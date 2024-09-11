@@ -8,7 +8,7 @@ namespace ServiceTrack.Api.Controllers;
 [ApiController]
 public class AuthController(AuthService authService) : Controller
 {
-    [HttpPost("api/v1/Auth/GetClaimsPrincipalForUser")]
+    [HttpPost("api/v1/Auth/Login")]
     public async Task<ActionResult> Login([FromBody] LoginDto model)
     {
         var userPrincipal = await authService.GetClaimsPrincipalForUser(model);
