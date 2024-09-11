@@ -19,7 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ServiceTrack.BL\ServiceTrack.Business.csproj" />
     <ProjectReference Include="..\ServiceTrack.Data\ServiceTrack.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Models\" />
   </ItemGroup>
 
 </Project>
