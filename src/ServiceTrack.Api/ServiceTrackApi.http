@@ -1,0 +1,6 @@
+@ServiceTrackApi_HostAddress = http://localhost:5209
+
+GET {{ServiceTrackApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
