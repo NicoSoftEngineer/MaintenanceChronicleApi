@@ -17,5 +17,16 @@ public class AuthController(AuthService authService) : Controller
 
         return NoContent();
     }
+
+    [HttpPost("api/v1/Auth/Register")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Register(
+        [FromBody] RegisterDto model
+    )
+    {
+        await authService.RegisterNewUser(model);
+        return NoContent();
+    }
 }
 

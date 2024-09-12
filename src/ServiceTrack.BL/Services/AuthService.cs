@@ -14,8 +14,8 @@ public class AuthService(UserManager<User> userManager, SignInManager<User> sign
         var normalizedEmail = model.Email.ToUpperInvariant();
 
         var user = await userManager
-                .Users
-                .SingleOrDefaultAsync(x => x.EmailConfirmed && x.NormalizedEmail == normalizedEmail);
+            .Users
+            .SingleOrDefaultAsync(x => x.NormalizedEmail == normalizedEmail);
         //TODO: handle if user is null
 
         var signInResult = await signInManager.CheckPasswordSignInAsync(user, model.Password, lockoutOnFailure: true);
@@ -24,5 +24,25 @@ public class AuthService(UserManager<User> userManager, SignInManager<User> sign
         var userPrincipal = await signInManager.CreateUserPrincipalAsync(user);
 
         return userPrincipal;
+    }
+
+    public async Task RegisterNewUser(RegisterDto model)
+    {
+        var validator = new PasswordValidator<User>();
+
+        var newUser = new User
+        {
+            Id = Guid.NewGuid(),
+            Email = model.Email,
+            UserName = model.Email,
+            FirstName = model.FirstName,
+            LastName = model.LastName
+        };
+
+        var checkPassword = await validator.ValidateAsync(userManager, newUser, model.Password);
+        //TODO: Handle checkPassword
+
+        await userManager.CreateAsync(newUser);
+        await userManager.AddPasswordAsync(newUser, model.Password);
     }
 }
