@@ -45,4 +45,17 @@ public class AuthService(UserManager<User> userManager, SignInManager<User> sign
         await userManager.CreateAsync(newUser);
         await userManager.AddPasswordAsync(newUser, model.Password);
     }
+
+    public async Task ValidateToken(TokenDto dto)
+    {
+        var normalizedMail = dto.Email.ToUpperInvariant();
+
+        var user = await userManager
+            .Users
+            .SingleOrDefaultAsync(x => !x.EmailConfirmed && x.NormalizedEmail == normalizedMail);
+        //Todo: Handle if user is null
+
+        var check = await userManager.ConfirmEmailAsync(user, dto.Token);
+        //TODO: Handle check
+    }
 }
