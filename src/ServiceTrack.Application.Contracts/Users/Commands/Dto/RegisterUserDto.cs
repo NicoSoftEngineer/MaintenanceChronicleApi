@@ -1,4 +1,4 @@
-namespace ServiceTrack.Application.Contracts.User.Commands.Dto;
+namespace ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
 public class RegisterUserDto
 {

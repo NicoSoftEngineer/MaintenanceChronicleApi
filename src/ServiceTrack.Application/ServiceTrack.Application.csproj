@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="User\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ServiceTrack.Application.Contracts\ServiceTrack.Application.Contracts.csproj" />
     <ProjectReference Include="..\ServiceTrack.Data\ServiceTrack.Data.csproj" />
   </ItemGroup>

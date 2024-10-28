@@ -1,10 +1,11 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using ServiceTrack.Application.Contracts.User.Commands;
+using ServiceTrack.Application.Contracts.Users.Commands;
+using ServiceTrack.Data.Entities;
 
-namespace ServiceTrack.Application.User.Commands;
+namespace ServiceTrack.Application.Users.Commands;
 
-public class AddPasswordToRegisteredUserCommandHandler(UserManager<Data.Entities.User> userManager) : IRequestHandler<AddPasswordToRegisteredUserCommand,
+public class AddPasswordToRegisteredUserCommandHandler(UserManager<User> userManager) : IRequestHandler<AddPasswordToRegisteredUserCommand,
                                                                          AddPasswordToRegisteredUserCommandResult>
 {
     public async Task<AddPasswordToRegisteredUserCommandResult> Handle(AddPasswordToRegisteredUserCommand request,

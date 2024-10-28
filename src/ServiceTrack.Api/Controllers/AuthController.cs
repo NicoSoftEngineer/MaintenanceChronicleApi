@@ -1,8 +1,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using ServiceTrack.Application.Contracts.User.Commands;
-using ServiceTrack.Application.Contracts.User.Commands.Dto;
+using ServiceTrack.Application.Contracts.Users.Commands;
+using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
 namespace ServiceTrack.Api.Controllers;
 
