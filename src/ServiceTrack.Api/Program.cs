@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ServiceTrack.Application;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities;
 
@@ -21,6 +22,12 @@ builder.Services.AddIdentity<User, Role>(options =>
     .AddEntityFrameworkStores<AppDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
+
+//MediatR
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
+});
 
 //builder.Services.AddScoped<AuthService>();
 
