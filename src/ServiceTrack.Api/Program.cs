@@ -23,7 +23,7 @@ builder.Services.AddIdentity<User, Role>(options =>
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
-builder.Services.AddScoped<AuthService>();
+//builder.Services.AddScoped<AuthService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

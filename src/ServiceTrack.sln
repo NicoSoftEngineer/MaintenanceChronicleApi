@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceTrack.Api", "Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTrack.Data", "ServiceTrack.Data\ServiceTrack.Data.csproj", "{13ABC419-3514-490C-AC43-BA7E88F22832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTrack.Business", "ServiceTrack.BL\ServiceTrack.Business.csproj", "{B87989B1-B6DA-4E80-9F98-9B92F0791F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTrack.Application", "ServiceTrack.Application\ServiceTrack.Application.csproj", "{DC4CEC9B-5EC0-428B-B880-484175DEEFAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
