@@ -16,7 +16,9 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid, IdentityUserClai
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<UserRole>()
+        
+
+    modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
             .WithMany(e => e.Users)
             .HasForeignKey(e => e.RoleId)
