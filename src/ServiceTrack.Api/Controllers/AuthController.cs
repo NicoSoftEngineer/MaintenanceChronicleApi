@@ -24,8 +24,15 @@ public class AuthController(IMediator mediator) : Controller
         [FromBody] RegisterUserDto model
     )
     {
-        var command = new RegisterNewUserCommand(model);
-        var result = await mediator.Send(command);
+        var registerNewUserCommand = new RegisterNewUserCommand(model);
+        var registerNewUserCommandResult = await mediator.Send(registerNewUserCommand);
+
+        var addPasswordToRegisteredUserCommand = new AddPasswordToRegisteredUserCommand(new AddPasswordToRegisteredUserDto
+        {
+            Email = model.Email,
+            Password = model.Password
+        });
+        var addPasswordToRegisteredUserCommandResult = await mediator.Send(addPasswordToRegisteredUserCommand);
 
         return NoContent();
     }

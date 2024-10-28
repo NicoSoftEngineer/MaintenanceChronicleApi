@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 using ServiceTrack.Application.Contracts.User.Commands.Dto;
 
 namespace ServiceTrack.Application.Contracts.User.Commands;
