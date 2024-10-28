@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Authentication;
+using MediatR;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTrack.Application.Contracts.User.Commands;
+using ServiceTrack.Application.Contracts.User.Commands.Dto;
 
 namespace ServiceTrack.Api.Controllers;
 
 [ApiController]
-public class AuthController(/*AuthService authService*/) : Controller
+public class AuthController(IMediator mediator) : Controller
 {
     [HttpPost("api/v1/Auth/Login")]
     public async Task<ActionResult> Login(/*[FromBody] LoginDto model*/)
@@ -18,10 +21,12 @@ public class AuthController(/*AuthService authService*/) : Controller
 
     [HttpPost("api/v1/Auth/Register")]
     public async Task<ActionResult> Register(
-        //[FromBody] RegisterDto model
+        [FromBody] RegisterUserDto model
     )
     {
-        //await authService.RegisterNewUser(model);
+        var command = new RegisterNewUserCommand(model);
+        var result = await mediator.Send(command);
+
         return NoContent();
     }
 

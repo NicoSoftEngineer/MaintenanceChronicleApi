@@ -21,6 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ServiceTrack.Application.Contracts\ServiceTrack.Application.Contracts.csproj" />
+    <ProjectReference Include="..\ServiceTrack.Application\ServiceTrack.Application.csproj" />
     <ProjectReference Include="..\ServiceTrack.BL\ServiceTrack.Business.csproj" />
     <ProjectReference Include="..\ServiceTrack.Data\ServiceTrack.Data.csproj" />
   </ItemGroup>

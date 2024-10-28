@@ -10,4 +10,13 @@
     <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="User\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceTrack.Application.Contracts\ServiceTrack.Application.Contracts.csproj" />
+    <ProjectReference Include="..\ServiceTrack.Data\ServiceTrack.Data.csproj" />
+  </ItemGroup>
+
 </Project>
