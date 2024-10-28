@@ -57,5 +57,6 @@ public class AuthService(UserManager<User> userManager, SignInManager<User> sign
 
         var check = await userManager.ConfirmEmailAsync(user, dto.Token);
         //TODO: Handle check
+
     }
 }

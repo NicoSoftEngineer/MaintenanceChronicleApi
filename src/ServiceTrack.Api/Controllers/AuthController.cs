@@ -39,8 +39,6 @@ public class AuthController(AuthService authService) : Controller
     {
         await authService.ValidateToken(model);
 
-
-
         return NoContent();
     }
 }
