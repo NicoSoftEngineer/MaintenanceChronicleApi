@@ -3,10 +3,5 @@ using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
 namespace ServiceTrack.Application.Contracts.Users.Commands;
 
-public record RegisterNewUserCommand(RegisterUserDto NewUserDto) : IRequest<RegisterNewUserCommandResult>;
+public record RegisterNewUserCommand(RegisterUserDto NewUserDto) : IRequest;
 
-public enum RegisterNewUserCommandResult
-{
-    Success,
-    EmailAlreadyExists
-}

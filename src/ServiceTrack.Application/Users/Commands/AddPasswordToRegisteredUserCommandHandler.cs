@@ -1,14 +1,15 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Identity.Client;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Data.Entities;
+using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;
 
-public class AddPasswordToRegisteredUserCommandHandler(UserManager<User> userManager) : IRequestHandler<AddPasswordToRegisteredUserCommand,
-                                                                         AddPasswordToRegisteredUserCommandResult>
+public class AddPasswordToRegisteredUserCommandHandler(UserManager<User> userManager) : IRequestHandler<AddPasswordToRegisteredUserCommand>
 {
-    public async Task<AddPasswordToRegisteredUserCommandResult> Handle(AddPasswordToRegisteredUserCommand request,
+    public async Task Handle(AddPasswordToRegisteredUserCommand request,
         CancellationToken cancellationToken)
     {
         var userPasswordDto = request.UserPasswordDto;
@@ -16,16 +17,13 @@ public class AddPasswordToRegisteredUserCommandHandler(UserManager<User> userMan
         var user = await userManager.FindByEmailAsync(userPasswordDto.Email);
         if (user == null)
         {
-            return AddPasswordToRegisteredUserCommandResult.UserNotFound;
+            throw new BadRequestException(ErrorType.UserNotFound);
         }
 
         var result = await userManager.AddPasswordAsync(user, userPasswordDto.Password);
         if (!result.Succeeded)
         {
-            return AddPasswordToRegisteredUserCommandResult.PasswordDoesNotMeetRequirements;
+            throw new BadRequestException(ErrorType.PasswordDoesNotMeetRequirements);
         }
-
-        return AddPasswordToRegisteredUserCommandResult.Success;
     }
-
 }

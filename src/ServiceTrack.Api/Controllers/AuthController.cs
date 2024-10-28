@@ -25,14 +25,14 @@ public class AuthController(IMediator mediator) : Controller
     )
     {
         var registerNewUserCommand = new RegisterNewUserCommand(model);
-        var registerNewUserCommandResult = await mediator.Send(registerNewUserCommand);
+        await mediator.Send(registerNewUserCommand);
 
         var addPasswordToRegisteredUserCommand = new AddPasswordToRegisteredUserCommand(new AddPasswordToRegisteredUserDto
         {
             Email = model.Email,
             Password = model.Password
         });
-        var addPasswordToRegisteredUserCommandResult = await mediator.Send(addPasswordToRegisteredUserCommand);
+        await mediator.Send(addPasswordToRegisteredUserCommand);
 
         return NoContent();
     }

@@ -2,19 +2,20 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Data.Entities;
+using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;
 
 public class RegisterNewUserCommandHandler(UserManager<User> userManager)
-        : IRequestHandler<RegisterNewUserCommand, RegisterNewUserCommandResult>
+        : IRequestHandler<RegisterNewUserCommand>
 {
-    public async Task<RegisterNewUserCommandResult> Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
+    public async Task Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
     {
         var user = request.NewUserDto;
 
         if (await userManager.FindByEmailAsync(user.Email) != null)
         {
-            return RegisterNewUserCommandResult.EmailAlreadyExists;
+            throw new BadRequestException(ErrorType.EmailAlreadyExists);
         }
 
         var result = await userManager.CreateAsync(new User
@@ -29,7 +30,5 @@ public class RegisterNewUserCommandHandler(UserManager<User> userManager)
         {
             throw new Exception("Failed to create user");
         }
-
-        return RegisterNewUserCommandResult.Success;
     }
 }
