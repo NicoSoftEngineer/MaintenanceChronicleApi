@@ -45,12 +45,27 @@ public class AuthController(IMediator mediator) : Controller
     /// <returns></returns>
     [HttpPost("api/v1/Auth/ValidateToken")]
     public async Task<ActionResult> ValidateToken(
-        //[FromBody] TokenDto model
+        [FromBody] EmailConfirmTokenForUserDto model
     )
     {
-        //await authService.ValidateToken(model);
+        var validateEmailConfirmationTokenForUserCommand = new ValidateEmailConfirmationTokenCommand(model);
+        await mediator.Send(validateEmailConfirmationTokenForUserCommand);
 
         return NoContent();
+    }
+
+    /// <summary>
+    /// unescape token before sending
+    /// </summary>
+    /// <param name="email"></param>
+    /// <returns></returns>
+    [HttpGet("api/v1/Auth/GenerateEmailConfirmToken")]
+    public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
+    {
+        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
+        var token = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
+
+        return Ok(token);
     }
 }
 

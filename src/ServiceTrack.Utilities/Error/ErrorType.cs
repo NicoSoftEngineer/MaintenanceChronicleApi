@@ -9,5 +9,7 @@ public enum ErrorType
     [ErrorMessage("Sorry this password doesn't meet our requirements!")]
     PasswordDoesNotMeetRequirements,
     [ErrorMessage("Wrong password!")]
-    InvalidPassword
+    InvalidPassword,
+    [ErrorMessage("Sorry this token is invalid!")]
+    InvalidEmailConfirmationToken,
 }
