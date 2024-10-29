@@ -39,7 +39,21 @@ public class AuthController(IMediator mediator) : Controller
     }
 
     /// <summary>
-    /// unescape token before sending
+    /// Generates a token for the user to confirm their email
+    /// </summary>
+    /// <param name="email"></param>
+    /// <returns></returns>
+    [HttpGet("api/v1/Auth/GenerateEmailConfirmToken")]
+    public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
+    {
+        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
+        var token = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
+
+        return Ok(token);
+    }
+
+    /// <summary>
+    /// Validates the token that the user has received in their email
     /// </summary>
     /// <param name="model"></param>
     /// <returns></returns>
@@ -52,20 +66,6 @@ public class AuthController(IMediator mediator) : Controller
         await mediator.Send(validateEmailConfirmationTokenForUserCommand);
 
         return NoContent();
-    }
-
-    /// <summary>
-    /// unescape token before sending
-    /// </summary>
-    /// <param name="email"></param>
-    /// <returns></returns>
-    [HttpGet("api/v1/Auth/GenerateEmailConfirmToken")]
-    public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
-    {
-        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
-        var token = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
-
-        return Ok(token);
     }
 }
 
