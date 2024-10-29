@@ -10,11 +10,12 @@ namespace ServiceTrack.Api.Controllers;
 public class AuthController(IMediator mediator) : Controller
 {
     [HttpPost("api/v1/Auth/Login")]
-    public async Task<ActionResult> Login(/*[FromBody] LoginDto model*/)
+    public async Task<ActionResult> Login([FromBody] LoginDto model)
     {
-        //var userPrincipal = await authService.GetClaimsPrincipalForUser(model);
+        var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(model);
+        var userPrincipal = await mediator.Send(generateClaimsPrincipalForUserCommand);
 
-        //await HttpContext.SignInAsync(userPrincipal);
+        await HttpContext.SignInAsync(userPrincipal);
 
         return NoContent();
     }

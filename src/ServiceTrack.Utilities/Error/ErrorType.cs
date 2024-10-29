@@ -8,4 +8,6 @@ public enum ErrorType
     UserNotFound,
     [ErrorMessage("Sorry this password doesn't meet our requirements!")]
     PasswordDoesNotMeetRequirements,
+    [ErrorMessage("Wrong password!")]
+    InvalidPassword
 }
