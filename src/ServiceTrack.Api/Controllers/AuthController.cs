@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
@@ -64,6 +65,22 @@ public class AuthController(IMediator mediator) : Controller
     {
         var validateEmailConfirmationTokenForUserCommand = new ValidateEmailConfirmationTokenCommand(model);
         await mediator.Send(validateEmailConfirmationTokenForUserCommand);
+
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Creates a user with the given information
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns></returns>
+    [HttpPost("api/v1/Auth/CreateUser")]
+    public async Task<ActionResult> CreateUser(
+        [FromBody] CreateNewUserDto model
+    )
+    {
+        var createNewUserCommand = new CreateNewUserCommand(model);
+        await mediator.Send(createNewUserCommand);
 
         return NoContent();
     }
