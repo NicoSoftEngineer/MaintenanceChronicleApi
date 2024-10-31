@@ -28,7 +28,7 @@ public class RegisterNewUserCommandHandler(UserManager<User> userManager)
 
         if (!result.Succeeded)
         {
-            throw new Exception("Failed to create user");
+            throw new InternalServerException(result.Errors.Select(e => e.Description).ToList());
         }
     }
 }
