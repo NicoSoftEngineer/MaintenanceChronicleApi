@@ -12,7 +12,7 @@ using ServiceTrack.Data;
 namespace ServiceTrack.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241102153705_AddedTenantAndPutTenantIdToEntities")]
+    [Migration("20241102210359_AddedTenantAndPutTenantIdToEntities")]
     partial class AddedTenantAndPutTenantIdToEntities
     {
         /// <inheritdoc />

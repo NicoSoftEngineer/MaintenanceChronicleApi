@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ServiceTrack.Data.Entities;
 
-[Table(nameof(User))]
+[Table(nameof(Tenant))]
 public class Tenant
 {
     public Guid Id { get; set; }
