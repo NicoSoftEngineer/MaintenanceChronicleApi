@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ServiceTrack.Application;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities;
 using ServiceTrack.Utilities.Error;
-using RequestHandlerRegistrationHelper = ServiceTrack.Application.RequestHandlerRegistrationHelper;
 
 var builder = WebApplication.CreateBuilder(args);
 
