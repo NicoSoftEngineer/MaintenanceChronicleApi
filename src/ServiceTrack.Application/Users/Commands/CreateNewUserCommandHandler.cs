@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using ServiceTrack.Application.Contracts.Users;
+using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Data.Entities;
 using ServiceTrack.Utilities.Error;

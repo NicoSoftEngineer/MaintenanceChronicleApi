@@ -12,4 +12,6 @@ public enum ErrorType
     InvalidPassword,
     [ErrorMessage("Sorry this token is invalid!")]
     InvalidEmailConfirmationToken,
+    [ErrorMessage("Name must be unique!")]
+    NameMustBeUnique,
 }

@@ -37,7 +37,10 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
         {
             logger.LogError(ex, ex.Message);
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            await context.Response.WriteAsync(JsonSerializer.Serialize(new { Error = ex.Message }));
+            await context.Response.WriteAsJsonAsync(new
+            {
+                Error = ex.Message
+            });
         }
     }
 }
