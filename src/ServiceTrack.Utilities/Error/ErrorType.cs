@@ -14,4 +14,8 @@ public enum ErrorType
     InvalidEmailConfirmationToken,
     [ErrorMessage("Name must be unique!")]
     NameMustBeUnique,
+    [ErrorMessage("Sorry this tenant doesn't exist!")]
+    TenantNotFound,
+    [ErrorMessage("Sorry your identity couldn't be accessed!")]
+    InvalidIdentityCookie
 }
