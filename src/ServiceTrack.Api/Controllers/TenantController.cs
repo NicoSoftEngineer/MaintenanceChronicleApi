@@ -2,10 +2,11 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ServiceTrack.Application.Contracts.Tenants.Commands;
 using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
-using ServiceTrack.Application.Contracts.Tenants.Queries;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Utils.Queries;
+using ServiceTrack.Application.Contracts.Tenants.Queries.Dto;
+using TenantDetailDto = ServiceTrack.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -17,7 +18,7 @@ public class TenantController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="newTenantDto">Information that user provides</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Tenant/new")]
+    [HttpPost("api/v1/tenants")]
     public async Task<ActionResult<Guid>> CreateTenant(
         [FromBody] NewTenantDto newTenantDto
     )
@@ -29,16 +30,32 @@ public class TenantController(IMediator mediator) : Controller
     }
 
     /// <summary>
+    /// Updates a tenant with the given information
+    /// </summary>
+    /// <param name="tenantDetailDto">Information that user provides</param>
+    /// <returns></returns>
+    [HttpPatch("api/v1/tenants")]
+    public async Task<ActionResult<Guid>> UpdateTenant(
+        [FromBody] TenantDetailDto tenantDetailDto
+    )
+    {
+        var updateTenantCommand = new UpdateTenantCommand(tenantDetailDto);
+        await mediator.Send(updateTenantCommand);
+
+        return NoContent();
+    }
+
+    /// <summary>
     /// Gets the tenant with the given id
     /// </summary>
     /// <param name="id">Id of tenant</param>
     /// <returns></returns>
-    [HttpGet("api/v1/Tenant/{id}")]
-    public async Task<ActionResult<TenantDto>> GetTenant(
+    [HttpGet("api/v1/tenants/{id}")]
+    public async Task<ActionResult<TenantDetailDto>> GetTenant(
         [FromRoute] Guid id
     )
     {
-        var getTenantByIdQuery = new GetEntityByIdQuery<TenantDto>(id);
+        var getTenantByIdQuery = new GetEntityByIdQuery<TenantDetailDto>(id);
         var tenant = await mediator.Send(getTenantByIdQuery);
 
         return Ok(tenant);
