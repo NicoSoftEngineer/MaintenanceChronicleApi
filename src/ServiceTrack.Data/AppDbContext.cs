@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 
 namespace ServiceTrack.Data;
 

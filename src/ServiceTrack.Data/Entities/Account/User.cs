@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace ServiceTrack.Data.Entities;
+namespace ServiceTrack.Data.Entities.Account;
 
 [Table(nameof(User))]
-public class User :IdentityUser<Guid>
+public class User : IdentityUser<Guid>
 {
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;

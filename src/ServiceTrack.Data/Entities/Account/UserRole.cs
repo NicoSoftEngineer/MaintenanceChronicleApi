@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ServiceTrack.Data.Entities;
+namespace ServiceTrack.Data.Entities.Account;
 
 [Table(nameof(UserRole))]
 public class UserRole : IdentityUserRole<Guid>

@@ -2,7 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;

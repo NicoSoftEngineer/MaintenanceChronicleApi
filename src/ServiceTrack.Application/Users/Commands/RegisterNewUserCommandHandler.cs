@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Data;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;

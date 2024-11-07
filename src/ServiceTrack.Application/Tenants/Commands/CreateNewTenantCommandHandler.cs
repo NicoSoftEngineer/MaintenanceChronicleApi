@@ -1,10 +1,8 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 using ServiceTrack.Application.Contracts.Tenants.Commands;
-using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
 using ServiceTrack.Data;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Tenants.Commands;

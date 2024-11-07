@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ServiceTrack.Data.Entities;
+namespace ServiceTrack.Data.Entities.Account;
 
 [Table(nameof(Tenant))]
 public class Tenant

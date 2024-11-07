@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrack.Application;
 using ServiceTrack.Data;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
 
 var builder = WebApplication.CreateBuilder(args);
