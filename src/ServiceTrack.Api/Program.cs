@@ -10,7 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"));
+    options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
+    {
+        optionsBuilder.UseNodaTime();
+    });
+    
 });
 
 builder.Services.AddControllers();
