@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NodaTime;
 using ServiceTrack.Application;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
@@ -34,7 +35,7 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
 });
 
-//builder.Services.AddScoped<AuthService>();
+builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
