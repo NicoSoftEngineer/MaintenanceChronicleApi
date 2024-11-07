@@ -1,5 +1,7 @@
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceTrack.Application.Contracts.Tenants.Commands;
 using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
@@ -36,7 +38,7 @@ public class AuthController(IMediator mediator) : Controller
         var addTenantClaimToUserPrincipalCommand = new AddTenantClaimToUserPrincipalCommand(userTenantClaimDto, userPrincipal);
         var userPrincipalWithTenantClaim = await mediator.Send(addTenantClaimToUserPrincipalCommand);
 
-        await HttpContext.SignInAsync(userPrincipalWithTenantClaim);
+        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim);
 
         return NoContent();
     }
