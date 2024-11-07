@@ -43,4 +43,17 @@ public class TenantController(IMediator mediator) : Controller
 
         return Ok(tenant);
     }
+
+    /// <summary>
+    /// Gets the list of tenants
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("api/v1/tenants")]
+    public async Task<ActionResult<List<TenantListDto>>> GetTenantList()
+    {
+        var getTenantListQuery = new GetListOfEntityQuery<TenantListDto>();
+        var tenants = await mediator.Send(getTenantListQuery);
+
+        return Ok(tenants);
+    }
 }
