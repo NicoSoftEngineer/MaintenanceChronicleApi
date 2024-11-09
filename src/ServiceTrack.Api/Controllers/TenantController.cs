@@ -6,6 +6,8 @@ using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Application.Contracts.Tenants.Queries.Dto;
+using ServiceTrack.Application.Tenants.Commands;
+using ServiceTrack.Utilities.Helpers;
 using TenantDetailDto = ServiceTrack.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto;
 
 namespace ServiceTrack.Api.Controllers;
@@ -30,6 +32,22 @@ public class TenantController(IMediator mediator) : Controller
     }
 
     /// <summary>
+    /// Creates a tenant with the given information
+    /// </summary>
+    /// <param name="tenantsCreatorUserId">Information that user provides</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/tenants/creation-info")]
+    public async Task<ActionResult> AssignCreationInfoToTenant(
+        [FromBody] TenantsCreatorUserIdDto tenantsCreatorUserId
+    )
+    {
+        var createNewTenantCommand = new AssignCreationInfoToTenantCommand(tenantsCreatorUserId);
+        await mediator.Send(createNewTenantCommand);
+
+        return NoContent();
+    }
+
+    /// <summary>
     /// Updates a tenant with the given information
     /// </summary>
     /// <param name="tenantDetailDto">Information that user provides</param>
@@ -39,7 +57,7 @@ public class TenantController(IMediator mediator) : Controller
         [FromBody] TenantDetailDto tenantDetailDto
     )
     {
-        var updateTenantCommand = new UpdateTenantCommand(tenantDetailDto);
+        var updateTenantCommand = new UpdateTenantCommand(tenantDetailDto, HttpContext.User.GetUserId());
         await mediator.Send(updateTenantCommand);
 
         return NoContent();
