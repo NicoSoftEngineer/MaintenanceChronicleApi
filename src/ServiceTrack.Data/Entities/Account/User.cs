@@ -14,9 +14,9 @@ public class User : IdentityUser<Guid>, ITenant, ITrackable
     public Tenant Tenant { get; set; } = null!;
     public ICollection<UserRole> Roles { get; set; } = new HashSet<UserRole>();
     public Instant CreatedAt { get; set; }
-    public string CreatedBy { get; set; }
+    public string CreatedBy { get; set; } = null!;
     public Instant ModifiedAt { get; set; }
-    public string ModifiedBy { get; set; }
+    public string ModifiedBy { get; set; } = null!;
     public Instant? DeletedAt { get; set; }
     public string? DeletedBy { get; set; }
 }

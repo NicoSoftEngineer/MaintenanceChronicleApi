@@ -12,8 +12,8 @@ public class AssignCreationInfoToTenantCommandHandler(AppDbContext dbContext, IC
 {
     public async Task Handle(AssignCreationInfoToTenantCommand request, CancellationToken cancellationToken)
     {
-        var tenant = await dbContext.Tenants.FirstAsync(x => x.Id == request.tenantsCreatorUserIdDto.TenantId, cancellationToken);
-        tenant.SetCreateBy(request.tenantsCreatorUserIdDto.UserId, clock.GetCurrentInstant());
+        var tenant = await dbContext.Tenants.FirstAsync(x => x.Id == request.TenantsCreatorUserIdDto.TenantId, cancellationToken);
+        tenant.SetCreateBy(request.TenantsCreatorUserIdDto.UserId, clock.GetCurrentInstant());
         await dbContext.SaveChangesAsync(cancellationToken);
     }
 }

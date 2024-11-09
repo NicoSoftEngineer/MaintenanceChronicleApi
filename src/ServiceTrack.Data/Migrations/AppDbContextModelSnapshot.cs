@@ -170,7 +170,7 @@ namespace ServiceTrack.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tenant");
+                    b.ToTable("Tenant", (string)null);
                 });
 
             modelBuilder.Entity("ServiceTrack.Data.Entities.Account.User", b =>
