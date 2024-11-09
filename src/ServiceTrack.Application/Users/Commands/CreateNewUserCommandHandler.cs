@@ -1,20 +1,29 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using NodaTime;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
+using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Data.Interfaces;
 using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;
 
-public class CreateNewUserCommandHandler(UserManager<User> userManager) : IRequestHandler<CreateNewUserCommand>
+public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewUserCommand>
 {
     public async Task Handle(CreateNewUserCommand request, CancellationToken cancellationToken)
     {
         var newUserDto = request.NewUserDto;
-        if (await userManager.FindByEmailAsync(newUserDto.Email) != null)
+        if ((await userManager.FindByEmailAsync(newUserDto.Email)) != null)
         {
             throw new BadRequestException(ErrorType.EmailAlreadyExists);
+        }
+
+        var tenant = await dbContext.Tenants.FindAsync(newUserDto.TenantId, cancellationToken);
+        if (tenant == null)
+        {
+            throw new BadRequestException(ErrorType.TenantNotFound);
         }
 
         var user = new User
@@ -22,8 +31,10 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager) : IReque
             UserName = newUserDto.Email,
             Email = newUserDto.Email,
             FirstName = newUserDto.FirstName,
-            LastName = newUserDto.LastName
+            LastName = newUserDto.LastName,
+            TenantId = newUserDto.TenantId,
         };
+        user.SetCreateBy(request.UserId, clock.GetCurrentInstant());
 
         var result = await userManager.CreateAsync(user);
         if (!result.Succeeded)

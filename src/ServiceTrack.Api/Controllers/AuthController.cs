@@ -9,6 +9,7 @@ using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries;
+using ServiceTrack.Utilities.Helpers;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -107,7 +108,7 @@ public class AuthController(IMediator mediator) : Controller
         [FromBody] CreateNewUserDto createNewUserDto
     )
     {
-        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto);
+        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto,HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
 
         return NoContent();

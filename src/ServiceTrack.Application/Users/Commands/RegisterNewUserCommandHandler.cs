@@ -1,17 +1,19 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NodaTime;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Data.Interfaces;
 using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;
 
-public class RegisterNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext)
-        : IRequestHandler<RegisterNewUserCommand>
+public class RegisterNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext, IClock clock)
+        : IRequestHandler<RegisterNewUserCommand, Guid>
 {
-    public async Task Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(RegisterNewUserCommand request, CancellationToken cancellationToken)
     {
         var user = request.NewUserDto;
 
@@ -39,5 +41,12 @@ public class RegisterNewUserCommandHandler(UserManager<User> userManager, AppDbC
         {
             throw new InternalServerException(result.Errors.Select(e => e.Description).ToList());
         }
+
+        var newUser = await dbContext.Users.FirstAsync(x => x.Email == user.Email); 
+        newUser!.SetCreateBy(newUser!.Id.ToString(), clock.GetCurrentInstant());
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return newUser.Id;
     }
 }
