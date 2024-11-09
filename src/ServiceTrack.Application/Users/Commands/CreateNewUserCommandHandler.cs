@@ -20,7 +20,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
             throw new BadRequestException(ErrorType.EmailAlreadyExists);
         }
 
-        var tenant = await dbContext.Tenants.FindAsync(newUserDto.TenantId, cancellationToken);
+        var tenant = await dbContext.Tenants.FindAsync(request.TenantId, cancellationToken);
         if (tenant == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);
@@ -32,7 +32,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
             Email = newUserDto.Email,
             FirstName = newUserDto.FirstName,
             LastName = newUserDto.LastName,
-            TenantId = newUserDto.TenantId,
+            TenantId = tenant.Id,
         };
         user.SetCreateBy(request.UserId, clock.GetCurrentInstant());
 

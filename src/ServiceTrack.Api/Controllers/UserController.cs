@@ -19,7 +19,23 @@ public class UserController(IMediator mediator) : Controller
         [FromBody] CreateNewUserDto createNewUserDto
     )
     {
-        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto, HttpContext.User.GetUserId());
+        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto, HttpContext.User.GetUserId(), HttpContext.User.GetTenantId());
+        await mediator.Send(createNewUserCommand);
+
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Creates a user with the given information
+    /// </summary>
+    /// <param name="userDetailDto">Information that admin provides</param>
+    /// <returns></returns>
+    [HttpPatch("api/v1/users")]
+    public async Task<ActionResult> UpdateUser(
+        [FromBody] UserDetailDto userDetailDto
+    )
+    {
+        var createNewUserCommand = new UpdateUserCommand(userDetailDto, HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
 
         return NoContent();
