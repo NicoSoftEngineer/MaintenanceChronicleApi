@@ -96,21 +96,4 @@ public class AuthController(IMediator mediator) : Controller
 
         return NoContent();
     }
-
-    //TODO: Move to a different controller
-    /// <summary>
-    /// Creates a user with the given information
-    /// </summary>
-    /// <param name="createNewUserDto">Information that admin provides</param>
-    /// <returns></returns>
-    [HttpPost("api/v1/Auth/CreateUser")]
-    public async Task<ActionResult> CreateUser(
-        [FromBody] CreateNewUserDto createNewUserDto
-    )
-    {
-        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto,HttpContext.User.GetUserId());
-        await mediator.Send(createNewUserCommand);
-
-        return NoContent();
-    }
 }
