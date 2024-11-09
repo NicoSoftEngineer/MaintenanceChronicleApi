@@ -1,9 +1,15 @@
+using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTrack.Application.Contracts.Tenants.Commands;
+using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
+using ServiceTrack.Application.Contracts.Users.Queries;
+using ServiceTrack.Utilities.Helpers;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -21,7 +27,19 @@ public class AuthController(IMediator mediator) : Controller
         var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(loginDto);
         var userPrincipal = await mediator.Send(generateClaimsPrincipalForUserCommand);
 
-        await HttpContext.SignInAsync(userPrincipal);
+        var getTenantIdForUserCommand = new GetTenantIdFromUserCommand(loginDto.Email);
+        var tenantId = await mediator.Send(getTenantIdForUserCommand);
+
+        var userTenantClaimDto = new UserTenantClaimDto
+        {
+            Email = loginDto.Email,
+            TenantId = tenantId
+        };
+
+        var addTenantClaimToUserPrincipalCommand = new AddTenantClaimToUserPrincipalCommand(userTenantClaimDto, userPrincipal);
+        var userPrincipalWithTenantClaim = await mediator.Send(addTenantClaimToUserPrincipalCommand);
+
+        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim);
 
         return NoContent();
     }
@@ -90,7 +108,7 @@ public class AuthController(IMediator mediator) : Controller
         [FromBody] CreateNewUserDto createNewUserDto
     )
     {
-        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto);
+        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto,HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
 
         return NoContent();

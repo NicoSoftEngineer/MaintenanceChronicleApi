@@ -12,4 +12,10 @@ public enum ErrorType
     InvalidPassword,
     [ErrorMessage("Sorry this token is invalid!")]
     InvalidEmailConfirmationToken,
+    [ErrorMessage("Name must be unique!")]
+    NameMustBeUnique,
+    [ErrorMessage("Sorry this tenant doesn't exist!")]
+    TenantNotFound,
+    [ErrorMessage("Sorry your identity couldn't be accessed!")]
+    InvalidIdentityCookie
 }

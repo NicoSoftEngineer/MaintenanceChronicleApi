@@ -16,4 +16,9 @@
     <ProjectReference Include="..\ServiceTrack.Utilities\ServiceTrack.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tenants\Queries\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
 </Project>

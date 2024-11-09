@@ -1,16 +1,21 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NodaTime;
+using ServiceTrack.Application;
 using ServiceTrack.Data;
-using ServiceTrack.Data.Entities;
+using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
-using RequestHandlerRegistrationHelper = ServiceTrack.Application.RequestHandlerRegistrationHelper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"));
+    options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
+    {
+        optionsBuilder.UseNodaTime();
+    });
+    
 });
 
 builder.Services.AddControllers();
@@ -30,7 +35,7 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
 });
 
-//builder.Services.AddScoped<AuthService>();
+builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -47,7 +52,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
