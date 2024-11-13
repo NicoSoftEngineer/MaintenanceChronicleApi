@@ -37,7 +37,7 @@ public class UserController(IMediator mediator) : Controller
     }
 
     /// <summary>
-    /// Creates a user with the given information
+    /// Updates a user with the given information
     /// </summary>
     /// <param name="userDetailDto">Information that admin provides</param>
     /// <returns></returns>
