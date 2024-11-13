@@ -3,12 +3,17 @@ using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTrack.Application.Contracts.Roles.Dto;
 using ServiceTrack.Application.Contracts.Tenants.Commands;
 using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries;
+using ServiceTrack.Application.Contracts.Utils.Queries;
+using ServiceTrack.Application.Roles.Queries;
+using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Utilities.Constants;
 using ServiceTrack.Utilities.Helpers;
 
 namespace ServiceTrack.Api.Controllers;
@@ -63,6 +68,20 @@ public class AuthController(IMediator mediator) : Controller
             Password = registerUserDto.Password
         });
         await mediator.Send(addPasswordToRegisteredUserCommand);
+
+        var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
+        var adminRole = await mediator.Send(getRoleByNameCommand);
+
+        var addRolesToUserCommand = new AddRolesToUserCommand(
+        new UserRolesDto
+            {
+                UserId = result,
+                RoleIds = new Guid[1] { adminRole.Id }
+            },
+            HttpContext.User.GetUserId(),
+            registerUserDto.TenantId.ToString()
+        );
+        await mediator.Send(addRolesToUserCommand);
 
         return Ok(result);
     }

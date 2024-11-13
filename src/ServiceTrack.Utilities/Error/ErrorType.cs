@@ -17,5 +17,7 @@ public enum ErrorType
     [ErrorMessage("Sorry this tenant doesn't exist!")]
     TenantNotFound,
     [ErrorMessage("Sorry your identity couldn't be accessed!")]
-    InvalidIdentityCookie
+    InvalidIdentityCookie,
+    [ErrorMessage("Sorry this role doesn't exist!")]
+    RoleNotFound
 }
