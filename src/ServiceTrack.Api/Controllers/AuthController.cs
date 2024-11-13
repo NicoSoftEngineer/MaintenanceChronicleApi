@@ -21,7 +21,7 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="loginDto">Email and password to login user</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/Login")]
+    [HttpPost("api/v1/auth/login")]
     public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
     {
         var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(loginDto);
@@ -49,13 +49,13 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="registerUserDto">Information needed to create new user with specified password</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/Register")]
-    public async Task<ActionResult> Register(
+    [HttpPost("api/v1/auth/register")]
+    public async Task<ActionResult<Guid>> Register(
         [FromBody] RegisterUserDto registerUserDto
     )
     {
         var registerNewUserCommand = new RegisterNewUserCommand(registerUserDto);
-        await mediator.Send(registerNewUserCommand);
+        var result = await mediator.Send(registerNewUserCommand);
 
         var addPasswordToRegisteredUserCommand = new AddPasswordToRegisteredUserCommand(new AddPasswordToRegisteredUserDto
         {
@@ -64,7 +64,7 @@ public class AuthController(IMediator mediator) : Controller
         });
         await mediator.Send(addPasswordToRegisteredUserCommand);
 
-        return NoContent();
+        return Ok(result);
     }
 
     /// <summary>
@@ -72,7 +72,7 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="email">Users email that specifies which user should get the token</param>
     /// <returns></returns>
-    [HttpGet("api/v1/Auth/GenerateEmailConfirmToken")]
+    [HttpGet("api/v1/auth/generateEmailConfirmToken")]
     public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
     {
         var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
@@ -86,7 +86,7 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="confirmTokenForUserDto">Email and the given token for email confirmation</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/ValidateToken")]
+    [HttpPost("api/v1/auth/validateToken")]
     public async Task<ActionResult> ValidateToken(
         [FromBody] EmailConfirmTokenForUserDto confirmTokenForUserDto
     )
