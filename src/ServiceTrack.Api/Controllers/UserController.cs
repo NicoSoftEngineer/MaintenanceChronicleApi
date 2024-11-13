@@ -20,7 +20,18 @@ public class UserController(IMediator mediator) : Controller
     )
     {
         var createNewUserCommand = new CreateNewUserCommand(createNewUserDto, HttpContext.User.GetUserId(), HttpContext.User.GetTenantId());
-        await mediator.Send(createNewUserCommand);
+        var userId = await mediator.Send(createNewUserCommand);
+
+        var addRolesToUserCommand = new AddRolesToUserCommand(
+            new UserRolesDto
+            {
+                UserId = userId,
+                RoleIds = createNewUserDto.Roles
+            },
+            HttpContext.User.GetUserId(),
+            HttpContext.User.GetTenantId()
+        );
+        await mediator.Send(addRolesToUserCommand);
 
         return NoContent();
     }
@@ -37,6 +48,17 @@ public class UserController(IMediator mediator) : Controller
     {
         var createNewUserCommand = new UpdateUserCommand(userDetailDto, HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
+
+        var addRolesToUserCommand = new AddRolesToUserCommand(
+            new UserRolesDto
+            {
+                UserId = userDetailDto.Id,
+                RoleIds = userDetailDto.Roles
+            },
+            HttpContext.User.GetUserId(),
+            HttpContext.User.GetTenantId()
+        );
+        await mediator.Send(addRolesToUserCommand);
 
         return NoContent();
     }
