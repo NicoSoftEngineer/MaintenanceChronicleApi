@@ -10,6 +10,8 @@ using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries;
+using ServiceTrack.Application.Contracts.UserTenant.Commands;
+using ServiceTrack.Application.Contracts.UserTenant.Commands.Dto;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Application.Roles.Queries;
 using ServiceTrack.Data.Entities.Account;
@@ -90,6 +92,22 @@ public class AuthController(IMediator mediator) : Controller
         await mediator.Send(addRolesToUserCommand);
 
         return Ok(result);
+    }
+
+    /// <summary>
+    /// Registers a new user and tenant with the given information. The user is not logged in after registration
+    /// </summary>
+    /// <param name="userTenantDto">Information needed to create new user with specified password and tenant</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/auth/register-user-tenant")]
+    public async Task<ActionResult<Guid>> RegisterUserTenant(
+        [FromBody] UserTenantDto userTenantDto
+    )
+    {
+        var registerNewUserCommand = new RegisterUserAndTenantCommand(userTenantDto);
+        await mediator.Send(registerNewUserCommand);
+
+        return NoContent();
     }
 
     /// <summary>
