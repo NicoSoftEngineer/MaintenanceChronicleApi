@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NodaTime;
@@ -5,8 +6,13 @@ using ServiceTrack.Application;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(serverOptions => {
+    serverOptions.ListenAnyIP(7290); // Change the port number here
+});
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -15,7 +21,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     {
         optionsBuilder.UseNodaTime();
     });
-    
+
 });
 
 builder.Services.AddControllers();
@@ -50,6 +56,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
 app.UseMiddleware<ExceptionMiddleware>();
 
 //app.UseHttpsRedirection();
@@ -58,5 +69,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/", () => "This page wooooooorks");
 
 app.Run();

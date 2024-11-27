@@ -44,7 +44,13 @@ public class AuthController(IMediator mediator) : Controller
         var addTenantClaimToUserPrincipalCommand = new AddTenantClaimToUserPrincipalCommand(userTenantClaimDto, userPrincipal);
         var userPrincipalWithTenantClaim = await mediator.Send(addTenantClaimToUserPrincipalCommand);
 
-        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim);
+        var authProperties = new AuthenticationProperties
+        {
+            ExpiresUtc = DateTimeOffset.UtcNow.AddDays(30), // Set custom expiration time
+            IsPersistent = true
+        };
+
+        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim, authProperties);
 
         return NoContent();
     }
@@ -78,7 +84,7 @@ public class AuthController(IMediator mediator) : Controller
                 UserId = result,
                 RoleIds = new Guid[1] { adminRole.Id }
             },
-            HttpContext.User.GetUserId(),
+            result.ToString(),
             registerUserDto.TenantId.ToString()
         );
         await mediator.Send(addRolesToUserCommand);
