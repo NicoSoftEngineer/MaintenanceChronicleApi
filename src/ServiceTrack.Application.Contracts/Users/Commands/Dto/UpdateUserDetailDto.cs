@@ -1,6 +1,6 @@
 namespace ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
-public class UserDetailDto
+public class UpdateUserDetailDto
 {
     public required Guid Id { get; set; }
     public required string Email { get; set; }

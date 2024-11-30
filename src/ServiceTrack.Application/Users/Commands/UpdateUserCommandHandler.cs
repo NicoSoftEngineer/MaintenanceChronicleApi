@@ -12,14 +12,14 @@ public class UpdateUserCommandHandler(AppDbContext dbContext, IClock clock) : IR
 {
     public async Task Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
-        var userEntity = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == request.UserDetailDto.Id, cancellationToken);
+        var userEntity = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == request.UpdateUserDetailDto.Id, cancellationToken);
         if (userEntity == null)
         {
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        userEntity.FirstName = request.UserDetailDto.FirstName;
-        userEntity.LastName = request.UserDetailDto.LastName;
+        userEntity.FirstName = request.UpdateUserDetailDto.FirstName;
+        userEntity.LastName = request.UpdateUserDetailDto.LastName;
 
         userEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
 

@@ -1,10 +1,11 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands;
+using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries.Dto;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
+using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -45,7 +46,7 @@ public class UserController(IMediator mediator) : Controller
     /// <returns></returns>
     [HttpPatch("api/v1/users")]
     public async Task<ActionResult> UpdateUser(
-        [FromBody] UserDetailDto userDetailDto
+        [FromBody] UpdateUserDetailDto userDetailDto
     )
     {
         var createNewUserCommand = new UpdateUserCommand(userDetailDto, HttpContext.User.GetUserId());
@@ -78,16 +79,19 @@ public class UserController(IMediator mediator) : Controller
         return Ok(users);
     }
 
-    ///// <summary>
-    ///// Gets a specific user by id
-    ///// </summary>
-    ///// <param name="id"></param>
-    ///// <returns>user</returns>
-    //[HttpGet("api/v1/users/{id:guid}")]
-    //public async Task<ActionResult> GetUser(
-    //    [FromRoute] Guid id
-    //)
-    //{
+    /// <summary>
+    /// Gets a specific user by id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>user</returns>
+    [HttpGet("api/v1/users/{id:guid}")]
+    public async Task<ActionResult> GetUser(
+        [FromRoute] Guid id
+    )
+    {
+        var userQuery = new GetEntityByIdQuery<UserDetailDto>(id);
+        var user = await mediator.Send(userQuery);
 
-    //}
+        return Ok(user);
+    }
 }
