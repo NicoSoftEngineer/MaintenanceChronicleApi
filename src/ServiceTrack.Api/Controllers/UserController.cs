@@ -2,6 +2,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands;
+using ServiceTrack.Application.Contracts.Users.Queries.Dto;
+using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
 
 namespace ServiceTrack.Api.Controllers;
@@ -62,4 +64,30 @@ public class UserController(IMediator mediator) : Controller
 
         return NoContent();
     }
+
+    /// <summary>
+    /// gets a list of users
+    /// </summary>
+    /// <returns>List of users</returns>
+    [HttpGet("api/v1/users")]
+    public async Task<ActionResult> GetUserList()
+    {
+        var usersQuery = new GetListOfEntityQuery<UserListDto>();
+        var users = await mediator.Send(usersQuery);
+
+        return Ok(users);
+    }
+
+    ///// <summary>
+    ///// Gets a specific user by id
+    ///// </summary>
+    ///// <param name="id"></param>
+    ///// <returns>user</returns>
+    //[HttpGet("api/v1/users/{id:guid}")]
+    //public async Task<ActionResult> GetUser(
+    //    [FromRoute] Guid id
+    //)
+    //{
+
+    //}
 }

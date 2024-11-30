@@ -10,9 +10,9 @@ using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureKestrel(serverOptions => {
-    serverOptions.ListenAnyIP(7290); // Change the port number here
-});
+//builder.WebHost.ConfigureKestrel(serverOptions => {
+//    serverOptions.ListenAnyIP(7290); // Change the port number here
+//});
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
