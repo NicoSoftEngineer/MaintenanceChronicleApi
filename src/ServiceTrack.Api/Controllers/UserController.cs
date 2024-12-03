@@ -20,9 +20,9 @@ public class UserController(IMediator mediator) : ControllerBase
     /// Creates a user with the given information
     /// </summary>
     /// <param name="createNewUserDto">Information that admin provides</param>
-    /// <returns></returns>
+    /// <returns>New user id</returns>
     [HttpPost("api/v1/users")]
-    public async Task<ActionResult> CreateUser(
+    public async Task<ActionResult<Guid>> CreateUser(
         [FromBody] CreateNewUserDto createNewUserDto
     )
     {
