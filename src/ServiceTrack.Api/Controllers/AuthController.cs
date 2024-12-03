@@ -3,12 +3,19 @@ using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ServiceTrack.Application.Contracts.Roles.Dto;
 using ServiceTrack.Application.Contracts.Tenants.Commands;
 using ServiceTrack.Application.Contracts.Tenants.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries;
+using ServiceTrack.Application.Contracts.UserTenant.Commands;
+using ServiceTrack.Application.Contracts.UserTenant.Commands.Dto;
+using ServiceTrack.Application.Contracts.Utils.Queries;
+using ServiceTrack.Application.Roles.Queries;
+using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Utilities.Constants;
 using ServiceTrack.Utilities.Helpers;
 
 namespace ServiceTrack.Api.Controllers;
@@ -21,7 +28,7 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="loginDto">Email and password to login user</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/Login")]
+    [HttpPost("api/v1/auth/login")]
     public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
     {
         var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(loginDto);
@@ -39,7 +46,13 @@ public class AuthController(IMediator mediator) : Controller
         var addTenantClaimToUserPrincipalCommand = new AddTenantClaimToUserPrincipalCommand(userTenantClaimDto, userPrincipal);
         var userPrincipalWithTenantClaim = await mediator.Send(addTenantClaimToUserPrincipalCommand);
 
-        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim);
+        var authProperties = new AuthenticationProperties
+        {
+            ExpiresUtc = DateTimeOffset.UtcNow.AddDays(30), // Set custom expiration time
+            IsPersistent = true
+        };
+
+        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim, authProperties);
 
         return NoContent();
     }
@@ -49,13 +62,13 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="registerUserDto">Information needed to create new user with specified password</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/Register")]
-    public async Task<ActionResult> Register(
+    [HttpPost("api/v1/auth/register")]
+    public async Task<ActionResult<Guid>> Register(
         [FromBody] RegisterUserDto registerUserDto
     )
     {
         var registerNewUserCommand = new RegisterNewUserCommand(registerUserDto);
-        await mediator.Send(registerNewUserCommand);
+        var result = await mediator.Send(registerNewUserCommand);
 
         var addPasswordToRegisteredUserCommand = new AddPasswordToRegisteredUserCommand(new AddPasswordToRegisteredUserDto
         {
@@ -63,6 +76,36 @@ public class AuthController(IMediator mediator) : Controller
             Password = registerUserDto.Password
         });
         await mediator.Send(addPasswordToRegisteredUserCommand);
+
+        var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
+        var adminRole = await mediator.Send(getRoleByNameCommand);
+
+        var addRolesToUserCommand = new AddRolesToUserCommand(
+        new UserRolesDto
+            {
+                UserId = result,
+                RoleIds = new Guid[1] { adminRole.Id }
+            },
+            result.ToString(),
+            registerUserDto.TenantId.ToString()
+        );
+        await mediator.Send(addRolesToUserCommand);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Registers a new user and tenant with the given information. The user is not logged in after registration
+    /// </summary>
+    /// <param name="userTenantDto">Information needed to create new user with specified password and tenant</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/auth/register-user-tenant")]
+    public async Task<ActionResult<Guid>> RegisterUserTenant(
+        [FromBody] UserTenantDto userTenantDto
+    )
+    {
+        var registerNewUserCommand = new RegisterUserAndTenantCommand(userTenantDto);
+        await mediator.Send(registerNewUserCommand);
 
         return NoContent();
     }
@@ -72,7 +115,7 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="email">Users email that specifies which user should get the token</param>
     /// <returns></returns>
-    [HttpGet("api/v1/Auth/GenerateEmailConfirmToken")]
+    [HttpGet("api/v1/auth/generateEmailConfirmToken")]
     public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
     {
         var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
@@ -86,30 +129,13 @@ public class AuthController(IMediator mediator) : Controller
     /// </summary>
     /// <param name="confirmTokenForUserDto">Email and the given token for email confirmation</param>
     /// <returns></returns>
-    [HttpPost("api/v1/Auth/ValidateToken")]
+    [HttpPost("api/v1/auth/validateToken")]
     public async Task<ActionResult> ValidateToken(
         [FromBody] EmailConfirmTokenForUserDto confirmTokenForUserDto
     )
     {
         var validateEmailConfirmationTokenForUserCommand = new ValidateEmailConfirmationTokenCommand(confirmTokenForUserDto);
         await mediator.Send(validateEmailConfirmationTokenForUserCommand);
-
-        return NoContent();
-    }
-
-    //TODO: Move to a different controller
-    /// <summary>
-    /// Creates a user with the given information
-    /// </summary>
-    /// <param name="createNewUserDto">Information that admin provides</param>
-    /// <returns></returns>
-    [HttpPost("api/v1/Auth/CreateUser")]
-    public async Task<ActionResult> CreateUser(
-        [FromBody] CreateNewUserDto createNewUserDto
-    )
-    {
-        var createNewUserCommand = new CreateNewUserCommand(createNewUserDto,HttpContext.User.GetUserId());
-        await mediator.Send(createNewUserCommand);
 
         return NoContent();
     }

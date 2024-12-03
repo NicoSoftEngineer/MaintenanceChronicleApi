@@ -32,7 +32,7 @@ public class TenantController(IMediator mediator) : Controller
     }
 
     /// <summary>
-    /// Creates a tenant with the given information
+    /// Assigns userId and ITrackable info to tenant
     /// </summary>
     /// <param name="tenantsCreatorUserId">Information that user provides</param>
     /// <returns></returns>

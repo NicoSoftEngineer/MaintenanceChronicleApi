@@ -10,9 +10,9 @@ using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Commands;
 
-public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewUserCommand>
+public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewUserCommand, Guid>
 {
-    public async Task Handle(CreateNewUserCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateNewUserCommand request, CancellationToken cancellationToken)
     {
         var newUserDto = request.NewUserDto;
         if ((await userManager.FindByEmailAsync(newUserDto.Email)) != null)
@@ -20,7 +20,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
             throw new BadRequestException(ErrorType.EmailAlreadyExists);
         }
 
-        var tenant = await dbContext.Tenants.FindAsync(newUserDto.TenantId, cancellationToken);
+        var tenant = await dbContext.Tenants.FindAsync(Guid.Parse(request.TenantId), cancellationToken);
         if (tenant == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);
@@ -28,11 +28,12 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
 
         var user = new User
         {
+            Id = Guid.NewGuid(),
             UserName = newUserDto.Email,
             Email = newUserDto.Email,
             FirstName = newUserDto.FirstName,
             LastName = newUserDto.LastName,
-            TenantId = newUserDto.TenantId,
+            TenantId = tenant.Id,
         };
         user.SetCreateBy(request.UserId, clock.GetCurrentInstant());
 
@@ -41,5 +42,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
         {
             throw new InternalServerException(result.Errors.Select(e => e.Description).ToList());
         }
+
+        return user.Id;
     }
 }

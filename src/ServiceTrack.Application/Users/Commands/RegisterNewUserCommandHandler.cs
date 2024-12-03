@@ -28,25 +28,25 @@ public class RegisterNewUserCommandHandler(UserManager<User> userManager, AppDbC
             throw new BadRequestException(ErrorType.TenantNotFound);
         }
 
-        var result = await userManager.CreateAsync(new User
+        var userEntity = new User
         {
+            Id = Guid.NewGuid(),
             FirstName = user.FirstName,
             LastName = user.LastName,
             Email = user.Email,
             UserName = user.Email,
             TenantId = tenant.Id,
-        });
+        };
+        userEntity.SetCreateBy(userEntity.Id.ToString(), clock.GetCurrentInstant());
+        var result = await userManager.CreateAsync(userEntity);
 
         if (!result.Succeeded)
         {
             throw new InternalServerException(result.Errors.Select(e => e.Description).ToList());
         }
 
-        var newUser = await dbContext.Users.FirstAsync(x => x.Email == user.Email); 
-        newUser!.SetCreateBy(newUser!.Id.ToString(), clock.GetCurrentInstant());
-
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        return newUser.Id;
+        return userEntity.Id;
     }
 }
