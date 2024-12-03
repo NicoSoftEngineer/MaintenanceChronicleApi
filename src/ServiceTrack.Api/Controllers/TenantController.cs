@@ -13,7 +13,7 @@ using TenantDetailDto = ServiceTrack.Application.Contracts.Tenants.Commands.Dto.
 namespace ServiceTrack.Api.Controllers;
 
 [ApiController]
-public class TenantController(IMediator mediator) : Controller
+public class TenantController(IMediator mediator) : ControllerBase
 {
     /// <summary>
     /// Creates a tenant with the given information

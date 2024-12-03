@@ -21,7 +21,7 @@ using ServiceTrack.Utilities.Helpers;
 namespace ServiceTrack.Api.Controllers;
 
 [ApiController]
-public class AuthController(IMediator mediator) : Controller
+public class AuthController(IMediator mediator) : ControllerBase
 {
     /// <summary>
     /// Logs in the user with the given information

@@ -10,7 +10,7 @@ using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 namespace ServiceTrack.Api.Controllers;
 
 [ApiController]
-public class UserController(IMediator mediator) : Controller
+public class UserController(IMediator mediator) : ControllerBase
 {
     /// <summary>
     /// Creates a user with the given information
