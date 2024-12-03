@@ -19,9 +19,10 @@
   <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime" Version="8.0.10" />
 </ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Entities\Business\" />
 	  <Folder Include="Interfaces\" />
 	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\ServiceTrack.Utilities\ServiceTrack.Utilities.csproj" />
-	</ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ServiceTrack.Utilities\ServiceTrack.Utilities.csproj" />
+    </ItemGroup>
 </Project>

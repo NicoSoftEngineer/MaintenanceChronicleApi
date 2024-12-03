@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Data.Entities.Business;
 using ServiceTrack.Utilities.Constants;
 using ServiceTrack.Utilities.Helpers;
 
@@ -10,6 +11,7 @@ namespace ServiceTrack.Data;
 public class AppDbContext : IdentityDbContext<User, Role, Guid, IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>
 {
     public DbSet<Tenant> Tenants { get; set; } = null!;
+    public DbSet<Customer> Customers { get; set; } = null!;
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
 
