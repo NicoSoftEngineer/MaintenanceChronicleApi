@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
@@ -6,9 +7,12 @@ using ServiceTrack.Application.Contracts.Users.Queries.Dto;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
+using ServiceTrack.Utilities.Constants;
 
 namespace ServiceTrack.Api.Controllers;
 
+//Makes endpoints accessible only for users with Admin or GlobalAdmin roles
+[Authorize(Roles = $"{RoleTypes.Admin},{RoleTypes.GlobalAdmin}")]
 [ApiController]
 public class UserController(IMediator mediator) : ControllerBase
 {
@@ -36,7 +40,7 @@ public class UserController(IMediator mediator) : ControllerBase
         );
         await mediator.Send(addRolesToUserCommand);
 
-        return NoContent();
+        return Ok(userId);
     }
 
     /// <summary>
