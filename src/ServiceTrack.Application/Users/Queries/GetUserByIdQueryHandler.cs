@@ -5,6 +5,7 @@ using ServiceTrack.Application.Contracts.Roles.Dto;
 using ServiceTrack.Application.Contracts.Users.Queries.Dto;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Data.Entities.Account;
+using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Users.Queries;
 
@@ -17,16 +18,21 @@ public class GetUserByIdQueryHandler(UserManager<User> userManager) : IRequestHa
                 .ThenInclude(x => x.Role)
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
 
+        if (user == null)
+        {
+            throw new BadRequestException(ErrorType.UserNotFound);
+        }
+
         var userDto = new UserDetailDto
         {
             Id = user.Id,
             FirstName = user.FirstName,
             LastName = user.LastName,
-            Email = user.Email,
+            Email = user.Email!,
             Roles = user.Roles.Select(r => new RoleDetailDto
             {
                 Id = r.Role.Id,
-                Name = r.Role.Name
+                Name = r.Role.Name!
             }).ToList()
         };
 
