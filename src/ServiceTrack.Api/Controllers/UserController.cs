@@ -67,7 +67,7 @@ public class UserController(IMediator mediator) : Controller
     }
 
     /// <summary>
-    /// gets a list of users
+    /// Gets a list of users
     /// </summary>
     /// <returns>List of users</returns>
     [HttpGet("api/v1/users")]
