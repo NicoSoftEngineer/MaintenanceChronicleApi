@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.JsonPatch;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,5 +34,27 @@ public class CustomerController(IMediator mediator) : ControllerBase
         var customerId = await mediator.Send(createNewCustomerDto);
 
         return Ok(customerId);
+    }
+
+    /// <summary>
+    /// Updates customer with the given information
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="customerDetailDto">Information that admin provides</param>
+    /// <returns></returns>
+    [HttpPatch("api/v1/customers/{id:guid}")]
+    public async Task<ActionResult<CustomerDetailDto>> UpdateCustomer(
+        [FromRoute] Guid id,
+        [FromBody] JsonPatchDocument<CustomerDetailDto> patch
+    )
+    {
+        var updateCustomerCommand = new UpdateCustomerCommand(
+            patch,
+            id,
+            User.GetUserId()
+        );
+        var updatedCustomer = await mediator.Send(updateCustomerCommand);
+
+        return Ok(updatedCustomer);
     }
 }
