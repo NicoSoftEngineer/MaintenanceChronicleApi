@@ -19,5 +19,7 @@ public enum ErrorType
     [ErrorMessage("Sorry your identity couldn't be accessed!")]
     InvalidIdentityCookie,
     [ErrorMessage("Sorry this role doesn't exist!")]
-    RoleNotFound
+    RoleNotFound,
+    [ErrorMessage("Sorry this customer doesn't exist!")]
+    CustomerNotFound,
 }
