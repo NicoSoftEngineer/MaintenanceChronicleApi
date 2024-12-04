@@ -7,6 +7,12 @@ using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Utilities.Error;
 using System.Net;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using NodaTime;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +30,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson();
 
 builder.Services.AddIdentity<User, Role>(options =>
     {
