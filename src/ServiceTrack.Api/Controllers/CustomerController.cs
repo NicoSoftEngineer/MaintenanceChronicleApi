@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceTrack.Application.Contracts.Customers.Commands;
 using ServiceTrack.Application.Contracts.Customers.Commands.Dto;
+using ServiceTrack.Application.Contracts.Customers.Queries.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands.Dto;
 using ServiceTrack.Application.Contracts.Users.Commands;
+using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
 using ServiceTrack.Utilities.Constants;
 
@@ -22,7 +24,7 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <param name="newCustomerDto">Information that admin provides</param>
     /// <returns>New customer id</returns>
     [HttpPost("api/v1/customers")]
-    public async Task<ActionResult<Guid>> CreateUser(
+    public async Task<ActionResult<Guid>> CreateCustomer(
         [FromBody] NewCustomerDto newCustomerDto
     )
     {
@@ -40,7 +42,7 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// Updates customer with the given information
     /// </summary>
     /// <param name="id"></param>
-    /// <param name="customerDetailDto">Information that admin provides</param>
+    /// <param name="patch">Information that admin provides</param>
     /// <returns></returns>
     [HttpPatch("api/v1/customers/{id:guid}")]
     public async Task<ActionResult<CustomerDetailDto>> UpdateCustomer(
@@ -56,5 +58,18 @@ public class CustomerController(IMediator mediator) : ControllerBase
         var updatedCustomer = await mediator.Send(updateCustomerCommand);
 
         return Ok(updatedCustomer);
+    }
+
+    /// <summary>
+    /// Updates customer with the given information
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("api/v1/customers")]
+    public async Task<ActionResult<List<CustomerDetailDto>>> GetCustomerList()
+    {
+        var getCustomerListQuery = new GetListOfEntityQuery<CustomerInListDto>();
+        var customers = await mediator.Send(getCustomerListQuery);
+
+        return Ok(customers);
     }
 }
