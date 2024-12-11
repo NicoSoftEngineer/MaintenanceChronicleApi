@@ -21,7 +21,7 @@ public class UpdateCustomerCommandHandler(AppDbContext dbContext, IClock clock) 
         }
         var patch = request.Patch;
 
-        var customerMapped = customerEntity.ToCustomerDetailDto();
+        var customerMapped = customerEntity.ToManageCustomerDetailDto();
         request.Patch.ApplyTo(customerMapped);
 
         customerEntity.Name = customerMapped.Name;

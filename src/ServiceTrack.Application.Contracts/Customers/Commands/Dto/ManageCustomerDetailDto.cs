@@ -8,9 +8,9 @@ public class ManageCustomerDetailDto
     public required string Name{ get; set; }
 }
 
-public static class CustomerDetailDtoExtensions
+public static class ManageCustomerDetailDtoExtensions
 {
-    public static ManageCustomerDetailDto ToCustomerDetailDto(this Customer customer)
+    public static ManageCustomerDetailDto ToManageCustomerDetailDto(this Customer customer)
     {
         return new ManageCustomerDetailDto
         {

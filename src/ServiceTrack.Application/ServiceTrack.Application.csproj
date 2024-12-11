@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Customers\Commands\" />
-    <Folder Include="Customers\Queries\" />
     <Folder Include="Tenants\Queries\" />
     <Folder Include="Users\Queries\" />
     <Folder Include="UserTenant\Commands\" />
