@@ -26,7 +26,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
+//TODO: Fix pipeline, to have authentication before dbcontext
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -34,7 +34,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     {
         optionsBuilder.UseNodaTime();
     });
-    options.EnableServiceProviderCaching(false);
 });
 
 //Use PATCH endpoints

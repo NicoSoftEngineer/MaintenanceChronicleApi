@@ -12,24 +12,25 @@ namespace ServiceTrack.Data;
 public class AppDbContext : IdentityDbContext<User, Role, Guid, IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>
 {
     private readonly Guid tenantId;
+    private readonly ICurrentTenantProvider currentTenantProvider;
     public DbSet<Tenant> Tenants { get; set; } = null!;
     public DbSet<Customer> Customers { get; set; } = null!;
 
     public AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenantProvider currentTenantProvider) : base(options)
     {
-        tenantId = currentTenantProvider!.TenantId;
+        this.currentTenantProvider = currentTenantProvider;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-         if (tenantId != Guid.Empty)
+         //if (currentTenantProvider.TenantId != Guid.Empty)
          {
-            modelBuilder.Entity<Customer>().HasQueryFilter(b => b.TenantId == tenantId);
-            modelBuilder.Entity<User>().HasQueryFilter(b => b.TenantId == tenantId);
-            modelBuilder.Entity<UserRole>().HasQueryFilter(b => b.TenantId == tenantId);
-            modelBuilder.Entity<Tenant>().HasQueryFilter(b => b.Id == tenantId);
+            modelBuilder.Entity<Customer>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
+            modelBuilder.Entity<User>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
+            modelBuilder.Entity<UserRole>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
+            modelBuilder.Entity<Tenant>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId);
          }
 
         modelBuilder.Entity<UserRole>()
