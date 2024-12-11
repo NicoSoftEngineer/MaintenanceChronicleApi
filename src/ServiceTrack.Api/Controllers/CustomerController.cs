@@ -10,6 +10,7 @@ using ServiceTrack.Application.Contracts.Users.Commands;
 using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
 using ServiceTrack.Utilities.Constants;
+using ServiceTrack.Application.Contracts.Users.Queries.Dto;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -45,9 +46,9 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <param name="patch">Information that admin provides</param>
     /// <returns></returns>
     [HttpPatch("api/v1/customers/{id:guid}")]
-    public async Task<ActionResult<CustomerDetailDto>> UpdateCustomer(
+    public async Task<ActionResult<ManageCustomerDetailDto>> UpdateCustomer(
         [FromRoute] Guid id,
-        [FromBody] JsonPatchDocument<CustomerDetailDto> patch
+        [FromBody] JsonPatchDocument<ManageCustomerDetailDto> patch
     )
     {
         var updateCustomerCommand = new UpdateCustomerCommand(
@@ -65,11 +66,27 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <returns></returns>
     [HttpGet("api/v1/customers")]
-    public async Task<ActionResult<List<CustomerDetailDto>>> GetCustomerList()
+    public async Task<ActionResult<List<ManageCustomerDetailDto>>> GetCustomerList()
     {
         var getCustomerListQuery = new GetListOfEntityQuery<CustomerInListDto>();
         var customers = await mediator.Send(getCustomerListQuery);
 
         return Ok(customers);
+    }
+
+    /// <summary>
+    /// Gets a specific customer by id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>customer</returns>
+    [HttpGet("api/v1/customers/{id:guid}")]
+    public async Task<ActionResult> GetCustomer(
+        [FromRoute] Guid id
+    )
+    {
+        var customerQuery = new GetEntityByIdQuery<CustomerDetailDto>(id);
+        var customer = await mediator.Send(customerQuery);
+
+        return Ok(customer);
     }
 }

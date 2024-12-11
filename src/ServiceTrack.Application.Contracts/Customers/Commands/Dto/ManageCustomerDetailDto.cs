@@ -2,7 +2,7 @@ using ServiceTrack.Data.Entities.Business;
 
 namespace ServiceTrack.Application.Contracts.Customers.Commands.Dto;
 
-public class CustomerDetailDto
+public class ManageCustomerDetailDto
 {
     public Guid Id { get; set; }
     public required string Name{ get; set; }
@@ -10,21 +10,21 @@ public class CustomerDetailDto
 
 public static class CustomerDetailDtoExtensions
 {
-    public static CustomerDetailDto ToCustomerDetailDto(this Customer customer)
+    public static ManageCustomerDetailDto ToCustomerDetailDto(this Customer customer)
     {
-        return new CustomerDetailDto
+        return new ManageCustomerDetailDto
         {
             Id = customer.Id,
             Name = customer.Name
         };
     }
 
-    public static Customer ToCustomerEntity(this CustomerDetailDto customerDto)
+    public static Customer ToCustomerEntity(this ManageCustomerDetailDto manageCustomerDto)
     {
         return new Customer
         {
-            Id = customerDto.Id,
-            Name = customerDto.Name
+            Id = manageCustomerDto.Id,
+            Name = manageCustomerDto.Name
         };
     }
 }

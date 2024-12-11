@@ -10,9 +10,9 @@ using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Customers.Commands;
 
-public class UpdateCustomerCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateCustomerCommand, CustomerDetailDto>
+public class UpdateCustomerCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateCustomerCommand, ManageCustomerDetailDto>
 {
-    public async Task<CustomerDetailDto> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
+    public async Task<ManageCustomerDetailDto> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
     {
         var customerEntity = await dbContext.Customers.FirstOrDefaultAsync(x => x.Id == request.CustomerId, cancellationToken);
         if (customerEntity == null)
