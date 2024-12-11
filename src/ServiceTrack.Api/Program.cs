@@ -9,10 +9,14 @@ using ServiceTrack.Utilities.Error;
 using System.Net;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 using NodaTime;
+using ServiceTrack.Api.Utils;
+using ServiceTrack.Utilities.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,18 +25,23 @@ var builder = WebApplication.CreateBuilder(args);
 //});
 
 // Add services to the container.
+
+
+//DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
     {
         optionsBuilder.UseNodaTime();
     });
-
+    options.EnableServiceProviderCaching(false);
 });
 
+//Use PATCH endpoints
 builder.Services.AddControllers()
     .AddNewtonsoftJson();
 
+//Identity
 builder.Services.AddIdentity<User, Role>(options =>
     {
         options.User.RequireUniqueEmail = true;
@@ -42,12 +51,20 @@ builder.Services.AddIdentity<User, Role>(options =>
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
+//These services are needed fot the ICurrentTenantProvider
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddDataProtection();
+
+//Method for global filter into db
+builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
+
 //MediatR
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
 });
 
+//Clock
 builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

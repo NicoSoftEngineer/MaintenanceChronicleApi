@@ -5,21 +5,32 @@ using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Data.Entities.Business;
 using ServiceTrack.Utilities.Constants;
 using ServiceTrack.Utilities.Helpers;
+using System.Reflection.Metadata;
 
 namespace ServiceTrack.Data;
 
 public class AppDbContext : IdentityDbContext<User, Role, Guid, IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>
 {
+    private readonly Guid tenantId;
     public DbSet<Tenant> Tenants { get; set; } = null!;
     public DbSet<Customer> Customers { get; set; } = null!;
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
 
+    public AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenantProvider currentTenantProvider) : base(options)
+    {
+        tenantId = currentTenantProvider!.TenantId;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+         if (tenantId != Guid.Empty)
+         {
+            modelBuilder.Entity<Customer>().HasQueryFilter(b => b.TenantId == tenantId);
+            modelBuilder.Entity<User>().HasQueryFilter(b => b.TenantId == tenantId);
+            modelBuilder.Entity<UserRole>().HasQueryFilter(b => b.TenantId == tenantId);
+            modelBuilder.Entity<Tenant>().HasQueryFilter(b => b.Id == tenantId);
+         }
 
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
