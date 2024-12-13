@@ -193,7 +193,7 @@ namespace ServiceTrack.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tenant");
+                    b.ToTable("Tenant", (string)null);
                 });
 
             modelBuilder.Entity("ServiceTrack.Data.Entities.Account.User", b =>
@@ -371,7 +371,7 @@ namespace ServiceTrack.Data.Migrations
 
                     b.HasIndex("TenantId");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customer", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

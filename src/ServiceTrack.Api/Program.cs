@@ -25,6 +25,15 @@ var builder = WebApplication.CreateBuilder(args);
 //});
 
 // Add services to the container.
+//These services are needed fot the ICurrentTenantProvider
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddDataProtection();
+
+//Method for global filter into db
+builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
+
+
+builder.Services.AddAuthentication();
 
 //TODO: Fix pipeline, to have authentication before dbcontext
 //DbContext
@@ -49,13 +58,6 @@ builder.Services.AddIdentity<User, Role>(options =>
     .AddEntityFrameworkStores<AppDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
-
-//These services are needed fot the ICurrentTenantProvider
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddDataProtection();
-
-//Method for global filter into db
-builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
 
 //MediatR
 builder.Services.AddMediatR(cfg =>
