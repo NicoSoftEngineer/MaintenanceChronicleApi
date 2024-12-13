@@ -12,7 +12,7 @@ public interface ITrackable
     public Instant? DeletedAt { get; set; }
     public string? DeletedBy { get; set; }
 }
-public static class ITrackableExtensions
+public static class TrackableExtensions
 {
     private const string SYSTEM = "System";
 

@@ -21,7 +21,7 @@ using ServiceTrack.Utilities.Helpers;
 namespace ServiceTrack.Api.Controllers;
 
 [ApiController]
-public class AuthController(IMediator mediator) : Controller
+public class AuthController(IMediator mediator) : ControllerBase
 {
     /// <summary>
     /// Logs in the user with the given information
@@ -105,7 +105,21 @@ public class AuthController(IMediator mediator) : Controller
     )
     {
         var registerNewUserCommand = new RegisterUserAndTenantCommand(userTenantDto);
-        await mediator.Send(registerNewUserCommand);
+        var result = await mediator.Send(registerNewUserCommand);
+
+        var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
+        var adminRole = await mediator.Send(getRoleByNameCommand);
+
+        var addRolesToUserCommand = new AddRolesToUserCommand(
+            new UserRolesDto
+            {
+                UserId = result.UserId,
+                RoleIds = new Guid[1] { adminRole.Id }
+            },
+            result.UserId.ToString(),
+            result.TenantId.ToString()
+        );
+        await mediator.Send(addRolesToUserCommand);
 
         return NoContent();
     }

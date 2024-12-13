@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NodaTime;
 using ServiceTrack.Application.Contracts.UserTenant.Commands;
+using ServiceTrack.Application.Contracts.UserTenant.Commands.Dto;
 using ServiceTrack.Data;
 using ServiceTrack.Data.Entities.Account;
 using ServiceTrack.Data.Interfaces;
@@ -10,9 +11,9 @@ using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.UserTenant.Commands;
 
-public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<RegisterUserAndTenantCommand>
+public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<RegisterUserAndTenantCommand, UserTenantIdsDto>
 {
-    public async Task Handle(RegisterUserAndTenantCommand request, CancellationToken cancellationToken)
+    public async Task<UserTenantIdsDto> Handle(RegisterUserAndTenantCommand request, CancellationToken cancellationToken)
     {
         using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
         try
@@ -37,7 +38,7 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
             }
 
             var userEntity = new User
-            {
+            { 
                 Id = Guid.NewGuid(),
                 FirstName = userTenant.FirstName,
                 LastName = userTenant.LastName,
@@ -59,6 +60,12 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
             await userManager.AddPasswordAsync(userEntity, userTenant.Password);
 
             await transaction.CommitAsync(cancellationToken);
+
+            return new UserTenantIdsDto
+            {
+                UserId = userEntity.Id,
+                TenantId = tenant.Id
+            };
         }
         catch (Exception ex)
         {
