@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using ServiceTrack.Application.Contracts.Locations.Commands;
 using ServiceTrack.Application.Contracts.Locations.Commands.Dto;
 using ServiceTrack.Utilities.Constants;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -34,5 +35,27 @@ public class LocationController(IMediator mediator) : ControllerBase
         var locationId = await mediator.Send(createNewLocationCommand);
 
         return Ok(locationId);
+    }
+
+    /// <summary>
+    /// Updates customer with the given information
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="patch">Information that admin provides</param>
+    /// <returns></returns>
+    [HttpPatch("api/v1/locations/{id:guid}")]
+    public async Task<ActionResult<ManageLocationDetailDto>> UpdateLocation(
+        [FromRoute] Guid id,
+        [FromBody] JsonPatchDocument<ManageLocationDetailDto> patch
+    )
+    {
+        var updateLocationCommand = new UpdateLocationCommand(
+            patch,
+            id,
+            User.GetUserId()
+        );
+        var updatedLocation = await mediator.Send(updateLocationCommand);
+
+        return Ok(updatedLocation);
     }
 }
