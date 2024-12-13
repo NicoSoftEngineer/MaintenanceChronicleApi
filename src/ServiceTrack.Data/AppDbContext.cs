@@ -20,10 +20,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Customer>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
-        modelBuilder.Entity<User>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
-        modelBuilder.Entity<UserRole>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId);
-        modelBuilder.Entity<Tenant>().HasQueryFilter(b => currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId);
+        modelBuilder.Entity<Customer>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<User>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<UserRole>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<Tenant>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId) && b.DeletedAt == null);
 
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
