@@ -11,6 +11,8 @@ using ServiceTrack.Application.Contracts.Utils.Queries;
 using ServiceTrack.Utilities.Helpers;
 using ServiceTrack.Utilities.Constants;
 using ServiceTrack.Application.Contracts.Users.Queries.Dto;
+using ServiceTrack.Application.Contracts.Utils.Commands;
+using ServiceTrack.Data.Entities.Business;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -88,5 +90,21 @@ public class CustomerController(IMediator mediator) : ControllerBase
         var customer = await mediator.Send(customerQuery);
 
         return Ok(customer);
+    }
+
+    /// <summary>
+    /// Deletes a specific customer by id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>customer</returns>
+    [HttpDelete("api/v1/customers/{id:guid}")]
+    public async Task<ActionResult> DeleteCustomer(
+        [FromRoute] Guid id
+    )
+    {
+        var deleteCommand = new DeleteEntityByIdCommand<Customer>(id, User.GetUserId());
+        await mediator.Send(deleteCommand);
+
+        return NoContent();
     }
 }
