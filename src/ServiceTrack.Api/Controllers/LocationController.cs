@@ -62,7 +62,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
-    /// 
+    /// Gets the list of locations
     /// </summary>
     /// <returns></returns>
     [HttpGet("/api/v1/locations")]
@@ -72,5 +72,19 @@ public class LocationController(IMediator mediator) : ControllerBase
         var locationList = await mediator.Send(getLocationsQuery);
 
         return Ok(locationList);
+    }
+
+    /// <summary>
+    /// Get location by id
+    /// </summary>
+    /// <param name="id">Id that user provides</param>
+    /// <returns></returns>
+    [HttpGet("/api/v1/location/{id:guid}")]
+    public async Task<ActionResult<List<LocationDetailDto>>> GetLocation(Guid id)
+    {
+        var getLocationQuery = new GetEntityByIdQuery<LocationDetailDto>(id);
+        var location = await mediator.Send(getLocationQuery);
+
+        return Ok(location);
     }
 }
