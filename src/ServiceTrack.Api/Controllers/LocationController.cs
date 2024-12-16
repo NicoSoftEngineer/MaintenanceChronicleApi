@@ -10,7 +10,9 @@ using ServiceTrack.Application.Contracts.Locations.Commands.Dto;
 using ServiceTrack.Utilities.Constants;
 using Microsoft.AspNetCore.JsonPatch;
 using ServiceTrack.Application.Contracts.Locations.Queries.Dto;
+using ServiceTrack.Application.Contracts.Utils.Commands;
 using ServiceTrack.Application.Contracts.Utils.Queries;
+using ServiceTrack.Data.Entities.Business;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -86,5 +88,14 @@ public class LocationController(IMediator mediator) : ControllerBase
         var location = await mediator.Send(getLocationQuery);
 
         return Ok(location);
+    }
+
+    [HttpDelete("/api/v1/location/{id:guid}")]
+    public async Task<ActionResult> DeleteLocation(Guid id)
+    {
+        var deleteCommand = new DeleteEntityByIdCommand<Location>(id, User.GetUserId());
+        await mediator.Send(deleteCommand);
+
+        return NoContent();
     }
 }
