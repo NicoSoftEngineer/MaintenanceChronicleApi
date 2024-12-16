@@ -9,6 +9,8 @@ using ServiceTrack.Application.Contracts.Locations.Commands;
 using ServiceTrack.Application.Contracts.Locations.Commands.Dto;
 using ServiceTrack.Utilities.Constants;
 using Microsoft.AspNetCore.JsonPatch;
+using ServiceTrack.Application.Contracts.Locations.Queries.Dto;
+using ServiceTrack.Application.Contracts.Utils.Queries;
 
 namespace ServiceTrack.Api.Controllers;
 
@@ -57,5 +59,18 @@ public class LocationController(IMediator mediator) : ControllerBase
         var updatedLocation = await mediator.Send(updateLocationCommand);
 
         return Ok(updatedLocation);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("/api/v1/locations")]
+    public async Task<ActionResult<List<LocationInListDto>>> GetLocationList()
+    {
+        var getLocationsQuery = new GetListOfEntityQuery<LocationInListDto>();
+        var locationList = await mediator.Send(getLocationsQuery);
+
+        return Ok(locationList);
     }
 }

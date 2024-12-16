@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Locations\Queries\" />
+        <Folder Include="Locations\Queries\Dto\" />
         <Folder Include="Users\Queries\Dto\" />
     </ItemGroup>
 </Project>
