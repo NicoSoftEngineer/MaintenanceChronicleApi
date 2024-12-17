@@ -90,6 +90,11 @@ public class LocationController(IMediator mediator) : ControllerBase
         return Ok(location);
     }
 
+    /// <summary>
+    /// Delete the specified location
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete("/api/v1/location/{id:guid}")]
     public async Task<ActionResult> DeleteLocation(Guid id)
     {
