@@ -25,8 +25,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
         modelBuilder.Entity<UserRole>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<Tenant>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<Customer>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
-        modelBuilder.Entity<Location>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId) && b.DeletedAt == null);
-        modelBuilder.Entity<LocationContactUser>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<Location>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<LocationContactUser>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
 
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
