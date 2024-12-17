@@ -9,6 +9,8 @@ using ServiceTrack.Application.Contracts.Locations.Commands;
 using ServiceTrack.Application.Contracts.Locations.Commands.Dto;
 using ServiceTrack.Utilities.Constants;
 using Microsoft.AspNetCore.JsonPatch;
+using ServiceTrack.Application.Contracts.LocationContactUsers.Queries;
+using ServiceTrack.Application.Contracts.LocationContactUsers.Queries.Dto;
 using ServiceTrack.Application.Contracts.Locations.Queries.Dto;
 using ServiceTrack.Application.Contracts.Utils.Commands;
 using ServiceTrack.Application.Contracts.Utils.Queries;
@@ -104,6 +106,11 @@ public class LocationController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Adds contact to Location
+    /// </summary>
+    /// <param name="contactsToLocationDto"></param>
+    /// <returns></returns>
     [HttpPost("/api/v1/location/contacts")]
     public async Task<ActionResult> AssignContactsToLocation(AssignContactsToLocationDto contactsToLocationDto)
     {
@@ -112,5 +119,19 @@ public class LocationController(IMediator mediator) : ControllerBase
         await mediator.Send(assignCommand);
 
         return NoContent();
+    }
+
+    /// <summary>
+    /// Gets contacts for specified location
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    [HttpGet("/api/v1/location/{id:guid}/contacts")]
+    public async Task<ActionResult<List<LocationContactInListDto>>> GetContactsForLocation([FromRoute] Guid id)
+    {
+        var getContactsQuery = new GetListOfContactsForLocationQuery(id);
+        var contacts = await mediator.Send(getContactsQuery);
+
+        return Ok(contacts);
     }
 }
