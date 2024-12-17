@@ -15,11 +15,6 @@ public class CreateNewLocationCommandHandler(AppDbContext dbContext, IClock cloc
 {
     public async Task<Guid> Handle(CreateNewLocationCommand request, CancellationToken cancellationToken)
     {
-        if (!await dbContext.ValidateUserTenantAccess(request.UserId, request.TenantId))
-        {
-            throw new BadRequestException(ErrorType.UserNotInTenant);
-        }
-
         var customer = await dbContext.Customers
             .FirstOrDefaultAsync(c => c.Id == request.LocationDto.CustomerId, cancellationToken);
         if (customer == null) {
