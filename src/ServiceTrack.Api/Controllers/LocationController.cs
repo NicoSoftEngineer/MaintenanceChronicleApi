@@ -103,4 +103,14 @@ public class LocationController(IMediator mediator) : ControllerBase
 
         return NoContent();
     }
+
+    [HttpPost("/api/v1/location/contacts")]
+    public async Task<ActionResult> AssignContactsToLocation(AssignContactsToLocationDto contactsToLocationDto)
+    {
+        var assignCommand =
+            new AssignContactsToLocationCommand(contactsToLocationDto, User.GetUserId(), User.GetTenantId());
+        await mediator.Send(assignCommand);
+
+        return NoContent();
+    }
 }
