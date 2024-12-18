@@ -109,13 +109,14 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Adds contact to Location
     /// </summary>
+    /// <param name="id"></param>
     /// <param name="contactsInLocationDto"></param>
     /// <returns></returns>
-    [HttpPost("/api/v1/location/contacts")]
-    public async Task<ActionResult> AssignContactsToLocation(ContactsInLocationDto contactsInLocationDto)
+    [HttpPost("/api/v1/location/{id:guid}/contacts")]
+    public async Task<ActionResult> ManageContactsToLocation([FromRoute] Guid id,[FromBody]ContactsInLocationDto contactsInLocationDto)
     {
         var assignCommand =
-            new AssignContactsToLocationCommand(contactsInLocationDto, User.GetUserId(), User.GetTenantId());
+            new ManageContactsInLocationCommand(id, contactsInLocationDto, User.GetUserId(), User.GetTenantId());
         await mediator.Send(assignCommand);
 
         return NoContent();
