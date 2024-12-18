@@ -1,0 +1,6 @@
+@MaintenanceChronicleApi_HostAddress = http://localhost:5209
+
+GET {{MaintenanceChronicleApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
