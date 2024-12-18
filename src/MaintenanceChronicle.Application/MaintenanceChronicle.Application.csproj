@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Customers\Commands\" />
+    <Folder Include="Tenants\Queries\" />
+    <Folder Include="Users\Queries\" />
+    <Folder Include="UserTenant\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaintenanceChronicle.Application.Contracts\MaintenanceChronicle.Application.Contracts.csproj" />
+    <ProjectReference Include="..\MaintenanceChronicle.Data\MaintenanceChronicle.Data.csproj" />
+  </ItemGroup>
+
+</Project>
