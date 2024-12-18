@@ -15,13 +15,13 @@ public class AssignContactsToLocationCommandHandler(AppDbContext dbContext, IClo
     {
         var location = await dbContext.Locations
             .Include(l => l.Contacts)
-            .FirstOrDefaultAsync(l => l.Id == request.ContactsToLocationDto.LocationId, cancellationToken);
+            .FirstOrDefaultAsync(l => l.Id == request.ContactsInLocationDto.LocationId, cancellationToken);
         if (location == null)
         {
             throw new BadRequestException(ErrorType.LocationNotFound);
         }
 
-        foreach (var contactId in request.ContactsToLocationDto.ContactIds)
+        foreach (var contactId in request.ContactsInLocationDto.ContactIds)
         {
             var user = await dbContext.Users.FindAsync(new object[] { contactId }, cancellationToken);
             if (user == null)

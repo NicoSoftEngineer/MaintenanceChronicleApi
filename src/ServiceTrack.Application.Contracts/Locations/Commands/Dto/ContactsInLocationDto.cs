@@ -1,6 +1,6 @@
 namespace ServiceTrack.Application.Contracts.Locations.Commands.Dto;
 
-public class AssignContactsToLocationDto
+public class ContactsInLocationDto
 {
     public Guid LocationId { get; set; }
     public Guid[] ContactIds { get; set; }
