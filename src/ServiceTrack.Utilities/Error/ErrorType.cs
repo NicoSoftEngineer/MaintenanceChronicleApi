@@ -22,4 +22,8 @@ public enum ErrorType
     RoleNotFound,
     [ErrorMessage("Sorry this customer doesn't exist!")]
     CustomerNotFound,
+    [ErrorMessage("Sorry you don't have access to this tenant!")]
+    UserNotInTenant,
+    [ErrorMessage("Sorry this location doesn't exist!")]
+    LocationNotFound
 }

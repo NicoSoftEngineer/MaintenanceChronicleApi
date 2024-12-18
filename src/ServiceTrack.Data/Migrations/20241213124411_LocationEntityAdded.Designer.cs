@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -12,9 +13,11 @@ using ServiceTrack.Data;
 namespace ServiceTrack.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241213124411_LocationEntityAdded")]
+    partial class LocationEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -431,52 +434,6 @@ namespace ServiceTrack.Data.Migrations
                     b.ToTable("Location");
                 });
 
-            modelBuilder.Entity("ServiceTrack.Data.Entities.Business.LocationContactUser", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Instant>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Instant?>("DeletedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("LocationId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Instant>("ModifiedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ModifiedBy")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("TenantId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LocationId");
-
-                    b.HasIndex("TenantId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("LocationContactUser");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("ServiceTrack.Data.Entities.Account.Role", null)
@@ -581,33 +538,6 @@ namespace ServiceTrack.Data.Migrations
                     b.Navigation("Tenant");
                 });
 
-            modelBuilder.Entity("ServiceTrack.Data.Entities.Business.LocationContactUser", b =>
-                {
-                    b.HasOne("ServiceTrack.Data.Entities.Business.Location", "Location")
-                        .WithMany("Contacts")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ServiceTrack.Data.Entities.Account.Tenant", "Tenant")
-                        .WithMany()
-                        .HasForeignKey("TenantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ServiceTrack.Data.Entities.Account.User", "User")
-                        .WithMany("Locations")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Location");
-
-                    b.Navigation("Tenant");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("ServiceTrack.Data.Entities.Account.Role", b =>
                 {
                     b.Navigation("Users");
@@ -615,19 +545,12 @@ namespace ServiceTrack.Data.Migrations
 
             modelBuilder.Entity("ServiceTrack.Data.Entities.Account.User", b =>
                 {
-                    b.Navigation("Locations");
-
                     b.Navigation("Roles");
                 });
 
             modelBuilder.Entity("ServiceTrack.Data.Entities.Business.Customer", b =>
                 {
                     b.Navigation("Locations");
-                });
-
-            modelBuilder.Entity("ServiceTrack.Data.Entities.Business.Location", b =>
-                {
-                    b.Navigation("Contacts");
                 });
 #pragma warning restore 612, 618
         }

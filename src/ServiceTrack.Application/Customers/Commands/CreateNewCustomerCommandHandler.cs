@@ -11,8 +11,6 @@ public class CreateNewCustomerCommandHandler(AppDbContext dbContext, IClock cloc
 {
     public async Task<Guid> Handle(CreateNewCustomerCommand request, CancellationToken cancellationToken)
     {
-        //TODO: Add validation if user and tenant exist, and if user has access to tenant
-
         var customerDto = request.NewCustomer;
         var customer = new Customer
         {

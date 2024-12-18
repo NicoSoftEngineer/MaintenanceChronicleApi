@@ -17,6 +17,7 @@ using Microsoft.Extensions.Configuration;
 using NodaTime;
 using ServiceTrack.Api.Utils;
 using ServiceTrack.Utilities.Helpers;
+using ServiceTrack.Application.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -68,6 +69,10 @@ builder.Services.AddMediatR(cfg =>
 //Clock
 builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
+//Registering middleware to validate if user has access to tenant
+builder.Services.AddScoped<UserTenantValidationMiddleware>();
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -86,15 +91,17 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
 
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseMiddleware<UserTenantValidationMiddleware>();
 app.UseMiddleware<ExceptionMiddleware>();
 
 //app.UseHttpsRedirection();
 
-app.UseAuthentication();
-app.UseAuthorization();
-
 app.MapControllers();
 
+//Testing purposes
 app.MapGet("/", () => "This page wooooooorks");
 
 app.Run();

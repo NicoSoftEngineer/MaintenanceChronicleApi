@@ -7,7 +7,7 @@ using ServiceTrack.Utilities.Error;
 
 namespace ServiceTrack.Application.Customers.Queries;
 
-public class GetCustomerByIdCommandHandler(AppDbContext dbContext) : IRequestHandler<GetEntityByIdQuery<CustomerDetailDto>, CustomerDetailDto>
+public class GetCustomerByIdQueryHandler(AppDbContext dbContext) : IRequestHandler<GetEntityByIdQuery<CustomerDetailDto>, CustomerDetailDto>
 {
     public async Task<CustomerDetailDto> Handle(GetEntityByIdQuery<CustomerDetailDto> request,
         CancellationToken cancellationToken)
