@@ -1,6 +1,7 @@
 using MaintenanceChronicle.Application.Contracts.Customers.Commands;
 using MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Locations.Queries;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Business;
@@ -103,5 +104,19 @@ public class CustomerController(IMediator mediator) : ControllerBase
         await mediator.Send(deleteCommand);
 
         return NoContent();
+    }
+
+    /// <summary>
+    /// Gets list of locations for the specified customer
+    /// </summary>
+    /// <param name="id">[Guid] customer id</param>
+    /// <returns>List of locations</returns>
+    [HttpGet("api/v1/customers/{id:guid}/locations")]
+    public async Task<ActionResult> GetLocationsForCustomer([FromRoute] Guid id)
+    {
+        var locationsQuery = new GetLocationsForCustomerQuery(id);
+        var locations = await mediator.Send(locationsQuery);
+
+        return Ok(locations);
     }
 }
