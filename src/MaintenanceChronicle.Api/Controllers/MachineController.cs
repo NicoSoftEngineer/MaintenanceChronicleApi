@@ -1,4 +1,7 @@
+using MaintenanceChronicle.Application.Contracts.Machines.Commands;
+using MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto;
 using MaintenanceChronicle.Utilities.Constants;
+using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -12,8 +15,11 @@ namespace MaintenanceChronicle.Api.Controllers;
 public class MachineController(IMediator mediator) : ControllerBase
 {
     [HttpPost("/api/v1/machines")]
-    public async Task CreateMachine([FromBody] object newMachineDetail)
+    public async Task<ActionResult<Guid>> CreateMachine([FromBody] NewMachineDto newMachineDetail)
     {
+        var createCommand = new CreateNewMachineCommand(newMachineDetail, User.GetUserId(), User.GetTenantId());
+        var machineId = await mediator.Send(createCommand);
 
+        return Ok(machineId);
     }
 }
