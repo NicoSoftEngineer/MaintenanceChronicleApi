@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Customers\Commands\" />
+    <Folder Include="Machines\Queries\Dto\" />
     <Folder Include="Tenants\Queries\" />
     <Folder Include="Users\Queries\" />
     <Folder Include="UserTenant\Commands\" />

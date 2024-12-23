@@ -25,5 +25,7 @@ public enum ErrorType
     [ErrorMessage("Sorry you don't have access to this tenant!")]
     UserNotInTenant,
     [ErrorMessage("Sorry this location doesn't exist!")]
-    LocationNotFound
+    LocationNotFound,
+    [ErrorMessage("Sorry this machine doesn't exist!")]
+    MachineNotFound
 }
