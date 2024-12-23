@@ -3,6 +3,7 @@ using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Utilities.Error;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
 namespace MaintenanceChronicle.Application.Machines.Queries;
@@ -19,5 +20,18 @@ public class GetMachineByIdQueryHandler(AppDbContext dbContext) : IRequestHandle
         }
 
         return machine.ToMachineDetailDto();
+    }
+}
+public class GetListOfMachinesQueryHandler(AppDbContext dbContext) : IRequestHandler<GetListOfEntityQuery<MachineInListDto>, List<MachineInListDto>>
+{
+    public async Task<List<MachineInListDto>> Handle(GetListOfEntityQuery<MachineInListDto> request,
+        CancellationToken cancellationToken)
+    {
+        var machines = await dbContext.Machines
+            .Include(m => m.Location)
+            .Select(m => m.ToMachineInListDto())
+            .ToListAsync(cancellationToken: cancellationToken);
+
+        return machines;
     }
 }

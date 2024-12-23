@@ -43,4 +43,17 @@ public class MachineController(IMediator mediator) : ControllerBase
 
         return Ok(machine);
     }
+
+    /// <summary>
+    /// Gets list of machines
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("/api/v1/machines")]
+    public async Task<ActionResult<List<MachineInListDto>>> GetMachineList()
+    {
+        var query = new GetListOfEntityQuery<MachineInListDto>();
+        var machines = await mediator.Send(query);
+
+        return Ok(machines);
+    }
 }

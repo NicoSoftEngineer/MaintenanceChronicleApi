@@ -13,7 +13,7 @@ public class MachineDetailDto
     public Instant InUseSince { get; set; }
 }
 
-public static class MachineDetailDtoExtensio
+public static class MachineDetailDtoExtension
 {
     public static MachineDetailDto ToMachineDetailDto(this Machine entity) => new MachineDetailDto
     {
