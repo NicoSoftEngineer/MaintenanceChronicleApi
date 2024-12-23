@@ -1,8 +1,10 @@
 using MaintenanceChronicle.Application.Contracts.Machines.Commands;
 using MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Application.Machines.Commands;
+using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
@@ -45,6 +47,20 @@ public class MachineController(IMediator mediator) : ControllerBase
         var result = await mediator.Send(command);
 
         return Ok(result);
+    }
+
+    /// <summary>
+    /// Soft deletes machine by specified id
+    /// </summary>
+    /// <param name="id">User specified machine id</param>
+    /// <returns></returns>
+    [HttpDelete("/api/v1/machines/{id:guid}")]
+    public async Task<ActionResult> DeleteMachine([FromRoute] Guid id)
+    {
+        var command = new DeleteEntityByIdCommand<Machine>(id, User.GetUserId());
+        await mediator.Send(command);
+
+        return Ok();
     }
 
     /// <summary>
