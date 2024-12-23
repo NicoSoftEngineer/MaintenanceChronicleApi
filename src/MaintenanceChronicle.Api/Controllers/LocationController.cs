@@ -3,6 +3,8 @@ using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dt
 using MaintenanceChronicle.Application.Contracts.Locations.Commands;
 using MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Machines.Queries;
+using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Business;
@@ -131,5 +133,19 @@ public class LocationController(IMediator mediator) : ControllerBase
         var contacts = await mediator.Send(getContactsQuery);
 
         return Ok(contacts);
+    }
+
+    /// <summary>
+    /// Gets list of machines for the specified location
+    /// </summary>
+    /// <param name="id">User specified location id</param>
+    /// <returns>List of machines</returns>
+    [HttpGet("/api/v1/location/{id:guid}/machines")]
+    public async Task<ActionResult<List<MachineInListForLocationDto>>> GetMachinesForLocation([FromRoute] Guid id)
+    {
+        var query = new GetMachinesForLocationQuery(id);
+        var machines = await mediator.Send(query);
+
+        return Ok(machines);
     }
 }
