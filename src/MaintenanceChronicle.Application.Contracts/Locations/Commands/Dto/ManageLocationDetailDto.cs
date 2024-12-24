@@ -9,7 +9,6 @@ public class ManageLocationDetailDto
     public required string Street { get; set; }
     public required string City { get; set; }
     public required string Country { get; set; }
-    public Guid CustomerId { get; set; }
 }
 
 public static class ManageLocationDetailDtoExtension
@@ -23,7 +22,6 @@ public static class ManageLocationDetailDtoExtension
             Street = location.Street,
             City = location.City,
             Country = location.Country,
-            CustomerId = location.CustomerId
         };
     }
     public static void MapToEntity(this ManageLocationDetailDto manageLocationDetailDto, Location target)
@@ -33,6 +31,5 @@ public static class ManageLocationDetailDtoExtension
         target.Street = manageLocationDetailDto.Street;
         target.City = manageLocationDetailDto.City;
         target.Country = manageLocationDetailDto.Country;
-        target.CustomerId = manageLocationDetailDto.CustomerId;
     }
 }

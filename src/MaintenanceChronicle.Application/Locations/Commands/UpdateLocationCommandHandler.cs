@@ -12,7 +12,7 @@ public class UpdateLocationCommandHandler(AppDbContext dbContext, IClock clock) 
 {
     public async Task<ManageLocationDetailDto> Handle(UpdateLocationCommand request, CancellationToken cancellationToken)
     {
-        var locationEntity = await dbContext.Locations.FindAsync(request.LocationId, cancellationToken);
+        var locationEntity = await dbContext.Locations.FindAsync([request.LocationId], cancellationToken);
         if (locationEntity == null)
         {
             throw new BadRequestException(ErrorType.LocationNotFound);
