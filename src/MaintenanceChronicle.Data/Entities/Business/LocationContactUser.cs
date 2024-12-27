@@ -19,5 +19,5 @@ public class LocationContactUser : ITrackable, ITenant
     public Instant? DeletedAt { get; set; }
     public string? DeletedBy { get; set; }
     public Guid TenantId { get; set; }
-    public Tenant Tenant { get; set; }
+    public Tenant Tenant { get; set; } = null!;
 }

@@ -16,7 +16,7 @@ public class GetRoleByNameQueryHandler(AppDbContext dbContext) : IRequestHandler
             .Select(r => new RoleDetailDto
             {
                 Id = r.Id,
-                Name = r.Name
+                Name = r.Name!
             })
             .FirstOrDefaultAsync(cancellationToken);
 
