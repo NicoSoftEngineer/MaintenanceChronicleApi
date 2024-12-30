@@ -6,6 +6,7 @@ using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MaintenanceChronicle.Api.Controllers;
@@ -15,6 +16,11 @@ namespace MaintenanceChronicle.Api.Controllers;
 [ApiController]
 public class MaintenanceRecordController(IMediator mediator) : ControllerBase
 {
+    /// <summary>
+    /// Creates new MaintenanceRecord, that is assigned to defined machine
+    /// </summary>
+    /// <param name="recordDto">MaintenanceRecord with user defined info</param>
+    /// <returns>New MaintenanceRecord id</returns>
     [HttpPost("/api/v1/maintenance-records/")]
     public async Task<ActionResult<Guid>> CreateMaintenanceRecord([FromBody] NewMaintenanceRecordDto recordDto)
     {
@@ -22,5 +28,15 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
         var recordId = await mediator.Send(command);
 
         return Ok(recordId);
+    }
+
+    [HttpPatch("/api/v1/maintenance-records/{id:guid}")]
+    public async Task<ActionResult<ManageMaintenanceRecordDetailDto>> UpdateMaintenanceRecord([FromRoute] Guid id,
+        [FromBody] JsonPatchDocument<ManageMaintenanceRecordDetailDto> patch)
+    {
+        var command = new UpdateMaintenanceRecordCommand(patch, id, User.GetUserId());
+        var result = await mediator.Send(command);
+
+        return Ok(result);
     }
 }
