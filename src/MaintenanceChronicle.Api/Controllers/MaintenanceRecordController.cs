@@ -1,5 +1,7 @@
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
+using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
@@ -30,12 +32,32 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
         return Ok(recordId);
     }
 
+    /// <summary>
+    /// Patch is applied to MaintenanceRecord with id from route
+    /// </summary>
+    /// <param name="id">MaintenanceRecord id</param>
+    /// <param name="patch">What props should be changed</param>
+    /// <returns>Updated dto</returns>
     [HttpPatch("/api/v1/maintenance-records/{id:guid}")]
     public async Task<ActionResult<ManageMaintenanceRecordDetailDto>> UpdateMaintenanceRecord([FromRoute] Guid id,
         [FromBody] JsonPatchDocument<ManageMaintenanceRecordDetailDto> patch)
     {
         var command = new UpdateMaintenanceRecordCommand(patch, id, User.GetUserId());
         var result = await mediator.Send(command);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Gets MaintenanceRecord with specified id
+    /// </summary>
+    /// <param name="id">MaintenanceRecord id</param>
+    /// <returns>dto</returns>
+    [HttpGet("/api/v1/maintenance-records/{id:guid}")]
+    public async Task<ActionResult<MaintenanceRecordDetailDto>> GetMaintenanceRecordById([FromRoute] Guid id)
+    {
+        var query = new GetEntityByIdQuery<MaintenanceRecordDetailDto>(id);
+        var result = await mediator.Send(query);
 
         return Ok(result);
     }
