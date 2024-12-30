@@ -1,8 +1,10 @@
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Account;
+using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
@@ -49,6 +51,20 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
+    /// Soft deletes a MaintenanceRecord 
+    /// </summary>
+    /// <param name="id">MaintenanceRecord id</param>
+    /// <returns></returns>
+    [HttpDelete("/api/v1/maintenance-records/{id:guid}")]
+    public async Task<ActionResult> DeleteMaintenanceRecord([FromRoute] Guid id)
+    {
+        var command = new DeleteEntityByIdCommand<MaintenanceRecord>(id, User.GetUserId());
+        await mediator.Send(command);
+
+        return Ok();
+    }
+
+    /// <summary>
     /// Gets MaintenanceRecord with specified id
     /// </summary>
     /// <param name="id">MaintenanceRecord id</param>
@@ -62,6 +78,10 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
 
+    /// <summary>
+    /// Gets list of all maintenance records
+    /// </summary>
+    /// <returns>List of dto</returns>
     [HttpGet("/api/v1/maintenance-records/")]
     public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfMaintenanceRecords()
     {
