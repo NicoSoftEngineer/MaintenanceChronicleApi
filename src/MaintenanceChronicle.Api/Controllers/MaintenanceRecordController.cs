@@ -61,4 +61,13 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpGet("/api/v1/maintenance-records/")]
+    public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfMaintenanceRecords()
+    {
+        var query = new GetListOfEntityQuery<MaintenanceRecordInListDto>();
+        var result = await mediator.Send(query);
+
+        return Ok(result);
+    }
 }

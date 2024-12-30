@@ -15,7 +15,6 @@
         <Folder Include="Locations\Queries\Dto\" />
         <Folder Include="Machines\Commands\Dto\" />
         <Folder Include="Machines\Queries\Dto\" />
-        <Folder Include="MaintenanceRecords\Queries\Dto\" />
         <Folder Include="Users\Queries\Dto\" />
     </ItemGroup>
 
