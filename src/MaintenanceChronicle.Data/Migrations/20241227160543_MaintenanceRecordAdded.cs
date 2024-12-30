@@ -14,7 +14,7 @@ namespace MaintenanceChronicle.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
-                .Annotation("Npgsql:Enum:recordType", "");
+                .Annotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation");
 
             migrationBuilder.CreateTable(
                 name: "MaintenanceRecord",
@@ -68,7 +68,7 @@ namespace MaintenanceChronicle.Data.Migrations
                 name: "MaintenanceRecord");
 
             migrationBuilder.AlterDatabase()
-                .OldAnnotation("Npgsql:Enum:recordType", "");
+                .OldAnnotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation");
         }
     }
 }

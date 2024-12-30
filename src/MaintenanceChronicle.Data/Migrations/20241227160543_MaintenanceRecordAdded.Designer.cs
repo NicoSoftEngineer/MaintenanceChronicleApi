@@ -14,7 +14,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MaintenanceChronicle.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241227151603_MaintenanceRecordAdded")]
+    [Migration("20241227160543_MaintenanceRecordAdded")]
     partial class MaintenanceRecordAdded
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace MaintenanceChronicle.Data.Migrations
                 .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, null, null);
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "recordType", new[] { "installation", "maintenance", "repair", "un_installation" });
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Account.Role", b =>
