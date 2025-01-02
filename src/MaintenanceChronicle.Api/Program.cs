@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +29,6 @@ builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
 
 builder.Services.AddAuthentication();
 
-//TODO: Fix pipeline, to have authentication before dbcontext
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
