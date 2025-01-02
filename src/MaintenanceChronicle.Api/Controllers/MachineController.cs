@@ -1,6 +1,8 @@
 using MaintenanceChronicle.Application.Contracts.Machines.Commands;
 using MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries;
+using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Application.Machines.Commands;
@@ -88,5 +90,20 @@ public class MachineController(IMediator mediator) : ControllerBase
         var machines = await mediator.Send(query);
 
         return Ok(machines);
+    }
+
+    /// <summary>
+    /// Gets MaintenanceRecords for the specified machine
+    /// </summary>
+    /// <param name="id">Specified machine id</param>
+    /// <returns>List of MaintenanceRecords</returns>
+    [HttpGet("/api/v1/machines/{id:guid}/maintenance-records")]
+    public async Task<ActionResult<List<MaintenanceRecordInListForMachineDto>>> GetMaintenanceRecordsForMachine(
+        [FromRoute] Guid id)
+    {
+        var query = new GetMaintenanceRecordsByMachineIdQuery(id);
+        var records = await mediator.Send(query);
+
+        return Ok(records);
     }
 }
