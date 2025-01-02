@@ -1,0 +1,793 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  id: CreateNewLocationCommandHandler
+  parent: MaintenanceChronicle.Application.Locations.Commands
+  children:
+  - MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,NodaTime.IClock)
+  - MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: CreateNewLocationCommandHandler
+  nameWithType: CreateNewLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CreateNewLocationCommandHandler
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.Locations.Commands
+  syntax:
+    content: 'public class CreateNewLocationCommandHandler : IRequestHandler<CreateNewLocationCommand, Guid>'
+    content.vb: Public Class CreateNewLocationCommandHandler Implements IRequestHandler(Of CreateNewLocationCommand, Guid)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,NodaTime.IClock)
+  commentId: M:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,NodaTime.IClock)
+  id: '#ctor(MaintenanceChronicle.Data.AppDbContext,NodaTime.IClock)'
+  parent: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: CreateNewLocationCommandHandler(AppDbContext, IClock)
+  nameWithType: CreateNewLocationCommandHandler.CreateNewLocationCommandHandler(AppDbContext, IClock)
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.CreateNewLocationCommandHandler(MaintenanceChronicle.Data.AppDbContext, NodaTime.IClock)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: .ctor
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.Locations.Commands
+  syntax:
+    content: public CreateNewLocationCommandHandler(AppDbContext dbContext, IClock clock)
+    parameters:
+    - id: dbContext
+      type: MaintenanceChronicle.Data.AppDbContext
+    - id: clock
+      type: NodaTime.IClock
+    content.vb: Public Sub New(dbContext As AppDbContext, clock As IClock)
+  overload: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor*
+  nameWithType.vb: CreateNewLocationCommandHandler.New(AppDbContext, IClock)
+  fullName.vb: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.New(MaintenanceChronicle.Data.AppDbContext, NodaTime.IClock)
+  name.vb: New(AppDbContext, IClock)
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  commentId: M:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  id: Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  parent: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(CreateNewLocationCommand, CancellationToken)
+  nameWithType: CreateNewLocationCommandHandler.Handle(CreateNewLocationCommand, CancellationToken)
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Handle
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application/Locations/Commands/CreateNewLocationCommandHandler.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.Locations.Commands
+  summary: Handles a request
+  example: []
+  syntax:
+    content: public Task<Guid> Handle(CreateNewLocationCommand request, CancellationToken cancellationToken)
+    parameters:
+    - id: request
+      type: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+      description: The request
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.Guid}
+      description: Response from the request
+    content.vb: Public Function Handle(request As CreateNewLocationCommand, cancellationToken As CancellationToken) As Task(Of Guid)
+  overload: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+references:
+- uid: MaintenanceChronicle.Application.Locations.Commands
+  commentId: N:MaintenanceChronicle.Application.Locations.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Locations.Commands
+  nameWithType: MaintenanceChronicle.Application.Locations.Commands
+  fullName: MaintenanceChronicle.Application.Locations.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Locations.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Locations.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}
+  commentId: T:MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  name: IRequestHandler<CreateNewLocationCommand, Guid>
+  nameWithType: IRequestHandler<CreateNewLocationCommand, Guid>
+  fullName: MediatR.IRequestHandler<MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Guid>
+  nameWithType.vb: IRequestHandler(Of CreateNewLocationCommand, Guid)
+  fullName.vb: MediatR.IRequestHandler(Of MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Guid)
+  name.vb: IRequestHandler(Of CreateNewLocationCommand, Guid)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+    name: CreateNewLocationCommand
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+    name: CreateNewLocationCommand
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.#ctor
+  href: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.html#MaintenanceChronicle_Application_Locations_Commands_CreateNewLocationCommandHandler__ctor_MaintenanceChronicle_Data_AppDbContext_NodaTime_IClock_
+  name: CreateNewLocationCommandHandler
+  nameWithType: CreateNewLocationCommandHandler.CreateNewLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.CreateNewLocationCommandHandler
+  nameWithType.vb: CreateNewLocationCommandHandler.New
+  fullName.vb: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.New
+  name.vb: New
+- uid: MaintenanceChronicle.Data.AppDbContext
+  commentId: T:MaintenanceChronicle.Data.AppDbContext
+  parent: MaintenanceChronicle.Data
+  href: MaintenanceChronicle.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: MaintenanceChronicle.Data.AppDbContext
+- uid: NodaTime.IClock
+  commentId: T:NodaTime.IClock
+  parent: NodaTime
+  isExternal: true
+  href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/IClock.cs
+  name: IClock
+  nameWithType: IClock
+  fullName: NodaTime.IClock
+- uid: MaintenanceChronicle.Data
+  commentId: N:MaintenanceChronicle.Data
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data
+  nameWithType: MaintenanceChronicle.Data
+  fullName: MaintenanceChronicle.Data
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+- uid: NodaTime
+  commentId: N:NodaTime
+  isExternal: true
+  name: NodaTime
+  nameWithType: NodaTime
+  fullName: NodaTime
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle*
+  commentId: Overload:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle
+  href: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.html#MaintenanceChronicle_Application_Locations_Commands_CreateNewLocationCommandHandler_Handle_MaintenanceChronicle_Application_Contracts_Locations_Commands_CreateNewLocationCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: CreateNewLocationCommandHandler.Handle
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.Handle
+- uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  name: Handle(CreateNewLocationCommand, CancellationToken)
+  nameWithType: IRequestHandler<CreateNewLocationCommand, Guid>.Handle(CreateNewLocationCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Guid>.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of CreateNewLocationCommand, Guid).Handle(CreateNewLocationCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Guid).Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+    name: CreateNewLocationCommand
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Guid}.Handle(MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+    name: CreateNewLocationCommand
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  name: CreateNewLocationCommand
+  nameWithType: CreateNewLocationCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Guid}
+  commentId: T:System.Threading.Tasks.Task{System.Guid}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Guid>
+  nameWithType: Task<Guid>
+  fullName: System.Threading.Tasks.Task<System.Guid>
+  nameWithType.vb: Task(Of Guid)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Guid)
+  name.vb: Task(Of Guid)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

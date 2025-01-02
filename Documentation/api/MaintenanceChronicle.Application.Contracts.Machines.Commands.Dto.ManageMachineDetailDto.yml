@@ -1,0 +1,690 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  id: ManageMachineDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+  langs:
+  - csharp
+  - vb
+  name: ManageMachineDetailDto
+  nameWithType: ManageMachineDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ManageMachineDetailDto
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public class ManageMachineDetailDto
+    content.vb: Public Class ManageMachineDetailDto
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Data.Entities.Business.Machine)
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+  id: Id
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ManageMachineDetailDto.Id
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Id
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 7
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+  id: Model
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: Model
+  nameWithType: ManageMachineDetailDto.Model
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Model
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 8
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required string Model { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Model As String
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+  id: Manufacture
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: Manufacture
+  nameWithType: ManageMachineDetailDto.Manufacture
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Manufacture
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 9
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required string Manufacture { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Manufacture As String
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+  id: LocationId
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: LocationId
+  nameWithType: ManageMachineDetailDto.LocationId
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: LocationId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 10
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required Guid LocationId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property LocationId As Guid
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+  id: SerialNumber
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: ManageMachineDetailDto.SerialNumber
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: SerialNumber
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required string SerialNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SerialNumber As String
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+  id: Color
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: ManageMachineDetailDto.Color
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Color
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 12
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required string Color { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Color As String
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color*
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+  commentId: P:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+  id: InUseSince
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  langs:
+  - csharp
+  - vb
+  name: InUseSince
+  nameWithType: ManageMachineDetailDto.InUseSince
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: InUseSince
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Machines/Commands/Dto/ManageMachineDetailDto.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  syntax:
+    content: public required Instant InUseSince { get; set; }
+    parameters: []
+    return:
+      type: NodaTime.Instant
+    content.vb: Public Property InUseSince As Instant
+  overload: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Data.Entities.Business.Machine)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  definition: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  name: MapToEntity(ManageMachineDetailDto, Machine)
+  nameWithType: ManageMachineDetailExtension.MapToEntity(ManageMachineDetailDto, Machine)
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto, MaintenanceChronicle.Data.Entities.Business.Machine)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+    name: MapToEntity
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+    name: ManageMachineDetailDto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html
+  - name: ','
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+    name: MapToEntity
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+    name: ManageMachineDetailDto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html
+  - name: ','
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  name: MapToEntity(ManageMachineDetailDto, Machine)
+  nameWithType: ManageMachineDetailExtension.MapToEntity(ManageMachineDetailDto, Machine)
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto, MaintenanceChronicle.Data.Entities.Business.Machine)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+    name: MapToEntity
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+    name: ManageMachineDetailDto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html
+  - name: ','
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.MapToEntity(MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto,MaintenanceChronicle.Data.Entities.Business.Machine)
+    name: MapToEntity
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailExtension_MapToEntity_MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_MaintenanceChronicle_Data_Entities_Business_Machine_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+    name: ManageMachineDetailDto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html
+  - name: ','
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html
+  name: ManageMachineDetailExtension
+  nameWithType: ManageMachineDetailExtension
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_Id
+  name: Id
+  nameWithType: ManageMachineDetailDto.Id
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_Model
+  name: Model
+  nameWithType: ManageMachineDetailDto.Model
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Model
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_Manufacture
+  name: Manufacture
+  nameWithType: ManageMachineDetailDto.Manufacture
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Manufacture
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_LocationId
+  name: LocationId
+  nameWithType: ManageMachineDetailDto.LocationId
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.LocationId
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_SerialNumber
+  name: SerialNumber
+  nameWithType: ManageMachineDetailDto.SerialNumber
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.SerialNumber
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_Color
+  name: Color
+  nameWithType: ManageMachineDetailDto.Color
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.Color
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html#MaintenanceChronicle_Application_Contracts_Machines_Commands_Dto_ManageMachineDetailDto_InUseSince
+  name: InUseSince
+  nameWithType: ManageMachineDetailDto.InUseSince
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.InUseSince
+- uid: NodaTime.Instant
+  commentId: T:NodaTime.Instant
+  parent: NodaTime
+  isExternal: true
+  href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  name: Instant
+  nameWithType: Instant
+  fullName: NodaTime.Instant
+- uid: NodaTime
+  commentId: N:NodaTime
+  isExternal: true
+  name: NodaTime
+  nameWithType: NodaTime
+  fullName: NodaTime

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.UserTenant.Commands
+  commentId: N:MaintenanceChronicle.Application.UserTenant.Commands
+  id: MaintenanceChronicle.Application.UserTenant.Commands
+  children:
+  - MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.UserTenant.Commands
+  nameWithType: MaintenanceChronicle.Application.UserTenant.Commands
+  fullName: MaintenanceChronicle.Application.UserTenant.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler
+  commentId: T:MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler
+  href: MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler.html
+  name: RegisterUserAndTenantCommandHandler
+  nameWithType: RegisterUserAndTenantCommandHandler
+  fullName: MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler

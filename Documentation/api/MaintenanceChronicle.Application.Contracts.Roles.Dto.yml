@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Roles.Dto
+  id: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto
+  href: MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto.html
+  name: RoleDetailDto
+  nameWithType: RoleDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto

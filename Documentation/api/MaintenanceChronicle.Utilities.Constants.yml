@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Constants
+  commentId: N:MaintenanceChronicle.Utilities.Constants
+  id: MaintenanceChronicle.Utilities.Constants
+  children:
+  - MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes
+  - MaintenanceChronicle.Utilities.Constants.RoleTypes
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Utilities.Constants
+  nameWithType: MaintenanceChronicle.Utilities.Constants
+  fullName: MaintenanceChronicle.Utilities.Constants
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Utilities
+references:
+- uid: MaintenanceChronicle.Utilities.Constants.RoleTypes
+  commentId: T:MaintenanceChronicle.Utilities.Constants.RoleTypes
+  href: MaintenanceChronicle.Utilities.Constants.RoleTypes.html
+  name: RoleTypes
+  nameWithType: RoleTypes
+  fullName: MaintenanceChronicle.Utilities.Constants.RoleTypes
+- uid: MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes
+  commentId: T:MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes
+  href: MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes.html
+  name: MaintenanceChronicleClaimTypes
+  nameWithType: MaintenanceChronicleClaimTypes
+  fullName: MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes

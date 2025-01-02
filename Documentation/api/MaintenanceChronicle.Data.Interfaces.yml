@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Interfaces
+  commentId: N:MaintenanceChronicle.Data.Interfaces
+  id: MaintenanceChronicle.Data.Interfaces
+  children:
+  - MaintenanceChronicle.Data.Interfaces.ITenant
+  - MaintenanceChronicle.Data.Interfaces.ITrackable
+  - MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Data.Interfaces
+  nameWithType: MaintenanceChronicle.Data.Interfaces
+  fullName: MaintenanceChronicle.Data.Interfaces
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Data
+references:
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant
+  commentId: T:MaintenanceChronicle.Data.Interfaces.ITenant
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html
+  name: ITenant
+  nameWithType: ITenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable
+  commentId: T:MaintenanceChronicle.Data.Interfaces.ITrackable
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html
+  name: ITrackable
+  nameWithType: ITrackable
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  commentId: T:MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html
+  name: TrackableExtensions
+  nameWithType: TrackableExtensions
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+- uid: MaintenanceChronicle.Data.Interfaces
+  commentId: N:MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Interfaces
+  nameWithType: MaintenanceChronicle.Data.Interfaces
+  fullName: MaintenanceChronicle.Data.Interfaces
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html

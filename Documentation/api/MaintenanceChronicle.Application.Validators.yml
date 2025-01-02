@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Validators
+  commentId: N:MaintenanceChronicle.Application.Validators
+  id: MaintenanceChronicle.Application.Validators
+  children:
+  - MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware
+  - MaintenanceChronicle.Application.Validators.UserTenantValidator
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Validators
+  nameWithType: MaintenanceChronicle.Application.Validators
+  fullName: MaintenanceChronicle.Application.Validators
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware
+  commentId: T:MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware
+  href: MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware.html
+  name: UserTenantValidationMiddleware
+  nameWithType: UserTenantValidationMiddleware
+  fullName: MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware
+- uid: MaintenanceChronicle.Application.Validators.UserTenantValidator
+  commentId: T:MaintenanceChronicle.Application.Validators.UserTenantValidator
+  href: MaintenanceChronicle.Application.Validators.UserTenantValidator.html
+  name: UserTenantValidator
+  nameWithType: UserTenantValidator
+  fullName: MaintenanceChronicle.Application.Validators.UserTenantValidator

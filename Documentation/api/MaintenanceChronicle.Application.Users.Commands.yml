@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Users.Commands
+  commentId: N:MaintenanceChronicle.Application.Users.Commands
+  id: MaintenanceChronicle.Application.Users.Commands
+  children:
+  - MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Users.Commands
+  nameWithType: MaintenanceChronicle.Application.Users.Commands
+  fullName: MaintenanceChronicle.Application.Users.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler.html
+  name: AddPasswordToRegisteredUserCommandHandler
+  nameWithType: AddPasswordToRegisteredUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler.html
+  name: AddRolesToUserCommandHandler
+  nameWithType: AddRolesToUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler.html
+  name: CreateNewUserCommandHandler
+  nameWithType: CreateNewUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler.html
+  name: GenerateClaimsPrincipalForUserCommandHandler
+  nameWithType: GenerateClaimsPrincipalForUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler.html
+  name: GenerateEmailConfirmationTokenForUserCommandHandler
+  nameWithType: GenerateEmailConfirmationTokenForUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler.html
+  name: RegisterNewUserCommandHandler
+  nameWithType: RegisterNewUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler.html
+  name: UpdateUserCommandHandler
+  nameWithType: UpdateUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler
+  href: MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler.html
+  name: ValidateEmailConfirmationTokenCommandHandler
+  nameWithType: ValidateEmailConfirmationTokenCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler

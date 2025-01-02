@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application
+  commentId: N:MaintenanceChronicle.Application
+  id: MaintenanceChronicle.Application
+  children:
+  - MaintenanceChronicle.Application.RequestHandlerRegistrationHelper
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application
+  nameWithType: MaintenanceChronicle.Application
+  fullName: MaintenanceChronicle.Application
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.RequestHandlerRegistrationHelper
+  commentId: T:MaintenanceChronicle.Application.RequestHandlerRegistrationHelper
+  href: MaintenanceChronicle.Application.RequestHandlerRegistrationHelper.html
+  name: RequestHandlerRegistrationHelper
+  nameWithType: RequestHandlerRegistrationHelper
+  fullName: MaintenanceChronicle.Application.RequestHandlerRegistrationHelper

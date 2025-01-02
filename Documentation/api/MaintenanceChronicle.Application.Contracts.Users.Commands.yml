@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands
+  id: MaintenanceChronicle.Application.Contracts.Users.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand.html
+  name: AddPasswordToRegisteredUserCommand
+  nameWithType: AddPasswordToRegisteredUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand.html
+  name: AddRolesToUserCommand
+  nameWithType: AddRolesToUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand.html
+  name: CreateNewUserCommand
+  nameWithType: CreateNewUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html
+  name: GenerateClaimsPrincipalForUserCommand
+  nameWithType: GenerateClaimsPrincipalForUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand.html
+  name: GenerateEmailConfirmationTokenForUserCommand
+  nameWithType: GenerateEmailConfirmationTokenForUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand.html
+  name: RegisterNewUserCommand
+  nameWithType: RegisterNewUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand.html
+  name: UpdateUserCommand
+  nameWithType: UpdateUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand.html
+  name: ValidateEmailConfirmationTokenCommand
+  nameWithType: ValidateEmailConfirmationTokenCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html

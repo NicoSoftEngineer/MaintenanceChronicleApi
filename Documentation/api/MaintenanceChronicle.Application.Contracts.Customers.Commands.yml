@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Customers.Commands
+  id: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand
+  - MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  href: MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand.html
+  name: CreateNewCustomerCommand
+  nameWithType: CreateNewCustomerCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  href: MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand.html
+  name: UpdateCustomerCommand
+  nameWithType: UpdateCustomerCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Customers.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Customers.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Customers.Commands.html

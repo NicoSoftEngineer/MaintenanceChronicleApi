@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  id: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto
+  - MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto
+  href: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto.html
+  name: UserDetailDto
+  nameWithType: UserDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto
+  href: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto.html
+  name: UserListDto
+  nameWithType: UserListDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto

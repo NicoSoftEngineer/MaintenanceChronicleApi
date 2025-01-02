@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Queries
+  id: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  children:
+  - MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  href: MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery.html
+  name: GetLocationsForCustomerQuery
+  nameWithType: GetLocationsForCustomerQuery
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Queries
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Locations.Queries.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Locations.Queries.html

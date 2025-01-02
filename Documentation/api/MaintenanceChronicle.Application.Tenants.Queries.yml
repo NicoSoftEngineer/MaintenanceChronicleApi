@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Tenants.Queries
+  commentId: N:MaintenanceChronicle.Application.Tenants.Queries
+  id: MaintenanceChronicle.Application.Tenants.Queries
+  children:
+  - MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler
+  - MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Tenants.Queries
+  nameWithType: MaintenanceChronicle.Application.Tenants.Queries
+  fullName: MaintenanceChronicle.Application.Tenants.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler
+  href: MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler.html
+  name: GetListOfTenantsQueryHandler
+  nameWithType: GetListOfTenantsQueryHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler
+- uid: MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler
+  href: MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler.html
+  name: GetTenantByIdQueryHandler
+  nameWithType: GetTenantByIdQueryHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler

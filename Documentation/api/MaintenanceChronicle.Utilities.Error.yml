@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Error
+  commentId: N:MaintenanceChronicle.Utilities.Error
+  id: MaintenanceChronicle.Utilities.Error
+  children:
+  - MaintenanceChronicle.Utilities.Error.BadRequestException
+  - MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+  - MaintenanceChronicle.Utilities.Error.ErrorType
+  - MaintenanceChronicle.Utilities.Error.ExceptionMiddleware
+  - MaintenanceChronicle.Utilities.Error.InternalServerException
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Utilities.Error
+  nameWithType: MaintenanceChronicle.Utilities.Error
+  fullName: MaintenanceChronicle.Utilities.Error
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Utilities
+references:
+- uid: MaintenanceChronicle.Utilities.Error.BadRequestException
+  commentId: T:MaintenanceChronicle.Utilities.Error.BadRequestException
+  href: MaintenanceChronicle.Utilities.Error.BadRequestException.html
+  name: BadRequestException
+  nameWithType: BadRequestException
+  fullName: MaintenanceChronicle.Utilities.Error.BadRequestException
+- uid: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+  commentId: T:MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+  parent: MaintenanceChronicle.Utilities.Error
+  href: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.html
+  name: ErrorMessageAttribute
+  nameWithType: ErrorMessageAttribute
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType
+  commentId: T:MaintenanceChronicle.Utilities.Error.ErrorType
+  parent: MaintenanceChronicle.Utilities.Error
+  href: MaintenanceChronicle.Utilities.Error.ErrorType.html
+  name: ErrorType
+  nameWithType: ErrorType
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType
+- uid: MaintenanceChronicle.Utilities.Error.ExceptionMiddleware
+  commentId: T:MaintenanceChronicle.Utilities.Error.ExceptionMiddleware
+  href: MaintenanceChronicle.Utilities.Error.ExceptionMiddleware.html
+  name: ExceptionMiddleware
+  nameWithType: ExceptionMiddleware
+  fullName: MaintenanceChronicle.Utilities.Error.ExceptionMiddleware
+- uid: MaintenanceChronicle.Utilities.Error.InternalServerException
+  commentId: T:MaintenanceChronicle.Utilities.Error.InternalServerException
+  href: MaintenanceChronicle.Utilities.Error.InternalServerException.html
+  name: InternalServerException
+  nameWithType: InternalServerException
+  fullName: MaintenanceChronicle.Utilities.Error.InternalServerException
+- uid: MaintenanceChronicle.Utilities.Error
+  commentId: N:MaintenanceChronicle.Utilities.Error
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Error
+  nameWithType: MaintenanceChronicle.Utilities.Error
+  fullName: MaintenanceChronicle.Utilities.Error
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Error
+    name: Error
+    href: MaintenanceChronicle.Utilities.Error.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Error
+    name: Error
+    href: MaintenanceChronicle.Utilities.Error.html

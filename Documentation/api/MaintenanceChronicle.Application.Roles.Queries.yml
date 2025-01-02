@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Roles.Queries
+  commentId: N:MaintenanceChronicle.Application.Roles.Queries
+  id: MaintenanceChronicle.Application.Roles.Queries
+  children:
+  - MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Roles.Queries
+  nameWithType: MaintenanceChronicle.Application.Roles.Queries
+  fullName: MaintenanceChronicle.Application.Roles.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler
+  href: MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler.html
+  name: GetRoleByNameQueryHandler
+  nameWithType: GetRoleByNameQueryHandler
+  fullName: MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler

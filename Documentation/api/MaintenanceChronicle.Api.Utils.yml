@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Api.Utils
+  commentId: N:MaintenanceChronicle.Api.Utils
+  id: MaintenanceChronicle.Api.Utils
+  children:
+  - MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Api.Utils
+  nameWithType: MaintenanceChronicle.Api.Utils
+  fullName: MaintenanceChronicle.Api.Utils
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Api
+references:
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  commentId: T:MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  href: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.html
+  name: CurrentTenantProvider
+  nameWithType: CurrentTenantProvider
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider

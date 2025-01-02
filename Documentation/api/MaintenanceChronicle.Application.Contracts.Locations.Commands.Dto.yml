@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  id: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto.html
+  name: ContactsInLocationDto
+  nameWithType: ContactsInLocationDto
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto.html
+  name: ManageLocationDetailDto
+  nameWithType: ManageLocationDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension.html
+  name: ManageLocationDetailDtoExtension
+  nameWithType: ManageLocationDetailDtoExtension
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto.html
+  name: NewLocationDto
+  nameWithType: NewLocationDto
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension.html
+  name: NewLocationDtoExtension
+  nameWithType: NewLocationDtoExtension
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.html

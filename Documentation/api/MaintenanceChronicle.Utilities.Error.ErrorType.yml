@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType
+  commentId: T:MaintenanceChronicle.Utilities.Error.ErrorType
+  id: ErrorType
+  parent: MaintenanceChronicle.Utilities.Error
+  children:
+  - MaintenanceChronicle.Utilities.Error.ErrorType.CustomerNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.EmailAlreadyExists
+  - MaintenanceChronicle.Utilities.Error.ErrorType.InvalidEmailConfirmationToken
+  - MaintenanceChronicle.Utilities.Error.ErrorType.InvalidIdentityCookie
+  - MaintenanceChronicle.Utilities.Error.ErrorType.InvalidPassword
+  - MaintenanceChronicle.Utilities.Error.ErrorType.LocationNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.MachineNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.NameMustBeUnique
+  - MaintenanceChronicle.Utilities.Error.ErrorType.PasswordDoesNotMeetRequirements
+  - MaintenanceChronicle.Utilities.Error.ErrorType.RoleNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.TenantNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.UserNotFound
+  - MaintenanceChronicle.Utilities.Error.ErrorType.UserNotInTenant
+  langs:
+  - csharp
+  - vb
+  name: ErrorType
+  nameWithType: ErrorType
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType
+  type: Enum
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ErrorType
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 2
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: public enum ErrorType
+    content.vb: Public Enum ErrorType
+  extensionMethods:
+  - System.Enum.MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.EmailAlreadyExists
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.EmailAlreadyExists
+  id: EmailAlreadyExists
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: EmailAlreadyExists
+  nameWithType: ErrorType.EmailAlreadyExists
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.EmailAlreadyExists
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: EmailAlreadyExists
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 4
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("User with this email already exists!")]
+
+      EmailAlreadyExists = 0
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("User with this email already exists!")>
+
+      EmailAlreadyExists = 0
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: User with this email already exists!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.UserNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.UserNotFound
+  id: UserNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: UserNotFound
+  nameWithType: ErrorType.UserNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.UserNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: UserNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this user doesn't exist!")]
+
+      UserNotFound = 1
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this user doesn't exist!")>
+
+      UserNotFound = 1
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this user doesn't exist!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.PasswordDoesNotMeetRequirements
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.PasswordDoesNotMeetRequirements
+  id: PasswordDoesNotMeetRequirements
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: PasswordDoesNotMeetRequirements
+  nameWithType: ErrorType.PasswordDoesNotMeetRequirements
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.PasswordDoesNotMeetRequirements
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: PasswordDoesNotMeetRequirements
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 8
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this password doesn't meet our requirements!")]
+
+      PasswordDoesNotMeetRequirements = 2
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this password doesn't meet our requirements!")>
+
+      PasswordDoesNotMeetRequirements = 2
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this password doesn't meet our requirements!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidPassword
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.InvalidPassword
+  id: InvalidPassword
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: InvalidPassword
+  nameWithType: ErrorType.InvalidPassword
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidPassword
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: InvalidPassword
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 10
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Wrong password!")]
+
+      InvalidPassword = 3
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Wrong password!")>
+
+      InvalidPassword = 3
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Wrong password!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidEmailConfirmationToken
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.InvalidEmailConfirmationToken
+  id: InvalidEmailConfirmationToken
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: InvalidEmailConfirmationToken
+  nameWithType: ErrorType.InvalidEmailConfirmationToken
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidEmailConfirmationToken
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: InvalidEmailConfirmationToken
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 12
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this token is invalid!")]
+
+      InvalidEmailConfirmationToken = 4
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this token is invalid!")>
+
+      InvalidEmailConfirmationToken = 4
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this token is invalid!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.NameMustBeUnique
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.NameMustBeUnique
+  id: NameMustBeUnique
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: NameMustBeUnique
+  nameWithType: ErrorType.NameMustBeUnique
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.NameMustBeUnique
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: NameMustBeUnique
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 14
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Name must be unique!")]
+
+      NameMustBeUnique = 5
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Name must be unique!")>
+
+      NameMustBeUnique = 5
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Name must be unique!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.TenantNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.TenantNotFound
+  id: TenantNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: TenantNotFound
+  nameWithType: ErrorType.TenantNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.TenantNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 16
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this tenant doesn't exist!")]
+
+      TenantNotFound = 6
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this tenant doesn't exist!")>
+
+      TenantNotFound = 6
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this tenant doesn't exist!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidIdentityCookie
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.InvalidIdentityCookie
+  id: InvalidIdentityCookie
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: InvalidIdentityCookie
+  nameWithType: ErrorType.InvalidIdentityCookie
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.InvalidIdentityCookie
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: InvalidIdentityCookie
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 18
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry your identity couldn't be accessed!")]
+
+      InvalidIdentityCookie = 7
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry your identity couldn't be accessed!")>
+
+      InvalidIdentityCookie = 7
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry your identity couldn't be accessed!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.RoleNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.RoleNotFound
+  id: RoleNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: RoleNotFound
+  nameWithType: ErrorType.RoleNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.RoleNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: RoleNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 20
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this role doesn't exist!")]
+
+      RoleNotFound = 8
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this role doesn't exist!")>
+
+      RoleNotFound = 8
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this role doesn't exist!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.CustomerNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.CustomerNotFound
+  id: CustomerNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: CustomerNotFound
+  nameWithType: ErrorType.CustomerNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.CustomerNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CustomerNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 22
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this customer doesn't exist!")]
+
+      CustomerNotFound = 9
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this customer doesn't exist!")>
+
+      CustomerNotFound = 9
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this customer doesn't exist!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.UserNotInTenant
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.UserNotInTenant
+  id: UserNotInTenant
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: UserNotInTenant
+  nameWithType: ErrorType.UserNotInTenant
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.UserNotInTenant
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: UserNotInTenant
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 24
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry you don't have access to this tenant!")]
+
+      UserNotInTenant = 10
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry you don't have access to this tenant!")>
+
+      UserNotInTenant = 10
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry you don't have access to this tenant!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.LocationNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.LocationNotFound
+  id: LocationNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: LocationNotFound
+  nameWithType: ErrorType.LocationNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.LocationNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: LocationNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 26
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this location doesn't exist!")]
+
+      LocationNotFound = 11
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this location doesn't exist!")>
+
+      LocationNotFound = 11
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this location doesn't exist!
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType.MachineNotFound
+  commentId: F:MaintenanceChronicle.Utilities.Error.ErrorType.MachineNotFound
+  id: MachineNotFound
+  parent: MaintenanceChronicle.Utilities.Error.ErrorType
+  langs:
+  - csharp
+  - vb
+  name: MachineNotFound
+  nameWithType: ErrorType.MachineNotFound
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType.MachineNotFound
+  type: Field
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: MachineNotFound
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Error/ErrorType.cs
+    startLine: 28
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Error
+  syntax:
+    content: >-
+      [ErrorMessage("Sorry this machine doesn't exist!")]
+
+      MachineNotFound = 12
+    return:
+      type: MaintenanceChronicle.Utilities.Error.ErrorType
+    content.vb: >-
+      <ErrorMessage("Sorry this machine doesn't exist!")>
+
+      MachineNotFound = 12
+  attributes:
+  - type: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    ctor: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sorry this machine doesn't exist!
+references:
+- uid: MaintenanceChronicle.Utilities.Error
+  commentId: N:MaintenanceChronicle.Utilities.Error
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Error
+  nameWithType: MaintenanceChronicle.Utilities.Error
+  fullName: MaintenanceChronicle.Utilities.Error
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Error
+    name: Error
+    href: MaintenanceChronicle.Utilities.Error.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Error
+    name: Error
+    href: MaintenanceChronicle.Utilities.Error.html
+- uid: System.Enum.MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage
+  commentId: M:MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  parent: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  definition: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  name: GetErrorMessage(Enum)
+  nameWithType: EnumExtensions.GetErrorMessage(Enum)
+  fullName: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+    name: GetErrorMessage
+    href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  - name: (
+  - uid: System.Enum
+    name: Enum
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.enum
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+    name: GetErrorMessage
+    href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  - name: (
+  - uid: System.Enum
+    name: Enum
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.enum
+  - name: )
+- uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  commentId: M:MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  isExternal: true
+  href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  name: GetErrorMessage(Enum)
+  nameWithType: EnumExtensions.GetErrorMessage(Enum)
+  fullName: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+    name: GetErrorMessage
+    href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  - name: (
+  - uid: System.Enum
+    name: Enum
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.enum
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions.GetErrorMessage(System.Enum)
+    name: GetErrorMessage
+    href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html#MaintenanceChronicle_Utilities_Enum_EnumExtensions_GetErrorMessage_System_Enum_
+  - name: (
+  - uid: System.Enum
+    name: Enum
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.enum
+  - name: )
+- uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  commentId: T:MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  parent: MaintenanceChronicle.Utilities.Enum
+  href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+- uid: MaintenanceChronicle.Utilities.Enum
+  commentId: N:MaintenanceChronicle.Utilities.Enum
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Enum
+  nameWithType: MaintenanceChronicle.Utilities.Enum
+  fullName: MaintenanceChronicle.Utilities.Enum
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Enum
+    name: Enum
+    href: MaintenanceChronicle.Utilities.Enum.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Enum
+    name: Enum
+    href: MaintenanceChronicle.Utilities.Enum.html
+- uid: MaintenanceChronicle.Utilities.Error.ErrorType
+  commentId: T:MaintenanceChronicle.Utilities.Error.ErrorType
+  parent: MaintenanceChronicle.Utilities.Error
+  href: MaintenanceChronicle.Utilities.Error.ErrorType.html
+  name: ErrorType
+  nameWithType: ErrorType
+  fullName: MaintenanceChronicle.Utilities.Error.ErrorType

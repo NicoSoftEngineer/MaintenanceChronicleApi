@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  id: CustomerDetailDtoExtensions
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto(MaintenanceChronicle.Data.Entities.Business.Customer)
+  - MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity(MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto)
+  langs:
+  - csharp
+  - vb
+  name: CustomerDetailDtoExtensions
+  nameWithType: CustomerDetailDtoExtensions
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CustomerDetailDtoExtensions
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+    startLine: 9
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  syntax:
+    content: public static class CustomerDetailDtoExtensions
+    content.vb: Public Module CustomerDetailDtoExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto(MaintenanceChronicle.Data.Entities.Business.Customer)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto(MaintenanceChronicle.Data.Entities.Business.Customer)
+  id: ToCustomerDetailDto(MaintenanceChronicle.Data.Entities.Business.Customer)
+  isExtensionMethod: true
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToCustomerDetailDto(Customer)
+  nameWithType: CustomerDetailDtoExtensions.ToCustomerDetailDto(Customer)
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto(MaintenanceChronicle.Data.Entities.Business.Customer)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ToCustomerDetailDto
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  syntax:
+    content: public static CustomerDetailDto ToCustomerDetailDto(this Customer customer)
+    parameters:
+    - id: customer
+      type: MaintenanceChronicle.Data.Entities.Business.Customer
+    return:
+      type: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+    content.vb: Public Shared Function ToCustomerDetailDto(customer As Customer) As CustomerDetailDto
+  overload: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto*
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity(MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity(MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto)
+  id: ToCustomerEntity(MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto)
+  isExtensionMethod: true
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToCustomerEntity(CustomerDetailDto)
+  nameWithType: CustomerDetailDtoExtensions.ToCustomerEntity(CustomerDetailDto)
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity(MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ToCustomerEntity
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Customers/Queries/Dto/CustomerDetailDto.cs
+    startLine: 20
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  syntax:
+    content: public static Customer ToCustomerEntity(this CustomerDetailDto manageCustomerDto)
+    parameters:
+    - id: manageCustomerDto
+      type: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+    return:
+      type: MaintenanceChronicle.Data.Entities.Business.Customer
+    content.vb: Public Shared Function ToCustomerEntity(manageCustomerDto As CustomerDetailDto) As Customer
+  overload: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.html#MaintenanceChronicle_Application_Contracts_Customers_Queries_Dto_CustomerDetailDtoExtensions_ToCustomerDetailDto_MaintenanceChronicle_Data_Entities_Business_Customer_
+  name: ToCustomerDetailDto
+  nameWithType: CustomerDetailDtoExtensions.ToCustomerDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerDetailDto
+- uid: MaintenanceChronicle.Data.Entities.Business.Customer
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Customer
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.Customer.html
+  name: Customer
+  nameWithType: Customer
+  fullName: MaintenanceChronicle.Data.Entities.Business.Customer
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.html
+  name: CustomerDetailDto
+  nameWithType: CustomerDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+- uid: MaintenanceChronicle.Data.Entities.Business
+  commentId: N:MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Business
+  nameWithType: MaintenanceChronicle.Data.Entities.Business
+  fullName: MaintenanceChronicle.Data.Entities.Business
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.html#MaintenanceChronicle_Application_Contracts_Customers_Queries_Dto_CustomerDetailDtoExtensions_ToCustomerEntity_MaintenanceChronicle_Application_Contracts_Customers_Queries_Dto_CustomerDetailDto_
+  name: ToCustomerEntity
+  nameWithType: CustomerDetailDtoExtensions.ToCustomerEntity
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.ToCustomerEntity

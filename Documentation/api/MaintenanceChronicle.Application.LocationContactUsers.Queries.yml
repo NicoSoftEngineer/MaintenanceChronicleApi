@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  commentId: N:MaintenanceChronicle.Application.LocationContactUsers.Queries
+  id: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  children:
+  - MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  nameWithType: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  fullName: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler
+  commentId: T:MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler
+  href: MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler.html
+  name: GetListOfContactsForLocationQueryHandler
+  nameWithType: GetListOfContactsForLocationQueryHandler
+  fullName: MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler

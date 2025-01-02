@@ -1,0 +1,546 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  id: AssignCreationInfoToTenantCommand
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  langs:
+  - csharp
+  - vb
+  name: AssignCreationInfoToTenantCommand
+  nameWithType: AssignCreationInfoToTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: AssignCreationInfoToTenantCommand
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  syntax:
+    content: 'public record AssignCreationInfoToTenantCommand : IRequest, IBaseRequest, IEquatable<AssignCreationInfoToTenantCommand>'
+    content.vb: Public Class AssignCreationInfoToTenantCommand Implements IRequest, IBaseRequest, IEquatable(Of AssignCreationInfoToTenantCommand)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequest
+  - MediatR.IBaseRequest
+  - System.IEquatable{MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)
+  id: '#ctor(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)'
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  langs:
+  - csharp
+  - vb
+  name: AssignCreationInfoToTenantCommand(TenantsCreatorUserIdDto)
+  nameWithType: AssignCreationInfoToTenantCommand.AssignCreationInfoToTenantCommand(TenantsCreatorUserIdDto)
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.AssignCreationInfoToTenantCommand(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: .ctor
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  syntax:
+    content: public AssignCreationInfoToTenantCommand(TenantsCreatorUserIdDto TenantsCreatorUserIdDto)
+    parameters:
+    - id: TenantsCreatorUserIdDto
+      type: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+    content.vb: Public Sub New(TenantsCreatorUserIdDto As TenantsCreatorUserIdDto)
+  overload: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor*
+  nameWithType.vb: AssignCreationInfoToTenantCommand.New(TenantsCreatorUserIdDto)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.New(MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto)
+  name.vb: New(TenantsCreatorUserIdDto)
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  commentId: P:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  id: TenantsCreatorUserIdDto
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  langs:
+  - csharp
+  - vb
+  name: TenantsCreatorUserIdDto
+  nameWithType: AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantsCreatorUserIdDto
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Tenants/Commands/AssignCreationInfoToTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  syntax:
+    content: public TenantsCreatorUserIdDto TenantsCreatorUserIdDto { get; init; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+    content.vb: Public Property TenantsCreatorUserIdDto As TenantsCreatorUserIdDto
+  overload: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequest
+  commentId: T:MediatR.IRequest
+  parent: MediatR
+  isExternal: true
+  name: IRequest
+  nameWithType: IRequest
+  fullName: MediatR.IRequest
+- uid: MediatR.IBaseRequest
+  commentId: T:MediatR.IBaseRequest
+  parent: MediatR
+  isExternal: true
+  name: IBaseRequest
+  nameWithType: IBaseRequest
+  fullName: MediatR.IBaseRequest
+- uid: System.IEquatable{MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand}
+  commentId: T:System.IEquatable{MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<AssignCreationInfoToTenantCommand>
+  nameWithType: IEquatable<AssignCreationInfoToTenantCommand>
+  fullName: System.IEquatable<MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand>
+  nameWithType.vb: IEquatable(Of AssignCreationInfoToTenantCommand)
+  fullName.vb: System.IEquatable(Of MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand)
+  name.vb: IEquatable(Of AssignCreationInfoToTenantCommand)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+    name: AssignCreationInfoToTenantCommand
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+    name: AssignCreationInfoToTenantCommand
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.#ctor
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html#MaintenanceChronicle_Application_Contracts_Tenants_Commands_AssignCreationInfoToTenantCommand__ctor_MaintenanceChronicle_Application_Contracts_Tenants_Commands_Dto_TenantsCreatorUserIdDto_
+  name: AssignCreationInfoToTenantCommand
+  nameWithType: AssignCreationInfoToTenantCommand.AssignCreationInfoToTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.AssignCreationInfoToTenantCommand
+  nameWithType.vb: AssignCreationInfoToTenantCommand.New
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.New
+  name.vb: New
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto.html
+  name: TenantsCreatorUserIdDto
+  nameWithType: TenantsCreatorUserIdDto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.html
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html#MaintenanceChronicle_Application_Contracts_Tenants_Commands_AssignCreationInfoToTenantCommand_TenantsCreatorUserIdDto
+  name: TenantsCreatorUserIdDto
+  nameWithType: AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.TenantsCreatorUserIdDto

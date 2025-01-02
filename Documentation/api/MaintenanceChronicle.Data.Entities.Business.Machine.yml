@@ -1,0 +1,1830 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Machine
+  id: Machine
+  parent: MaintenanceChronicle.Data.Entities.Business
+  children:
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Color
+  - MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+  - MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+  - MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+  - MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Id
+  - MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Location
+  - MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Model
+  - MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+  - MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+  - MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+  - MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+  - MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+  langs:
+  - csharp
+  - vb
+  name: Machine
+  nameWithType: Machine
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Machine
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 7
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: >-
+      [Table("Machine")]
+
+      public class Machine : ITrackable, ITenant
+    content.vb: >-
+      <Table("Machine")>
+
+      Public Class Machine Implements ITrackable, ITenant
+  inheritance:
+  - System.Object
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable
+  - MaintenanceChronicle.Data.Interfaces.ITenant
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(NodaTime.Instant)
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(System.String,NodaTime.Instant)
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(NodaTime.Instant)
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(System.String,NodaTime.Instant)
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(NodaTime.Instant)
+  - MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(System.String,NodaTime.Instant)
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.TableAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.TableAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Machine
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Id
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Id
+  id: Id
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Machine.Id
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Id
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Id
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 10
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Id*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Model
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Model
+  id: Model
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Model
+  nameWithType: Machine.Model
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Model
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Model
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public string Model { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Model As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Model*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+  id: Manufacture
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Manufacture
+  nameWithType: Machine.Manufacture
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Manufacture
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 12
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public string Manufacture { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Manufacture As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+  id: LocationId
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: LocationId
+  nameWithType: Machine.LocationId
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: LocationId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public Guid LocationId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property LocationId As Guid
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.LocationId*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Location
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Location
+  id: Location
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Machine.Location
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Location
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Location
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 14
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public Location Location { get; set; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Data.Entities.Business.Location
+    content.vb: Public Property Location As Location
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Location*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+  id: SerialNumber
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: Machine.SerialNumber
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: SerialNumber
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 15
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public string SerialNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SerialNumber As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Color
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Color
+  id: Color
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Machine.Color
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Color
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Color
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 16
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public string Color { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Color As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Color*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+  id: InUseSince
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: InUseSince
+  nameWithType: Machine.InUseSince
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: InUseSince
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 17
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  syntax:
+    content: public Instant InUseSince { get; set; }
+    parameters: []
+    return:
+      type: NodaTime.Instant
+    content.vb: Public Property InUseSince As Instant
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince*
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+  id: CreatedAt
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: Machine.CreatedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CreatedAt
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 18
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public Instant CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: NodaTime.Instant
+    content.vb: Public Property CreatedAt As Instant
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedAt
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+  id: CreatedBy
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: CreatedBy
+  nameWithType: Machine.CreatedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CreatedBy
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 19
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public string CreatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedBy As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+  id: ModifiedAt
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: ModifiedAt
+  nameWithType: Machine.ModifiedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ModifiedAt
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 20
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public Instant ModifiedAt { get; set; }
+    parameters: []
+    return:
+      type: NodaTime.Instant
+    content.vb: Public Property ModifiedAt As Instant
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedAt
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+  id: ModifiedBy
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: ModifiedBy
+  nameWithType: Machine.ModifiedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ModifiedBy
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 21
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public string ModifiedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModifiedBy As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+  id: DeletedAt
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: DeletedAt
+  nameWithType: Machine.DeletedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: DeletedAt
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 22
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public Instant? DeletedAt { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{NodaTime.Instant}
+    content.vb: Public Property DeletedAt As Instant?
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedAt
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+  id: DeletedBy
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: DeletedBy
+  nameWithType: Machine.DeletedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: DeletedBy
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 23
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public string? DeletedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DeletedBy As String
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+  id: TenantId
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: TenantId
+  nameWithType: Machine.TenantId
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 24
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public Guid TenantId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property TenantId As Guid
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.TenantId*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+  commentId: P:MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+  id: Tenant
+  parent: MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: Tenant
+  nameWithType: Machine.Tenant
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Tenant
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Entities/Business/Machine.cs
+    startLine: 25
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Entities.Business
+  example: []
+  syntax:
+    content: public Tenant Tenant { get; set; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Data.Entities.Account.Tenant
+    content.vb: Public Property Tenant As Tenant
+  overload: MaintenanceChronicle.Data.Entities.Business.Machine.Tenant*
+  implements:
+  - MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+references:
+- uid: MaintenanceChronicle.Data.Entities.Business
+  commentId: N:MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Business
+  nameWithType: MaintenanceChronicle.Data.Entities.Business
+  fullName: MaintenanceChronicle.Data.Entities.Business
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable
+  commentId: T:MaintenanceChronicle.Data.Interfaces.ITrackable
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html
+  name: ITrackable
+  nameWithType: ITrackable
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant
+  commentId: T:MaintenanceChronicle.Data.Interfaces.ITenant
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html
+  name: ITenant
+  nameWithType: ITenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  name: SetCreateBySystem<Machine>(Machine, Instant)
+  nameWithType: TrackableExtensions.SetCreateBySystem<Machine>(Machine, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetCreateBySystem(Of Machine)(Machine, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  name.vb: SetCreateBySystem(Of Machine)(Machine, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetCreateBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetCreateBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  name: SetCreateBy<Machine>(Machine, string, Instant)
+  nameWithType: TrackableExtensions.SetCreateBy<Machine>(Machine, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetCreateBy(Of Machine)(Machine, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, String, NodaTime.Instant)
+  name.vb: SetCreateBy(Of Machine)(Machine, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetCreateBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetCreateBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  name: SetDeleteBySystem<Machine>(Machine, Instant)
+  nameWithType: TrackableExtensions.SetDeleteBySystem<Machine>(Machine, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetDeleteBySystem(Of Machine)(Machine, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  name.vb: SetDeleteBySystem(Of Machine)(Machine, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetDeleteBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetDeleteBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  name: SetDeleteBy<Machine>(Machine, string, Instant)
+  nameWithType: TrackableExtensions.SetDeleteBy<Machine>(Machine, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetDeleteBy(Of Machine)(Machine, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, String, NodaTime.Instant)
+  name.vb: SetDeleteBy(Of Machine)(Machine, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetDeleteBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetDeleteBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  name: SetModifyBySystem<Machine>(Machine, Instant)
+  nameWithType: TrackableExtensions.SetModifyBySystem<Machine>(Machine, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetModifyBySystem(Of Machine)(Machine, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, NodaTime.Instant)
+  name.vb: SetModifyBySystem(Of Machine)(Machine, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetModifyBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(MaintenanceChronicle.Data.Entities.Business.Machine,NodaTime.Instant)
+    name: SetModifyBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+  parent: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  definition: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  name: SetModifyBy<Machine>(Machine, string, Instant)
+  nameWithType: TrackableExtensions.SetModifyBy<Machine>(Machine, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy<MaintenanceChronicle.Data.Entities.Business.Machine>(MaintenanceChronicle.Data.Entities.Business.Machine, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetModifyBy(Of Machine)(Machine, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy(Of MaintenanceChronicle.Data.Entities.Business.Machine)(MaintenanceChronicle.Data.Entities.Business.Machine, String, NodaTime.Instant)
+  name.vb: SetModifyBy(Of Machine)(Machine, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetModifyBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: '>'
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(MaintenanceChronicle.Data.Entities.Business.Machine,System.String,NodaTime.Instant)
+    name: SetModifyBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: )
+  - name: (
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Data.Interfaces
+  commentId: N:MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Interfaces
+  nameWithType: MaintenanceChronicle.Data.Interfaces
+  fullName: MaintenanceChronicle.Data.Interfaces
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  name: SetCreateBySystem<T>(T, Instant)
+  nameWithType: TrackableExtensions.SetCreateBySystem<T>(T, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem<T>(T, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetCreateBySystem(Of T)(T, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem(Of T)(T, NodaTime.Instant)
+  name.vb: SetCreateBySystem(Of T)(T, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+    name: SetCreateBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBySystem``1(``0,NodaTime.Instant)
+    name: SetCreateBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  commentId: T:MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+  parent: MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html
+  name: TrackableExtensions
+  nameWithType: TrackableExtensions
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  name: SetCreateBy<T>(T, string, Instant)
+  nameWithType: TrackableExtensions.SetCreateBy<T>(T, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy<T>(T, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetCreateBy(Of T)(T, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy(Of T)(T, String, NodaTime.Instant)
+  name.vb: SetCreateBy(Of T)(T, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+    name: SetCreateBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetCreateBy``1(``0,System.String,NodaTime.Instant)
+    name: SetCreateBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetCreateBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  name: SetDeleteBySystem<T>(T, Instant)
+  nameWithType: TrackableExtensions.SetDeleteBySystem<T>(T, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem<T>(T, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetDeleteBySystem(Of T)(T, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem(Of T)(T, NodaTime.Instant)
+  name.vb: SetDeleteBySystem(Of T)(T, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+    name: SetDeleteBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBySystem``1(``0,NodaTime.Instant)
+    name: SetDeleteBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  name: SetDeleteBy<T>(T, string, Instant)
+  nameWithType: TrackableExtensions.SetDeleteBy<T>(T, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy<T>(T, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetDeleteBy(Of T)(T, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy(Of T)(T, String, NodaTime.Instant)
+  name.vb: SetDeleteBy(Of T)(T, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+    name: SetDeleteBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetDeleteBy``1(``0,System.String,NodaTime.Instant)
+    name: SetDeleteBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetDeleteBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  name: SetModifyBySystem<T>(T, Instant)
+  nameWithType: TrackableExtensions.SetModifyBySystem<T>(T, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem<T>(T, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetModifyBySystem(Of T)(T, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem(Of T)(T, NodaTime.Instant)
+  name.vb: SetModifyBySystem(Of T)(T, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+    name: SetModifyBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBySystem``1(``0,NodaTime.Instant)
+    name: SetModifyBySystem
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBySystem__1___0_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  name: SetModifyBy<T>(T, string, Instant)
+  nameWithType: TrackableExtensions.SetModifyBy<T>(T, string, Instant)
+  fullName: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy<T>(T, string, NodaTime.Instant)
+  nameWithType.vb: TrackableExtensions.SetModifyBy(Of T)(T, String, Instant)
+  fullName.vb: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy(Of T)(T, String, NodaTime.Instant)
+  name.vb: SetModifyBy(Of T)(T, String, Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+    name: SetModifyBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.SetModifyBy``1(``0,System.String,NodaTime.Instant)
+    name: SetModifyBy
+    href: MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html#MaintenanceChronicle_Data_Interfaces_TrackableExtensions_SetModifyBy__1___0_System_String_NodaTime_Instant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Id*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Id
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Id
+  name: Id
+  nameWithType: Machine.Id
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Model*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Model
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Model
+  name: Model
+  nameWithType: Machine.Model
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Model
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Manufacture
+  name: Manufacture
+  nameWithType: Machine.Manufacture
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Manufacture
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.LocationId*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_LocationId
+  name: LocationId
+  nameWithType: Machine.LocationId
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.LocationId
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Location*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Location
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Location
+  name: Location
+  nameWithType: Machine.Location
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Location
+- uid: MaintenanceChronicle.Data.Entities.Business.Location
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Location
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: MaintenanceChronicle.Data.Entities.Business.Location
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_SerialNumber
+  name: SerialNumber
+  nameWithType: Machine.SerialNumber
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.SerialNumber
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Color*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Color
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Color
+  name: Color
+  nameWithType: Machine.Color
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Color
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_InUseSince
+  name: InUseSince
+  nameWithType: Machine.InUseSince
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.InUseSince
+- uid: NodaTime.Instant
+  commentId: T:NodaTime.Instant
+  parent: NodaTime
+  isExternal: true
+  href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  name: Instant
+  nameWithType: Instant
+  fullName: NodaTime.Instant
+- uid: NodaTime
+  commentId: N:NodaTime
+  isExternal: true
+  name: NodaTime
+  nameWithType: NodaTime
+  fullName: NodaTime
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_CreatedAt
+  name: CreatedAt
+  nameWithType: Machine.CreatedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedAt
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedAt
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedAt
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_CreatedAt
+  name: CreatedAt
+  nameWithType: ITrackable.CreatedAt
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedAt
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_CreatedBy
+  name: CreatedBy
+  nameWithType: Machine.CreatedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.CreatedBy
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedBy
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedBy
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_CreatedBy
+  name: CreatedBy
+  nameWithType: ITrackable.CreatedBy
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.CreatedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_ModifiedAt
+  name: ModifiedAt
+  nameWithType: Machine.ModifiedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedAt
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedAt
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedAt
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_ModifiedAt
+  name: ModifiedAt
+  nameWithType: ITrackable.ModifiedAt
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedAt
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_ModifiedBy
+  name: ModifiedBy
+  nameWithType: Machine.ModifiedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.ModifiedBy
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedBy
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedBy
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_ModifiedBy
+  name: ModifiedBy
+  nameWithType: ITrackable.ModifiedBy
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.ModifiedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_DeletedAt
+  name: DeletedAt
+  nameWithType: Machine.DeletedAt
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedAt
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedAt
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedAt
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_DeletedAt
+  name: DeletedAt
+  nameWithType: ITrackable.DeletedAt
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedAt
+- uid: System.Nullable{NodaTime.Instant}
+  commentId: T:System.Nullable{NodaTime.Instant}
+  parent: System
+  definition: System.Nullable`1
+  href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  name: Instant?
+  nameWithType: Instant?
+  fullName: NodaTime.Instant?
+  spec.csharp:
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: '?'
+  spec.vb:
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_DeletedBy
+  name: DeletedBy
+  nameWithType: Machine.DeletedBy
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.DeletedBy
+- uid: MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedBy
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedBy
+  parent: MaintenanceChronicle.Data.Interfaces.ITrackable
+  href: MaintenanceChronicle.Data.Interfaces.ITrackable.html#MaintenanceChronicle_Data_Interfaces_ITrackable_DeletedBy
+  name: DeletedBy
+  nameWithType: ITrackable.DeletedBy
+  fullName: MaintenanceChronicle.Data.Interfaces.ITrackable.DeletedBy
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.TenantId*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_TenantId
+  name: TenantId
+  nameWithType: Machine.TenantId
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.TenantId
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  parent: MaintenanceChronicle.Data.Interfaces.ITenant
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html#MaintenanceChronicle_Data_Interfaces_ITenant_TenantId
+  name: TenantId
+  nameWithType: ITenant.TenantId
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine.Tenant*
+  commentId: Overload:MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html#MaintenanceChronicle_Data_Entities_Business_Machine_Tenant
+  name: Tenant
+  nameWithType: Machine.Tenant
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine.Tenant
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  parent: MaintenanceChronicle.Data.Interfaces.ITenant
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html#MaintenanceChronicle_Data_Interfaces_ITenant_Tenant
+  name: Tenant
+  nameWithType: ITenant.Tenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+- uid: MaintenanceChronicle.Data.Entities.Account.Tenant
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.Tenant
+  parent: MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.Data.Entities.Account.Tenant.html
+  name: Tenant
+  nameWithType: Tenant
+  fullName: MaintenanceChronicle.Data.Entities.Account.Tenant
+- uid: MaintenanceChronicle.Data.Entities.Account
+  commentId: N:MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Account
+  nameWithType: MaintenanceChronicle.Data.Entities.Account
+  fullName: MaintenanceChronicle.Data.Entities.Account
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html

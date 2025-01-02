@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data
+  commentId: N:MaintenanceChronicle.Data
+  id: MaintenanceChronicle.Data
+  children:
+  - MaintenanceChronicle.Data.AppDbContext
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Data
+  nameWithType: MaintenanceChronicle.Data
+  fullName: MaintenanceChronicle.Data
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Data
+references:
+- uid: MaintenanceChronicle.Data.AppDbContext
+  commentId: T:MaintenanceChronicle.Data.AppDbContext
+  parent: MaintenanceChronicle.Data
+  href: MaintenanceChronicle.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: MaintenanceChronicle.Data.AppDbContext
+- uid: MaintenanceChronicle.Data
+  commentId: N:MaintenanceChronicle.Data
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data
+  nameWithType: MaintenanceChronicle.Data
+  fullName: MaintenanceChronicle.Data
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html

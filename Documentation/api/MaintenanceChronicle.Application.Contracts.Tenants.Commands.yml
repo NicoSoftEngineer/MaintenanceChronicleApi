@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  id: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand
+  - MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand.html
+  name: AddTenantClaimToUserPrincipalCommand
+  nameWithType: AddTenantClaimToUserPrincipalCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html
+  name: AssignCreationInfoToTenantCommand
+  nameWithType: AssignCreationInfoToTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand.html
+  name: CreateNewTenantCommand
+  nameWithType: CreateNewTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand
+  parent: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand.html
+  name: UpdateTenantCommand
+  nameWithType: UpdateTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants
+    name: Tenants
+    href: MaintenanceChronicle.Application.Contracts.Tenants.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Tenants.Commands.html

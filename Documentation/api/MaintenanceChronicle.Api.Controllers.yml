@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Api.Controllers
+  commentId: N:MaintenanceChronicle.Api.Controllers
+  id: MaintenanceChronicle.Api.Controllers
+  children:
+  - MaintenanceChronicle.Api.Controllers.AuthController
+  - MaintenanceChronicle.Api.Controllers.CustomerController
+  - MaintenanceChronicle.Api.Controllers.LocationController
+  - MaintenanceChronicle.Api.Controllers.MachineController
+  - MaintenanceChronicle.Api.Controllers.TenantController
+  - MaintenanceChronicle.Api.Controllers.UserController
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Api.Controllers
+  nameWithType: MaintenanceChronicle.Api.Controllers
+  fullName: MaintenanceChronicle.Api.Controllers
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Api
+references:
+- uid: MaintenanceChronicle.Api.Controllers.AuthController
+  commentId: T:MaintenanceChronicle.Api.Controllers.AuthController
+  href: MaintenanceChronicle.Api.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: MaintenanceChronicle.Api.Controllers.AuthController
+- uid: MaintenanceChronicle.Api.Controllers.CustomerController
+  commentId: T:MaintenanceChronicle.Api.Controllers.CustomerController
+  href: MaintenanceChronicle.Api.Controllers.CustomerController.html
+  name: CustomerController
+  nameWithType: CustomerController
+  fullName: MaintenanceChronicle.Api.Controllers.CustomerController
+- uid: MaintenanceChronicle.Api.Controllers.LocationController
+  commentId: T:MaintenanceChronicle.Api.Controllers.LocationController
+  href: MaintenanceChronicle.Api.Controllers.LocationController.html
+  name: LocationController
+  nameWithType: LocationController
+  fullName: MaintenanceChronicle.Api.Controllers.LocationController
+- uid: MaintenanceChronicle.Api.Controllers.MachineController
+  commentId: T:MaintenanceChronicle.Api.Controllers.MachineController
+  href: MaintenanceChronicle.Api.Controllers.MachineController.html
+  name: MachineController
+  nameWithType: MachineController
+  fullName: MaintenanceChronicle.Api.Controllers.MachineController
+- uid: MaintenanceChronicle.Api.Controllers.TenantController
+  commentId: T:MaintenanceChronicle.Api.Controllers.TenantController
+  href: MaintenanceChronicle.Api.Controllers.TenantController.html
+  name: TenantController
+  nameWithType: TenantController
+  fullName: MaintenanceChronicle.Api.Controllers.TenantController
+- uid: MaintenanceChronicle.Api.Controllers.UserController
+  commentId: T:MaintenanceChronicle.Api.Controllers.UserController
+  href: MaintenanceChronicle.Api.Controllers.UserController.html
+  name: UserController
+  nameWithType: UserController
+  fullName: MaintenanceChronicle.Api.Controllers.UserController
