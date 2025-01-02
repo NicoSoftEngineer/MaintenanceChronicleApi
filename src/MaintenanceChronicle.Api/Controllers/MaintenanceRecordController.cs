@@ -1,3 +1,5 @@
+using MaintenanceChronicle.Application.Contracts.Machines.Queries;
+using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
@@ -103,5 +105,19 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
         var result = await mediator.Send(query);
 
         return Ok(result);
+    }
+
+    /// <summary>
+    /// Gets machine for the specified maintenance record
+    /// </summary>
+    /// <param name="id">MaintenanceRecord id</param>
+    /// <returns>MachineInRecordDetailDto</returns>
+    [HttpGet("/api/v1/maintenance-records/{id:guid}/machine")]
+    public async Task<ActionResult<MachineInMaintenanceRecordDetailDto>> GetMachineForMaintenanceRecord(Guid id)
+    {
+        var query = new GetMachineByMaintenanceRecordIdQuery(id);
+        var machine = await mediator.Send(query);
+
+        return Ok(machine);
     }
 }
