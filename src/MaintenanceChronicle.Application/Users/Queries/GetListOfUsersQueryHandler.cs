@@ -21,11 +21,11 @@ public class GetListOfUsersQueryHandler(UserManager<User> userManager) : IReques
                 Id = x.Id,
                 FirstName = x.FirstName,
                 LastName = x.LastName,
-                Email = x.Email,
+                Email = x.Email!,
                 Roles = x.Roles.Select(r => new RoleDetailDto
                 {
                     Id = r.Role.Id,
-                    Name = r.Role.Name
+                    Name = r.Role.Name!
                 }).ToList()
             })
             .ToListAsync(cancellationToken);

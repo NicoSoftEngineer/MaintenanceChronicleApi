@@ -67,7 +67,7 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
                 TenantId = tenant.Id
             };
         }
-        catch (Exception ex)
+        catch
         {
             await transaction.RollbackAsync(cancellationToken);
             throw;

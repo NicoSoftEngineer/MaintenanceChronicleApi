@@ -5,17 +5,15 @@ using NodaTime;
 
 namespace MaintenanceChronicle.Data.Entities.Business;
 
-[Table(nameof(Machine))]
-public class Machine : ITrackable, ITenant
+[Table(nameof(MaintenanceRecord))]
+public class MaintenanceRecord : ITrackable, ITenant
 {
     public Guid Id { get; set; }
-    public string Model { get; set; } = null!;
-    public string Manufacture { get; set; } = null!;
-    public Guid LocationId { get; set; }
-    public Location Location { get; set; } = null!;
-    public string SerialNumber { get; set; } = null!;
-    public string Color { get; set; } = null!;
-    public Instant InUseSince { get; set; }
+    public string Description { get; set; } = null!;
+    public Instant Date { get; set; }
+    public RecordType Type { get; set; }
+    public Guid MachineId { get; set; }
+    public Machine Machine { get; set; } = null!;
     public Instant CreatedAt { get; set; }
     public string CreatedBy { get; set; } = null!;
     public Instant ModifiedAt { get; set; }
@@ -24,5 +22,4 @@ public class Machine : ITrackable, ITenant
     public string? DeletedBy { get; set; }
     public Guid TenantId { get; set; }
     public Tenant Tenant { get; set; } = null!;
-    public ICollection<MaintenanceRecord> MaintenanceRecords { get; set; } = new HashSet<MaintenanceRecord>();
 }

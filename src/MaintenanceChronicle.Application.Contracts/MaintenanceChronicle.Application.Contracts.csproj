@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -15,6 +15,7 @@
         <Folder Include="Locations\Queries\Dto\" />
         <Folder Include="Machines\Commands\Dto\" />
         <Folder Include="Machines\Queries\Dto\" />
+        <Folder Include="RecordTypes\Queries\Dto\" />
         <Folder Include="Users\Queries\Dto\" />
     </ItemGroup>
 

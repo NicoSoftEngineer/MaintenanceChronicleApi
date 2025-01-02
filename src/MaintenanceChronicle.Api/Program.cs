@@ -3,22 +3,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NodaTime;
 using MaintenanceChronicle.Data;
-using System.Net;
 using MaintenanceChronicle.Api.Utils;
 using MaintenanceChronicle.Application;
 using MaintenanceChronicle.Application.Validators;
-using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Data.Entities.Account;
+using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
-using Newtonsoft.Json;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.DataProtection;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
-using NodaTime;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,7 +34,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
     {
         optionsBuilder.UseNodaTime();
+        optionsBuilder.MapEnum<RecordType>("recordType");
     });
+    
 });
 
 //Use PATCH endpoints
