@@ -24,4 +24,5 @@ public class Machine : ITrackable, ITenant
     public string? DeletedBy { get; set; }
     public Guid TenantId { get; set; }
     public Tenant Tenant { get; set; } = null!;
+    public ICollection<MaintenanceRecord> MaintenanceRecords { get; set; } = new HashSet<MaintenanceRecord>();
 }
