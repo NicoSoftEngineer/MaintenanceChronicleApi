@@ -1,6 +1,7 @@
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Account;
@@ -86,6 +87,19 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfMaintenanceRecords()
     {
         var query = new GetListOfEntityQuery<MaintenanceRecordInListDto>();
+        var result = await mediator.Send(query);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Gets list of all maintenance record types
+    /// </summary>
+    /// <returns>List of dto</returns>
+    [HttpGet("/api/v1/maintenance-records/types/")]
+    public async Task<ActionResult<RecordTypeDto>> GetListOfMaintenanceRecordTypes()
+    {
+        var query = new GetListOfEntityQuery<RecordTypeDto>();
         var result = await mediator.Send(query);
 
         return Ok(result);
