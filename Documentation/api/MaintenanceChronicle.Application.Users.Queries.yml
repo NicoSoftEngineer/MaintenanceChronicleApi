@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Users.Queries
+  commentId: N:MaintenanceChronicle.Application.Users.Queries
+  id: MaintenanceChronicle.Application.Users.Queries
+  children:
+  - MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler
+  - MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler
+  - MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Users.Queries
+  nameWithType: MaintenanceChronicle.Application.Users.Queries
+  fullName: MaintenanceChronicle.Application.Users.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler
+  href: MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler.html
+  name: GetListOfUsersQueryHandler
+  nameWithType: GetListOfUsersQueryHandler
+  fullName: MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler
+- uid: MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler
+  href: MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler.html
+  name: GetTenantIdFromUserCommandHandler
+  nameWithType: GetTenantIdFromUserCommandHandler
+  fullName: MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler
+- uid: MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler
+  href: MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler.html
+  name: GetUserByIdQueryHandler
+  nameWithType: GetUserByIdQueryHandler
+  fullName: MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler

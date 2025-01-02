@@ -1,0 +1,485 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  commentId: T:MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  id: CurrentTenantProvider
+  parent: MaintenanceChronicle.Api.Utils
+  children:
+  - MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  - MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+  langs:
+  - csharp
+  - vb
+  name: CurrentTenantProvider
+  nameWithType: CurrentTenantProvider
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: CurrentTenantProvider
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Api
+  namespace: MaintenanceChronicle.Api.Utils
+  syntax:
+    content: 'public class CurrentTenantProvider : ICurrentTenantProvider'
+    content.vb: Public Class CurrentTenantProvider Implements ICurrentTenantProvider
+  inheritance:
+  - System.Object
+  implements:
+  - MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  commentId: M:MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)'
+  parent: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  langs:
+  - csharp
+  - vb
+  name: CurrentTenantProvider(IHttpContextAccessor)
+  nameWithType: CurrentTenantProvider.CurrentTenantProvider(IHttpContextAccessor)
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.CurrentTenantProvider(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: .ctor
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Api
+  namespace: MaintenanceChronicle.Api.Utils
+  syntax:
+    content: public CurrentTenantProvider(IHttpContextAccessor httpContextAccessor)
+    parameters:
+    - id: httpContextAccessor
+      type: Microsoft.AspNetCore.Http.IHttpContextAccessor
+    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor)
+  overload: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor*
+  nameWithType.vb: CurrentTenantProvider.New(IHttpContextAccessor)
+  fullName.vb: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.New(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  name.vb: New(IHttpContextAccessor)
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+  commentId: P:MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+  id: TenantId
+  parent: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+  langs:
+  - csharp
+  - vb
+  name: TenantId
+  nameWithType: CurrentTenantProvider.TenantId
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Api/Utils/CurrentTenantProvider.cs
+    startLine: 9
+  assemblies:
+  - MaintenanceChronicle.Api
+  namespace: MaintenanceChronicle.Api.Utils
+  example: []
+  syntax:
+    content: public Guid TenantId { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property TenantId As Guid
+  overload: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId*
+  implements:
+  - MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+references:
+- uid: MaintenanceChronicle.Api.Utils
+  commentId: N:MaintenanceChronicle.Api.Utils
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Api.Utils
+  nameWithType: MaintenanceChronicle.Api.Utils
+  fullName: MaintenanceChronicle.Api.Utils
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Api
+    name: Api
+    href: MaintenanceChronicle.Api.html
+  - name: .
+  - uid: MaintenanceChronicle.Api.Utils
+    name: Utils
+    href: MaintenanceChronicle.Api.Utils.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Api
+    name: Api
+    href: MaintenanceChronicle.Api.html
+  - name: .
+  - uid: MaintenanceChronicle.Api.Utils
+    name: Utils
+    href: MaintenanceChronicle.Api.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  commentId: T:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  parent: MaintenanceChronicle.Utilities.Helpers
+  href: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.html
+  name: ICurrentTenantProvider
+  nameWithType: ICurrentTenantProvider
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Utilities.Helpers
+  commentId: N:MaintenanceChronicle.Utilities.Helpers
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Helpers
+  nameWithType: MaintenanceChronicle.Utilities.Helpers
+  fullName: MaintenanceChronicle.Utilities.Helpers
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor*
+  commentId: Overload:MaintenanceChronicle.Api.Utils.CurrentTenantProvider.#ctor
+  href: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.html#MaintenanceChronicle_Api_Utils_CurrentTenantProvider__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_
+  name: CurrentTenantProvider
+  nameWithType: CurrentTenantProvider.CurrentTenantProvider
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.CurrentTenantProvider
+  nameWithType.vb: CurrentTenantProvider.New
+  fullName.vb: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor
+  name: IHttpContextAccessor
+  nameWithType: IHttpContextAccessor
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+- uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId*
+  commentId: Overload:MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+  href: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.html#MaintenanceChronicle_Api_Utils_CurrentTenantProvider_TenantId
+  name: TenantId
+  nameWithType: CurrentTenantProvider.TenantId
+  fullName: MaintenanceChronicle.Api.Utils.CurrentTenantProvider.TenantId
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  commentId: P:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  parent: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  name: TenantId
+  nameWithType: ICurrentTenantProvider.TenantId
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid

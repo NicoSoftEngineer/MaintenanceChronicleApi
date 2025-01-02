@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Migrations
+  commentId: N:MaintenanceChronicle.Data.Migrations
+  id: MaintenanceChronicle.Data.Migrations
+  children:
+  - MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities
+  - MaintenanceChronicle.Data.Migrations.AddedLocationContactUser
+  - MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities
+  - MaintenanceChronicle.Data.Migrations.CustomerAdded
+  - MaintenanceChronicle.Data.Migrations.Init
+  - MaintenanceChronicle.Data.Migrations.LocationEntityAdded
+  - MaintenanceChronicle.Data.Migrations.MachineAdded
+  - MaintenanceChronicle.Data.Migrations.RolesAdded
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Data.Migrations
+  nameWithType: MaintenanceChronicle.Data.Migrations
+  fullName: MaintenanceChronicle.Data.Migrations
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Data
+references:
+- uid: MaintenanceChronicle.Data.Migrations.Init
+  commentId: T:MaintenanceChronicle.Data.Migrations.Init
+  href: MaintenanceChronicle.Data.Migrations.Init.html
+  name: Init
+  nameWithType: Init
+  fullName: MaintenanceChronicle.Data.Migrations.Init
+- uid: MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities
+  commentId: T:MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities
+  href: MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities.html
+  name: AddedTenantAndPutTenantIdToEntities
+  nameWithType: AddedTenantAndPutTenantIdToEntities
+  fullName: MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities
+- uid: MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities
+  commentId: T:MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities
+  href: MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities.html
+  name: AddedITrackableToEntities
+  nameWithType: AddedITrackableToEntities
+  fullName: MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities
+- uid: MaintenanceChronicle.Data.Migrations.RolesAdded
+  commentId: T:MaintenanceChronicle.Data.Migrations.RolesAdded
+  href: MaintenanceChronicle.Data.Migrations.RolesAdded.html
+  name: RolesAdded
+  nameWithType: RolesAdded
+  fullName: MaintenanceChronicle.Data.Migrations.RolesAdded
+- uid: MaintenanceChronicle.Data.Migrations.CustomerAdded
+  commentId: T:MaintenanceChronicle.Data.Migrations.CustomerAdded
+  href: MaintenanceChronicle.Data.Migrations.CustomerAdded.html
+  name: CustomerAdded
+  nameWithType: CustomerAdded
+  fullName: MaintenanceChronicle.Data.Migrations.CustomerAdded
+- uid: MaintenanceChronicle.Data.Migrations.LocationEntityAdded
+  commentId: T:MaintenanceChronicle.Data.Migrations.LocationEntityAdded
+  href: MaintenanceChronicle.Data.Migrations.LocationEntityAdded.html
+  name: LocationEntityAdded
+  nameWithType: LocationEntityAdded
+  fullName: MaintenanceChronicle.Data.Migrations.LocationEntityAdded
+- uid: MaintenanceChronicle.Data.Migrations.AddedLocationContactUser
+  commentId: T:MaintenanceChronicle.Data.Migrations.AddedLocationContactUser
+  href: MaintenanceChronicle.Data.Migrations.AddedLocationContactUser.html
+  name: AddedLocationContactUser
+  nameWithType: AddedLocationContactUser
+  fullName: MaintenanceChronicle.Data.Migrations.AddedLocationContactUser
+- uid: MaintenanceChronicle.Data.Migrations.MachineAdded
+  commentId: T:MaintenanceChronicle.Data.Migrations.MachineAdded
+  href: MaintenanceChronicle.Data.Migrations.MachineAdded.html
+  name: MachineAdded
+  nameWithType: MachineAdded
+  fullName: MaintenanceChronicle.Data.Migrations.MachineAdded

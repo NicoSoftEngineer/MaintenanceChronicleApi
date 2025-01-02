@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Queries
+  id: MaintenanceChronicle.Application.Contracts.Users.Queries
+  children:
+  - MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Users.Queries
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Queries
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Queries
+  href: MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand.html
+  name: GetTenantIdFromUserCommand
+  nameWithType: GetTenantIdFromUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Queries
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Users.Queries
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Queries
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Queries
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Users.Queries.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Users.Queries.html

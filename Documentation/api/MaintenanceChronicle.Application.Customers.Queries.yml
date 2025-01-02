@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Customers.Queries
+  commentId: N:MaintenanceChronicle.Application.Customers.Queries
+  id: MaintenanceChronicle.Application.Customers.Queries
+  children:
+  - MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler
+  - MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Customers.Queries
+  nameWithType: MaintenanceChronicle.Application.Customers.Queries
+  fullName: MaintenanceChronicle.Application.Customers.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler
+  href: MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler.html
+  name: GetCustomerByIdQueryHandler
+  nameWithType: GetCustomerByIdQueryHandler
+  fullName: MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler
+- uid: MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler
+  href: MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler.html
+  name: GetListOfCustomersQueryHandler
+  nameWithType: GetListOfCustomersQueryHandler
+  fullName: MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler

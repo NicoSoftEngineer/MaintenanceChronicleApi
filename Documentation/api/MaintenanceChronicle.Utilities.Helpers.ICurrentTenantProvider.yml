@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  commentId: T:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  id: ICurrentTenantProvider
+  parent: MaintenanceChronicle.Utilities.Helpers
+  children:
+  - MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  langs:
+  - csharp
+  - vb
+  name: ICurrentTenantProvider
+  nameWithType: ICurrentTenantProvider
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  type: Interface
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Helpers/ICurrentTenantProvider.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ICurrentTenantProvider
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Helpers/ICurrentTenantProvider.cs
+    startLine: 2
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Helpers
+  syntax:
+    content: public interface ICurrentTenantProvider
+    content.vb: Public Interface ICurrentTenantProvider
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  commentId: P:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  id: TenantId
+  parent: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  langs:
+  - csharp
+  - vb
+  name: TenantId
+  nameWithType: ICurrentTenantProvider.TenantId
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/Helpers/ICurrentTenantProvider.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Utilities/Helpers/ICurrentTenantProvider.cs
+    startLine: 4
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.Helpers
+  syntax:
+    content: Guid TenantId { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: ReadOnly Property TenantId As Guid
+  overload: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId*
+references:
+- uid: MaintenanceChronicle.Utilities.Helpers
+  commentId: N:MaintenanceChronicle.Utilities.Helpers
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Helpers
+  nameWithType: MaintenanceChronicle.Utilities.Helpers
+  fullName: MaintenanceChronicle.Utilities.Helpers
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId*
+  commentId: Overload:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+  href: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.html#MaintenanceChronicle_Utilities_Helpers_ICurrentTenantProvider_TenantId
+  name: TenantId
+  nameWithType: ICurrentTenantProvider.TenantId
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.TenantId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

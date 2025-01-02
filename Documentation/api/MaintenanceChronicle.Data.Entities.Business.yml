@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Entities.Business
+  commentId: N:MaintenanceChronicle.Data.Entities.Business
+  id: MaintenanceChronicle.Data.Entities.Business
+  children:
+  - MaintenanceChronicle.Data.Entities.Business.Customer
+  - MaintenanceChronicle.Data.Entities.Business.Location
+  - MaintenanceChronicle.Data.Entities.Business.LocationContactUser
+  - MaintenanceChronicle.Data.Entities.Business.Machine
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Data.Entities.Business
+  nameWithType: MaintenanceChronicle.Data.Entities.Business
+  fullName: MaintenanceChronicle.Data.Entities.Business
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Data
+references:
+- uid: MaintenanceChronicle.Data.Entities.Business.Customer
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Customer
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.Customer.html
+  name: Customer
+  nameWithType: Customer
+  fullName: MaintenanceChronicle.Data.Entities.Business.Customer
+- uid: MaintenanceChronicle.Data.Entities.Business.Location
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Location
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: MaintenanceChronicle.Data.Entities.Business.Location
+- uid: MaintenanceChronicle.Data.Entities.Business.LocationContactUser
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.LocationContactUser
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.LocationContactUser.html
+  name: LocationContactUser
+  nameWithType: LocationContactUser
+  fullName: MaintenanceChronicle.Data.Entities.Business.LocationContactUser
+- uid: MaintenanceChronicle.Data.Entities.Business.Machine
+  commentId: T:MaintenanceChronicle.Data.Entities.Business.Machine
+  parent: MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.Data.Entities.Business.Machine.html
+  name: Machine
+  nameWithType: Machine
+  fullName: MaintenanceChronicle.Data.Entities.Business.Machine
+- uid: MaintenanceChronicle.Data.Entities.Business
+  commentId: N:MaintenanceChronicle.Data.Entities.Business
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Business
+  nameWithType: MaintenanceChronicle.Data.Entities.Business
+  fullName: MaintenanceChronicle.Data.Entities.Business
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Business
+    name: Business
+    href: MaintenanceChronicle.Data.Entities.Business.html

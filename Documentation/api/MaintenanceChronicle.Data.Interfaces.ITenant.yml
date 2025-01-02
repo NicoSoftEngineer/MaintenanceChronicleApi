@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant
+  commentId: T:MaintenanceChronicle.Data.Interfaces.ITenant
+  id: ITenant
+  parent: MaintenanceChronicle.Data.Interfaces
+  children:
+  - MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  - MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  langs:
+  - csharp
+  - vb
+  name: ITenant
+  nameWithType: ITenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant
+  type: Interface
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: ITenant
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+    startLine: 4
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Interfaces
+  syntax:
+    content: public interface ITenant
+    content.vb: Public Interface ITenant
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  id: TenantId
+  parent: MaintenanceChronicle.Data.Interfaces.ITenant
+  langs:
+  - csharp
+  - vb
+  name: TenantId
+  nameWithType: ITenant.TenantId
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: TenantId
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Interfaces
+  syntax:
+    content: Guid TenantId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Property TenantId As Guid
+  overload: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId*
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  commentId: P:MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  id: Tenant
+  parent: MaintenanceChronicle.Data.Interfaces.ITenant
+  langs:
+  - csharp
+  - vb
+  name: Tenant
+  nameWithType: ITenant.Tenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: Tenant
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Data/Interfaces/ITenant.cs
+    startLine: 7
+  assemblies:
+  - MaintenanceChronicle.Data
+  namespace: MaintenanceChronicle.Data.Interfaces
+  syntax:
+    content: Tenant Tenant { get; set; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Data.Entities.Account.Tenant
+    content.vb: Property Tenant As Tenant
+  overload: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant*
+references:
+- uid: MaintenanceChronicle.Data.Interfaces
+  commentId: N:MaintenanceChronicle.Data.Interfaces
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Interfaces
+  nameWithType: MaintenanceChronicle.Data.Interfaces
+  fullName: MaintenanceChronicle.Data.Interfaces
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Interfaces
+    name: Interfaces
+    href: MaintenanceChronicle.Data.Interfaces.html
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId*
+  commentId: Overload:MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html#MaintenanceChronicle_Data_Interfaces_ITenant_TenantId
+  name: TenantId
+  nameWithType: ITenant.TenantId
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.TenantId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant*
+  commentId: Overload:MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+  href: MaintenanceChronicle.Data.Interfaces.ITenant.html#MaintenanceChronicle_Data_Interfaces_ITenant_Tenant
+  name: Tenant
+  nameWithType: ITenant.Tenant
+  fullName: MaintenanceChronicle.Data.Interfaces.ITenant.Tenant
+- uid: MaintenanceChronicle.Data.Entities.Account.Tenant
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.Tenant
+  parent: MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.Data.Entities.Account.Tenant.html
+  name: Tenant
+  nameWithType: Tenant
+  fullName: MaintenanceChronicle.Data.Entities.Account.Tenant
+- uid: MaintenanceChronicle.Data.Entities.Account
+  commentId: N:MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Account
+  nameWithType: MaintenanceChronicle.Data.Entities.Account
+  fullName: MaintenanceChronicle.Data.Entities.Account
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html

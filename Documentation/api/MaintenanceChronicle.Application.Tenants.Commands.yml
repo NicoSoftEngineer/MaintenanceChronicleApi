@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Tenants.Commands
+  commentId: N:MaintenanceChronicle.Application.Tenants.Commands
+  id: MaintenanceChronicle.Application.Tenants.Commands
+  children:
+  - MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler
+  - MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler
+  - MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler
+  - MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Tenants.Commands
+  nameWithType: MaintenanceChronicle.Application.Tenants.Commands
+  fullName: MaintenanceChronicle.Application.Tenants.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler
+  href: MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler.html
+  name: AddTenantClaimToUserPrincipalCommandHandler
+  nameWithType: AddTenantClaimToUserPrincipalCommandHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler
+- uid: MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler
+  href: MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler.html
+  name: AssignCreationInfoToTenantCommandHandler
+  nameWithType: AssignCreationInfoToTenantCommandHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler
+- uid: MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler
+  href: MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler.html
+  name: CreateNewTenantCommandHandler
+  nameWithType: CreateNewTenantCommandHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler
+- uid: MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler
+  href: MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler.html
+  name: UpdateTenantCommandHandler
+  nameWithType: UpdateTenantCommandHandler
+  fullName: MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  id: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html
+  name: ManageMachineDetailDto
+  nameWithType: ManageMachineDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html
+  name: ManageMachineDetailExtension
+  nameWithType: ManageMachineDetailExtension
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto.html
+  name: NewMachineDto
+  nameWithType: NewMachineDto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension.html
+  name: NewMachineDtoExtension
+  nameWithType: NewMachineDtoExtension
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html

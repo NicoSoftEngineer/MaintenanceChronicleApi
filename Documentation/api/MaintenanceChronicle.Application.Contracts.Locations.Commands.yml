@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Commands
+  id: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand
+  - MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html
+  name: CreateNewLocationCommand
+  nameWithType: CreateNewLocationCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand.html
+  name: ManageContactsInLocationCommand
+  nameWithType: ManageContactsInLocationCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand
+  parent: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand.html
+  name: UpdateLocationCommand
+  nameWithType: UpdateLocationCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Locations.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations
+    name: Locations
+    href: MaintenanceChronicle.Application.Contracts.Locations.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Locations.Commands.html

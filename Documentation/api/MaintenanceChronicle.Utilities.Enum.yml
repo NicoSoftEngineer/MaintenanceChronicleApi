@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Enum
+  commentId: N:MaintenanceChronicle.Utilities.Enum
+  id: MaintenanceChronicle.Utilities.Enum
+  children:
+  - MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Utilities.Enum
+  nameWithType: MaintenanceChronicle.Utilities.Enum
+  fullName: MaintenanceChronicle.Utilities.Enum
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Utilities
+references:
+- uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  commentId: T:MaintenanceChronicle.Utilities.Enum.EnumExtensions
+  parent: MaintenanceChronicle.Utilities.Enum
+  href: MaintenanceChronicle.Utilities.Enum.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+- uid: MaintenanceChronicle.Utilities.Enum
+  commentId: N:MaintenanceChronicle.Utilities.Enum
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Enum
+  nameWithType: MaintenanceChronicle.Utilities.Enum
+  fullName: MaintenanceChronicle.Utilities.Enum
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Enum
+    name: Enum
+    href: MaintenanceChronicle.Utilities.Enum.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Enum
+    name: Enum
+    href: MaintenanceChronicle.Utilities.Enum.html

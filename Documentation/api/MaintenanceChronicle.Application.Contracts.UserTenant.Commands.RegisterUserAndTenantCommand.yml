@@ -1,0 +1,595 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+  id: RegisterUserAndTenantCommand
+  parent: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)
+  - MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto
+  langs:
+  - csharp
+  - vb
+  name: RegisterUserAndTenantCommand
+  nameWithType: RegisterUserAndTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: RegisterUserAndTenantCommand
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  syntax:
+    content: 'public record RegisterUserAndTenantCommand : IRequest<UserTenantIdsDto>, IBaseRequest, IEquatable<RegisterUserAndTenantCommand>'
+    content.vb: Public Class RegisterUserAndTenantCommand Implements IRequest(Of UserTenantIdsDto), IBaseRequest, IEquatable(Of RegisterUserAndTenantCommand)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequest{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto}
+  - MediatR.IBaseRequest
+  - System.IEquatable{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)
+  commentId: M:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)
+  id: '#ctor(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)'
+  parent: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+  langs:
+  - csharp
+  - vb
+  name: RegisterUserAndTenantCommand(UserTenantDto)
+  nameWithType: RegisterUserAndTenantCommand.RegisterUserAndTenantCommand(UserTenantDto)
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.RegisterUserAndTenantCommand(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: .ctor
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  syntax:
+    content: public RegisterUserAndTenantCommand(UserTenantDto UserTenantDto)
+    parameters:
+    - id: UserTenantDto
+      type: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+    content.vb: Public Sub New(UserTenantDto As UserTenantDto)
+  overload: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor*
+  nameWithType.vb: RegisterUserAndTenantCommand.New(UserTenantDto)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.New(MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto)
+  name.vb: New(UserTenantDto)
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto
+  commentId: P:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto
+  id: UserTenantDto
+  parent: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+  langs:
+  - csharp
+  - vb
+  name: UserTenantDto
+  nameWithType: RegisterUserAndTenantCommand.UserTenantDto
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: UserTenantDto
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/UserTenant/Commands/RegisterUserAndTenantCommand.cs
+    startLine: 5
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  syntax:
+    content: public UserTenantDto UserTenantDto { get; init; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+    content.vb: Public Property UserTenantDto As UserTenantDto
+  overload: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant
+    name: UserTenant
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant
+    name: UserTenant
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequest{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto}
+  commentId: T:MediatR.IRequest{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto}
+  parent: MediatR
+  definition: MediatR.IRequest`1
+  href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.html
+  name: IRequest<UserTenantIdsDto>
+  nameWithType: IRequest<UserTenantIdsDto>
+  fullName: MediatR.IRequest<MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto>
+  nameWithType.vb: IRequest(Of UserTenantIdsDto)
+  fullName.vb: MediatR.IRequest(Of MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto)
+  name.vb: IRequest(Of UserTenantIdsDto)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto
+    name: UserTenantIdsDto
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.html
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto
+    name: UserTenantIdsDto
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.html
+  - name: )
+- uid: MediatR.IBaseRequest
+  commentId: T:MediatR.IBaseRequest
+  parent: MediatR
+  isExternal: true
+  name: IBaseRequest
+  nameWithType: IBaseRequest
+  fullName: MediatR.IBaseRequest
+- uid: System.IEquatable{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand}
+  commentId: T:System.IEquatable{MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<RegisterUserAndTenantCommand>
+  nameWithType: IEquatable<RegisterUserAndTenantCommand>
+  fullName: System.IEquatable<MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand>
+  nameWithType.vb: IEquatable(Of RegisterUserAndTenantCommand)
+  fullName.vb: System.IEquatable(Of MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand)
+  name.vb: IEquatable(Of RegisterUserAndTenantCommand)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+    name: RegisterUserAndTenantCommand
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+    name: RegisterUserAndTenantCommand
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequest`1
+  commentId: T:MediatR.IRequest`1
+  isExternal: true
+  name: IRequest<TResponse>
+  nameWithType: IRequest<TResponse>
+  fullName: MediatR.IRequest<TResponse>
+  nameWithType.vb: IRequest(Of TResponse)
+  fullName.vb: MediatR.IRequest(Of TResponse)
+  name.vb: IRequest(Of TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.#ctor
+  href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html#MaintenanceChronicle_Application_Contracts_UserTenant_Commands_RegisterUserAndTenantCommand__ctor_MaintenanceChronicle_Application_Contracts_UserTenant_Commands_Dto_UserTenantDto_
+  name: RegisterUserAndTenantCommand
+  nameWithType: RegisterUserAndTenantCommand.RegisterUserAndTenantCommand
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.RegisterUserAndTenantCommand
+  nameWithType.vb: RegisterUserAndTenantCommand.New
+  fullName.vb: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.New
+  name.vb: New
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+  parent: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto.html
+  name: UserTenantDto
+  nameWithType: UserTenantDto
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant
+    name: UserTenant
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant
+    name: UserTenant
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.html
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto
+  href: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html#MaintenanceChronicle_Application_Contracts_UserTenant_Commands_RegisterUserAndTenantCommand_UserTenantDto
+  name: UserTenantDto
+  nameWithType: RegisterUserAndTenantCommand.UserTenantDto
+  fullName: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.UserTenantDto

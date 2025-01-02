@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Machines.Queries
+  commentId: N:MaintenanceChronicle.Application.Machines.Queries
+  id: MaintenanceChronicle.Application.Machines.Queries
+  children:
+  - MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler
+  - MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler
+  - MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Machines.Queries
+  nameWithType: MaintenanceChronicle.Application.Machines.Queries
+  fullName: MaintenanceChronicle.Application.Machines.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler
+  href: MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler.html
+  name: GetMachinesForLocationQueryHandler
+  nameWithType: GetMachinesForLocationQueryHandler
+  fullName: MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler
+- uid: MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler
+  href: MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler.html
+  name: GetListOfMachinesQueryHandler
+  nameWithType: GetListOfMachinesQueryHandler
+  fullName: MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler
+- uid: MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler
+  href: MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler.html
+  name: GetMachineByIdQueryHandler
+  nameWithType: GetMachineByIdQueryHandler
+  fullName: MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler

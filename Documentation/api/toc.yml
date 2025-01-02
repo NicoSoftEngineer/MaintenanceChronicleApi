@@ -1,0 +1,663 @@
+### YamlMime:TableOfContent
+items:
+- uid: MaintenanceChronicle.Api.Controllers
+  name: MaintenanceChronicle.Api.Controllers
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Api.Controllers.AuthController
+    name: AuthController
+    type: Class
+  - uid: MaintenanceChronicle.Api.Controllers.CustomerController
+    name: CustomerController
+    type: Class
+  - uid: MaintenanceChronicle.Api.Controllers.LocationController
+    name: LocationController
+    type: Class
+  - uid: MaintenanceChronicle.Api.Controllers.MachineController
+    name: MachineController
+    type: Class
+  - uid: MaintenanceChronicle.Api.Controllers.TenantController
+    name: TenantController
+    type: Class
+  - uid: MaintenanceChronicle.Api.Controllers.UserController
+    name: UserController
+    type: Class
+- uid: MaintenanceChronicle.Api.Utils
+  name: MaintenanceChronicle.Api.Utils
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Api.Utils.CurrentTenantProvider
+    name: CurrentTenantProvider
+    type: Class
+- uid: MaintenanceChronicle.Application
+  name: MaintenanceChronicle.Application
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.RequestHandlerRegistrationHelper
+    name: RequestHandlerRegistrationHelper
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  name: MaintenanceChronicle.Application.Contracts.Customers.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand
+    name: CreateNewCustomerCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand
+    name: UpdateCustomerCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDto
+    name: ManageCustomerDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDtoExtensions
+    name: ManageCustomerDetailDtoExtensions
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.NewCustomerDto
+    name: NewCustomerDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+    name: CustomerDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+    name: CustomerDetailDtoExtensions
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto
+    name: CustomerInListDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries
+  name: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfContactsForLocationQuery
+    name: GetListOfContactsForLocationQuery
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto
+    name: LocationContactInListDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension
+    name: LocationContactInListDtoExtension
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand
+    name: CreateNewLocationCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand
+    name: ManageContactsInLocationCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand
+    name: UpdateLocationCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto
+    name: ContactsInLocationDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto
+    name: ManageLocationDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension
+    name: ManageLocationDetailDtoExtension
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto
+    name: NewLocationDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension
+    name: NewLocationDtoExtension
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  name: MaintenanceChronicle.Application.Contracts.Locations.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery
+    name: GetLocationsForCustomerQuery
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDto
+    name: LocationDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDtoExtensions
+    name: LocationDetailDtoExtensions
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListDto
+    name: LocationInListDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListExtensions
+    name: LocationInListExtensions
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand
+    name: CreateNewMachineCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand
+    name: UpdateMachineCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto
+    name: ManageMachineDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension
+    name: ManageMachineDetailExtension
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto
+    name: NewMachineDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension
+    name: NewMachineDtoExtension
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Queries
+  name: MaintenanceChronicle.Application.Contracts.Machines.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachinesForLocationQuery
+    name: GetMachinesForLocationQuery
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDto
+    name: MachineDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDtoExtension
+    name: MachineDetailDtoExtension
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListDto
+    name: MachineInListDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListExtension
+    name: MachineInListExtension
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationDto
+    name: MachineInListForLocationDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationExtension
+    name: MachineInListForLocationExtension
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  name: MaintenanceChronicle.Application.Contracts.Roles.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto
+    name: RoleDetailDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand
+    name: AddTenantClaimToUserPrincipalCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand
+    name: AssignCreationInfoToTenantCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand
+    name: CreateNewTenantCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand
+    name: UpdateTenantCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.NewTenantDto
+    name: NewTenantDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto
+    name: TenantDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto
+    name: TenantsCreatorUserIdDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.UserTenantClaimDto
+    name: UserTenantClaimDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto
+    name: TenantDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto
+    name: TenantListDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  name: MaintenanceChronicle.Application.Contracts.UserTenant.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand
+    name: RegisterUserAndTenantCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto
+    name: UserTenantDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto
+    name: UserTenantIdsDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand
+    name: AddPasswordToRegisteredUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand
+    name: AddRolesToUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand
+    name: CreateNewUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+    name: GenerateClaimsPrincipalForUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand
+    name: GenerateEmailConfirmationTokenForUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand
+    name: RegisterNewUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand
+    name: UpdateUserCommand
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand
+    name: ValidateEmailConfirmationTokenCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto
+    name: AddPasswordToRegisteredUserDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto
+    name: CreateNewUserDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto
+    name: EmailConfirmTokenForUserDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+    name: LoginDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto
+    name: RegisterUserDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto
+    name: UpdateUserDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto
+    name: UserRolesDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries
+  name: MaintenanceChronicle.Application.Contracts.Users.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand
+    name: GetTenantIdFromUserCommand
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  name: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto
+    name: UserDetailDto
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto
+    name: UserListDto
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  name: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+    name: DeleteEntityByIdCommand<TEntity>
+    type: Class
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  name: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+    name: GetEntityByIdQuery<TEntity>
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+    name: GetEntityByNameQuery<TEntity>
+    type: Class
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+    name: GetListOfEntityQuery<TEntity>
+    type: Class
+- uid: MaintenanceChronicle.Application.Customers.Commands
+  name: MaintenanceChronicle.Application.Customers.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler
+    name: CreateNewCustomerCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler
+    name: DeleteCustomerCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler
+    name: UpdateCustomerCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Customers.Queries
+  name: MaintenanceChronicle.Application.Customers.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler
+    name: GetCustomerByIdQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler
+    name: GetListOfCustomersQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  name: MaintenanceChronicle.Application.LocationContactUsers.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler
+    name: GetListOfContactsForLocationQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Locations.Commands
+  name: MaintenanceChronicle.Application.Locations.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+    name: CreateNewLocationCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler
+    name: DeleteLocationCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler
+    name: ManageContactsInLocationCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler
+    name: UpdateLocationCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Locations.Queries
+  name: MaintenanceChronicle.Application.Locations.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler
+    name: GetListOfLocationsQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler
+    name: GetLocationByIdQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler
+    name: GetLocationsForCustomerQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Machines.Commands
+  name: MaintenanceChronicle.Application.Machines.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler
+    name: CreateNewMachineCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler
+    name: DeleteMachineCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler
+    name: UpdateMachineCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Machines.Queries
+  name: MaintenanceChronicle.Application.Machines.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler
+    name: GetListOfMachinesQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler
+    name: GetMachineByIdQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler
+    name: GetMachinesForLocationQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Roles.Queries
+  name: MaintenanceChronicle.Application.Roles.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler
+    name: GetRoleByNameQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Tenants.Commands
+  name: MaintenanceChronicle.Application.Tenants.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler
+    name: AddTenantClaimToUserPrincipalCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler
+    name: AssignCreationInfoToTenantCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler
+    name: CreateNewTenantCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler
+    name: UpdateTenantCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Tenants.Queries
+  name: MaintenanceChronicle.Application.Tenants.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler
+    name: GetListOfTenantsQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler
+    name: GetTenantByIdQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.UserTenant.Commands
+  name: MaintenanceChronicle.Application.UserTenant.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler
+    name: RegisterUserAndTenantCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Users.Commands
+  name: MaintenanceChronicle.Application.Users.Commands
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler
+    name: AddPasswordToRegisteredUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler
+    name: AddRolesToUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler
+    name: CreateNewUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler
+    name: GenerateClaimsPrincipalForUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler
+    name: GenerateEmailConfirmationTokenForUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler
+    name: RegisterNewUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler
+    name: UpdateUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler
+    name: ValidateEmailConfirmationTokenCommandHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Users.Queries
+  name: MaintenanceChronicle.Application.Users.Queries
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler
+    name: GetListOfUsersQueryHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler
+    name: GetTenantIdFromUserCommandHandler
+    type: Class
+  - uid: MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler
+    name: GetUserByIdQueryHandler
+    type: Class
+- uid: MaintenanceChronicle.Application.Validators
+  name: MaintenanceChronicle.Application.Validators
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware
+    name: UserTenantValidationMiddleware
+    type: Class
+  - uid: MaintenanceChronicle.Application.Validators.UserTenantValidator
+    name: UserTenantValidator
+    type: Class
+- uid: MaintenanceChronicle.Data
+  name: MaintenanceChronicle.Data
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Data.AppDbContext
+    name: AppDbContext
+    type: Class
+- uid: MaintenanceChronicle.Data.Entities.Account
+  name: MaintenanceChronicle.Data.Entities.Account
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Data.Entities.Account.Role
+    name: Role
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Account.Tenant
+    name: Tenant
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Account.User
+    name: User
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Account.UserRole
+    name: UserRole
+    type: Class
+- uid: MaintenanceChronicle.Data.Entities.Business
+  name: MaintenanceChronicle.Data.Entities.Business
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Data.Entities.Business.Customer
+    name: Customer
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Business.Location
+    name: Location
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Business.LocationContactUser
+    name: LocationContactUser
+    type: Class
+  - uid: MaintenanceChronicle.Data.Entities.Business.Machine
+    name: Machine
+    type: Class
+- uid: MaintenanceChronicle.Data.Interfaces
+  name: MaintenanceChronicle.Data.Interfaces
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Data.Interfaces.ITenant
+    name: ITenant
+    type: Interface
+  - uid: MaintenanceChronicle.Data.Interfaces.ITrackable
+    name: ITrackable
+    type: Interface
+  - uid: MaintenanceChronicle.Data.Interfaces.TrackableExtensions
+    name: TrackableExtensions
+    type: Class
+- uid: MaintenanceChronicle.Data.Migrations
+  name: MaintenanceChronicle.Data.Migrations
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities
+    name: AddedITrackableToEntities
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.AddedLocationContactUser
+    name: AddedLocationContactUser
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities
+    name: AddedTenantAndPutTenantIdToEntities
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.CustomerAdded
+    name: CustomerAdded
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.Init
+    name: Init
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.LocationEntityAdded
+    name: LocationEntityAdded
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.MachineAdded
+    name: MachineAdded
+    type: Class
+  - uid: MaintenanceChronicle.Data.Migrations.RolesAdded
+    name: RolesAdded
+    type: Class
+- uid: MaintenanceChronicle.Utilities.Constants
+  name: MaintenanceChronicle.Utilities.Constants
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes
+    name: MaintenanceChronicleClaimTypes
+    type: Class
+  - uid: MaintenanceChronicle.Utilities.Constants.RoleTypes
+    name: RoleTypes
+    type: Class
+- uid: MaintenanceChronicle.Utilities.Enum
+  name: MaintenanceChronicle.Utilities.Enum
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Utilities.Enum.EnumExtensions
+    name: EnumExtensions
+    type: Class
+- uid: MaintenanceChronicle.Utilities.Error
+  name: MaintenanceChronicle.Utilities.Error
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Utilities.Error.BadRequestException
+    name: BadRequestException
+    type: Class
+  - uid: MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute
+    name: ErrorMessageAttribute
+    type: Class
+  - uid: MaintenanceChronicle.Utilities.Error.ErrorType
+    name: ErrorType
+    type: Enum
+  - uid: MaintenanceChronicle.Utilities.Error.ExceptionMiddleware
+    name: ExceptionMiddleware
+    type: Class
+  - uid: MaintenanceChronicle.Utilities.Error.InternalServerException
+    name: InternalServerException
+    type: Class
+- uid: MaintenanceChronicle.Utilities.Helpers
+  name: MaintenanceChronicle.Utilities.Helpers
+  type: Namespace
+  items:
+  - uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+    name: ICurrentTenantProvider
+    type: Interface
+  - uid: MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension
+    name: IdentityCookieExtension
+    type: Class
+  - uid: MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension
+    name: NormalizeStringExtension
+    type: Class
+memberLayout: SamePage

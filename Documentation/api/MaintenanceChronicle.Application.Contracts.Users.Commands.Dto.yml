@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  id: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto.html
+  name: AddPasswordToRegisteredUserDto
+  nameWithType: AddPasswordToRegisteredUserDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto.html
+  name: CreateNewUserDto
+  nameWithType: CreateNewUserDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto.html
+  name: EmailConfirmTokenForUserDto
+  nameWithType: EmailConfirmTokenForUserDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.html
+  name: LoginDto
+  nameWithType: LoginDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto.html
+  name: RegisterUserDto
+  nameWithType: RegisterUserDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto.html
+  name: UpdateUserDetailDto
+  nameWithType: UpdateUserDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto.html
+  name: UserRolesDto
+  nameWithType: UserRolesDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html

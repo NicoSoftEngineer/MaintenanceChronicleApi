@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  commentId: N:MaintenanceChronicle.Application.Contracts.Utils.Queries
+  id: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  children:
+  - MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+  - MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+  - MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  nameWithType: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+  commentId: T:MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+  href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.html
+  name: GetEntityByIdQuery<TEntity>
+  nameWithType: GetEntityByIdQuery<TEntity>
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery<TEntity>
+  nameWithType.vb: GetEntityByIdQuery(Of TEntity)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery(Of TEntity)
+  name.vb: GetEntityByIdQuery(Of TEntity)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+    name: GetEntityByIdQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery`1
+    name: GetEntityByIdQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+  commentId: T:MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+  href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.html
+  name: GetEntityByNameQuery<TEntity>
+  nameWithType: GetEntityByNameQuery<TEntity>
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery<TEntity>
+  nameWithType.vb: GetEntityByNameQuery(Of TEntity)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery(Of TEntity)
+  name.vb: GetEntityByNameQuery(Of TEntity)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+    name: GetEntityByNameQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery`1
+    name: GetEntityByNameQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+  commentId: T:MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+  href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.html
+  name: GetListOfEntityQuery<TEntity>
+  nameWithType: GetListOfEntityQuery<TEntity>
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery<TEntity>
+  nameWithType.vb: GetListOfEntityQuery(Of TEntity)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery(Of TEntity)
+  name.vb: GetListOfEntityQuery(Of TEntity)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+    name: GetListOfEntityQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery`1
+    name: GetListOfEntityQuery
+    href: MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

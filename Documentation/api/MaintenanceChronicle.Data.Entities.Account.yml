@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Data.Entities.Account
+  commentId: N:MaintenanceChronicle.Data.Entities.Account
+  id: MaintenanceChronicle.Data.Entities.Account
+  children:
+  - MaintenanceChronicle.Data.Entities.Account.Role
+  - MaintenanceChronicle.Data.Entities.Account.Tenant
+  - MaintenanceChronicle.Data.Entities.Account.User
+  - MaintenanceChronicle.Data.Entities.Account.UserRole
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Data.Entities.Account
+  nameWithType: MaintenanceChronicle.Data.Entities.Account
+  fullName: MaintenanceChronicle.Data.Entities.Account
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Data
+references:
+- uid: MaintenanceChronicle.Data.Entities.Account.Role
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.Role
+  parent: MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.Data.Entities.Account.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: MaintenanceChronicle.Data.Entities.Account.Role
+- uid: MaintenanceChronicle.Data.Entities.Account.Tenant
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.Tenant
+  parent: MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.Data.Entities.Account.Tenant.html
+  name: Tenant
+  nameWithType: Tenant
+  fullName: MaintenanceChronicle.Data.Entities.Account.Tenant
+- uid: MaintenanceChronicle.Data.Entities.Account.User
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.User
+  parent: MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.Data.Entities.Account.User.html
+  name: User
+  nameWithType: User
+  fullName: MaintenanceChronicle.Data.Entities.Account.User
+- uid: MaintenanceChronicle.Data.Entities.Account.UserRole
+  commentId: T:MaintenanceChronicle.Data.Entities.Account.UserRole
+  href: MaintenanceChronicle.Data.Entities.Account.UserRole.html
+  name: UserRole
+  nameWithType: UserRole
+  fullName: MaintenanceChronicle.Data.Entities.Account.UserRole
+- uid: MaintenanceChronicle.Data.Entities.Account
+  commentId: N:MaintenanceChronicle.Data.Entities.Account
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data.Entities.Account
+  nameWithType: MaintenanceChronicle.Data.Entities.Account
+  fullName: MaintenanceChronicle.Data.Entities.Account
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities
+    name: Entities
+    href: MaintenanceChronicle.Data.Entities.html
+  - name: .
+  - uid: MaintenanceChronicle.Data.Entities.Account
+    name: Account
+    href: MaintenanceChronicle.Data.Entities.Account.html

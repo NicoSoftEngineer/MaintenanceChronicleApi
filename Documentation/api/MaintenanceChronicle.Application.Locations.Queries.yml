@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Locations.Queries
+  commentId: N:MaintenanceChronicle.Application.Locations.Queries
+  id: MaintenanceChronicle.Application.Locations.Queries
+  children:
+  - MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler
+  - MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler
+  - MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Locations.Queries
+  nameWithType: MaintenanceChronicle.Application.Locations.Queries
+  fullName: MaintenanceChronicle.Application.Locations.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler
+  href: MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler.html
+  name: GetListOfLocationsQueryHandler
+  nameWithType: GetListOfLocationsQueryHandler
+  fullName: MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler
+- uid: MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler
+  href: MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler.html
+  name: GetLocationByIdQueryHandler
+  nameWithType: GetLocationByIdQueryHandler
+  fullName: MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler
+- uid: MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler
+  href: MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler.html
+  name: GetLocationsForCustomerQueryHandler
+  nameWithType: GetLocationsForCustomerQueryHandler
+  fullName: MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Machines.Commands
+  commentId: N:MaintenanceChronicle.Application.Machines.Commands
+  id: MaintenanceChronicle.Application.Machines.Commands
+  children:
+  - MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler
+  - MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler
+  - MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Machines.Commands
+  nameWithType: MaintenanceChronicle.Application.Machines.Commands
+  fullName: MaintenanceChronicle.Application.Machines.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler
+  href: MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler.html
+  name: CreateNewMachineCommandHandler
+  nameWithType: CreateNewMachineCommandHandler
+  fullName: MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler
+- uid: MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler
+  href: MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler.html
+  name: DeleteMachineCommandHandler
+  nameWithType: DeleteMachineCommandHandler
+  fullName: MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler
+- uid: MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler
+  href: MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler.html
+  name: UpdateMachineCommandHandler
+  nameWithType: UpdateMachineCommandHandler
+  fullName: MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler

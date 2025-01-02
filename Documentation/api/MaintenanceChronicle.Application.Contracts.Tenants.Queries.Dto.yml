@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  id: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto
+  - MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto.html
+  name: TenantDetailDto
+  nameWithType: TenantDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto
+  href: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto.html
+  name: TenantListDto
+  nameWithType: TenantListDto
+  fullName: MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto

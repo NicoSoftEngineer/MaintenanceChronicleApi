@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  id: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+  - MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  - MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.html
+  name: CustomerDetailDto
+  nameWithType: CustomerDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+  parent: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.html
+  name: CustomerDetailDtoExtensions
+  nameWithType: CustomerDetailDtoExtensions
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto
+  href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto.html
+  name: CustomerInListDto
+  nameWithType: CustomerInListDto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto
+- uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers
+    name: Customers
+    href: MaintenanceChronicle.Application.Contracts.Customers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html

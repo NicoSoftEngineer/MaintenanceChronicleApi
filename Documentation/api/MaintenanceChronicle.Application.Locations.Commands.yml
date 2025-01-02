@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Locations.Commands
+  commentId: N:MaintenanceChronicle.Application.Locations.Commands
+  id: MaintenanceChronicle.Application.Locations.Commands
+  children:
+  - MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  - MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler
+  - MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler
+  - MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Locations.Commands
+  nameWithType: MaintenanceChronicle.Application.Locations.Commands
+  fullName: MaintenanceChronicle.Application.Locations.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler
+  href: MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler.html
+  name: ManageContactsInLocationCommandHandler
+  nameWithType: ManageContactsInLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler
+- uid: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+  href: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.html
+  name: CreateNewLocationCommandHandler
+  nameWithType: CreateNewLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler
+- uid: MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler
+  href: MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler.html
+  name: DeleteLocationCommandHandler
+  nameWithType: DeleteLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler
+- uid: MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler
+  href: MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler.html
+  name: UpdateLocationCommandHandler
+  nameWithType: UpdateLocationCommandHandler
+  fullName: MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler

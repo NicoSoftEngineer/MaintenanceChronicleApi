@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Machines.Commands
+  id: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand
+  - MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand.html
+  name: CreateNewMachineCommand
+  nameWithType: CreateNewMachineCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand
+  parent: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  href: MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand.html
+  name: UpdateMachineCommand
+  nameWithType: UpdateMachineCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand
+- uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Machines.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Machines.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines
+    name: Machines
+    href: MaintenanceChronicle.Application.Contracts.Machines.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Machines.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Machines.Commands.html

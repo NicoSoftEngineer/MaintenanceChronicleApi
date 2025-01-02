@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Customers.Commands
+  commentId: N:MaintenanceChronicle.Application.Customers.Commands
+  id: MaintenanceChronicle.Application.Customers.Commands
+  children:
+  - MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler
+  - MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler
+  - MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Customers.Commands
+  nameWithType: MaintenanceChronicle.Application.Customers.Commands
+  fullName: MaintenanceChronicle.Application.Customers.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler
+  href: MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler.html
+  name: CreateNewCustomerCommandHandler
+  nameWithType: CreateNewCustomerCommandHandler
+  fullName: MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler
+- uid: MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler
+  href: MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler.html
+  name: DeleteCustomerCommandHandler
+  nameWithType: DeleteCustomerCommandHandler
+  fullName: MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler
+- uid: MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler
+  commentId: T:MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler
+  href: MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler.html
+  name: UpdateCustomerCommandHandler
+  nameWithType: UpdateCustomerCommandHandler
+  fullName: MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler

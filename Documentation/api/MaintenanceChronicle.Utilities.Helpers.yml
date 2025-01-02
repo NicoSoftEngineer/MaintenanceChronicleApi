@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.Helpers
+  commentId: N:MaintenanceChronicle.Utilities.Helpers
+  id: MaintenanceChronicle.Utilities.Helpers
+  children:
+  - MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  - MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension
+  - MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Utilities.Helpers
+  nameWithType: MaintenanceChronicle.Utilities.Helpers
+  fullName: MaintenanceChronicle.Utilities.Helpers
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Utilities
+references:
+- uid: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  commentId: T:MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+  parent: MaintenanceChronicle.Utilities.Helpers
+  href: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.html
+  name: ICurrentTenantProvider
+  nameWithType: ICurrentTenantProvider
+  fullName: MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider
+- uid: MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension
+  commentId: T:MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension
+  href: MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension.html
+  name: IdentityCookieExtension
+  nameWithType: IdentityCookieExtension
+  fullName: MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension
+- uid: MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension
+  commentId: T:MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension
+  href: MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension.html
+  name: NormalizeStringExtension
+  nameWithType: NormalizeStringExtension
+  fullName: MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension
+- uid: MaintenanceChronicle.Utilities.Helpers
+  commentId: N:MaintenanceChronicle.Utilities.Helpers
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.Helpers
+  nameWithType: MaintenanceChronicle.Utilities.Helpers
+  fullName: MaintenanceChronicle.Utilities.Helpers
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.Helpers
+    name: Helpers
+    href: MaintenanceChronicle.Utilities.Helpers.html

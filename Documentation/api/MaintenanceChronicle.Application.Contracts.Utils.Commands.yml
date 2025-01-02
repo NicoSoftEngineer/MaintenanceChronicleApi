@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Utils.Commands
+  id: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+  commentId: T:MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+  href: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.html
+  name: DeleteEntityByIdCommand<TEntity>
+  nameWithType: DeleteEntityByIdCommand<TEntity>
+  fullName: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand<TEntity>
+  nameWithType.vb: DeleteEntityByIdCommand(Of TEntity)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand(Of TEntity)
+  name.vb: DeleteEntityByIdCommand(Of TEntity)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+    name: DeleteEntityByIdCommand
+    href: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand`1
+    name: DeleteEntityByIdCommand
+    href: MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  id: GenerateClaimsPrincipalForUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)
+  - MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin
+  langs:
+  - csharp
+  - vb
+  name: GenerateClaimsPrincipalForUserCommand
+  nameWithType: GenerateClaimsPrincipalForUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: GenerateClaimsPrincipalForUserCommand
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Users.Commands
+  syntax:
+    content: 'public record GenerateClaimsPrincipalForUserCommand : IRequest<ClaimsPrincipal>, IBaseRequest, IEquatable<GenerateClaimsPrincipalForUserCommand>'
+    content.vb: Public Class GenerateClaimsPrincipalForUserCommand Implements IRequest(Of ClaimsPrincipal), IBaseRequest, IEquatable(Of GenerateClaimsPrincipalForUserCommand)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequest{System.Security.Claims.ClaimsPrincipal}
+  - MediatR.IBaseRequest
+  - System.IEquatable{MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)
+  commentId: M:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)
+  id: '#ctor(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)'
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  langs:
+  - csharp
+  - vb
+  name: GenerateClaimsPrincipalForUserCommand(LoginDto)
+  nameWithType: GenerateClaimsPrincipalForUserCommand.GenerateClaimsPrincipalForUserCommand(LoginDto)
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.GenerateClaimsPrincipalForUserCommand(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: .ctor
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Users.Commands
+  syntax:
+    content: public GenerateClaimsPrincipalForUserCommand(LoginDto UserLogin)
+    parameters:
+    - id: UserLogin
+      type: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+    content.vb: Public Sub New(UserLogin As LoginDto)
+  overload: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor*
+  nameWithType.vb: GenerateClaimsPrincipalForUserCommand.New(LoginDto)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.New(MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto)
+  name.vb: New(LoginDto)
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin
+  commentId: P:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin
+  id: UserLogin
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+  langs:
+  - csharp
+  - vb
+  name: UserLogin
+  nameWithType: GenerateClaimsPrincipalForUserCommand.UserLogin
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/ServiceTrackApi.git
+    id: UserLogin
+    path: ../MaintenanceChronicleApi/src/MaintenanceChronicle.Application.Contracts/Users/Commands/GenerateClaimsPrincipalForUserCommand.cs
+    startLine: 6
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.Users.Commands
+  syntax:
+    content: public LoginDto UserLogin { get; init; }
+    parameters: []
+    return:
+      type: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+    content.vb: Public Property UserLogin As LoginDto
+  overload: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequest{System.Security.Claims.ClaimsPrincipal}
+  commentId: T:MediatR.IRequest{System.Security.Claims.ClaimsPrincipal}
+  parent: MediatR
+  definition: MediatR.IRequest`1
+  href: https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal
+  name: IRequest<ClaimsPrincipal>
+  nameWithType: IRequest<ClaimsPrincipal>
+  fullName: MediatR.IRequest<System.Security.Claims.ClaimsPrincipal>
+  nameWithType.vb: IRequest(Of ClaimsPrincipal)
+  fullName.vb: MediatR.IRequest(Of System.Security.Claims.ClaimsPrincipal)
+  name.vb: IRequest(Of ClaimsPrincipal)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - uid: System.Security.Claims.ClaimsPrincipal
+    name: ClaimsPrincipal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Security.Claims.ClaimsPrincipal
+    name: ClaimsPrincipal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal
+  - name: )
+- uid: MediatR.IBaseRequest
+  commentId: T:MediatR.IBaseRequest
+  parent: MediatR
+  isExternal: true
+  name: IBaseRequest
+  nameWithType: IBaseRequest
+  fullName: MediatR.IBaseRequest
+- uid: System.IEquatable{MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand}
+  commentId: T:System.IEquatable{MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GenerateClaimsPrincipalForUserCommand>
+  nameWithType: IEquatable<GenerateClaimsPrincipalForUserCommand>
+  fullName: System.IEquatable<MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand>
+  nameWithType.vb: IEquatable(Of GenerateClaimsPrincipalForUserCommand)
+  fullName.vb: System.IEquatable(Of MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand)
+  name.vb: IEquatable(Of GenerateClaimsPrincipalForUserCommand)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+    name: GenerateClaimsPrincipalForUserCommand
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand
+    name: GenerateClaimsPrincipalForUserCommand
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequest`1
+  commentId: T:MediatR.IRequest`1
+  isExternal: true
+  name: IRequest<TResponse>
+  nameWithType: IRequest<TResponse>
+  fullName: MediatR.IRequest<TResponse>
+  nameWithType.vb: IRequest(Of TResponse)
+  fullName.vb: MediatR.IRequest(Of TResponse)
+  name.vb: IRequest(Of TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.#ctor
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html#MaintenanceChronicle_Application_Contracts_Users_Commands_GenerateClaimsPrincipalForUserCommand__ctor_MaintenanceChronicle_Application_Contracts_Users_Commands_Dto_LoginDto_
+  name: GenerateClaimsPrincipalForUserCommand
+  nameWithType: GenerateClaimsPrincipalForUserCommand.GenerateClaimsPrincipalForUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.GenerateClaimsPrincipalForUserCommand
+  nameWithType.vb: GenerateClaimsPrincipalForUserCommand.New
+  fullName.vb: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.New
+  name.vb: New
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+  parent: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.html
+  name: LoginDto
+  nameWithType: LoginDto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users
+    name: Users
+    href: MaintenanceChronicle.Application.Contracts.Users.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html
+- uid: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin
+  href: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html#MaintenanceChronicle_Application_Contracts_Users_Commands_GenerateClaimsPrincipalForUserCommand_UserLogin
+  name: UserLogin
+  nameWithType: GenerateClaimsPrincipalForUserCommand.UserLogin
+  fullName: MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.UserLogin

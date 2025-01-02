@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  id: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto
+  - MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto
+  parent: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto.html
+  name: LocationContactInListDto
+  nameWithType: LocationContactInListDto
+  fullName: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension
+  href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension.html
+  name: LocationContactInListDtoExtension
+  nameWithType: LocationContactInListDtoExtension
+  fullName: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension
+- uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers
+    name: LocationContactUsers
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers
+    name: LocationContactUsers
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.html
