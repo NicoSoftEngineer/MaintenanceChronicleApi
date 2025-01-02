@@ -1,6 +1,5 @@
 using MaintenanceChronicle.Data.Entities.Business;
 using NodaTime.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
 
