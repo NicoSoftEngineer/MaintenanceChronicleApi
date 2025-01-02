@@ -8,7 +8,7 @@ public class CurrentTenantProvider(IHttpContextAccessor httpContextAccessor)
     : ICurrentTenantProvider
 {
     public Guid TenantId =>
-        httpContextAccessor.HttpContext.User.FindFirstValue(MaintenanceChronicleClaimTypes.TenantIdClaimType) != null
+        httpContextAccessor.HttpContext!.User.FindFirstValue(MaintenanceChronicleClaimTypes.TenantIdClaimType) != null
             ? new Guid(httpContextAccessor.HttpContext.User.FindFirstValue(MaintenanceChronicleClaimTypes.TenantIdClaimType)!)
             : Guid.Empty;
 }

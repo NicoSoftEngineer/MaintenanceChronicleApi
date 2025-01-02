@@ -27,5 +27,7 @@ public enum ErrorType
     [ErrorMessage("Sorry this location doesn't exist!")]
     LocationNotFound,
     [ErrorMessage("Sorry this machine doesn't exist!")]
-    MachineNotFound
+    MachineNotFound,
+    [ErrorMessage("Sorry this maintenance record doesn't exist!")]
+    MaintenanceRecordNotFound
 }

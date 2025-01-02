@@ -17,6 +17,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
     public DbSet<Location> Locations { get; set; } = null!;
     public DbSet<LocationContactUser> LocationContactUsers { get; set; } = null!;
     public DbSet<Machine> Machines { get; set; } = null!;
+    public DbSet<MaintenanceRecord> MaintenanceRecords { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -28,6 +29,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
         modelBuilder.Entity<Location>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<LocationContactUser>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<Machine>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<MaintenanceRecord>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
 
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)

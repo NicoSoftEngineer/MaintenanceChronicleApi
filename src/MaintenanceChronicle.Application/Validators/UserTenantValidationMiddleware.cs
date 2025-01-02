@@ -12,7 +12,7 @@ public class UserTenantValidationMiddleware(AppDbContext dbContext) : IMiddlewar
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
         var userPrincipal = context.User;
-        if (context.User.Identity.IsAuthenticated)
+        if (context.User.Identity!.IsAuthenticated)
         {
             //if user has access to tenant continue
             if (!await dbContext.ValidateUserTenantAccess(userPrincipal.GetUserId(), userPrincipal.GetTenantId()))
