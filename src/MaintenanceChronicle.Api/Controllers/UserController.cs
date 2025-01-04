@@ -1,3 +1,5 @@
+using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries;
+using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
 using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Queries.Dto;
@@ -96,5 +98,19 @@ public class UserController(IMediator mediator) : ControllerBase
         var user = await mediator.Send(userQuery);
 
         return Ok(user);
+    }
+
+    /// <summary>
+    /// Gets the list of locations in which the specified user is contact
+    /// </summary>
+    /// <param name="id">User Id</param>
+    /// <returns>List of locations</returns>
+    [HttpGet("api/v1/users/{id:guid}/locations")]
+    public async Task<ActionResult<List<LocationInListForContactDto>>> GetUsersLocations([FromRoute] Guid id)
+    {
+        var query = new GetListOfLocationsForContactUserQuery(id);
+        var locations = await mediator.Send(query);
+
+        return Ok(locations);
     }
 }
