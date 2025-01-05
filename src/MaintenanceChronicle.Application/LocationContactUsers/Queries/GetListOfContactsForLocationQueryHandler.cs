@@ -14,6 +14,7 @@ public class GetListOfContactsForLocationQueryHandler(AppDbContext dbContext) : 
         var contacts = await dbContext.LocationContactUsers
             .Include(c => c.User)
             .Include(c => c.Location)
+            .Where(l => l.LocationId == request.LocationId)
             .Select(c => c.ToLocationContactInListDto())
             .ToListAsync(cancellationToken);
 
