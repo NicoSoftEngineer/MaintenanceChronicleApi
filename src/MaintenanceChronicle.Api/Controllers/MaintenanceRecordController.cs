@@ -2,6 +2,7 @@ using MaintenanceChronicle.Application.Contracts.Machines.Queries;
 using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
+using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
@@ -89,6 +90,20 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfMaintenanceRecords()
     {
         var query = new GetListOfEntityQuery<MaintenanceRecordInListDto>();
+        var result = await mediator.Send(query);
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Gets list of all maintenance records filtered by user specified filter
+    /// </summary>
+    /// <param name="filter">Maintenance record filter</param>
+    /// <returns>List of filtered dto</returns>
+    [HttpGet("/api/v1/maintenance-records/filter")]
+    public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfFilteredMaintenanceRecords([FromQuery]MaintenanceRecordFilterDto filter)
+    {
+        var query = new GetFilteredMaintenanceRecordsQuery(filter);
         var result = await mediator.Send(query);
 
         return Ok(result);
