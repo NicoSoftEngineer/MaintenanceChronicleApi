@@ -1,5 +1,6 @@
 using MaintenanceChronicle.Application.Contracts.Machines.Commands;
 using MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto;
+using MaintenanceChronicle.Application.Contracts.Machines.Queries;
 using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries;
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
@@ -87,6 +88,20 @@ public class MachineController(IMediator mediator) : ControllerBase
     public async Task<ActionResult<List<MachineInListDto>>> GetMachineList()
     {
         var query = new GetListOfEntityQuery<MachineInListDto>();
+        var machines = await mediator.Send(query);
+
+        return Ok(machines);
+    }
+
+    /// <summary>
+    /// Gets list of filtered machines
+    /// </summary>
+    /// <param name="filter">Filter specified by user</param>
+    /// <returns>Filtered machine list</returns>
+    [HttpGet("/api/v1/machines/filter")]
+    public async Task<ActionResult<List<MachineInListDto>>> GetFilteredMachineList([FromQuery] MachineFilterDto filter)
+    {
+        var query = new GetFilteredMachinesQuery(filter);
         var machines = await mediator.Send(query);
 
         return Ok(machines);
