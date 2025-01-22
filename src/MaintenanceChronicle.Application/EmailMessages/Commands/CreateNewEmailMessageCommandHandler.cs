@@ -1,0 +1,24 @@
+using MaintenanceChronicle.Api.Options;
+using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
+using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto;
+using MaintenanceChronicle.Data;
+using MediatR;
+using Microsoft.Extensions.Options;
+using NodaTime;
+
+namespace MaintenanceChronicle.Application.EmailMessages.Commands;
+
+public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock clock, IOptions<EnvironmentOptions> environmentOptions) : IRequestHandler<CreateNewEmailMessageCommand>
+{
+    public async Task Handle(CreateNewEmailMessageCommand request, CancellationToken cancellationToken)
+    {
+        request.NewEmailMessage.FromEmail = request.NewEmailMessage.FromEmail ?? environmentOptions.Value.SenderEmail;
+        request.NewEmailMessage.FromName = request.NewEmailMessage.FromName ?? environmentOptions.Value.SenderName;
+
+        var entity = request.NewEmailMessage.ToEntity();
+        entity.CreatedAt = clock.GetCurrentInstant();
+
+        await dbContext.AddAsync(entity, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
+    }
+}
