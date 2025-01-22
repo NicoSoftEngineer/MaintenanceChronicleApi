@@ -12,6 +12,7 @@ using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
+using MaintenanceChronicle.Api.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         optionsBuilder.UseNodaTime();
         optionsBuilder.MapEnum<RecordType>("recordType");
     });
-    
 });
 
 //Use PATCH endpoints
@@ -59,6 +59,12 @@ builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
 });
+
+//Smtp Options
+builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("SmtpOptions"));
+
+//Environment options
+builder.Services.Configure<EnvironmentOptions>(builder.Configuration.GetSection("EnvironmentOptions"));
 
 //Clock
 builder.Services.AddSingleton<IClock>(SystemClock.Instance);
