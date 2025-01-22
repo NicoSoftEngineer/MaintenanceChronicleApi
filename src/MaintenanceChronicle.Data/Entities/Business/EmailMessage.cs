@@ -12,7 +12,7 @@ public class EmailMessage
 {
     public Guid Id { get; set; }
     public string RecipientEmail { get; set; } = null!;
-    public string RecipientName { get; set; } = null!;
+    public string? RecipientName { get; set; }
     public string Subject { get; set; } = null!;
     public string Body { get; set; } = null!;
     public bool Sent { get; set; }
