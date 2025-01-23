@@ -104,6 +104,6 @@ app.MapControllers();
 app.MapGet("/", () => "This page wooooooorks");
 
 //Apply the newest migrations to db
-app.ApplyMigrations();
+await app.ApplyMigrations();
 
 app.Run();
