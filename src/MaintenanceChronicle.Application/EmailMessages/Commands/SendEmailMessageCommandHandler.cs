@@ -5,7 +5,7 @@ using MediatR;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using System.Net.Mail;
-using MaintenanceChronicle.Api.Options;
+using MaintenanceChronicle.Utilities.Options;
 
 namespace MaintenanceChronicle.Application.EmailMessages.Commands;
 

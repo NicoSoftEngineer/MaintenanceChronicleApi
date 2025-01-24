@@ -12,7 +12,7 @@ using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
-using MaintenanceChronicle.Api.Options;
+using MaintenanceChronicle.Utilities.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 

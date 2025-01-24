@@ -1,4 +1,4 @@
-namespace MaintenanceChronicle.Api.Options;
+namespace MaintenanceChronicle.Utilities.Options;
 
 public class SmtpOptions
 {

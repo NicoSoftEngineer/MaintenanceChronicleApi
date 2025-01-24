@@ -1,7 +1,7 @@
-using MaintenanceChronicle.Api.Options;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto;
 using MaintenanceChronicle.Data;
+using MaintenanceChronicle.Utilities.Options;
 using MediatR;
 using Microsoft.Extensions.Options;
 using NodaTime;
