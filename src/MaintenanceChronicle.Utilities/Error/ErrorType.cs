@@ -29,5 +29,9 @@ public enum ErrorType
     [ErrorMessage("Sorry this machine doesn't exist!")]
     MachineNotFound,
     [ErrorMessage("Sorry this maintenance record doesn't exist!")]
-    MaintenanceRecordNotFound
+    MaintenanceRecordNotFound,
+    [ErrorMessage("Sorry this email message doesn't exist!")]
+    EmailMessageNotFound,
+    [ErrorMessage("Sorry this email message was already sent!")]
+    EmailAlreadySent
 }
