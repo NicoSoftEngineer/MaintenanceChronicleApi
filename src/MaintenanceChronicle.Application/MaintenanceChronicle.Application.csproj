@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MailKit" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +23,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MaintenanceChronicle.Application.Contracts\MaintenanceChronicle.Application.Contracts.csproj" />
       <ProjectReference Include="..\MaintenanceChronicle.Data\MaintenanceChronicle.Data.csproj" />
-      <ProjectReference Include="..\MaintenanceChronicle.Api\MaintenanceChronicle.Api.csproj" />
   </ItemGroup>
 
 </Project>
