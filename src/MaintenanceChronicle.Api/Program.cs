@@ -7,12 +7,14 @@ using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Api.Utils;
 using MaintenanceChronicle.Application;
 using MaintenanceChronicle.Application.Validators;
+using MaintenanceChronicle.BackgroundServices.BackgroundWorkers;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Entities.Business;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
 using MaintenanceChronicle.Utilities.Options;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -68,6 +70,9 @@ builder.Services.Configure<EnvironmentOptions>(builder.Configuration.GetSection(
 
 //Clock
 builder.Services.AddSingleton<IClock>(SystemClock.Instance);
+
+//Adding EmailSenderBackgroundService into HostedServices
+builder.Services.AddHostedService<EmailSenderBackgroundService>();
 
 //Registering middleware to validate if user has access to tenant
 builder.Services.AddScoped<UserTenantValidationMiddleware>();
