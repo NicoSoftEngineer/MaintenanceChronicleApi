@@ -28,7 +28,7 @@ public class SendEmailMessageCommandHandler(AppDbContext dbContext, IOptions<Smt
         {
             Subject = emailMessage.Subject,
             Body = emailMessage.Body,
-            IsBodyHtml = false,
+            IsBodyHtml = true,
             From = new MailAddress(emailMessage.FromEmail, emailMessage.FromName),
         };
         mail.To.Add(new MailAddress(emailMessage.RecipientEmail, emailMessage.RecipientName));
