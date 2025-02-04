@@ -2,7 +2,6 @@ using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Queries;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
-using MaintenanceChronicle.Application.EmailMessages.Commands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
