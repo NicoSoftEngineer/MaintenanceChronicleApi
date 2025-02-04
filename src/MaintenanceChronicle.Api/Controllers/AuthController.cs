@@ -1,3 +1,4 @@
+using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.Roles.Dto;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
@@ -120,17 +121,20 @@ public class AuthController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
-    /// Generates a token for the user to confirm their email
+    /// Generates and sends a token for the user to confirm their email
     /// </summary>
     /// <param name="email">Users email that specifies which user should get the token</param>
     /// <returns></returns>
-    [HttpGet("api/v1/auth/generateEmailConfirmToken")]
-    public async Task<ActionResult<string>> GenerateToken([FromQuery] string email)
+    [HttpPost("api/v1/auth/sendEmailConfirmEmail")]
+    public async Task<ActionResult> GenerateEmailConfirmationEmail([FromQuery] string email)
     {
-        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationTokenForUserCommand(email);
-        var token = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
+        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationEmailForUserCommand(email);
+        var emailToBeSent = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
 
-        return Ok(token);
+        var createEmailToBeSendCommand = new CreateNewEmailMessageCommand(emailToBeSent);
+        await mediator.Send(createEmailToBeSendCommand);
+
+        return Ok();
     }
 
     /// <summary>
@@ -140,7 +144,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// <returns></returns>
     [HttpPost("api/v1/auth/validateToken")]
     public async Task<ActionResult> ValidateToken(
-        [FromBody] EmailConfirmTokenForUserDto confirmTokenForUserDto
+        [FromQuery] EmailConfirmTokenForUserDto confirmTokenForUserDto
     )
     {
         var validateEmailConfirmationTokenForUserCommand = new ValidateEmailConfirmationTokenCommand(confirmTokenForUserDto);
