@@ -14,11 +14,22 @@ public class EmailSenderBackgroundService(
     IServiceProvider provider)
     : BackgroundService
 {
+    /// <summary>
+    /// Function definition from BackgroundService, which gets called at the start of an app
+    /// Calls private SendEmails
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         await SendEmails(cancellationToken);
     }
 
+    /// <summary>
+    /// Has infinite loop, which gets all emails, and then which where unsent get passed into SendEmailCommand where they get sent
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     private async Task SendEmails(CancellationToken cancellationToken)
     {
         while (!cancellationToken.IsCancellationRequested)
