@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.9.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.1" />
+    <PackageReference Include="NodaTime" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <ProjectReference Include="..\MaintenanceChronicle.Data\MaintenanceChronicle.Data.csproj" />
+      <ProjectReference Include="..\MaintenanceChronicle.Application.Contracts\MaintenanceChronicle.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
