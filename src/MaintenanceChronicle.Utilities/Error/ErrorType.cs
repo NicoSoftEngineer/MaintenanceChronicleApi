@@ -33,5 +33,7 @@ public enum ErrorType
     [ErrorMessage("Sorry this email message doesn't exist!")]
     EmailMessageNotFound,
     [ErrorMessage("Sorry this email message was already sent!")]
-    EmailAlreadySent
+    EmailAlreadySent,
+    [ErrorMessage("Sorry this password reset token is invalid!")]
+    PasswordResetTokenInInvalid
 }
