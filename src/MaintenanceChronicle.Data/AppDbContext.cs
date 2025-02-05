@@ -18,6 +18,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
     public DbSet<LocationContactUser> LocationContactUsers { get; set; } = null!;
     public DbSet<Machine> Machines { get; set; } = null!;
     public DbSet<MaintenanceRecord> MaintenanceRecords { get; set; } = null!;
+    public DbSet<EmailMessage> EmailMessages { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
