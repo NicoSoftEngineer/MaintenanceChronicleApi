@@ -169,4 +169,18 @@ public class AuthController(IMediator mediator) : ControllerBase
 
         return Ok();
     }
+
+    /// <summary>
+    /// Resets the password for user, when the reset token is valid for that user
+    /// </summary>
+    /// <param name="userResetPasswordDto"></param>
+    /// <returns></returns>
+    [HttpPost("api/v1/auth/resetPassword")]
+    public async Task<ActionResult> ResetPassword([FromBody] UserResetPasswordDto userResetPasswordDto)
+    {
+        var command = new ResetPasswordForUserCommand(userResetPasswordDto);
+        await mediator.Send(command);
+
+        return NoContent();
+    }
 }
