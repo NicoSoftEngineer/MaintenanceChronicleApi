@@ -123,7 +123,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Generates and sends a token for the user to confirm their email
     /// </summary>
-    /// <param name="email">Users email that specifies which user should get the token</param>
+    /// <param name="email">Users email that specifies which user should get the email</param>
     /// <returns></returns>
     [HttpPost("api/v1/auth/sendEmailConfirmEmail")]
     public async Task<ActionResult> GenerateEmailConfirmationEmail([FromQuery] string email)
@@ -151,5 +151,22 @@ public class AuthController(IMediator mediator) : ControllerBase
         await mediator.Send(validateEmailConfirmationTokenForUserCommand);
 
         return NoContent();
+    }
+
+    /// <summary>
+    /// Generates and sends a token for the user to reset their password
+    /// </summary>
+    /// <param name="email">Users email that specifies which user should get the email</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/auth/sendPasswordReset")]
+    public async Task<ActionResult> GeneratePasswordResetEmail([FromQuery] string email)
+    {
+        var generatePasswordResetEmailForUserCommand = new GeneratePasswordResetEmailForUserCommand(email);
+        var emailToBeSent = await mediator.Send(generatePasswordResetEmailForUserCommand);
+
+        var createEmailToBeSendCommand = new CreateNewEmailMessageCommand(emailToBeSent);
+        await mediator.Send(createEmailToBeSendCommand);
+
+        return Ok();
     }
 }
