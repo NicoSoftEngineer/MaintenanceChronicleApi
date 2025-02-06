@@ -125,7 +125,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="email">Users email that specifies which user should get the email</param>
     /// <returns></returns>
-    [HttpPost("api/v1/auth/sendEmailConfirmEmail")]
+    [HttpPost("api/v1/auth/send-email-confirm-email")]
     public async Task<ActionResult> GenerateEmailConfirmationEmail([FromQuery] string email)
     {
         var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationEmailForUserCommand(email);
@@ -142,7 +142,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="confirmTokenForUserDto">Email and the given token for email confirmation</param>
     /// <returns></returns>
-    [HttpPost("api/v1/auth/validateToken")]
+    [HttpPost("api/v1/auth/validate-token")]
     public async Task<ActionResult> ValidateToken(
         [FromQuery] EmailConfirmTokenForUserDto confirmTokenForUserDto
     )
@@ -158,7 +158,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="email">Users email that specifies which user should get the email</param>
     /// <returns></returns>
-    [HttpPost("api/v1/auth/sendPasswordReset")]
+    [HttpPost("api/v1/auth/send-password-reset")]
     public async Task<ActionResult> GeneratePasswordResetEmail([FromQuery] string email)
     {
         var generatePasswordResetEmailForUserCommand = new GeneratePasswordResetEmailForUserCommand(email);
@@ -175,7 +175,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="userResetPasswordDto"></param>
     /// <returns></returns>
-    [HttpPost("api/v1/auth/resetPassword")]
+    [HttpPost("api/v1/auth/reset-password")]
     public async Task<ActionResult> ResetPassword([FromBody] UserResetPasswordDto userResetPasswordDto)
     {
         var command = new ResetPasswordForUserCommand(userResetPasswordDto);
