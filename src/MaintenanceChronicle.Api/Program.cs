@@ -114,4 +114,7 @@ app.MapControllers();
 //Testing purposes
 app.MapGet("/", () => "This page wooooooorks");
 
+//Apply the newest migrations to db
+await app.ApplyMigrations();
+
 app.Run();
