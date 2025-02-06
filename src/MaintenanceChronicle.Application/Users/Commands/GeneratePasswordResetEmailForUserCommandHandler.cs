@@ -10,9 +10,9 @@ using Microsoft.Extensions.Options;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
-public class GenerateEmailConfirmationEmailForUserCommandHandler(UserManager<User> userManager, IOptions<EnvironmentOptions> envOptions) : IRequestHandler<GenerateEmailConfirmationEmailForUserCommand, NewEmailMessageDto>
+public class GeneratePasswordResetEmailForUserCommandHandler(UserManager<User> userManager, IOptions<EnvironmentOptions> envOptions) : IRequestHandler<GeneratePasswordResetEmailForUserCommand, NewEmailMessageDto>
 {
-    public async Task<NewEmailMessageDto> Handle(GenerateEmailConfirmationEmailForUserCommand request,
+    public async Task<NewEmailMessageDto> Handle(GeneratePasswordResetEmailForUserCommand request,
         CancellationToken cancellationToken)
     {
         var user = await userManager.FindByEmailAsync(request.Email);
@@ -21,11 +21,11 @@ public class GenerateEmailConfirmationEmailForUserCommandHandler(UserManager<Use
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-        var confirmLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendConfirmUrl.Replace("[Email]", user.Email).Replace("[ConfToken]", token)}";
+        var token = await userManager.GeneratePasswordResetTokenAsync(user);
+        var passwordResetLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendPasswordResetUrl.Replace("[Email]", user.Email).Replace("[PasswordToken]", token)}";
 
         var emailHelper = new EmailTemplateHelper();
-        var body = await emailHelper.GetEmailConfirmationTemplate($"{user.FirstName} {user.LastName}", confirmLink);
+        var body = await emailHelper.GetPasswordResetEmailTemplate($"{user.FirstName} {user.LastName}", passwordResetLink);
 
         var newEmailMessage = new NewEmailMessageDto
         {
