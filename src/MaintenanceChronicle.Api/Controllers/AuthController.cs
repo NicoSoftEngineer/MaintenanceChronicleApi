@@ -93,14 +93,14 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Registers a new user and tenant with the given information. The user is not logged in after registration
     /// </summary>
-    /// <param name="userTenantDto">Information needed to create new user with specified password and tenant</param>
+    /// <param name="registerUserTenantDto">Information needed to create new user with specified password and tenant</param>
     /// <returns></returns>
     [HttpPost("api/v1/auth/register-user-tenant")]
     public async Task<ActionResult<Guid>> RegisterUserTenant(
-        [FromBody] UserTenantDto userTenantDto
+        [FromBody] RegisterUserTenantDto registerUserTenantDto
     )
     {
-        var registerNewUserCommand = new RegisterUserAndTenantCommand(userTenantDto);
+        var registerNewUserCommand = new RegisterUserAndTenantCommand(registerUserTenantDto);
         var result = await mediator.Send(registerNewUserCommand);
 
         var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
