@@ -1,39 +1,40 @@
 namespace MaintenanceChronicle.Utilities.Error;
 
+//TODO: localize
 public enum ErrorType
 {
-    [ErrorMessage("User with this email already exists!")]
+    [ErrorMessage("Uživatel s tímto e-mailem již existuje!")]
     EmailAlreadyExists,
-    [ErrorMessage("Sorry this user doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tento uživatel neexistuje!")]
     UserNotFound,
-    [ErrorMessage("Sorry this password doesn't meet our requirements!")]
+    [ErrorMessage("Omlouváme se, toto heslo nesplňuje naše požadavky!")]
     PasswordDoesNotMeetRequirements,
-    [ErrorMessage("Wrong password!")]
+    [ErrorMessage("Špatné heslo!")]
     InvalidPassword,
-    [ErrorMessage("Sorry this token is invalid!")]
+    [ErrorMessage("Omlouváme se, tento token je neplatný!")]
     InvalidEmailConfirmationToken,
-    [ErrorMessage("Name must be unique!")]
+    [ErrorMessage("Název musí být jedinečný!")]
     NameMustBeUnique,
-    [ErrorMessage("Sorry this tenant doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tento nájemce neexistuje!")]
     TenantNotFound,
-    [ErrorMessage("Sorry your identity couldn't be accessed!")]
+    [ErrorMessage("Omlouváme se, vaši identitu se nepodařilo ověřit!")]
     InvalidIdentityCookie,
-    [ErrorMessage("Sorry this role doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tato role neexistuje!")]
     RoleNotFound,
-    [ErrorMessage("Sorry this customer doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tento zákazník neexistuje!")]
     CustomerNotFound,
-    [ErrorMessage("Sorry you don't have access to this tenant!")]
+    [ErrorMessage("Omlouváme se, nemáte přístup k tomuto nájemci!")]
     UserNotInTenant,
-    [ErrorMessage("Sorry this location doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tato lokalita neexistuje!")]
     LocationNotFound,
-    [ErrorMessage("Sorry this machine doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tento stroj neexistuje!")]
     MachineNotFound,
-    [ErrorMessage("Sorry this maintenance record doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tento záznam údržby neexistuje!")]
     MaintenanceRecordNotFound,
-    [ErrorMessage("Sorry this email message doesn't exist!")]
+    [ErrorMessage("Omlouváme se, tato e-mailová zpráva neexistuje!")]
     EmailMessageNotFound,
-    [ErrorMessage("Sorry this email message was already sent!")]
+    [ErrorMessage("Omlouváme se, tato e-mailová zpráva již byla odeslána!")]
     EmailAlreadySent,
-    [ErrorMessage("Sorry this password reset token is invalid!")]
+    [ErrorMessage("Omlouváme se, tento token pro reset hesla je neplatný!")]
     PasswordResetTokenInInvalid
 }

@@ -18,10 +18,10 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
         using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
         try
         {
-            var userTenant = request.UserTenantDto;
+            var userTenant = request.RegisterUserTenantDto;
             if (await dbContext.Tenants.AnyAsync(x => x.Name == userTenant.TenantName, cancellationToken))
             {
-                throw new BadRequestException(ErrorType.NameMustBeUnique);
+                throw new BadRequestException(ErrorType.NameMustBeUnique, "tenantName");
             }
 
             var tenant = new Tenant
@@ -34,7 +34,7 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
 
             if (await userManager.FindByEmailAsync(userTenant.Email) != null)
             {
-                throw new BadRequestException(ErrorType.EmailAlreadyExists);
+                throw new BadRequestException(ErrorType.EmailAlreadyExists, "email");
             }
 
             var userEntity = new User

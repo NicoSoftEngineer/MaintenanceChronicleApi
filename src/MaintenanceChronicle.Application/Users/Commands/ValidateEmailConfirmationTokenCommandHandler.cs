@@ -3,6 +3,7 @@ using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Utilities.Error;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using MimeKit.Text;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
@@ -18,7 +19,9 @@ public class ValidateEmailConfirmationTokenCommandHandler(UserManager<User> user
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var tokenCheckResult = await userManager.ConfirmEmailAsync(user, userTokenDto.Token);
+        var decodedToken = Uri.UnescapeDataString(userTokenDto.Token);
+
+        var tokenCheckResult = await userManager.ConfirmEmailAsync(user, decodedToken);
         if (!tokenCheckResult.Succeeded)
         {
             throw new BadRequestException(ErrorType.InvalidEmailConfirmationToken);

@@ -3,4 +3,4 @@ using MediatR;
 
 namespace MaintenanceChronicle.Application.Contracts.UserTenant.Commands;
 
-public record RegisterUserAndTenantCommand(UserTenantDto UserTenantDto) : IRequest<UserTenantIdsDto>;
+public record RegisterUserAndTenantCommand(RegisterUserTenantDto RegisterUserTenantDto) : IRequest<UserTenantIdsDto>;
