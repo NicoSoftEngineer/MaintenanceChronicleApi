@@ -36,5 +36,7 @@ public enum ErrorType
     [ErrorMessage("Omlouváme se, tato e-mailová zpráva již byla odeslána!")]
     EmailAlreadySent,
     [ErrorMessage("Omlouváme se, tento token pro reset hesla je neplatný!")]
-    PasswordResetTokenInInvalid
+    PasswordResetTokenInInvalid,
+    [ErrorMessage("Omlouváme se, nejste přihlášený")]
+    UserNotLoggedIn
 }

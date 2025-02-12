@@ -5,10 +5,12 @@ using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
 using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Queries;
+using MaintenanceChronicle.Application.Contracts.Users.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.UserTenant.Commands;
 using MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Utilities.Constants;
+using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -182,5 +184,14 @@ public class AuthController(IMediator mediator) : ControllerBase
         await mediator.Send(command);
 
         return NoContent();
+    }
+
+    [HttpGet("api/v1/auth/current-user-info")]
+    public async Task<ActionResult<LoggedInUserInfoDto>> GetCurrentUserInfo()
+    {
+        var query = new GetCurrentUserInfoQuery(User.GetUserId());
+        var info = await mediator.Send(query);
+
+        return info;
     }
 }

@@ -5,13 +5,15 @@ namespace MaintenanceChronicle.Utilities.Helpers;
 
 public static class IdentityCookieExtension
 {
-    public static string GetTenantId(this ClaimsPrincipal claimsPrincipal)
+    public static string? GetTenantId(this ClaimsPrincipal claimsPrincipal)
     {
-        return claimsPrincipal.FindFirst(MaintenanceChronicleClaimTypes.TenantIdClaimType)!.Value;
+        var tenantClaim = claimsPrincipal.FindFirst(MaintenanceChronicleClaimTypes.TenantIdClaimType);
+        return tenantClaim?.Value;
     }
 
-    public static string GetUserId(this ClaimsPrincipal claimsPrincipal)
+    public static string? GetUserId(this ClaimsPrincipal claimsPrincipal)
     {
-        return claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+        var userClaim = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier);
+        return userClaim?.Value;
     }
 }
