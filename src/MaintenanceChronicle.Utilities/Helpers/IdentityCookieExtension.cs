@@ -16,4 +16,10 @@ public static class IdentityCookieExtension
         var userClaim = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier);
         return userClaim?.Value;
     }
+
+    public static string? GetUserEmail(this ClaimsPrincipal claimsPrincipal)
+    {
+        var userClaim = claimsPrincipal.FindFirst(ClaimTypes.Email);
+        return userClaim?.Value;
+    }
 }
