@@ -2,6 +2,8 @@ using System.Net;
 using MaintenanceChronicle.Utilities.Enum;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace MaintenanceChronicle.Utilities.Error;
 
@@ -15,12 +17,16 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
         }
         catch (BadRequestException ex)
         {
-            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            await context.Response.WriteAsJsonAsync(new
+            var errorResponse = new
             {
-                ErrorType = ex.ErrorType.ToString(),
-                Error = ex.ErrorType.GetErrorMessage()
-            });
+                Errors = new Dictionary<string, string[]>
+                {
+                    { ex.PropertyName ?? "General", new[] { ex.ErrorType.GetErrorMessage() } }
+                }
+            };
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsJsonAsync(errorResponse);
         }
         catch (InternalServerException ex)
         {

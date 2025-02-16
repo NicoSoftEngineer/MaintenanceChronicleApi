@@ -1,3 +1,4 @@
+using System.Web;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
 using MaintenanceChronicle.Data.Entities.Account;
@@ -22,7 +23,10 @@ public class GenerateEmailConfirmationEmailForUserCommandHandler(UserManager<Use
         }
 
         var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-        var confirmLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendConfirmUrl.Replace("[Email]", user.Email).Replace("[ConfToken]", token)}";
+
+        var tokenEncoded = Uri.EscapeDataString(token);
+
+        var confirmLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendConfirmUrl.Replace("[Email]", user.Email).Replace("[ConfToken]", tokenEncoded)}";
 
         var emailHelper = new EmailTemplateHelper();
         var body = await emailHelper.GetEmailConfirmationTemplate($"{user.FirstName} {user.LastName}", confirmLink);

@@ -19,13 +19,13 @@ public class RegisterNewUserCommandHandler(UserManager<User> userManager, AppDbC
 
         if (await userManager.FindByEmailAsync(user.Email) != null)
         {
-            throw new BadRequestException(ErrorType.EmailAlreadyExists);
+            throw new BadRequestException(ErrorType.EmailAlreadyExists, "email");
         }
 
         var tenant = await dbContext.Tenants.FirstOrDefaultAsync(x => x.Id == user.TenantId, cancellationToken);
         if (tenant == null)
         {
-            throw new BadRequestException(ErrorType.TenantNotFound);
+            throw new BadRequestException(ErrorType.TenantNotFound, "tenantName");
         }
 
         var userEntity = new User

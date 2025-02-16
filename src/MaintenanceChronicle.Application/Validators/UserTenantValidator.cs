@@ -1,4 +1,5 @@
 using MaintenanceChronicle.Data;
+using MaintenanceChronicle.Utilities.Error;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Validators;
@@ -12,7 +13,7 @@ public static class UserTenantValidator
     /// <param name="userId"></param>
     /// <param name="tenantId"></param>
     /// <returns></returns>
-    public static async Task<bool> ValidateUserTenantAccess(this AppDbContext dbContext, string userId, string tenantId)
+    public static async Task<bool> ValidateUserTenantAccess(this AppDbContext dbContext, string? userId, string? tenantId)
     {
         var user = await dbContext.Users.Include(x => x.Tenant).FirstOrDefaultAsync(u => u.Id == Guid.Parse(userId));
         var tenant = await dbContext.Tenants.FirstOrDefaultAsync(t => t.Id == Guid.Parse(tenantId));

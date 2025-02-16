@@ -5,12 +5,15 @@ using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
 using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Queries;
+using MaintenanceChronicle.Application.Contracts.Users.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.UserTenant.Commands;
 using MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Utilities.Constants;
+using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,6 +53,15 @@ public class AuthController(IMediator mediator) : ControllerBase
 
         await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim, authProperties);
 
+        return NoContent();
+    }
+
+    [Authorize]
+    [HttpGet("api/v1/auth/logout")]
+    public async Task<ActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync();
+        Response.Cookies.Delete(".AspNetCore.Identity.Application");
         return NoContent();
     }
 
@@ -93,14 +105,14 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Registers a new user and tenant with the given information. The user is not logged in after registration
     /// </summary>
-    /// <param name="userTenantDto">Information needed to create new user with specified password and tenant</param>
+    /// <param name="registerUserTenantDto">Information needed to create new user with specified password and tenant</param>
     /// <returns></returns>
     [HttpPost("api/v1/auth/register-user-tenant")]
     public async Task<ActionResult<Guid>> RegisterUserTenant(
-        [FromBody] UserTenantDto userTenantDto
+        [FromBody] RegisterUserTenantDto registerUserTenantDto
     )
     {
-        var registerNewUserCommand = new RegisterUserAndTenantCommand(userTenantDto);
+        var registerNewUserCommand = new RegisterUserAndTenantCommand(registerUserTenantDto);
         var result = await mediator.Send(registerNewUserCommand);
 
         var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
@@ -182,5 +194,14 @@ public class AuthController(IMediator mediator) : ControllerBase
         await mediator.Send(command);
 
         return NoContent();
+    }
+
+    [HttpGet("api/v1/auth/current-user-info")]
+    public async Task<ActionResult<LoggedInUserInfoDto>> GetCurrentUserInfo()
+    {
+        var query = new GetCurrentUserInfoQuery(User.GetUserId());
+        var info = await mediator.Send(query);
+
+        return info;
     }
 }
