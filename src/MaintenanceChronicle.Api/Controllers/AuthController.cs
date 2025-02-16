@@ -13,6 +13,7 @@ using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,6 +53,15 @@ public class AuthController(IMediator mediator) : ControllerBase
 
         await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim, authProperties);
 
+        return NoContent();
+    }
+
+    [Authorize]
+    [HttpGet("api/v1/auth/logout")]
+    public async Task<ActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync();
+        Response.Cookies.Delete(".AspNetCore.Identity.Application");
         return NoContent();
     }
 
