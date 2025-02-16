@@ -23,7 +23,8 @@ public class UpdateCustomerCommandHandler(AppDbContext dbContext, IClock clock) 
         var customerMapped = customerEntity.ToManageCustomerDetailDto();
         request.Patch.ApplyTo(customerMapped);
 
-        customerEntity.Name = customerMapped.Name;
+        customerMapped.MapToEntity(customerEntity);
+
         customerEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
 
         await dbContext.SaveChangesAsync(cancellationToken);

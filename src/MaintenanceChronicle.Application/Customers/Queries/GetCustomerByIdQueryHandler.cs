@@ -11,7 +11,7 @@ public class GetCustomerByIdQueryHandler(AppDbContext dbContext) : IRequestHandl
     public async Task<CustomerDetailDto> Handle(GetEntityByIdQuery<CustomerDetailDto> request,
         CancellationToken cancellationToken)
     {
-        var customer = await dbContext.Customers.FindAsync(request.Id, cancellationToken);
+        var customer = await dbContext.Customers.FindAsync([request.Id ], cancellationToken);
 
         if (customer == null)
         {

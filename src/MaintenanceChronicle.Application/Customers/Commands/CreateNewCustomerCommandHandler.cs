@@ -16,6 +16,9 @@ public class CreateNewCustomerCommandHandler(AppDbContext dbContext, IClock cloc
         {
             Id = Guid.NewGuid(),
             Name = customerDto.Name,
+            Email = customerDto.Email,
+            CompanyIdNumber = customerDto.CompanyIdNumber,
+            PhoneNumber = customerDto.PhoneNumber,
             TenantId = Guid.Parse(request.TenantId)
         };
         customer.SetCreateBy(request.UserId, clock.GetCurrentInstant());
