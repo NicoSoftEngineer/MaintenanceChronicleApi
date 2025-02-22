@@ -1,3 +1,5 @@
+using MaintenanceChronicle.Application.Contracts.Customers.Queries;
+using MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Locations.Commands;
@@ -147,5 +149,14 @@ public class LocationController(IMediator mediator) : ControllerBase
         var machines = await mediator.Send(query);
 
         return Ok(machines);
+    }
+
+    [HttpGet("/api/v1/locations/{id:guid}/customer")]
+    public async Task<ActionResult<CustomerDetailForLocationDto>> GetCustomerForLocation([FromRoute] Guid id)
+    {
+        var query = new GetCustomerDetailForLocationQuery(id);
+        var customer = await mediator.Send(query);
+
+        return Ok(customer);
     }
 }
