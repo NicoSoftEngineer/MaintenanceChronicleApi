@@ -82,7 +82,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id">Id that user provides</param>
     /// <returns></returns>
-    [HttpGet("/api/v1/location/{id:guid}")]
+    [HttpGet("/api/v1/locations/{id:guid}")]
     public async Task<ActionResult<List<LocationDetailDto>>> GetLocation(Guid id)
     {
         var getLocationQuery = new GetEntityByIdQuery<LocationDetailDto>(id);
@@ -96,7 +96,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    [HttpDelete("/api/v1/location/{id:guid}")]
+    [HttpDelete("/api/v1/locations/{id:guid}")]
     public async Task<ActionResult> DeleteLocation(Guid id)
     {
         var deleteCommand = new DeleteEntityByIdCommand<Location>(id, User.GetUserId());
@@ -111,7 +111,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <param name="id"></param>
     /// <param name="contactsInLocationDto"></param>
     /// <returns></returns>
-    [HttpPost("/api/v1/location/{id:guid}/contacts")]
+    [HttpPost("/api/v1/locations/{id:guid}/contacts")]
     public async Task<ActionResult> ManageContactsToLocation([FromRoute] Guid id,[FromBody]ContactsInLocationDto contactsInLocationDto)
     {
         var assignCommand =
@@ -126,7 +126,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    [HttpGet("/api/v1/location/{id:guid}/contacts")]
+    [HttpGet("/api/v1/locations/{id:guid}/contacts")]
     public async Task<ActionResult<List<LocationContactInListDto>>> GetContactsForLocation([FromRoute] Guid id)
     {
         var getContactsQuery = new GetListOfContactsForLocationQuery(id);
@@ -140,7 +140,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id">User specified location id</param>
     /// <returns>List of machines</returns>
-    [HttpGet("/api/v1/location/{id:guid}/machines")]
+    [HttpGet("/api/v1/locations/{id:guid}/machines")]
     public async Task<ActionResult<List<MachineInListForLocationDto>>> GetMachinesForLocation([FromRoute] Guid id)
     {
         var query = new GetMachinesForLocationQuery(id);
