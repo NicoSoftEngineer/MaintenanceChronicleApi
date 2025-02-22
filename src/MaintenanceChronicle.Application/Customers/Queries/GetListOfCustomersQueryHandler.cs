@@ -12,11 +12,7 @@ public class GetListOfCustomersQueryHandler(AppDbContext dbContext) : IRequestHa
         CancellationToken cancellationToken)
     {
         var customers = await dbContext.Customers
-            .Select(c => new CustomerInListDto
-            {
-                Id = c.Id,
-                Name = c.Name
-            })
+            .Select(c => c.ToListDto())
             .ToListAsync(cancellationToken);
 
         return customers;

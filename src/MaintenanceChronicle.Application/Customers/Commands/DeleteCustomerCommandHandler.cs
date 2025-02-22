@@ -12,7 +12,7 @@ public class DeleteCustomerCommandHandler(AppDbContext dbContext, IClock clock) 
 {
     public async Task Handle(DeleteEntityByIdCommand<Customer> request, CancellationToken cancellationToken)
     {
-        var customer = await dbContext.Customers.FindAsync(request.Id, cancellationToken);
+        var customer = await dbContext.Customers.FindAsync([request.Id], cancellationToken);
         if (customer is null)
         {
             throw new BadRequestException(ErrorType.CustomerNotFound);

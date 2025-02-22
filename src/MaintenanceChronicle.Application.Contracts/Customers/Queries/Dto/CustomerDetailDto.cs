@@ -6,6 +6,9 @@ public class CustomerDetailDto
 {
     public Guid Id { get; set; }
     public required string Name { get; set; }
+    public required string Email { get; set; }
+    public required string PhoneNumber { get; set; }
+    public required string CompanyIdNumber { get; set; }
 }
 public static class CustomerDetailDtoExtensions
 {
@@ -14,7 +17,10 @@ public static class CustomerDetailDtoExtensions
         return new CustomerDetailDto
         {
             Id = customer.Id,
-            Name = customer.Name
+            Name = customer.Name,
+            Email = customer.Email,
+            PhoneNumber = customer.PhoneNumber,
+            CompanyIdNumber = customer.CompanyIdNumber
         };
     }
 
@@ -23,7 +29,10 @@ public static class CustomerDetailDtoExtensions
         return new Customer
         {
             Id = manageCustomerDto.Id,
-            Name = manageCustomerDto.Name
+            Name = manageCustomerDto.Name,
+            Email = manageCustomerDto.Email,
+            PhoneNumber = manageCustomerDto.PhoneNumber,
+            CompanyIdNumber = manageCustomerDto.CompanyIdNumber
         };
     }
 }

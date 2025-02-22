@@ -10,6 +10,9 @@ public class Customer : ITrackable, ITenant
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
+    public string PhoneNumber { get; set; } = null!;
+    public string CompanyIdNumber { get; set; } = null!;
+    public string Email { get; set; } = null!;
     public ICollection<Location> Locations { get; set; } = new HashSet<Location>();
     public Instant CreatedAt { get; set; }
     public string CreatedBy { get; set; } = null!;
