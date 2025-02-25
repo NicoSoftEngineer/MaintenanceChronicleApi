@@ -120,7 +120,7 @@ public class UserController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <returns>List of roles</returns>
     [HttpGet("api/v1/users/roles")]
-    public async Task<ActionResult<List<LocationInListForContactDto>>> GetRoles()
+    public async Task<ActionResult<List<RoleDetailDto>>> GetRoles()
     {
         var query = new GetListOfEntityQuery<RoleDetailDto>();
         var roles = await mediator.Send(query);
