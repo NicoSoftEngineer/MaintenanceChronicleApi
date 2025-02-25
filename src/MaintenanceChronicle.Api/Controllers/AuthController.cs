@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.Roles.Dto;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands;
@@ -203,5 +204,12 @@ public class AuthController(IMediator mediator) : ControllerBase
         var info = await mediator.Send(query);
 
         return info;
+    }
+
+    [HttpGet("api/v1/auth/current-user-roles")]
+    public async Task<ActionResult<string[]>> GetCurrentUserRoles()
+    {
+        var roles = HttpContext.User.GetUserRoles();
+        return roles;
     }
 }

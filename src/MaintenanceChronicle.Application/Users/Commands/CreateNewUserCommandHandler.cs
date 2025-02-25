@@ -16,7 +16,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
         var newUserDto = request.NewUserDto;
         if ((await userManager.FindByEmailAsync(newUserDto.Email)) != null)
         {
-            throw new BadRequestException(ErrorType.EmailAlreadyExists);
+            throw new BadRequestException(ErrorType.EmailAlreadyExists,"email");
         }
 
         var tenant = await dbContext.Tenants.FindAsync(Guid.Parse(request.TenantId), cancellationToken);

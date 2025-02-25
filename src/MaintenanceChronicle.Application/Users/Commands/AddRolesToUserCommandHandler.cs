@@ -16,13 +16,15 @@ public class AddRolesToUserCommandHandler(AppDbContext dbContext, IClock clock, 
     {
         var userRoles = request.UserRoles;
 
-        var user = await userManager.FindByIdAsync(userRoles.UserId.ToString());
+        var user = await dbContext.Users
+            .Include(u => u.Roles)
+            .FirstOrDefaultAsync(x => x.Id == userRoles.UserId, cancellationToken: cancellationToken);
         if (user == null)
         {
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var tenant = await dbContext.Tenants.FindAsync(Guid.Parse(request.TenantId), cancellationToken);
+        var tenant = await dbContext.Tenants.FindAsync([Guid.Parse(request.TenantId)], cancellationToken);
         if (tenant == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);
@@ -30,9 +32,9 @@ public class AddRolesToUserCommandHandler(AppDbContext dbContext, IClock clock, 
 
         var roles = await dbContext.Roles.Where(x => userRoles.RoleIds.Contains(x.Id)).ToListAsync(cancellationToken);
 
-        foreach (var rolesToRemove in user.Roles.Where(x => !roles.Contains(x.Role)))
+        foreach (var roleToRemove in user.Roles.Where(x => !roles.Contains(x.Role)))
         {
-            rolesToRemove.SetDeleteBy(request.UserId, clock.GetCurrentInstant());
+            roleToRemove.SetDeleteBy(request.UserId, clock.GetCurrentInstant());
         }
         foreach (var rolesToAdd in roles)
         {

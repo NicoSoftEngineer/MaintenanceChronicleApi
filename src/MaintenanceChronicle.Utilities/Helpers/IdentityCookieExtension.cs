@@ -22,4 +22,10 @@ public static class IdentityCookieExtension
         var userClaim = claimsPrincipal.FindFirst(ClaimTypes.Email);
         return userClaim?.Value;
     }
+
+    public static string[] GetUserRoles(this ClaimsPrincipal claimsPrincipal)
+    {
+        var userRoles = claimsPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(r => r.Value).ToArray();
+        return userRoles;
+    }
 }
