@@ -9,6 +9,7 @@ using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MaintenanceChronicle.Api.Controllers;
@@ -48,26 +49,17 @@ public class UserController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Updates a user with the given information
     /// </summary>
+    /// <param name="id">Edited user id</param>
     /// <param name="userDetailDto">Information that admin provides</param>
     /// <returns></returns>
-    [HttpPatch("api/v1/users")]
+    [HttpPatch("api/v1/users/{id:guid}")]
     public async Task<ActionResult> UpdateUser(
-        [FromBody] UpdateUserDetailDto userDetailDto
+        [FromRoute]Guid id,
+        [FromBody] JsonPatchDocument<UpdateUserDetailDto> userDetailDto
     )
     {
-        var createNewUserCommand = new UpdateUserCommand(userDetailDto, HttpContext.User.GetUserId());
+        var createNewUserCommand = new UpdateUserCommand(userDetailDto, id, HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
-
-        var addRolesToUserCommand = new AddRolesToUserCommand(
-            new UserRolesDto
-            {
-                UserId = userDetailDto.Id,
-                RoleIds = userDetailDto.Roles
-            },
-            HttpContext.User.GetUserId(),
-            HttpContext.User.GetTenantId()
-        );
-        await mediator.Send(addRolesToUserCommand);
 
         return NoContent();
     }
