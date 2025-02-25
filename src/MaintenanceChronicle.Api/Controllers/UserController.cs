@@ -1,5 +1,6 @@
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto;
+using MaintenanceChronicle.Application.Contracts.Roles.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
 using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Users.Queries.Dto;
@@ -112,5 +113,18 @@ public class UserController(IMediator mediator) : ControllerBase
         var locations = await mediator.Send(query);
 
         return Ok(locations);
+    }
+
+    /// <summary>
+    /// Gets all the available roles for user
+    /// </summary>
+    /// <returns>List of roles</returns>
+    [HttpGet("api/v1/users/roles")]
+    public async Task<ActionResult<List<LocationInListForContactDto>>> GetRoles()
+    {
+        var query = new GetListOfEntityQuery<RoleDetailDto>();
+        var roles = await mediator.Send(query);
+
+        return Ok(roles);
     }
 }
