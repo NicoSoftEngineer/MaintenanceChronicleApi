@@ -9,6 +9,7 @@ using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MaintenanceChronicle.Api.Controllers;
@@ -31,7 +32,7 @@ public class UserController(IMediator mediator) : ControllerBase
         var createNewUserCommand = new CreateNewUserCommand(createNewUserDto, HttpContext.User.GetUserId(), HttpContext.User.GetTenantId());
         var userId = await mediator.Send(createNewUserCommand);
 
-        var addRolesToUserCommand = new AddRolesToUserCommand(
+        var addRolesToUserCommand = new ManageRolesForUserCommand(
             new UserRolesDto
             {
                 UserId = userId,
@@ -48,26 +49,40 @@ public class UserController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Updates a user with the given information
     /// </summary>
+    /// <param name="id">Edited user id</param>
     /// <param name="userDetailDto">Information that admin provides</param>
     /// <returns></returns>
-    [HttpPatch("api/v1/users")]
+    [HttpPatch("api/v1/users/{id:guid}")]
     public async Task<ActionResult> UpdateUser(
-        [FromBody] UpdateUserDetailDto userDetailDto
+        [FromRoute]Guid id,
+        [FromBody] JsonPatchDocument<UpdateUserDetailDto> userDetailDto
     )
     {
-        var createNewUserCommand = new UpdateUserCommand(userDetailDto, HttpContext.User.GetUserId());
+        var createNewUserCommand = new UpdateUserCommand(userDetailDto, id, HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
 
-        var addRolesToUserCommand = new AddRolesToUserCommand(
-            new UserRolesDto
-            {
-                UserId = userDetailDto.Id,
-                RoleIds = userDetailDto.Roles
-            },
-            HttpContext.User.GetUserId(),
-            HttpContext.User.GetTenantId()
-        );
-        await mediator.Send(addRolesToUserCommand);
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Updates user roles
+    /// </summary>
+    /// <param name="id">User id</param>
+    /// <param name="roles">New roles</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/users/{id:guid}/roles")]
+    public async Task<ActionResult> ManageUserRoles(
+        [FromRoute] Guid id,
+        [FromBody] RoleDetailDto[] roles
+    )
+    {
+        var userDetailDto = new UserRolesDto
+        {
+            UserId = id,
+            RoleIds = roles.Select(r => r.Id).ToArray()
+        };
+        var manageRoles = new ManageRolesForUserCommand(userDetailDto, HttpContext.User.GetUserId(), User.GetTenantId());
+        await mediator.Send(manageRoles);
 
         return NoContent();
     }

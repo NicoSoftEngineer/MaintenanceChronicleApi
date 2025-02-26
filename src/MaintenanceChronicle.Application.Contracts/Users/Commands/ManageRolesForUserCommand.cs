@@ -4,4 +4,7 @@ using Microsoft.AspNetCore.JsonPatch;
 
 namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 
-public record UpdateUserCommand(JsonPatchDocument<UpdateUserDetailDto> Patch, Guid ModifiedUserId, string UserId) : IRequest;
+public record ManageRolesForUserCommand(
+    UserRolesDto UserRoles,
+    string UserId,
+    string TenantId) : IRequest;

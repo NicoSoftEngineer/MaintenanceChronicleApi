@@ -1,4 +1,5 @@
 using MaintenanceChronicle.Application.Contracts.Users.Commands;
+using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Interfaces;
@@ -10,9 +11,9 @@ using NodaTime;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
-public class AddRolesToUserCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<AddRolesToUserCommand>
+public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<ManageRolesForUserCommand>
 {
-    public async Task Handle(AddRolesToUserCommand request, CancellationToken cancellationToken)
+    public async Task Handle(ManageRolesForUserCommand request, CancellationToken cancellationToken)
     {
         var userRoles = request.UserRoles;
 
@@ -24,27 +25,23 @@ public class AddRolesToUserCommandHandler(AppDbContext dbContext, IClock clock, 
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var tenant = await dbContext.Tenants.FindAsync([Guid.Parse(request.TenantId)], cancellationToken);
-        if (tenant == null)
-        {
-            throw new BadRequestException(ErrorType.TenantNotFound);
-        }
-
         var roles = await dbContext.Roles.Where(x => userRoles.RoleIds.Contains(x.Id)).ToListAsync(cancellationToken);
 
         foreach (var roleToRemove in user.Roles.Where(x => !roles.Contains(x.Role)))
         {
             roleToRemove.SetDeleteBy(request.UserId, clock.GetCurrentInstant());
         }
-        foreach (var rolesToAdd in roles)
+
+        var rolesToAdd = roles.Where(x => user.Roles.All(r => r.RoleId != x.Id)).ToList();
+        foreach (var roleToAdd in rolesToAdd)
         {
-            if (user.Roles.All(x => x.Role.Name != rolesToAdd.Name))
+            if (user.Roles.All(x => x.Role.Name != roleToAdd.Name))
             {
                 var userRole = new UserRole
                 {
                     UserId = userRoles.UserId,
-                    RoleId = rolesToAdd.Id,
-                    TenantId = tenant.Id
+                    RoleId = roleToAdd.Id,
+                    TenantId = Guid.Parse(request.TenantId)
                 };
                 userRole.SetCreateBy(request.UserId, clock.GetCurrentInstant());
                 await dbContext.UserRoles.AddAsync(userRole, cancellationToken);

@@ -14,8 +14,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MaintenanceChronicle.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241227160543_MaintenanceRecordAdded")]
-    partial class MaintenanceRecordAdded
+    [Migration("20250226094502_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -213,46 +213,6 @@ namespace MaintenanceChronicle.Data.Migrations
 
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Account.UserRole", b =>
                 {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Instant>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Instant?>("DeletedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("text");
-
-                    b.Property<Instant>("ModifiedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ModifiedBy")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("TenantId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasIndex("TenantId");
-
-                    b.ToTable("AspNetUserRoles", (string)null);
-                });
-
-            modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.Customer", b =>
-                {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
@@ -277,7 +237,65 @@ namespace MaintenanceChronicle.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("TenantId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.Customer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CompanyIdNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Instant>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Instant?>("DeletedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Instant>("ModifiedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ModifiedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -289,6 +307,46 @@ namespace MaintenanceChronicle.Data.Migrations
                     b.HasIndex("TenantId");
 
                     b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.EmailMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Instant>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FromEmail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FromName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RecipientEmail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RecipientName")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Sent")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailMessage");
                 });
 
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.Location", b =>
@@ -710,7 +768,7 @@ namespace MaintenanceChronicle.Data.Migrations
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.MaintenanceRecord", b =>
                 {
                     b.HasOne("MaintenanceChronicle.Data.Entities.Business.Machine", "Machine")
-                        .WithMany()
+                        .WithMany("MaintenanceRecords")
                         .HasForeignKey("MachineId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -784,6 +842,11 @@ namespace MaintenanceChronicle.Data.Migrations
                     b.Navigation("Contacts");
 
                     b.Navigation("Machines");
+                });
+
+            modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.Machine", b =>
+                {
+                    b.Navigation("MaintenanceRecords");
                 });
 #pragma warning restore 612, 618
         }

@@ -210,10 +210,8 @@ namespace MaintenanceChronicle.Data.Migrations
 
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Account.UserRole", b =>
                 {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("RoleId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<Instant>("CreatedAt")
@@ -236,14 +234,22 @@ namespace MaintenanceChronicle.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("TenantId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("UserId", "RoleId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
                     b.HasIndex("TenantId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
