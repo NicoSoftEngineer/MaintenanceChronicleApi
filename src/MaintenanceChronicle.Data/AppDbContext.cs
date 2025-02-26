@@ -42,6 +42,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
             .WithMany(e => e.Roles)
             .HasForeignKey(e => e.UserId)
             .HasPrincipalKey(e => e.Id);
+        modelBuilder.Entity<UserRole>()
+            .HasKey(r => r.Id);
 
         modelBuilder.Entity<Role>().HasData(new()
         {
