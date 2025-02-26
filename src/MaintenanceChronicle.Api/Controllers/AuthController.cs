@@ -89,7 +89,7 @@ public class AuthController(IMediator mediator) : ControllerBase
         var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
         var adminRole = await mediator.Send(getRoleByNameCommand);
 
-        var addRolesToUserCommand = new AddRolesToUserCommand(
+        var addRolesToUserCommand = new ManageRolesForUserCommand(
         new UserRolesDto
             {
                 UserId = result,
@@ -119,7 +119,7 @@ public class AuthController(IMediator mediator) : ControllerBase
         var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
         var adminRole = await mediator.Send(getRoleByNameCommand);
 
-        var addRolesToUserCommand = new AddRolesToUserCommand(
+        var addRolesToUserCommand = new ManageRolesForUserCommand(
             new UserRolesDto
             {
                 UserId = result.UserId,
@@ -197,6 +197,10 @@ public class AuthController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Get the signed-in user info
+    /// </summary>
+    /// <returns>LoggedIn user info</returns>
     [HttpGet("api/v1/auth/current-user-info")]
     public async Task<ActionResult<LoggedInUserInfoDto>> GetCurrentUserInfo()
     {
@@ -206,10 +210,14 @@ public class AuthController(IMediator mediator) : ControllerBase
         return info;
     }
 
+    /// <summary>
+    /// Get current user roles
+    /// </summary>
+    /// <returns>Current user roles</returns>
     [HttpGet("api/v1/auth/current-user-roles")]
-    public async Task<ActionResult<string[]>> GetCurrentUserRoles()
+    public ActionResult<string[]> GetCurrentUserRoles()
     {
         var roles = HttpContext.User.GetUserRoles();
-        return roles;
+        return Ok(roles);
     }
 }

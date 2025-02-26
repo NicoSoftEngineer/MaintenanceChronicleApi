@@ -32,7 +32,7 @@ public class UserController(IMediator mediator) : ControllerBase
         var createNewUserCommand = new CreateNewUserCommand(createNewUserDto, HttpContext.User.GetUserId(), HttpContext.User.GetTenantId());
         var userId = await mediator.Send(createNewUserCommand);
 
-        var addRolesToUserCommand = new AddRolesToUserCommand(
+        var addRolesToUserCommand = new ManageRolesForUserCommand(
             new UserRolesDto
             {
                 UserId = userId,
@@ -60,6 +60,29 @@ public class UserController(IMediator mediator) : ControllerBase
     {
         var createNewUserCommand = new UpdateUserCommand(userDetailDto, id, HttpContext.User.GetUserId());
         await mediator.Send(createNewUserCommand);
+
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Updates user roles
+    /// </summary>
+    /// <param name="id">User id</param>
+    /// <param name="roles">New roles</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/users/{id:guid}/roles")]
+    public async Task<ActionResult> ManageUserRoles(
+        [FromRoute] Guid id,
+        [FromBody] RoleDetailDto[] roles
+    )
+    {
+        var userDetailDto = new UserRolesDto
+        {
+            UserId = id,
+            RoleIds = roles.Select(r => r.Id).ToArray()
+        };
+        var manageRoles = new ManageRolesForUserCommand(userDetailDto, HttpContext.User.GetUserId(), User.GetTenantId());
+        await mediator.Send(manageRoles);
 
         return NoContent();
     }

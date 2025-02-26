@@ -8,7 +8,6 @@ public class UpdateUserDetailDto
     public required string Email { get; set; }
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
-    public Guid[] Roles { get; set; } = null!;
 }
 
 public static class UpdateUserDetailExtension
@@ -19,7 +18,6 @@ public static class UpdateUserDetailExtension
         Email = entity.Email!,
         FirstName = entity.FirstName,
         LastName = entity.LastName,
-        Roles = entity.Roles.Select(r => r.RoleId).ToArray(),
     };
 
     public static void MapToEntity(this UpdateUserDetailDto from, User to)
