@@ -27,7 +27,7 @@ public class UserTenantValidationMiddleware(AppDbContext dbContext, IMediator me
                 userPrincipal = await mediator.Send(new AddTenantClaimToUserPrincipalCommand(new UserTenantClaimDto
                 {
                     Email = userPrincipal.GetUserEmail(),
-                    TenantId = await mediator.Send(new GetTenantIdFromUserCommand(userPrincipal.GetUserEmail()))
+                    TenantId = await mediator.Send(new GetTenantIdFromUserQuery(userPrincipal.GetUserEmail()))
                 }, userPrincipal));
                 await context.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipal);
             }

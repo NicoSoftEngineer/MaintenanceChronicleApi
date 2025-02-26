@@ -34,7 +34,7 @@ public class AuthController(IMediator mediator) : ControllerBase
         var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(loginDto);
         var userPrincipal = await mediator.Send(generateClaimsPrincipalForUserCommand);
 
-        var getTenantIdForUserCommand = new GetTenantIdFromUserCommand(loginDto.Email);
+        var getTenantIdForUserCommand = new GetTenantIdFromUserQuery(loginDto.Email);
         var tenantId = await mediator.Send(getTenantIdForUserCommand);
 
         var userTenantClaimDto = new UserTenantClaimDto
