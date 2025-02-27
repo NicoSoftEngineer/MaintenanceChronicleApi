@@ -22,22 +22,23 @@ public class ManageContactsInLocationCommandHandler(AppDbContext dbContext, IClo
         }
 
         var currentInstant = clock.GetCurrentInstant();
+        var contactIds = request.Contacts.Select(c => c.Id).ToList();
 
         foreach (var existingContacts in location.Contacts)
         {
             //Remove existing contact if it is not in requests contact list
-            if (request.ContactsInLocationDto.ContactIds.All(x => x != existingContacts.UserId))
+            if (contactIds.All(x => x != existingContacts.UserId))
             {
                 existingContacts.SetDeleteBy(request.UserId, currentInstant);
             }
         }
 
-        foreach (var contactId in request.ContactsInLocationDto.ContactIds)
+        foreach (var contact in request.Contacts)
         {
             //Add contact if it is not in existing contact list
-            if (location.Contacts.All(x => x.UserId != contactId))
+            if (location.Contacts.All(x => x.UserId != contact.Id))
             {
-                var user = await dbContext.Users.FindAsync(new object[] { contactId }, cancellationToken);
+                var user = await dbContext.Users.FindAsync(new object[] { contact.Id }, cancellationToken);
                 if (user == null)
                 {
                     throw new BadRequestException(ErrorType.UserNotFound);
