@@ -114,7 +114,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <param name="contactInListDto"></param>
     /// <returns></returns>
     [HttpPost("/api/v1/locations/{id:guid}/contacts")]
-    public async Task<ActionResult> ManageContactsToLocation([FromRoute] Guid id,[FromBody]ContactInListDto[] contactInListDto)
+    public async Task<ActionResult> ManageContactsToLocation([FromRoute] Guid id,[FromBody]LocationContactInListDto[] contactInListDto)
     {
         var assignCommand =
             new ManageContactsInLocationCommand(id, contactInListDto, User.GetUserId(), User.GetTenantId());
@@ -132,6 +132,19 @@ public class LocationController(IMediator mediator) : ControllerBase
     public async Task<ActionResult<List<LocationContactInListDto>>> GetContactsForLocation([FromRoute] Guid id)
     {
         var getContactsQuery = new GetListOfContactsForLocationQuery(id);
+        var contacts = await mediator.Send(getContactsQuery);
+
+        return Ok(contacts);
+    }
+
+    /// <summary>
+    /// Gets possible contacts for location
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("/api/v1/locations/contacts")]
+    public async Task<ActionResult<List<LocationContactInListDto>>> GetPossibleContactsForLocation()
+    {
+        var getContactsQuery = new GetListOfEntityQuery<LocationContactInListDto>();
         var contacts = await mediator.Send(getContactsQuery);
 
         return Ok(contacts);
