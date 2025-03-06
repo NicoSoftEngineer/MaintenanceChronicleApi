@@ -27,7 +27,7 @@ jobs:
         run: dotnet build --configuration Release src
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/MaintenanceChronicleApi/MaintenanceChronicleApi.csproj # Specify the project file
+        run: dotnet publish ./src -c Release -o ${{env.DOTNET_ROOT}} # Specify the project file
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
