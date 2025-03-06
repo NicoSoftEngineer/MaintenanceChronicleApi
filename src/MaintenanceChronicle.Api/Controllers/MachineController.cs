@@ -1,3 +1,5 @@
+using MaintenanceChronicle.Application.Contracts.Locations.Queries;
+using MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Machines.Commands;
 using MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto;
@@ -70,6 +72,7 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id">Machine id specified by user</param>
     /// <returns>Patch</returns>
+    [AllowAnonymous]
     [HttpGet("/api/v1/machines/{id:guid}")]
     public async Task<ActionResult<MachineDetailDto>> GetMachineById([FromRoute] Guid id)
     {
@@ -106,4 +109,21 @@ public class MachineController(IMediator mediator) : ControllerBase
 
         return Ok(records);
     }
+
+    /// <summary>
+    /// Gets Location for the specified machine
+    /// </summary>
+    /// <param name="id">Specified machine id</param>
+    /// <returns>Machines location</returns>
+    [AllowAnonymous]
+    [HttpGet("/api/v1/machines/{id:guid}/location")]
+    public async Task<ActionResult<List<LocationInListDto>>> GetLocationForMachine(
+        [FromRoute] Guid id)
+    {
+        var query = new GetLocationForMachineQuery(id);
+        var location = await mediator.Send(query);
+
+        return Ok(location);
+    }
+
 }

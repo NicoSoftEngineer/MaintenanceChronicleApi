@@ -8,6 +8,7 @@ public class UpdateUserDetailDto
     public required string Email { get; set; }
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
+    public string? PhoneNumber { get; set; }
 }
 
 public static class UpdateUserDetailExtension
@@ -18,11 +19,13 @@ public static class UpdateUserDetailExtension
         Email = entity.Email!,
         FirstName = entity.FirstName,
         LastName = entity.LastName,
+        PhoneNumber = entity.PhoneNumber,
     };
 
     public static void MapToEntity(this UpdateUserDetailDto from, User to)
     {
         to.FirstName = from.FirstName;
         to.LastName = from.LastName;
+        to.PhoneNumber = from.PhoneNumber;
     }
 }

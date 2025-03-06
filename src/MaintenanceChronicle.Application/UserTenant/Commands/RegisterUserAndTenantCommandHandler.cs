@@ -43,6 +43,7 @@ public class RegisterUserAndTenantCommandHandler(AppDbContext dbContext, IClock 
                 FirstName = userTenant.FirstName,
                 LastName = userTenant.LastName,
                 Email = userTenant.Email,
+                PhoneNumber = userTenant.PhoneNumber,
                 UserName = userTenant.Email,
                 TenantId = tenant.Id,
             };

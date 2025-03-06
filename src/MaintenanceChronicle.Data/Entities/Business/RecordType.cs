@@ -4,12 +4,12 @@ namespace MaintenanceChronicle.Data.Entities.Business;
 
 public enum RecordType
 {
-    [MaintenanceRecordTypeEnumName("Installation")]
+    [MaintenanceRecordTypeEnumName("Instalace")]
     Installation,
-    [MaintenanceRecordTypeEnumName("Uninstallation")]
+    [MaintenanceRecordTypeEnumName("Odinstalace")]
     UnInstallation,
-    [MaintenanceRecordTypeEnumName("Maintenance")]
+    [MaintenanceRecordTypeEnumName("Údržba")]
     Maintenance,
-    [MaintenanceRecordTypeEnumName("Repair")]
+    [MaintenanceRecordTypeEnumName("Oprava")]
     Repair,
 }

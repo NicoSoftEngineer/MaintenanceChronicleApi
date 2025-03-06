@@ -1,4 +1,5 @@
 using MaintenanceChronicle.Data.Entities.Business;
+using MaintenanceChronicle.Utilities.Enum;
 using NodaTime.Text;
 
 namespace MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
@@ -22,7 +23,7 @@ public static class MaintenanceRecordInListExtension
         LocationName = entity.Machine.Location.Name,
         MachineName = entity.Machine.Model,
         MachineSerialNumber = entity.Machine.SerialNumber,
-        Type = entity.Type.ToString(),
+        Type = entity.Type.GetTypeName(),
         Date = InstantPattern.CreateWithInvariantCulture("dd.MM.yyyy").Format(entity.Date),
         Description = entity.Description,
     };

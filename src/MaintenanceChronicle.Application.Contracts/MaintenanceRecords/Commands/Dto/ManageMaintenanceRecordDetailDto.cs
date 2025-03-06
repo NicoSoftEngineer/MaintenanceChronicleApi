@@ -1,5 +1,7 @@
+using System.Globalization;
 using MaintenanceChronicle.Data.Entities.Business;
 using NodaTime;
+using NodaTime.Text;
 
 namespace MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
 
@@ -8,7 +10,7 @@ public class ManageMaintenanceRecordDetailDto
     public Guid Id { get; set; }
     public Guid MachineId { get; set; }
     public required string Description { get; set; }
-    public Instant Date { get; set; }
+    public required string Date { get; set; }
     public required RecordType Type { get; set; }
 }
 
@@ -18,7 +20,7 @@ public static class MaintenanceRecordDetailExtension
     {
         MachineId = entity.MachineId,
         Description = entity.Description,
-        Date = entity.Date,
+        Date = entity.Date.ToString(),
         Type = entity.Type,
     };
 
@@ -26,7 +28,7 @@ public static class MaintenanceRecordDetailExtension
     {
         target.MachineId = dto.MachineId;
         target.Description = dto.Description;
-        target.Date = dto.Date;
+        target.Date = InstantPattern.General.Parse(dto.Date.Split("T")[0] + "T12:00:00Z").Value;
         target.Type = dto.Type;
     }
 }

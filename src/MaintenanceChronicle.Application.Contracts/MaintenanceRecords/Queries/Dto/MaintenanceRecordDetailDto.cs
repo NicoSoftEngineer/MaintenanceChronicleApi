@@ -1,5 +1,6 @@
 using MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto;
 using MaintenanceChronicle.Data.Entities.Business;
+using MaintenanceChronicle.Utilities.Enum;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto;
@@ -9,7 +10,7 @@ public class MaintenanceRecordDetailDto
     public Guid Id { get; set; }
     public required string Description { get; set; }
     public Instant Date { get; set; }
-    public required RecordType Type { get; set; }
+    public required string Type { get; set; }
 }
 
 public static class MaintenanceRecordDetailExtension
@@ -20,6 +21,6 @@ public static class MaintenanceRecordDetailExtension
             Id = entity.Id,
             Description = entity.Description,
             Date = entity.Date,
-            Type = entity.Type
+            Type = entity.Type.GetTypeName()
         };
 }
