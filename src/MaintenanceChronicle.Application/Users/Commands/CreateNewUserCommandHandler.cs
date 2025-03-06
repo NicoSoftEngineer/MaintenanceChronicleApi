@@ -32,6 +32,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
             Email = newUserDto.Email,
             FirstName = newUserDto.FirstName,
             LastName = newUserDto.LastName,
+            PhoneNumber = newUserDto.PhoneNumber,
             TenantId = tenant.Id,
         };
         user.SetCreateBy(request.UserId, clock.GetCurrentInstant());

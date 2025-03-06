@@ -128,6 +128,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
+    [AllowAnonymous]
     [HttpGet("/api/v1/locations/{id:guid}/contacts")]
     public async Task<ActionResult<List<LocationContactInListDto>>> GetContactsForLocation([FromRoute] Guid id)
     {
