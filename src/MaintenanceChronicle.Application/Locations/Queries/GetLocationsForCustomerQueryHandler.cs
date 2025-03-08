@@ -12,7 +12,11 @@ public class GetLocationsForCustomerQueryHandler(AppDbContext dbContext) : IRequ
     public async Task<List<LocationInListDto>> Handle(GetLocationsForCustomerQuery request,
         CancellationToken cancellationToken)
     {
-        var locations = await dbContext.Locations.Select(x => x.ToLocationInListDto()).ToListAsync(cancellationToken);
+        var locations = await dbContext.Locations
+            .Include(l => l.Customer)
+            .Where(l => l.CustomerId == request.CustomerId)
+            .Select(x => x.ToLocationInListDto())
+            .ToListAsync(cancellationToken);
 
         return locations;
     }

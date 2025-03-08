@@ -11,7 +11,7 @@ public class GetListOfLocationsQueryHandler(AppDbContext dbContext) : IRequestHa
     public async Task<List<LocationInListDto>> Handle(GetListOfEntityQuery<LocationInListDto> request,
         CancellationToken cancellationToken)
     {
-        var locationList = await dbContext.Locations.Select(x =>x.ToLocationInListDto()).ToListAsync(cancellationToken);
+        var locationList = await dbContext.Locations.Include(l =>l.Customer).Select(x =>x.ToLocationInListDto()).ToListAsync(cancellationToken);
 
         return locationList;
     }

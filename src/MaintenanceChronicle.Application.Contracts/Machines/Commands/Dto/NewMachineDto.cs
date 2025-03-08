@@ -22,7 +22,7 @@ public static class NewMachineDtoExtension
         Manufacture = newMachineDto.Manufacture,
         Color = newMachineDto.Color,
         SerialNumber = newMachineDto.SerialNumber,
-        InUseSince = InstantPattern.General.Parse(newMachineDto.InUseSince).Value,
+        InUseSince = InstantPattern.General.Parse(newMachineDto.InUseSince.Split("T")[0] + "T12:00:00Z").Value,
         LocationId = newMachineDto.LocationId,
     };
 }

@@ -9,6 +9,7 @@ public class LocationInListDto
     public required string Street { get; set; }
     public required string City { get; set; }
     public required string Country { get; set; }
+    public required string CustomerName { get; set; }
 }
 
 public static class LocationInListExtensions
@@ -21,7 +22,8 @@ public static class LocationInListExtensions
             Name = location.Name,
             Street = location.Street,
             City = location.City,
-            Country = location.Country
+            Country = location.Country,
+            CustomerName = location.Customer.Name
         };
     }
 }

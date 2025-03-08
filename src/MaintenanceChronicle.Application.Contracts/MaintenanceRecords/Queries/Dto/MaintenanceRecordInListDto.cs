@@ -13,6 +13,7 @@ public class MaintenanceRecordInListDto
     public required string Type { get; set; }
     public required string Date { get; set; }
     public required string Description { get; set; }
+    public required string CustomerName { get; set; }
 }
 
 public static class MaintenanceRecordInListExtension
@@ -26,5 +27,6 @@ public static class MaintenanceRecordInListExtension
         Type = entity.Type.GetTypeName(),
         Date = InstantPattern.CreateWithInvariantCulture("dd.MM.yyyy").Format(entity.Date),
         Description = entity.Description,
+        CustomerName = entity.Machine.Location.Customer.Name,
     };
 }
