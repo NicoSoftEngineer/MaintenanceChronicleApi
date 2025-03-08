@@ -13,6 +13,7 @@ public class GetListOfMachinesQueryHandler(AppDbContext dbContext) : IRequestHan
     {
         var machines = await dbContext.Machines
             .Include(m => m.Location)
+            .ThenInclude(l => l.Customer)
             .Select(m => m.ToMachineInListDto())
             .ToListAsync(cancellationToken: cancellationToken);
 

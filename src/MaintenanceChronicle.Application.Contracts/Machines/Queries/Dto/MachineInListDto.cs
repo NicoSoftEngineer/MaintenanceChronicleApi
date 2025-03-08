@@ -7,6 +7,7 @@ public class MachineInListDto
     public Guid Id { get; set; }
     public required string Model { get; set; }
     public required string LocationName { get; set; }
+    public required string CustomerName { get; set; }
 }
 
 public static  class MachineInListExtension
@@ -16,5 +17,6 @@ public static  class MachineInListExtension
         Id = entity.Id,
         Model = entity.Model,
         LocationName = entity.Location.Name,
+        CustomerName = entity.Location.Customer.Name
     };
 }
