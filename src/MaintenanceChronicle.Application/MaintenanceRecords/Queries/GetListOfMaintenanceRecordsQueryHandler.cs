@@ -10,7 +10,10 @@ public class GetListOfMaintenanceRecordsQueryHandler(AppDbContext dbContext) : I
 {
     public async Task<List<MaintenanceRecordInListDto>> Handle(GetListOfEntityQuery<MaintenanceRecordInListDto> request, CancellationToken cancellationToken)
     {
-        var records = await dbContext.MaintenanceRecords.Include(m => m.Machine).ThenInclude(m => m.Location)
+        var records = await dbContext.MaintenanceRecords
+            .Include(r => r.Machine)
+                .ThenInclude(m => m.Location)
+                    .ThenInclude(l => l.Customer)
             .Select(m => m.ToListDto()).ToListAsync(cancellationToken);
 
         return records;
