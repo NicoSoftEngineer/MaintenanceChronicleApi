@@ -35,6 +35,7 @@ builder.Services.AddAuthentication();
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
+    //TODO: getConnectionString
     options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
     {
         optionsBuilder.UseNodaTime();

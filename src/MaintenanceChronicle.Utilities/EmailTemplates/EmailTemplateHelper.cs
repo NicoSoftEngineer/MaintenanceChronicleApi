@@ -7,7 +7,7 @@ public class EmailTemplateHelper
     /// </summary>
     /// <param name="userName">User name</param>
     /// <param name="confirmationLink">Email confirmation link for user</param>
-    /// <returns></returns>
+    /// <returns>Email template</returns>
     public async Task<string> GetEmailConfirmationTemplate(string userName, string confirmationLink)
     {
         var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/EmailConfirmation.html");
@@ -21,11 +21,25 @@ public class EmailTemplateHelper
     /// </summary>
     /// <param name="userName">User name</param>
     /// <param name="passwordResetLink">Password reset link for user</param>
-    /// <returns></returns>
+    /// <returns>Email template</returns>
     public async Task<string> GetPasswordResetEmailTemplate(string userName, string passwordResetLink)
     {
         var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/PasswordReset.html");
         template = template.Replace("[UserName]", userName).Replace("[ResetLink]", passwordResetLink);
+
+        return template;
+    }
+
+    /// <summary>
+    /// Gets UserInvitationEmailTemplate from file system, fills out userName and link into email
+    /// </summary>
+    /// <param name="userName">User name</param>
+    /// <param name="link">Create password and confirm email link</param>
+    /// <returns>Email template</returns>
+    public async Task<string> GetUserInvitationEmailTemplate(string userName, string link)
+    {
+        var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/UserInvitationEmail.html");
+        template = template.Replace("[UserName]", userName).Replace("[Link]", link);
 
         return template;
     }
