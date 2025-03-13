@@ -22,11 +22,7 @@ public class GenerateEmailConfirmationEmailForUserCommandHandler(UserManager<Use
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-
-        var tokenEncoded = Uri.EscapeDataString(token);
-
-        var confirmLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendConfirmUrl.Replace("[Email]", user.Email).Replace("[ConfToken]", tokenEncoded)}";
+        var confirmLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendConfirmUrl.Replace("[Email]", user.Email).Replace("[ConfToken]", request.Token)}";
 
         var emailHelper = new EmailTemplateHelper();
         var body = await emailHelper.GetEmailConfirmationTemplate($"{user.FirstName} {user.LastName}", confirmLink);
