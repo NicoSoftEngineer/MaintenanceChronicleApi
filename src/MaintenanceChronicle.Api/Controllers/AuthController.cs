@@ -67,43 +67,6 @@ public class AuthController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
-    /// Registers a new user with the given information. The user is not logged in after registration
-    /// </summary>
-    /// <param name="registerUserDto">Information needed to create new user with specified password</param>
-    /// <returns></returns>
-    [HttpPost("api/v1/auth/register")]
-    public async Task<ActionResult<Guid>> Register(
-        [FromBody] RegisterUserDto registerUserDto
-    )
-    {
-        var registerNewUserCommand = new RegisterNewUserCommand(registerUserDto);
-        var result = await mediator.Send(registerNewUserCommand);
-
-        var addPasswordToRegisteredUserCommand = new AddPasswordToRegisteredUserCommand(new AddPasswordToRegisteredUserDto
-        {
-            Email = registerUserDto.Email,
-            Password = registerUserDto.Password
-        });
-        await mediator.Send(addPasswordToRegisteredUserCommand);
-
-        var getRoleByNameCommand = new GetEntityByNameQuery<RoleDetailDto>(RoleTypes.Admin);
-        var adminRole = await mediator.Send(getRoleByNameCommand);
-
-        var addRolesToUserCommand = new ManageRolesForUserCommand(
-        new UserRolesDto
-            {
-                UserId = result,
-                RoleIds = new Guid[1] { adminRole.Id }
-            },
-            result.ToString(),
-            registerUserDto.TenantId.ToString()
-        );
-        await mediator.Send(addRolesToUserCommand);
-
-        return Ok(result);
-    }
-
-    /// <summary>
     /// Registers a new user and tenant with the given information. The user is not logged in after registration
     /// </summary>
     /// <param name="registerUserTenantDto">Information needed to create new user with specified password and tenant</param>
@@ -141,7 +104,10 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpPost("api/v1/auth/send-email-confirm-email")]
     public async Task<ActionResult> GenerateEmailConfirmationEmail([FromQuery] string email)
     {
-        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationEmailForUserCommand(email);
+        var confTokenCommand = new GenerateEmailConfirmTokenCommand(email);
+        var confToken = await mediator.Send(confTokenCommand);
+
+        var generateEmailConfirmationTokenForUserCommand = new GenerateEmailConfirmationEmailForUserCommand(email, confToken);
         var emailToBeSent = await mediator.Send(generateEmailConfirmationTokenForUserCommand);
 
         var createEmailToBeSendCommand = new CreateNewEmailMessageCommand(emailToBeSent);
@@ -174,7 +140,10 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpPost("api/v1/auth/send-password-reset")]
     public async Task<ActionResult> GeneratePasswordResetEmail([FromQuery] string email)
     {
-        var generatePasswordResetEmailForUserCommand = new GeneratePasswordResetEmailForUserCommand(email);
+        var generateToken = new GeneratePasswordResetTokenCommand(email);
+        var token = await mediator.Send(generateToken);
+
+        var generatePasswordResetEmailForUserCommand = new GeneratePasswordResetEmailForUserCommand(email, token);
         var emailToBeSent = await mediator.Send(generatePasswordResetEmailForUserCommand);
 
         var createEmailToBeSendCommand = new CreateNewEmailMessageCommand(emailToBeSent);
