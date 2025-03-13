@@ -22,7 +22,7 @@ public class AddPasswordToRegisteredUserCommandHandler(UserManager<User> userMan
         var result = await userManager.AddPasswordAsync(user, userPasswordDto.Password);
         if (!result.Succeeded)
         {
-            throw new BadRequestException(ErrorType.PasswordDoesNotMeetRequirements);
+            throw new BadRequestException(ErrorType.UserAlreadyHasPassword);
         }
     }
 }
