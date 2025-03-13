@@ -1,3 +1,4 @@
+using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Roles.Dto;
@@ -44,6 +45,29 @@ public class UserController(IMediator mediator) : ControllerBase
         await mediator.Send(addRolesToUserCommand);
 
         return Ok(userId);
+    }
+
+    /// <summary>
+    /// Generates and sends a token for the user to reset their password
+    /// </summary>
+    /// <param name="email">Users email that specifies which user should get the email</param>
+    /// <returns></returns>
+    [HttpPost("api/v1/users/send-password-create")]
+    public async Task<ActionResult> GeneratePasswordCreateEmail([FromQuery] string email)
+    {
+        var confTokenCommand = new GenerateEmailConfirmTokenCommand(email);
+        var confToken = await mediator.Send(confTokenCommand);
+
+        var generateToken = new GeneratePasswordResetTokenCommand(email);
+        var token = await mediator.Send(generateToken);
+
+        var generatePasswordResetEmailForUserCommand = new GeneratePasswordCreateEmailForUserCommand(email, token, confToken);
+        var emailToBeSent = await mediator.Send(generatePasswordResetEmailForUserCommand);
+
+        var createEmailToBeSendCommand = new CreateNewEmailMessageCommand(emailToBeSent);
+        await mediator.Send(createEmailToBeSendCommand);
+
+        return Ok();
     }
 
     /// <summary>
