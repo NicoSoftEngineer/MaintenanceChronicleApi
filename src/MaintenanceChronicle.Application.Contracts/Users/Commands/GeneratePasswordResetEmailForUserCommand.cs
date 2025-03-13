@@ -8,4 +8,4 @@ namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 /// Generates password reset email for defined user
 /// </summary>
 /// <param name="Email">Users email, that wants its password reset</param>
-public record GeneratePasswordResetEmailForUserCommand(string Email) : IRequest<NewEmailMessageDto>;
+public record GeneratePasswordResetEmailForUserCommand(string Email, string Token) : IRequest<NewEmailMessageDto>;

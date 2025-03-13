@@ -21,8 +21,7 @@ public class GeneratePasswordResetEmailForUserCommandHandler(UserManager<User> u
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
-        var token = await userManager.GeneratePasswordResetTokenAsync(user);
-        var passwordResetLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendPasswordResetUrl.Replace("[Email]", user.Email).Replace("[PasswordToken]", token)}";
+        var passwordResetLink = $"{envOptions.Value.FrontendHostUrl}{envOptions.Value.FrontendPasswordResetUrl.Replace("[Email]", user.Email).Replace("[PasswordToken]", request.Token)}";
 
         var emailHelper = new EmailTemplateHelper();
         var body = await emailHelper.GetPasswordResetEmailTemplate($"{user.FirstName} {user.LastName}", passwordResetLink);
