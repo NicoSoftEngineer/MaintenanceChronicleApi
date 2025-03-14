@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MaintenanceChronicle.Api.Controllers;
 
 //Makes endpoints accessible only for users with Admin or GlobalAdmin roles
-[Authorize(Roles = $"{RoleTypes.Admin},{RoleTypes.GlobalAdmin}")]
+[Authorize(Roles = $"{RoleTypes.Admin},{RoleTypes.GlobalAdmin},{RoleTypes.Technician}")]
 [ApiController]
 public class MachineController(IMediator mediator) : ControllerBase
 {
