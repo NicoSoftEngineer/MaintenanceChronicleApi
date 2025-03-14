@@ -15,6 +15,8 @@ public class DynamicCookieAuthenticationEvents(IHttpContextAccessor httpContextA
         var tenantId = user.FindFirst(MaintenanceChronicleClaimTypes.TenantIdClaimType)?.Value ?? "DefaultTenant";
         var uniqueCookieName = $"AuthCookie_{tenantId}";
 
+        httpContext.Response.Cookies.Delete(MaintenanceChronicleClaimTypes.ActiveCookieName);
+        httpContext.Response.Cookies.Append(MaintenanceChronicleClaimTypes.ActiveCookieName, uniqueCookieName);
 
         // Set a dynamic cookie name
         context.Options.Cookie.Name = uniqueCookieName;
