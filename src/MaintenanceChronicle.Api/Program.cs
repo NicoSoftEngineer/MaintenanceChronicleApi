@@ -10,10 +10,12 @@ using MaintenanceChronicle.Application.Validators;
 using MaintenanceChronicle.BackgroundServices.BackgroundWorkers;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Entities.Business;
+using MaintenanceChronicle.Utilities.Cookies;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
 using MaintenanceChronicle.Utilities.Options;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,7 +32,18 @@ builder.Services.AddDataProtection();
 //Method for global filter into db
 builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
 
-builder.Services.AddAuthentication();
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        options.Cookie.Name = "DefaultAuthCookie"; // Fallback
+        options.EventsType = typeof(DynamicCookieAuthenticationEvents);
+    });
+
+builder.Services.AddScoped<DynamicCookieAuthenticationEvents>();
+
 
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
