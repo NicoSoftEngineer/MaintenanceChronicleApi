@@ -38,5 +38,7 @@ public enum ErrorType
     [ErrorMessage("Omlouváme se, tento token pro reset hesla je neplatný!")]
     PasswordResetTokenInInvalid,
     [ErrorMessage("Omlouváme se, nejste přihlášený")]
-    UserNotLoggedIn
+    UserNotLoggedIn,
+    [ErrorMessage("Omlouváme se, tento už má heslo!")]
+    UserAlreadyHasPassword
 }

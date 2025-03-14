@@ -3,4 +3,4 @@ using MediatR;
 
 namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 
-public record AddPasswordToRegisteredUserCommand(AddPasswordToRegisteredUserDto UserPasswordDto) : IRequest;
+public record AddPasswordToRegisteredUserCommand(AddPasswordToUserDto UserPasswordDto) : IRequest;
