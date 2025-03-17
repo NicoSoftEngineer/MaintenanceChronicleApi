@@ -24,4 +24,3 @@ public static class StringExtension
         return Convert.ToBase64String(hash);
     }
 }
-}
