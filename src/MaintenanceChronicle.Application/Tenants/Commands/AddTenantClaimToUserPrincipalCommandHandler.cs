@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 namespace MaintenanceChronicle.Application.Tenants.Commands;
 
 public class AddTenantClaimToUserPrincipalCommandHandler(AppDbContext dbContext)
-    : IRequestHandler<AddTenantClaimToUserPrincipalCommand, ClaimsPrincipal>
+    : IRequestHandler<AddTenantClaimsListCommand, List<Claim>>
 {
-    public async Task<ClaimsPrincipal> Handle(AddTenantClaimToUserPrincipalCommand request, CancellationToken cancellationToken)
+    public async Task<List<Claim>> Handle(AddTenantClaimsListCommand request, CancellationToken cancellationToken)
     {
         var userTenantClaim = request.UserTenantClaim;
         var user = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == userTenantClaim.Email, cancellationToken);
@@ -26,14 +26,8 @@ public class AddTenantClaimToUserPrincipalCommandHandler(AppDbContext dbContext)
             throw new BadRequestException(ErrorType.TenantNotFound);
         }
 
-        var identity = request.ClaimsPrincipal.Identity as ClaimsIdentity;
-        if (tenant == null)
-        {
-            throw new BadRequestException(ErrorType.InvalidIdentityCookie);
-        }
+        request.Claims.Add(new Claim(MaintenanceChronicleClaimTypes.TenantIdClaimType, tenant.Id.ToString()));
 
-        identity!.AddClaim(new(MaintenanceChronicleClaimTypes.TenantIdClaimType, tenant.Id.ToString()));
-
-        return request.ClaimsPrincipal;
+        return request.Claims;
     }
 }

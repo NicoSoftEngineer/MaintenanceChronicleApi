@@ -4,4 +4,4 @@ using MediatR;
 
 namespace MaintenanceChronicle.Application.Contracts.Tenants.Commands;
 
-public record AddTenantClaimToUserPrincipalCommand(UserTenantClaimDto UserTenantClaim, ClaimsPrincipal ClaimsPrincipal) : IRequest<ClaimsPrincipal>;
+public record AddTenantClaimsListCommand(UserTenantClaimDto UserTenantClaim, List<Claim> Claims) : IRequest<List<Claim>>;

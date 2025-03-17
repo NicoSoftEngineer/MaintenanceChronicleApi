@@ -31,7 +31,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpPost("api/v1/auth/login")]
     public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
     {
-        var generateClaimsPrincipalForUserCommand = new GenerateClaimsPrincipalForUserCommand(loginDto);
+        var generateClaimsPrincipalForUserCommand = new GenerateClaimsListForUserCommand(loginDto);
         var userPrincipal = await mediator.Send(generateClaimsPrincipalForUserCommand);
 
         var getTenantIdForUserCommand = new GetTenantIdFromUserQuery(loginDto.Email);
@@ -43,8 +43,8 @@ public class AuthController(IMediator mediator) : ControllerBase
             TenantId = tenantId
         };
 
-        var addTenantClaimToUserPrincipalCommand = new AddTenantClaimToUserPrincipalCommand(userTenantClaimDto, userPrincipal);
-        var userPrincipalWithTenantClaim = await mediator.Send(addTenantClaimToUserPrincipalCommand);
+        var claimsWithTenantIdCommand = new AddTenantClaimsListCommand(userTenantClaimDto, userPrincipal);
+        var claimsWithTenantId = await mediator.Send(claimsWithTenantIdCommand);
 
         var authProperties = new AuthenticationProperties
         {
@@ -52,9 +52,11 @@ public class AuthController(IMediator mediator) : ControllerBase
             IsPersistent = true
         };
 
-        await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme, userPrincipalWithTenantClaim, authProperties);
+        var generateAccessToken = new GenerateAccessTokenFromClaimsCommand(claimsWithTenantId);
+        var accessToken = await mediator.Send(generateAccessToken);
 
-        return NoContent();
+
+        return Ok(new { Token = accessToken });
     }
 
     [Authorize]
