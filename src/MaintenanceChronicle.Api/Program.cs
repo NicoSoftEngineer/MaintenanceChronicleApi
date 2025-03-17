@@ -10,6 +10,7 @@ using MaintenanceChronicle.Application.Validators;
 using MaintenanceChronicle.BackgroundServices.BackgroundWorkers;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Entities.Business;
+using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Cookies;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
@@ -38,7 +39,7 @@ builder.Services.AddAuthentication(options =>
     })
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
     {
-        options.Cookie.Name = "DefaultAuthCookie"; // Fallback
+        // Fallback
         options.EventsType = typeof(DynamicCookieAuthenticationEvents);
     });
 
@@ -89,7 +90,7 @@ builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 builder.Services.AddHostedService<EmailSenderBackgroundService>();
 
 //Registering middleware to validate if user has access to tenant
-builder.Services.AddScoped<UserTenantValidationMiddleware>();
+builder.Services.AddScoped<ActiveCookieMiddleware>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -118,7 +119,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseMiddleware<UserTenantValidationMiddleware>();
+app.UseMiddleware<ActiveCookieMiddleware>();
 app.UseMiddleware<ExceptionMiddleware>();
 
 //app.UseHttpsRedirection();
