@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
+using MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands;
 using MaintenanceChronicle.Application.Contracts.Roles.Dto;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
@@ -12,11 +13,13 @@ using MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
+using MaintenanceChronicle.Utilities.Options;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace MaintenanceChronicle.Api.Controllers;
 
@@ -27,9 +30,10 @@ public class AuthController(IMediator mediator) : ControllerBase
     /// Logs in the user with the given information
     /// </summary>
     /// <param name="loginDto">Email and password to login user</param>
+    /// <param name="jwtOptions">JWT options registered in service collection</param>
     /// <returns></returns>
     [HttpPost("api/v1/auth/login")]
-    public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
+    public async Task<ActionResult> Login([FromBody] LoginDto loginDto, [FromServices] IOptions<JwtOptions> jwtOptions)
     {
         var generateClaimsPrincipalForUserCommand = new GenerateClaimsListForUserCommand(loginDto);
         var userPrincipal = await mediator.Send(generateClaimsPrincipalForUserCommand);
@@ -46,15 +50,19 @@ public class AuthController(IMediator mediator) : ControllerBase
         var claimsWithTenantIdCommand = new AddTenantClaimsListCommand(userTenantClaimDto, userPrincipal);
         var claimsWithTenantId = await mediator.Send(claimsWithTenantIdCommand);
 
-        var authProperties = new AuthenticationProperties
-        {
-            ExpiresUtc = DateTimeOffset.UtcNow.AddDays(30), // Set custom expiration time
-            IsPersistent = true
-        };
-
         var generateAccessToken = new GenerateAccessTokenFromClaimsCommand(claimsWithTenantId);
         var accessToken = await mediator.Send(generateAccessToken);
 
+        var generateRefreshToken = new GenerateRefreshTokenForUserCommand(loginDto.Email, Request.Headers.UserAgent.ToString());
+        var refreshToken = await mediator.Send(generateRefreshToken);
+
+        Response.Cookies.Append("RefreshToken", refreshToken, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = false, // For HTTPS
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
+        });
 
         return Ok(new { Token = accessToken });
     }
