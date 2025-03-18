@@ -64,7 +64,9 @@ public class AuthController(IMediator mediator) : ControllerBase
         var generateRefreshToken = new GenerateRefreshTokenForUserCommand(loginDto.Email, Request.Headers.UserAgent.ToString());
         var refreshToken = await mediator.Send(generateRefreshToken);
 
-        Response.Cookies.Append("RefreshToken", refreshToken, new CookieOptions
+        var activeTokenName = $"Auth-{tenantId}";
+
+        Response.Cookies.Append(activeTokenName, refreshToken, new CookieOptions
         {
             HttpOnly = true,
             Secure = false, // For HTTPS
@@ -72,7 +74,15 @@ public class AuthController(IMediator mediator) : ControllerBase
             Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
         });
 
-        return Ok(new { Token = accessToken });
+        Response.Cookies.Append(TokenConstants.ActiveTokenName, activeTokenName, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = false, // For HTTPS
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
+        });
+
+        return Ok(new { Token = accessToken, Name = activeTokenName });
     }
 
     /// <summary>
@@ -84,7 +94,11 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpPost("api/v1/auth/refresh-token")]
     public async Task<ActionResult> RefreshToken([FromServices] IOptions<JwtOptions> jwtOptions)
     {
-        if (!Request.Cookies.TryGetValue("RefreshToken", out var incomingRefreshToken))
+        if (!Request.Cookies.TryGetValue(TokenConstants.ActiveTokenName, out var activeTokenName))
+        {
+            throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
+        }
+        if (!Request.Cookies.TryGetValue(activeTokenName, out var incomingRefreshToken))
         {
             throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
         }
@@ -116,7 +130,7 @@ public class AuthController(IMediator mediator) : ControllerBase
         var revokeExistingTokenCommand = new RevokeRefreshTokenCommand(incomingRefreshToken);
         await mediator.Send(revokeExistingTokenCommand);
 
-        Response.Cookies.Append("RefreshToken", refreshToken, new CookieOptions
+        Response.Cookies.Append(activeTokenName, refreshToken, new CookieOptions
         {
             HttpOnly = true,
             Secure = false, // For HTTPS
