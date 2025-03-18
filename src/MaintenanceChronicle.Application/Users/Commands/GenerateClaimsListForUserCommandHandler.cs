@@ -8,21 +8,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
-public class GenerateClaimsListForUserCommandHandler(UserManager<User> userManager, SignInManager<User> signInManager) : IRequestHandler<GenerateClaimsListForUserCommand, List<Claim>>
+public class GenerateClaimsListForUserCommandHandler(UserManager<User> userManager) : IRequestHandler<GenerateClaimsListForUserCommand, List<Claim>>
 {
     public async Task<List<Claim>> Handle(GenerateClaimsListForUserCommand request, CancellationToken cancellationToken)
     {
-        var userLogin = request.UserLogin;
-
-        var user = await userManager.FindByEmailAsync(userLogin.Email);
+        var user = await userManager.FindByEmailAsync(request.UserEmail);
         if (user == null) {
             throw new BadRequestException(ErrorType.UserNotFound);
-        }
-
-        var signInResult = await signInManager.CheckPasswordSignInAsync(user, userLogin.Password, lockoutOnFailure: false);
-        if (!signInResult.Succeeded)
-        {
-            throw new BadRequestException(ErrorType.InvalidPassword);
         }
 
         //Claims with basic info
