@@ -28,6 +28,13 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsJsonAsync(errorResponse);
         }
+        catch (UnauthorizedRequestException ex)
+        {
+            var errorResponse = new { Message = ex.ErrorType.GetErrorMessage() };
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsJsonAsync(errorResponse);
+        }
         catch (InternalServerException ex)
         {
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
