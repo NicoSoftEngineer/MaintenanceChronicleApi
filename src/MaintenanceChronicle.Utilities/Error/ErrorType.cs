@@ -40,5 +40,11 @@ public enum ErrorType
     [ErrorMessage("Omlouváme se, nejste přihlášený")]
     UserNotLoggedIn,
     [ErrorMessage("Omlouváme se, tento už má heslo!")]
-    UserAlreadyHasPassword
+    UserAlreadyHasPassword,
+    [ErrorMessage("Neplatný obnovovací token nebo jeho platnost vypršela!")]
+    InvalidRefreshToken,
+    [ErrorMessage("Obnovovací token nebyl nalezen!")]
+    TokenNotFound,
+    [ErrorMessage("Špatné přihlašovací údaje!")]
+    InvalidLogIn
 }
