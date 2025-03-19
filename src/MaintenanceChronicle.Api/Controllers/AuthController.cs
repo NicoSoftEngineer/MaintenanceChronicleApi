@@ -64,9 +64,9 @@ public class AuthController(IMediator mediator) : ControllerBase
         var generateRefreshToken = new GenerateRefreshTokenForUserCommand(loginDto.Email, Request.Headers.UserAgent.ToString());
         var refreshToken = await mediator.Send(generateRefreshToken);
 
-        var activeTokenName = $"Auth-{tenantId}";
+        var activeTokenName = $"Auth-{loginDto.Email.Hash()}";
 
-        Response.Cookies.Append(activeTokenName, refreshToken, new CookieOptions
+        Response.Cookies.Append(activeTokenName.UriEscape(), refreshToken, new CookieOptions
         {
             HttpOnly = true,
             Secure = false, // For HTTPS
@@ -76,13 +76,13 @@ public class AuthController(IMediator mediator) : ControllerBase
 
         Response.Cookies.Append(TokenConstants.ActiveTokenName, activeTokenName, new CookieOptions
         {
-            HttpOnly = true,
+            HttpOnly = false,
             Secure = false, // For HTTPS
             SameSite = SameSiteMode.Strict,
             Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
         });
 
-        return Ok(new { Token = accessToken, Name = activeTokenName });
+        return Ok(new { Token = accessToken, Name = activeTokenName.UriEscape() });
     }
 
     /// <summary>
@@ -138,7 +138,7 @@ public class AuthController(IMediator mediator) : ControllerBase
             Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
         });
 
-        return Ok(new { Token = accessToken });
+        return Ok(new { Token = accessToken, Name = activeTokenName });
     }
 
     [Authorize]
