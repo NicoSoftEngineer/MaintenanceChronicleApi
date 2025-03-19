@@ -23,4 +23,11 @@ public static class StringExtension
         var hash = SHA256.HashData(bytes);
         return Convert.ToBase64String(hash);
     }
+
+    /// <summary>
+    /// Converts string to its escaped representation
+    /// </summary>
+    /// <param name="value">String to be converted</param>
+    /// <returns>Converted string</returns>
+    public static string UriEscape(this string value) => Uri.EscapeDataString(value);
 }
