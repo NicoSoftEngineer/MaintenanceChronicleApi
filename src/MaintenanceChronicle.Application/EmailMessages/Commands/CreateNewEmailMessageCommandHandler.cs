@@ -15,8 +15,7 @@ public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock 
         request.NewEmailMessage.FromEmail = request.NewEmailMessage.FromEmail ?? environmentOptions.Value.SenderEmail;
         request.NewEmailMessage.FromName = request.NewEmailMessage.FromName ?? environmentOptions.Value.SenderName;
 
-        var entity = request.NewEmailMessage.ToEntity();
-        entity.CreatedAt = clock.GetCurrentInstant();
+        var entity = request.NewEmailMessage.ToEntity(clock.GetCurrentInstant());
 
         await dbContext.AddAsync(entity, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
