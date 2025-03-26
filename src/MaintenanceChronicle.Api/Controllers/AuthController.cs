@@ -145,8 +145,13 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpGet("api/v1/auth/logout")]
     public async Task<ActionResult> Logout()
     {
+        if (!Request.Cookies.TryGetValue(TokenConstants.ActiveTokenName, out var activeTokenName))
+        {
+            throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
+        }
+
         await HttpContext.SignOutAsync();
-        Response.Cookies.Delete(".AspNetCore.Identity.Application");
+        Response.Cookies.Delete(activeTokenName.UriEscape());
         return NoContent();
     }
 
