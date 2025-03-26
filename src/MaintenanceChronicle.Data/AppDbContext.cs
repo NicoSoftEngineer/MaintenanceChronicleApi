@@ -18,6 +18,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
     public DbSet<LocationContactUser> LocationContactUsers { get; set; } = null!;
     public DbSet<Machine> Machines { get; set; } = null!;
     public DbSet<MaintenanceRecord> MaintenanceRecords { get; set; } = null!;
+    public DbSet<MaintenanceReminder> MaintenanceReminders { get; set; } = null!;
     public DbSet<EmailMessage> EmailMessages { get; set; } = null!;
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,6 +33,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
         modelBuilder.Entity<LocationContactUser>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<Machine>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<MaintenanceRecord>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
+        modelBuilder.Entity<MaintenanceReminder>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
 
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
