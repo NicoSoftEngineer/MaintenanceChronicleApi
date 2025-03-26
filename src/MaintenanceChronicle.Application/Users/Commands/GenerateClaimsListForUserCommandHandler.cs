@@ -22,7 +22,7 @@ public class GenerateClaimsListForUserCommandHandler(UserManager<User> userManag
         {
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString().ToLowerInvariant()),
             new(JwtRegisteredClaimNames.Email, user.Email!),
-            new(JwtRegisteredClaimNames.Name, user.UserName!)
+            new(JwtRegisteredClaimNames.Name, $"{user.FirstName} {user.LastName}")
         };
 
         //Adding user roles to claims
