@@ -1,4 +1,6 @@
 using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +17,7 @@ using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
 using MaintenanceChronicle.Utilities.Options;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,13 +33,10 @@ builder.Services.AddDataProtection();
 //Method for global filter into db
 builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
 
-builder.Services.AddAuthentication();
-
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    //TODO: getConnectionString
-    options.UseNpgsql(builder.Configuration.GetValue<string>("ConnectionStrings:DbConnection"), optionsBuilder =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection"), optionsBuilder =>
     {
         optionsBuilder.UseNodaTime();
         optionsBuilder.MapEnum<RecordType>("recordType");
@@ -51,11 +51,46 @@ builder.Services.AddControllers()
 builder.Services.AddIdentity<User, Role>(options =>
     {
         options.User.RequireUniqueEmail = true;
+        options.SignIn.RequireConfirmedAccount = true;
         options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
     })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+//Configure JwtOptions
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
+
+//Configure authentication using JwtTokens
+var jwtSettings = builder.Configuration.GetRequiredSection(nameof(JwtOptions)).Get<JwtOptions>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
+            ValidIssuer = jwtSettings.Issuer,
+            ValidAudience = jwtSettings.Audience
+        };
+    });
 
 //MediatR
 builder.Services.AddMediatR(cfg =>
@@ -80,12 +115,38 @@ builder.Services.AddScoped<UserTenantValidationMiddleware>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddSwaggerGen(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MaintenanceChronicleApi", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "MaintenanceChronicleApi", Version = "v1" });
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    c.IncludeXmlComments(xmlPath);
+    options.IncludeXmlComments(xmlPath);
+
+    // Configure JWT Authentication in Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter your JWT token without the 'Bearer' prefix.\n\nExample: abc123xyz"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 var app = builder.Build();

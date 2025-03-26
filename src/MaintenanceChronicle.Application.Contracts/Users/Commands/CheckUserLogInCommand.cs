@@ -1,7 +1,7 @@
-using System.Security.Claims;
 using MaintenanceChronicle.Application.Contracts.Users.Commands.Dto;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 
 namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 
-public record GenerateClaimsPrincipalForUserCommand(LoginDto UserLogin) : IRequest<ClaimsPrincipal>;
+public record CheckUserLogInCommand(LoginDto Login) : IRequest<SignInResult>;
