@@ -14,7 +14,7 @@ public class GetCurrentUserInfoQueryHandler(UserManager<User> userManager) : IRe
         var user = await userManager.FindByIdAsync(request.UserId);
         if (user == null)
         {
-            throw new BadRequestException(ErrorType.UserNotLoggedIn);
+            throw new UnauthorizedRequestException(ErrorType.UserNotLoggedIn);
         }
 
         var userDto = user.ToLoggedInUserInfoDto();
