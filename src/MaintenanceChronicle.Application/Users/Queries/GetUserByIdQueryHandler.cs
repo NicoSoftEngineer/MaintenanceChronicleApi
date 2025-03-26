@@ -29,6 +29,7 @@ public class GetUserByIdQueryHandler(UserManager<User> userManager) : IRequestHa
             FirstName = user.FirstName,
             LastName = user.LastName,
             Email = user.Email!,
+            PhoneNumber = user.PhoneNumber,
             Roles = user.Roles.Select(r => new RoleDetailDto
             {
                 Id = r.Role.Id,
