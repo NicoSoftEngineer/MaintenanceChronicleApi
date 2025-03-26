@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 using MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands;
+using MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries;
 using MaintenanceChronicle.Application.Contracts.Roles.Dto;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands;
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
@@ -98,39 +99,40 @@ public class AuthController(IMediator mediator) : ControllerBase
         {
             throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
         }
-        if (!Request.Cookies.TryGetValue(activeTokenName, out var incomingRefreshToken))
+        if (!Request.Cookies.TryGetValue(activeTokenName.UriEscape(), out var incomingRefreshToken))
         {
             throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
         }
 
-        var isTokenValidCommand = new ValidateRefreshTokenCommand(incomingRefreshToken);
-        var isTokenValid = await mediator.Send(isTokenValidCommand);
-        if (!isTokenValid)
+        var getValidTokenQuery = new GetStoredRefreshTokenQuery(incomingRefreshToken);
+        var validStoredToken = await mediator.Send(getValidTokenQuery);
+        if (validStoredToken == null)
         {
             throw new UnauthorizedRequestException(ErrorType.InvalidRefreshToken);
         }
 
-        var userEmail = User.GetUserEmail();
+        var userQuery = new GetEntityByIdQuery<UserDetailDto>(validStoredToken.UserId);
+        var user = await mediator.Send(userQuery);
 
-        var claimsListForUserCommand = new GenerateClaimsListForUserCommand(userEmail);
+        var claimsListForUserCommand = new GenerateClaimsListForUserCommand(user.Email);
         var claims = await mediator.Send(claimsListForUserCommand);
 
-        var getTenantIdForUserCommand = new GetTenantIdFromUserQuery(userEmail);
+        var getTenantIdForUserCommand = new GetTenantIdFromUserQuery(user.Email);
         var tenantId = await mediator.Send(getTenantIdForUserCommand);
 
-        var claimsWithTenantIdCommand = new AddTenantClaimsListCommand(new UserTenantClaimDto{ Email = userEmail, TenantId = tenantId }, claims);
+        var claimsWithTenantIdCommand = new AddTenantClaimsListCommand(new UserTenantClaimDto{ Email = user.Email, TenantId = tenantId }, claims);
         var claimsWithTenantId = await mediator.Send(claimsWithTenantIdCommand);
 
         var generateAccessToken = new GenerateAccessTokenFromClaimsCommand(claimsWithTenantId);
         var accessToken = await mediator.Send(generateAccessToken);
 
-        var generateRefreshToken = new GenerateRefreshTokenForUserCommand(userEmail, Request.Headers.UserAgent.ToString());
+        var generateRefreshToken = new GenerateRefreshTokenForUserCommand(user.Email, Request.Headers.UserAgent.ToString());
         var refreshToken = await mediator.Send(generateRefreshToken);
 
         var revokeExistingTokenCommand = new RevokeRefreshTokenCommand(incomingRefreshToken);
         await mediator.Send(revokeExistingTokenCommand);
 
-        Response.Cookies.Append(activeTokenName, refreshToken, new CookieOptions
+        Response.Cookies.Append(activeTokenName.UriEscape(), refreshToken, new CookieOptions
         {
             HttpOnly = true,
             Secure = false, // For HTTPS
@@ -138,7 +140,7 @@ public class AuthController(IMediator mediator) : ControllerBase
             Expires = DateTime.UtcNow.AddDays(jwtOptions.Value.RefreshTokenExpirationInDays)
         });
 
-        return Ok(new { Token = accessToken, Name = activeTokenName });
+        return Ok(new { Token = accessToken, Name = activeTokenName.UriEscape() });
     }
 
     [Authorize]
