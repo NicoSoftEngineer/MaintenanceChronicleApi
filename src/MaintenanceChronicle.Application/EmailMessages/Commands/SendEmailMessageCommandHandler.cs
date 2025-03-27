@@ -33,7 +33,7 @@ public class SendEmailMessageCommandHandler(AppDbContext dbContext, IOptions<Smt
         };
         foreach (var recipients in emailMessage.Recipients)
         {
-            mail.To.Add(new MailAddress(recipients.Item1, recipients.Item2));
+            mail.To.Add(new MailAddress(recipients.Key, recipients.Value));
 
         }
 

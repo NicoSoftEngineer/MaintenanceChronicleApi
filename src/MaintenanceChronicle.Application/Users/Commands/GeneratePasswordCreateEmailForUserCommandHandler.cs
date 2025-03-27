@@ -31,7 +31,7 @@ public class GeneratePasswordCreateEmailForUserCommandHandler(UserManager<User> 
             Subject = "Email confirmation",
             Body = body,
         };
-        newEmailMessage.Recipients.Add((user.Email!, $"{user.FirstName} {user.LastName}"));
+        newEmailMessage.Recipients.Add(user.Email!, $"{user.FirstName} {user.LastName}");
 
         return newEmailMessage;
     }

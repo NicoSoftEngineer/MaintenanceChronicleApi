@@ -7,7 +7,7 @@ namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto;
 
 public class NewEmailMessageDto
 {
-    public ICollection<(string, string?)> Recipients { get; set; } = new List<(string, string?)>();
+    public Dictionary<string, string?> Recipients { get; set; } = new Dictionary<string, string?>();
     public required string Subject { get; set; }
     public required string Body { get; set; }
     public string? SendAt { get; set; } = null;
@@ -25,6 +25,7 @@ public static class NewEmailMessageExtension
         Recipients = dto.Recipients,
         Subject = dto.Subject,
         Sent = false,
-        SendAt = dto.SendAt.IsNullOrEmpty() ? InstantPattern.General.Parse(dto.SendAt!.Split("T")[0] + "T12:00:00Z").Value : createdAt,
+        CreatedAt = createdAt,
+        SendAt = !string.IsNullOrEmpty(dto.SendAt) ? InstantPattern.General.Parse(dto.SendAt!.Split("T")[0] + "T12:00:00Z").Value : createdAt,
     };
 }

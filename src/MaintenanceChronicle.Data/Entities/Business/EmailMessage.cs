@@ -15,7 +15,7 @@ public class EmailMessage
     public Guid Id { get; set; }
 
     [MaxLength(StringLengthConstants.MaxEmailLength)]
-    public ICollection<(string, string?)> Recipients { get; set; } = new List<(string,string?)>();
+    public Dictionary<string, string?> Recipients { get; set; } = new Dictionary<string, string?>();
 
     [MaxLength(StringLengthConstants.MaxNameLength)]
     public string Subject { get; set; } = null!;

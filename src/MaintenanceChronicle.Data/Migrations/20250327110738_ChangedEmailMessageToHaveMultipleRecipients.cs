@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -19,13 +19,17 @@ namespace MaintenanceChronicle.Data.Migrations
                 name: "RecipientName",
                 table: "EmailMessage");
 
-            migrationBuilder.AddColumn<ValueTuple<string, string>[]>(
+            migrationBuilder.AlterDatabase()
+                .Annotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation")
+                .Annotation("Npgsql:PostgresExtension:hstore", ",,")
+                .OldAnnotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation");
+
+            migrationBuilder.AddColumn<Dictionary<string, string>>(
                 name: "Recipients",
                 table: "EmailMessage",
-                type: "record[]",
+                type: "hstore",
                 maxLength: 254,
-                nullable: false,
-                defaultValue: new ValueTuple<string, string>[0]);
+                nullable: false);
         }
 
         /// <inheritdoc />
@@ -34,6 +38,11 @@ namespace MaintenanceChronicle.Data.Migrations
             migrationBuilder.DropColumn(
                 name: "Recipients",
                 table: "EmailMessage");
+
+            migrationBuilder.AlterDatabase()
+                .Annotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation")
+                .OldAnnotation("Npgsql:Enum:recordType", "installation,maintenance,repair,un_installation")
+                .OldAnnotation("Npgsql:PostgresExtension:hstore", ",,");
 
             migrationBuilder.AddColumn<string>(
                 name: "RecipientEmail",

@@ -35,6 +35,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
         modelBuilder.Entity<MaintenanceRecord>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<MaintenanceReminder>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
 
+        modelBuilder.Entity<EmailMessage>()
+            .Property(e => e.Recipients)
+            .HasColumnType("hstore");
+
         modelBuilder.Entity<UserRole>()
             .HasOne(e => e.Role)
             .WithMany(e => e.Users)

@@ -7,7 +7,7 @@ namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto;
 public class EmailMessageInListDto
 {
     public Guid Id { get; set; }
-    public ICollection<(string, string?)> Recipients { get; set; } = new List<(string, string?)>();
+    public IDictionary<string, string?> Recipients { get; set; } = new Dictionary<string, string?>();
 
     public required string Subject { get; set; }
     public required string Body { get; set; }
