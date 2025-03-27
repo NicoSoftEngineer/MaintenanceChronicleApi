@@ -29,11 +29,10 @@ public class GenerateEmailConfirmationEmailForUserCommandHandler(UserManager<Use
 
         var newEmailMessage = new NewEmailMessageDto
         {
-            RecipientEmail = user.Email,
-            RecipientName = $"{user.FirstName} {user.LastName}",
             Subject = "Email confirmation",
             Body = body,
         };
+        newEmailMessage.Recipients.Add((user.Email!, $"{user.FirstName} {user.LastName}"));
 
         return newEmailMessage;
     }

@@ -31,7 +31,11 @@ public class SendEmailMessageCommandHandler(AppDbContext dbContext, IOptions<Smt
             IsBodyHtml = true,
             From = new MailAddress(emailMessage.FromEmail, emailMessage.FromName),
         };
-        mail.To.Add(new MailAddress(emailMessage.RecipientEmail, emailMessage.RecipientName));
+        foreach (var recipients in emailMessage.Recipients)
+        {
+            mail.To.Add(new MailAddress(recipients.Item1, recipients.Item2));
+
+        }
 
         using var smtp = new MailKit.Net.Smtp.SmtpClient();
         await smtp.ConnectAsync(smtpOptions.Value.Host, smtpOptions.Value.Port, cancellationToken: cancellationToken);

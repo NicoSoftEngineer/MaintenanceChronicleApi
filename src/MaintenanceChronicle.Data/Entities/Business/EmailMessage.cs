@@ -13,10 +13,10 @@ namespace MaintenanceChronicle.Data.Entities.Business;
 public class EmailMessage
 {
     public Guid Id { get; set; }
+
     [MaxLength(StringLengthConstants.MaxEmailLength)]
-    public string RecipientEmail { get; set; } = null!;
-    [MaxLength(StringLengthConstants.MaxNameLength)]
-    public string? RecipientName { get; set; }
+    public ICollection<(string, string?)> Recipients { get; set; } = new List<(string,string?)>();
+
     [MaxLength(StringLengthConstants.MaxNameLength)]
     public string Subject { get; set; } = null!;
     [MaxLength(StringLengthConstants.MaxEmailBodyLength)]

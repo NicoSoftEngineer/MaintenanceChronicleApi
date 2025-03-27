@@ -1,15 +1,16 @@
 using MaintenanceChronicle.Data.Entities.Business;
+using Microsoft.IdentityModel.Tokens;
 using NodaTime;
+using NodaTime.Text;
 
 namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto;
 
 public class NewEmailMessageDto
 {
-    public required string RecipientEmail { get; set; }
-    public string? RecipientName { get; set; }
+    public ICollection<(string, string?)> Recipients { get; set; } = new List<(string, string?)>();
     public required string Subject { get; set; }
     public required string Body { get; set; }
-    public Instant? SendAt { get; set; } = null;
+    public string? SendAt { get; set; } = null;
     public string? FromEmail { get; set; }
     public string? FromName { get; set; }
 }
@@ -21,10 +22,9 @@ public static class NewEmailMessageExtension
         Body = dto.Body,
         FromEmail = dto.FromEmail,
         FromName = dto.FromName,
-        RecipientEmail = dto.RecipientEmail,
-        RecipientName = dto.RecipientName,
+        Recipients = dto.Recipients,
         Subject = dto.Subject,
         Sent = false,
-        SendAt = dto.SendAt ?? createdAt,
+        SendAt = dto.SendAt.IsNullOrEmpty() ? InstantPattern.General.Parse(dto.SendAt!.Split("T")[0] + "T12:00:00Z").Value : createdAt,
     };
 }
