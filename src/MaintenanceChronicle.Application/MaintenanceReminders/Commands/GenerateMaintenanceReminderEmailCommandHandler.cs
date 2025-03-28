@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using NodaTime;
+using NodaTime.Text;
 
 namespace MaintenanceChronicle.Application.MaintenanceReminders.Commands;
 
@@ -28,8 +29,10 @@ public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbConte
             throw new BadRequestException(ErrorType.MachineNotFound);
         }
 
+        var date = InstantPattern.CreateWithInvariantCulture("yyyy-MM-dd").Format(request.Reminder.SendAt);
+
         var emailHelper = new EmailTemplateHelper();
-        var body = await emailHelper.GetMaintenanceReminderEmailTemplate($"{machine.Manufacture} {machine.Model}", machine.SerialNumber, request.Reminder.Date, request.Reminder.Description, machine.Location.Name, $"{machine.Location.Street}, {machine.Location.City}, {machine.Location.Country}");
+        var body = await emailHelper.GetMaintenanceReminderEmailTemplate($"{machine.Manufacture} {machine.Model}", machine.SerialNumber, date, request.Reminder.Description, machine.Location.Name, $"{machine.Location.Street}, {machine.Location.City}, {machine.Location.Country}");
 
         var users = machine.Location.Contacts.Select(c => c.User).ToList();
         var emailMessage = new NewEmailMessageDto
@@ -37,7 +40,7 @@ public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbConte
             Body = body,
             Subject = "Maintenance Reminder",
             Recipients = users.Select(u =>(u.Email!, $"{u.FirstName} {u.LastName}")).ToDictionary(),
-            SendAt = request.Reminder.Date,
+            SendAt = date,
         };
 
         return emailMessage;
