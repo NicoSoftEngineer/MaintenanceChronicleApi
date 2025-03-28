@@ -17,6 +17,13 @@ namespace MaintenanceChronicle.Api.Controllers;
 [Route("api/v1/maintenance-reminders")]
 public class MaintenanceReminderController(IMediator mediator) : Controller
 {
+    /// <summary>
+    /// Creates a new maintenance reminder
+    /// </summary>
+    /// <param name="reminderDto">
+    /// The new maintenance reminder data
+    /// </param>
+    /// <returns></returns>
     [HttpPost]
     public async Task<ActionResult<Guid>> CreateMaintenanceReminder([FromBody] NewMaintenanceReminderDto reminderDto)
     {
@@ -25,4 +32,6 @@ public class MaintenanceReminderController(IMediator mediator) : Controller
         
         return Ok();
     }
+
+
 }
