@@ -50,3 +50,5 @@ public class EmailSenderBackgroundService(
         }
     }
 }
+
+public class 

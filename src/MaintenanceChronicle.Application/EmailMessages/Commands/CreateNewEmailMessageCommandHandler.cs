@@ -8,9 +8,9 @@ using NodaTime;
 
 namespace MaintenanceChronicle.Application.EmailMessages.Commands;
 
-public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock clock, IOptions<EnvironmentOptions> environmentOptions) : IRequestHandler<CreateNewEmailMessageCommand>
+public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock clock, IOptions<EnvironmentOptions> environmentOptions) : IRequestHandler<CreateNewEmailMessageCommand, Guid>
 {
-    public async Task Handle(CreateNewEmailMessageCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateNewEmailMessageCommand request, CancellationToken cancellationToken)
     {
         request.NewEmailMessage.FromEmail = request.NewEmailMessage.FromEmail ?? environmentOptions.Value.SenderEmail;
         request.NewEmailMessage.FromName = request.NewEmailMessage.FromName ?? environmentOptions.Value.SenderName;
@@ -19,5 +19,7 @@ public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock 
 
         await dbContext.AddAsync(entity, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
+
+        return entity.Id;
     }
 }

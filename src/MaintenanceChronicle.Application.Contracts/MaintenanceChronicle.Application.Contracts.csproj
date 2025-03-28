@@ -15,6 +15,7 @@
         <Folder Include="EmailMessages\Commands\Dto\" />
         <Folder Include="Machines\Commands\Dto\" />
         <Folder Include="Machines\Queries\Dto\" />
+        <Folder Include="MaintenanceReminders\Queries\" />
         <Folder Include="RecordTypes\Queries\Dto\" />
     </ItemGroup>
 

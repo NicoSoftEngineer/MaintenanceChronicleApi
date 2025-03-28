@@ -1,0 +1,35 @@
+using MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
+using MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands;
+using MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto;
+using MaintenanceChronicle.Utilities.Constants;
+using MaintenanceChronicle.Utilities.Helpers;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace MaintenanceChronicle.Api.Controllers;
+
+/// <summary>
+/// Controller for managing maintenance reminders
+/// </summary>
+[ApiController]
+[Authorize(Roles = $"{RoleTypes.Admin},{RoleTypes.GlobalAdmin},{RoleTypes.Technician}")]
+[Route("api/v1/maintenance-reminders")]
+public class MaintenanceReminderController(IMediator mediator) : Controller
+{
+    [HttpPost]
+    public async Task<ActionResult<Guid>> CreateMaintenanceReminder([FromBody] NewMaintenanceReminderDto reminderDto)
+    {
+        var command = new CreateNewMaintenanceReminderCommand(reminderDto, User.GetUserId(), User.GetTenantId());
+        await mediator.Send(command);
+
+        var emailCommand = new GenerateMaintenanceReminderEmailCommand(reminderDto);
+        var emails = await mediator.Send(emailCommand);
+
+        var createEmailCommand= new CreateNewEmailMessageCommand(emails);
+        var emailId = await mediator.Send(createEmailCommand);
+
+        
+        return Ok();
+    }
+}

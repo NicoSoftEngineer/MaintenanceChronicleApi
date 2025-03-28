@@ -3,4 +3,4 @@ using MediatR;
 
 namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 
-public record CreateNewEmailMessageCommand(NewEmailMessageDto NewEmailMessage) : IRequest;
+public record CreateNewEmailMessageCommand(NewEmailMessageDto NewEmailMessage) : IRequest<Guid>;
