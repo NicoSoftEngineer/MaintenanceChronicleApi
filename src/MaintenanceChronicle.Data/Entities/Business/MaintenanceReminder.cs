@@ -17,8 +17,7 @@ public class MaintenanceReminder : ITenant, ITrackable
     public Instant Date { get; set; }
     public Guid MachineId { get; set; }
     public Machine Machine { get; set; } = null!;
-    public Guid? EmailMessageId { get; set; }
-    public EmailMessage? EmailMessage { get; set; }
+    public bool WasReminderSent { get; set; } = false;
     public Guid TenantId { get; set; }
     public Tenant Tenant { get; set; } = null!;
     public Instant CreatedAt { get; set; }
