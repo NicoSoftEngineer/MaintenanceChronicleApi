@@ -22,13 +22,6 @@ public class MaintenanceReminderController(IMediator mediator) : Controller
     {
         var command = new CreateNewMaintenanceReminderCommand(reminderDto, User.GetUserId(), User.GetTenantId());
         await mediator.Send(command);
-
-        var emailCommand = new GenerateMaintenanceReminderEmailCommand(reminderDto);
-        var emails = await mediator.Send(emailCommand);
-
-        var createEmailCommand= new CreateNewEmailMessageCommand(emails);
-        var emailId = await mediator.Send(createEmailCommand);
-
         
         return Ok();
     }
