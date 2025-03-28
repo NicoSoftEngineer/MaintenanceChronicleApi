@@ -13,7 +13,7 @@ public class DueMaintenanceReminderDto()
 }
 public static class DueMaintenanceReminderDtoExtension
 {
-    public static DueMaintenanceReminderDto ToDto(this MaintenanceReminder mr) => new DueMaintenanceReminderDto
+    public static DueMaintenanceReminderDto ToDueDto(this MaintenanceReminder mr) => new DueMaintenanceReminderDto
     {
         Id = mr.Id,
         Description = mr.Description,

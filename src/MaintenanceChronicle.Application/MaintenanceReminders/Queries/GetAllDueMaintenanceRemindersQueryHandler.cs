@@ -14,7 +14,7 @@ public class GetAllDueMaintenanceRemindersQueryHandler(AppDbContext dbContext, I
         var dueMaintenanceReminders = await dbContext.MaintenanceReminders
             .Include(mr => mr.Machine)
             .Where(mr => mr.Date <= clock.GetCurrentInstant())
-            .Select(mr => mr.ToDto())
+            .Select(mr => mr.ToDueDto())
             .ToListAsync(cancellationToken);
 
         return dueMaintenanceReminders;
