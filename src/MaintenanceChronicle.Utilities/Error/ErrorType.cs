@@ -1,3 +1,4 @@
+
 namespace MaintenanceChronicle.Utilities.Error;
 
 //TODO: localize
@@ -46,5 +47,7 @@ public enum ErrorType
     [ErrorMessage("Obnovovací token nebyl nalezen!")]
     TokenNotFound,
     [ErrorMessage("Špatné přihlašovací údaje!")]
-    InvalidLogIn
+    InvalidLogIn,
+    [ErrorMessage("Omlouváme se, toto upozorňení neexistuje!")]
+    MaintenanceReminderNotFound
 }
