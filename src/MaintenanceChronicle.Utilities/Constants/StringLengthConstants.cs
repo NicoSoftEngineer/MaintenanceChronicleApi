@@ -11,4 +11,8 @@ public class StringLengthConstants
     public const int MaxNameLength = 255;
     public const int MaxFirstNameLength = 50;
     public const int MaxLastNameLength = 100;
+    public const int MaxPhoneNumberLength = 20;
+    public const int MaxIdLength = 36;
+    public const int MaxAddressLength = 255;
+    public const int MaxSerialNumberLength = 50;
 }
