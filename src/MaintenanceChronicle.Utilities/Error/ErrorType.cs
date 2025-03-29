@@ -52,5 +52,9 @@ public enum ErrorType
     [ErrorMessage("Špatné přihlašovací údaje!")]
     InvalidLogIn,
     [ErrorMessage("Omlouváme se, toto upozorňení neexistuje!")]
-    MaintenanceReminderNotFound
+    MaintenanceReminderNotFound,
+    [ErrorMessage("Omlouváme se, id uživatele nebylo nalezeno!")]
+    UserIdNotFound,
+    [ErrorMessage("Omlouváme se, id organizace nebylo nalezeno!")]
+    TenantIdNotFound
 }

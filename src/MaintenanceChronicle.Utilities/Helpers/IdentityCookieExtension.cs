@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using MaintenanceChronicle.Utilities.Constants;
+using MaintenanceChronicle.Utilities.Error;
 
 namespace MaintenanceChronicle.Utilities.Helpers;
 
@@ -12,22 +13,30 @@ public static class IdentityCookieExtension
     /// Gets the tenant id from the claims principal.
     /// </summary>
     /// <param name="claimsPrincipal">User claims principal</param>
-    /// <returns>Tenant id or null</returns>
-    public static string? GetTenantId(this ClaimsPrincipal claimsPrincipal)
+    /// <returns>Tenant id</returns>
+    public static string GetTenantId(this ClaimsPrincipal claimsPrincipal)
     {
         var tenantClaim = claimsPrincipal.FindFirst(MaintenanceChronicleClaimTypes.TenantIdClaimType);
-        return tenantClaim?.Value;
+        if (tenantClaim == null)
+        {
+            throw new BadRequestException(ErrorType.TenantIdNotFound);
+        }
+        return tenantClaim.Value;
     }
 
     /// <summary>
     /// Gets the user id from the claims principal.
     /// </summary>
     /// <param name="claimsPrincipal">User claims principal</param>
-    /// <returns>User id or null</returns>
-    public static string? GetUserId(this ClaimsPrincipal claimsPrincipal)
+    /// <returns>User id</returns>
+    public static string GetUserId(this ClaimsPrincipal claimsPrincipal)
     {
         var userClaim = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier);
-        return userClaim?.Value;
+        if (userClaim == null)
+        {
+            throw new BadRequestException(ErrorType.UserIdNotFound);
+        }
+        return userClaim.Value;
     }
 
     /// <summary>

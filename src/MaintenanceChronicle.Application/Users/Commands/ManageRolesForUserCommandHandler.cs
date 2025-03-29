@@ -14,7 +14,7 @@ namespace MaintenanceChronicle.Application.Users.Commands;
 /// <summary>
 /// Handler for <see cref="ManageRolesForUserCommand"/>
 /// </summary>
-public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<ManageRolesForUserCommand>
+public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<ManageRolesForUserCommand>
 {
     public async Task Handle(ManageRolesForUserCommand request, CancellationToken cancellationToken)
     {

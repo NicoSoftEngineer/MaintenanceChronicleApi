@@ -73,6 +73,10 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(J
 
 //Configure authentication using JwtTokens
 var jwtSettings = builder.Configuration.GetRequiredSection(nameof(JwtOptions)).Get<JwtOptions>();
+if (jwtSettings == null)
+{
+    throw new InternalServerException("Jwt settings was not found");
+}
 
 builder.Services.AddAuthentication(options =>
 {

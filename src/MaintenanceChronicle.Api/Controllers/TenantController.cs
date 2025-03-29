@@ -19,6 +19,7 @@ public class TenantController(IMediator mediator) : ControllerBase
     /// Updates a tenant with the given information
     /// </summary>
     /// <param name="tenantDetailDto">Information that user provides</param>
+    /// <param name="id">ID of tenant to be updated</param>
     /// <returns></returns>
     [HttpPatch("api/v1/tenants/{id:guid}")]
     public async Task<ActionResult<Guid>> UpdateTenant([FromRoute] Guid id,

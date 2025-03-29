@@ -16,7 +16,7 @@ namespace MaintenanceChronicle.Application.MaintenanceReminders.Commands;
 /// <summary>
 /// Handler for <see cref="GenerateMaintenanceReminderEmailCommand"/>.
 /// </summary>
-public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbContext, IOptions<EnvironmentOptions> envOptions) : IRequestHandler<GenerateMaintenanceReminderEmailCommand, NewEmailMessageDto>
+public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbContext) : IRequestHandler<GenerateMaintenanceReminderEmailCommand, NewEmailMessageDto>
 {
     public async Task<NewEmailMessageDto> Handle(GenerateMaintenanceReminderEmailCommand request,
         CancellationToken cancellationToken)
@@ -46,8 +46,7 @@ public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbConte
         {
             Body = body,
             Subject = "Maintenance Reminder",
-            Recipients = users.Select(u =>(u.Email!, $"{u.FirstName} {u.LastName}")).ToDictionary(),
-            SendAt = date,
+            Recipients = users.Select(u =>(u.Email!, (string?)$"{u.FirstName} {u.LastName}")).ToDictionary()
         };
 
         return emailMessage;

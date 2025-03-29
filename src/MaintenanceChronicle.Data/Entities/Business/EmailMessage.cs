@@ -23,7 +23,6 @@ public class EmailMessage
     public string Body { get; set; } = null!;
     public bool Sent { get; set; }
     public Instant CreatedAt { get; set; }
-    public Instant SendAt { get; set; }
     [MaxLength(StringLengthConstants.MaxEmailLength)]
     public string FromEmail { get; set; } = null!;
     [MaxLength(StringLengthConstants.MaxNameLength)]

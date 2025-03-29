@@ -6,7 +6,7 @@ namespace MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Querie
 public class MaintenanceReminderDetailDto
 {
     public Guid Id { get; set; }
-    public string Description { get; set; }
+    public string Description { get; set; } = String.Empty;
     public Instant Date { get; set; }
     public Guid MachineId { get; set; }
 }
