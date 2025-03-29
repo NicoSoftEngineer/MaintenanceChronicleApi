@@ -11,9 +11,16 @@ public class LocationInListDto
     public required string Country { get; set; }
     public required string CustomerName { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="LocationInListDto"/> entity.
+/// </summary>
 public static class LocationInListExtensions
 {
+    /// <summary>
+    /// Converts <see cref="Location"/> to <see cref="LocationInListDto"/>.
+    /// </summary>
+    /// <param name="location"><see cref="Location"/> to convert</param>
+    /// <returns>Converted entity to <see cref="LocationInListDto"/></returns>
     public static LocationInListDto ToLocationInListDto(this Location location)
     {
         return new LocationInListDto

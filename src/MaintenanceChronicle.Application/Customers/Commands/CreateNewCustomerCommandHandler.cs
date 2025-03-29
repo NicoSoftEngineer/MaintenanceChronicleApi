@@ -6,7 +6,9 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Customers.Commands;
-
+/// <summary>
+/// Handler for <see cref="CreateNewCustomerCommand"/>
+/// </summary>
 public class CreateNewCustomerCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewCustomerCommand, Guid>
 {
     public async Task<Guid> Handle(CreateNewCustomerCommand request, CancellationToken cancellationToken)

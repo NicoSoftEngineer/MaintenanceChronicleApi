@@ -3,7 +3,9 @@ using MaintenanceChronicle.Utilities.Constants;
 using MaintenanceChronicle.Utilities.Helpers;
 
 namespace MaintenanceChronicle.Api.Utils;
-
+/// <summary>
+/// Implementation of <see cref="ICurrentTenantProvider"/> that uses the current user's claims to get the tenant ID.
+/// </summary>
 public class CurrentTenantProvider(IHttpContextAccessor httpContextAccessor)
     : ICurrentTenantProvider
 {

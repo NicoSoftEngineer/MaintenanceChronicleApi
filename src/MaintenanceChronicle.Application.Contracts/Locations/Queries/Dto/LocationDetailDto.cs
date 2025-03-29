@@ -10,9 +10,16 @@ public class LocationDetailDto
     public required string City { get; set; }
     public required string Country { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="LocationDetailDto"/> entity.
+/// </summary>
 public static class LocationDetailDtoExtensions
 {
+    /// <summary>
+    /// Converts <see cref="Location"/> to <see cref="LocationDetailDto"/>.
+    /// </summary>
+    /// <param name="location"><see cref="Location"/> to convert</param>
+    /// <returns>Converted entity to <see cref="LocationDetailDto"/></returns>
     public static LocationDetailDto ToLocationDetailDto(this Location location)
     {
         return new LocationDetailDto

@@ -13,9 +13,16 @@ public class ManageMaintenanceRecordDetailDto
     public required string Date { get; set; }
     public required RecordType Type { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="MaintenanceRecord"/> entity.
+/// </summary>
 public static class MaintenanceRecordDetailExtension
 {
+    /// <summary>
+    /// Converts <see cref="MaintenanceRecord"/> to <see cref="ManageMaintenanceRecordDetailDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="MaintenanceRecord"/> to convert</param>
+    /// <returns>Converted entity to <see cref="ManageMaintenanceRecordDetailDto"/></returns>
     public static ManageMaintenanceRecordDetailDto ToManageDto(this MaintenanceRecord entity) => new ManageMaintenanceRecordDetailDto()
     {
         MachineId = entity.MachineId,
@@ -24,6 +31,11 @@ public static class MaintenanceRecordDetailExtension
         Type = entity.Type,
     };
 
+    /// <summary>
+    /// Maps <see cref="ManageMaintenanceRecordDetailDto"/> to <see cref="MaintenanceRecord"/>.
+    /// </summary>
+    /// <param name="dto">Source <see cref="ManageMaintenanceRecordDetailDto"/></param>
+    /// <param name="target">Destination <see cref="MaintenanceRecord"/></param>
     public static void MapToEntity(this ManageMaintenanceRecordDetailDto dto, MaintenanceRecord target)
     {
         target.MachineId = dto.MachineId;

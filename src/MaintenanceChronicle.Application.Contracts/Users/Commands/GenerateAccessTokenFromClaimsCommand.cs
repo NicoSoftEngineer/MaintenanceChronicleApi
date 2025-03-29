@@ -7,5 +7,5 @@ namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 /// Generates JWT access token for user using specified claims
 /// </summary>
 /// <param name="Claims">Claims from which the token should be generated</param>
-/// <returns>Generated JWT toke</returns>
+/// <returns>Generated JWT token</returns>
 public record GenerateAccessTokenFromClaimsCommand(List<Claim> Claims) : IRequest<string>;

@@ -14,9 +14,16 @@ public class ManageMachineDetailDto
     public required string Color { get; set; }
     public required string InUseSince { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="ManageMachineDetailDto"/> entity.
+/// </summary>
 public static class ManageMachineDetailExtension
 {
+    /// <summary>
+    /// Converts <see cref="Machine"/> to <see cref="ManageMachineDetailDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="Machine"/> to convert</param>
+    /// <returns>Converted entity to <see cref="ManageMachineDetailDto"/></returns>
     public static ManageMachineDetailDto ToManageMachineDetailDto(this Machine entity) => new ManageMachineDetailDto
     {
         Id = entity.Id,
@@ -28,6 +35,11 @@ public static class ManageMachineDetailExtension
         LocationId = entity.LocationId,
     };
 
+    /// <summary>
+    /// Maps <see cref="ManageMachineDetailDto"/> properties to <see cref="Machine"/>.
+    /// </summary>
+    /// <param name="dto">Source <see cref="ManageMachineDetailDto"/></param>
+    /// <param name="target">Destination <see cref="Machine"/></param>
     public static void MapToEntity(this ManageMachineDetailDto dto, Machine target)
     {
         target.Model = dto.Model;

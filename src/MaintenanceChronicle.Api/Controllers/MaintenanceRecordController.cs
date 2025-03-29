@@ -41,8 +41,8 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     /// Patch is applied to MaintenanceRecord with id from route
     /// </summary>
     /// <param name="id">MaintenanceRecord id</param>
-    /// <param name="patch">What props should be changed</param>
-    /// <returns>Updated dto</returns>
+    /// <param name="patch"><see cref="JsonPatchDocument{ManageMaintenanceRecordDetailDto}"/> with instructions on what to change</param>
+    /// <returns>Updated <see cref="MachineInMaintenanceRecordDetailDto"/></returns>
     [HttpPatch("/api/v1/maintenance-records/{id:guid}")]
     public async Task<ActionResult<ManageMaintenanceRecordDetailDto>> UpdateMaintenanceRecord([FromRoute] Guid id,
         [FromBody] JsonPatchDocument<ManageMaintenanceRecordDetailDto> patch)
@@ -71,7 +71,7 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     /// Gets MaintenanceRecord with specified id
     /// </summary>
     /// <param name="id">MaintenanceRecord id</param>
-    /// <returns>dto</returns>
+    /// <returns><see cref="MaintenanceRecordDetailDto"/> of requested record</returns>
     [HttpGet("/api/v1/maintenance-records/{id:guid}")]
     public async Task<ActionResult<MaintenanceRecordDetailDto>> GetMaintenanceRecordById([FromRoute] Guid id)
     {
@@ -84,7 +84,7 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets list of all maintenance records
     /// </summary>
-    /// <returns>List of dto</returns>
+    /// <returns>List of <see cref="MaintenanceRecordInListDto"/></returns>
     [HttpGet("/api/v1/maintenance-records/")]
     public async Task<ActionResult<MaintenanceRecordInListDto>> GetListOfMaintenanceRecords()
     {
@@ -97,7 +97,7 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets list of all maintenance record types
     /// </summary>
-    /// <returns>List of dto</returns>
+    /// <returns>List of <see cref="RecordTypeDto"/></returns>
     [HttpGet("/api/v1/maintenance-records/types/")]
     public async Task<ActionResult<RecordTypeDto>> GetListOfMaintenanceRecordTypes()
     {
@@ -110,8 +110,8 @@ public class MaintenanceRecordController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets machine for the specified maintenance record
     /// </summary>
-    /// <param name="id">MaintenanceRecord id</param>
-    /// <returns>MachineInRecordDetailDto</returns>
+    /// <param name="id">ID of record for which we get the machine for</param>
+    /// <returns>Records <see cref="MachineInMaintenanceRecordDetailDto"/></returns>
     [HttpGet("/api/v1/maintenance-records/{id:guid}/machine")]
     public async Task<ActionResult<MachineInMaintenanceRecordDetailDto>> GetMachineForMaintenanceRecord(Guid id)
     {

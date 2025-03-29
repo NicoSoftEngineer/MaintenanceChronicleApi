@@ -7,12 +7,14 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Locations.Commands;
-
+/// <summary>
+/// Handler for <see cref="DeleteEntityByIdCommand{Location}"/>
+/// </summary>
 public class DeleteLocationCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<DeleteEntityByIdCommand<Location>>
 {
     public async Task Handle(DeleteEntityByIdCommand<Location> request, CancellationToken cancellationToken)
     {
-        var location = await dbContext.Locations.FindAsync(request.Id,cancellationToken);
+        var location = await dbContext.Locations.FindAsync([request.Id],cancellationToken);
         if (location == null)
         {
             throw new BadRequestException(ErrorType.LocationNotFound);

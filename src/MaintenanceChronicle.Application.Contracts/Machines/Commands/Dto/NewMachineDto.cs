@@ -13,9 +13,16 @@ public class NewMachineDto
     public required string Color { get; set; }
     public required string InUseSince { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="NewMachineDto"/> entity.
+/// </summary>
 public static class NewMachineDtoExtension
 {
+    /// <summary>
+    /// Converts <see cref="NewMachineDto"/> to <see cref="Machine"/>.
+    /// </summary>
+    /// <param name="newMachineDto"><see cref="NewMachineDto"/> to convert</param>
+    /// <returns>Converted entity to <see cref="Machine"/></returns>
     public static Machine ToMachineEntity(this NewMachineDto newMachineDto) => new Machine
     {
         Model = newMachineDto.Model,

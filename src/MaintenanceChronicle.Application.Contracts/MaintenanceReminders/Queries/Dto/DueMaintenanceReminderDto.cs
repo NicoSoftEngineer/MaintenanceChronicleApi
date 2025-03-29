@@ -11,8 +11,16 @@ public class DueMaintenanceReminderDto()
     public bool WasSent { get; set; }
     public Guid MachineId { get; set; }
 }
+/// <summary>
+/// Extension methods for DueMaintenanceReminderDto.
+/// </summary>
 public static class DueMaintenanceReminderDtoExtension
 {
+    /// <summary>
+    /// Convert <see cref="MaintenanceReminder"/> to <see cref="DueMaintenanceReminderDto"/>.
+    /// </summary>
+    /// <param name="mr"><see cref="MaintenanceReminder"/> entity to convert</param>
+    /// <returns>Converted entity to <see cref="DueMaintenanceReminderDto"/></returns>
     public static DueMaintenanceReminderDto ToDueDto(this MaintenanceReminder mr) => new DueMaintenanceReminderDto
     {
         Id = mr.Id,

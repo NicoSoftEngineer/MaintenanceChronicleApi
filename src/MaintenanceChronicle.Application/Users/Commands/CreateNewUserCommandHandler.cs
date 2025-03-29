@@ -8,18 +8,22 @@ using Microsoft.AspNetCore.Identity;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
-
+/// <summary>
+/// Handler for <see cref="CreateNewUserCommand"/>
+/// </summary>
 public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewUserCommand, Guid>
 {
     public async Task<Guid> Handle(CreateNewUserCommand request, CancellationToken cancellationToken)
     {
+        // Check if user with the same email already exists
         var newUserDto = request.NewUserDto;
         if ((await userManager.FindByEmailAsync(newUserDto.Email)) != null)
         {
             throw new BadRequestException(ErrorType.EmailAlreadyExists,"email");
         }
 
-        var tenant = await dbContext.Tenants.FindAsync(Guid.Parse(request.TenantId), cancellationToken);
+        // Gets the responsible tenant
+        var tenant = await dbContext.Tenants.FindAsync([Guid.Parse(request.TenantId)], cancellationToken);
         if (tenant == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);
@@ -37,6 +41,7 @@ public class CreateNewUserCommandHandler(UserManager<User> userManager, AppDbCon
         };
         user.SetCreateBy(request.UserId, clock.GetCurrentInstant());
 
+        // Create the user
         var result = await userManager.CreateAsync(user);
         if (!result.Succeeded)
         {

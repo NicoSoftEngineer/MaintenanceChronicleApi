@@ -73,6 +73,10 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(J
 
 //Configure authentication using JwtTokens
 var jwtSettings = builder.Configuration.GetRequiredSection(nameof(JwtOptions)).Get<JwtOptions>();
+if (jwtSettings == null)
+{
+    throw new InternalServerException("Jwt settings was not found");
+}
 
 builder.Services.AddAuthentication(options =>
 {
@@ -112,9 +116,6 @@ builder.Services.AddHostedService<EmailSenderBackgroundService>();
 
 //Adding MaintenanceReminderBackgroundService into HostedServices
 builder.Services.AddHostedService<MaintenanceReminderBackgroundService>();
-
-//Registering middleware to validate if user has access to tenant
-builder.Services.AddScoped<UserTenantValidationMiddleware>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -169,7 +170,6 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseMiddleware<UserTenantValidationMiddleware>();
 app.UseMiddleware<ExceptionMiddleware>();
 
 //app.UseHttpsRedirection();

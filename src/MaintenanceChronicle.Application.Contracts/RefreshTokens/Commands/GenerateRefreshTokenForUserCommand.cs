@@ -7,5 +7,5 @@ namespace MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands;
 /// </summary>
 /// <param name="UserEmail">User email for which the token should be generated</param>
 /// <param name="RequestInfo">Additional info about the users request </param>
-/// <returns>Hashed user refresh token</returns>
+/// <returns>User refresh token</returns>
 public record GenerateRefreshTokenForUserCommand(string UserEmail, string? RequestInfo = null) : IRequest<string>;

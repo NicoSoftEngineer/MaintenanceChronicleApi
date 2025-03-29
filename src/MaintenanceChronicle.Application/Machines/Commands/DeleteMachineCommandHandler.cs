@@ -7,7 +7,9 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Machines.Commands;
-
+/// <summary>
+/// Handler for <see cref="DeleteEntityByIdCommand{Machine}"/>
+/// </summary>
 public class DeleteMachineCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<DeleteEntityByIdCommand<Machine>>
 {
     public async Task Handle(DeleteEntityByIdCommand<Machine> request, CancellationToken cancellationToken)

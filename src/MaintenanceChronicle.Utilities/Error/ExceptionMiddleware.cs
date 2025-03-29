@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MaintenanceChronicle.Utilities.Error;
 
+/// <summary>
+/// Middleware to handle exceptions.
+/// </summary>
+/// <param name="logger">App logger</param>
+/// <param name="next">Next request</param>
 public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDelegate next)
 {
     public async Task InvokeAsync(HttpContext context)

@@ -15,9 +15,16 @@ public class MaintenanceRecordInListDto
     public required string Description { get; set; }
     public required string CustomerName { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="MaintenanceRecord"/> entity.
+/// </summary>
 public static class MaintenanceRecordInListExtension
 {
+    /// <summary>
+    /// Convert <see cref="MaintenanceRecord"/> entity to <see cref="MaintenanceRecordInListDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="MaintenanceRecord"/> entity to map</param>
+    /// <returns>Entity mapped to <see cref="MaintenanceRecordInListDto"/></returns>
     public static MaintenanceRecordInListDto ToListDto(this MaintenanceRecord entity) => new MaintenanceRecordInListDto
     {
         Id = entity.Id,

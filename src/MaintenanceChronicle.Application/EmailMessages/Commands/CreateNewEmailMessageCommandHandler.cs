@@ -7,13 +7,15 @@ using Microsoft.Extensions.Options;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.EmailMessages.Commands;
-
+/// <summary>
+/// Handler for <see cref="CreateNewEmailMessageCommand"/>
+/// </summary>
 public class CreateNewEmailMessageCommandHandler(AppDbContext dbContext, IClock clock, IOptions<EnvironmentOptions> environmentOptions) : IRequestHandler<CreateNewEmailMessageCommand, Guid>
 {
     public async Task<Guid> Handle(CreateNewEmailMessageCommand request, CancellationToken cancellationToken)
     {
-        request.NewEmailMessage.FromEmail = request.NewEmailMessage.FromEmail ?? environmentOptions.Value.SenderEmail;
-        request.NewEmailMessage.FromName = request.NewEmailMessage.FromName ?? environmentOptions.Value.SenderName;
+        request.NewEmailMessage.FromEmail ??= environmentOptions.Value.SenderEmail;
+        request.NewEmailMessage.FromName ??= environmentOptions.Value.SenderName;
 
         var entity = request.NewEmailMessage.ToEntity(clock.GetCurrentInstant());
 

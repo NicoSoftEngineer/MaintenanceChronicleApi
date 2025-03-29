@@ -3,8 +3,16 @@ using System.Text;
 
 namespace MaintenanceChronicle.Utilities.Helpers;
 
+/// <summary>
+/// Extension methods for string class
+/// </summary>
 public static class StringExtension
 {
+    /// <summary>
+    /// Normalizes string to upper case
+    /// </summary>
+    /// <param name="value">String to be normalized</param>
+    /// <returns>Normalized string</returns>
     public static string NormalizeToUpper(this string value)
     {
         return new string(value.ToCharArray()

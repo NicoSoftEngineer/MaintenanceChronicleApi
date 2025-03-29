@@ -1,5 +1,8 @@
 namespace MaintenanceChronicle.Utilities.Options;
 
+/// <summary>
+/// Defines SMTP options.
+/// </summary>
 public class SmtpOptions
 {
     public required string Host { get; set; }

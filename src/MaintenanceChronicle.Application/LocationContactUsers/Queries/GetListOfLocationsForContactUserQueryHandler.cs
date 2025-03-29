@@ -1,3 +1,4 @@
+
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries;
 using MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto;
 using MaintenanceChronicle.Data;
@@ -6,7 +7,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.LocationContactUsers.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetListOfLocationsForContactUserQuery"/>
+/// </summary>
 public class GetListOfLocationsForContactUserQueryHandler(AppDbContext dbContext) : IRequestHandler<GetListOfLocationsForContactUserQuery, List<LocationInListForContactDto>>
 {
     public async Task<List<LocationInListForContactDto>> Handle(GetListOfLocationsForContactUserQuery request,

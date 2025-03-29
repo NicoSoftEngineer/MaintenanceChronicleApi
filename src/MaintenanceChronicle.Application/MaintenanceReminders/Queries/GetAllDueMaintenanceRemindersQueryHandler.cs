@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.MaintenanceReminders.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetAllDueMaintenanceRemindersQuery"/>.
+/// </summary>
 public class GetAllDueMaintenanceRemindersQueryHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<GetAllDueMaintenanceRemindersQuery, List<DueMaintenanceReminderDto>>
 {
     public async Task<List<DueMaintenanceReminderDto>> Handle(GetAllDueMaintenanceRemindersQuery request, CancellationToken cancellationToken)

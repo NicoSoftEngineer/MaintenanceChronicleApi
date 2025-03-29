@@ -143,6 +143,11 @@ public class AuthController(IMediator mediator) : ControllerBase
         return Ok(new { Token = accessToken, Name = activeTokenName.UriEscape() });
     }
 
+    /// <summary>
+    /// Logs out the user and revokes the refresh token
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="UnauthorizedRequestException"></exception>
     [Authorize]
     [HttpGet("api/v1/auth/logout")]
     public async Task<ActionResult> Logout()
@@ -151,6 +156,13 @@ public class AuthController(IMediator mediator) : ControllerBase
         {
             throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
         }
+        if (!Request.Cookies.TryGetValue(activeTokenName.UriEscape(), out var incomingRefreshToken))
+        {
+            throw new UnauthorizedRequestException(ErrorType.TokenNotFound);
+        }
+
+        var revokeExistingTokenCommand = new RevokeRefreshTokenCommand(incomingRefreshToken);
+        await mediator.Send(revokeExistingTokenCommand);
 
         await HttpContext.SignOutAsync();
         Response.Cookies.Delete(activeTokenName.UriEscape());

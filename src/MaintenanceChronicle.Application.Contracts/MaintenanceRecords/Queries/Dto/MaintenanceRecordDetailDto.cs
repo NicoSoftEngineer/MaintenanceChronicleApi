@@ -12,9 +12,16 @@ public class MaintenanceRecordDetailDto
     public Instant Date { get; set; }
     public required string Type { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="MaintenanceRecordDetailDto"/>.
+/// </summary>
 public static class MaintenanceRecordDetailExtension
 {
+    /// <summary>
+    /// Converts <see cref="MaintenanceRecord"/> to <see cref="MaintenanceRecordDetailDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="MaintenanceRecord"/> entity to map</param>
+    /// <returns>Mapped entity to <see cref="MaintenanceRecordDetailDto"/></returns>
     public static MaintenanceRecordDetailDto ToDetailDto(this MaintenanceRecord entity) =>
         new MaintenanceRecordDetailDto
         {

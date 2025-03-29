@@ -11,9 +11,16 @@ public class ManageCustomerDetailDto
     public required string PhoneNumber{ get; set; }
     public required string CompanyIdNumber{ get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="ManageCustomerDetailDto"/> entity.
+/// </summary>
 public static class ManageCustomerDetailDtoExtensions
 {
+    /// <summary>
+    /// Converts <see cref="Customer"/> to <see cref="ManageCustomerDetailDto"/>.
+    /// </summary>
+    /// <param name="customer"><see cref="Customer"/> to convert</param>
+    /// <returns>Converted entity to <see cref="ManageCustomerDetailDto"/></returns>
     public static ManageCustomerDetailDto ToManageCustomerDetailDto(this Customer customer)
     {
         return new ManageCustomerDetailDto
@@ -25,7 +32,11 @@ public static class ManageCustomerDetailDtoExtensions
             CompanyIdNumber = customer.CompanyIdNumber
         };
     }
-
+    /// <summary>
+    /// Converts <see cref="ManageCustomerDetailDto"/> to <see cref="Customer"/>.
+    /// </summary>
+    /// <param name="manageCustomerDto"><see cref="ManageCustomerDetailDto"/> to convert</param>
+    /// <returns>Converted entity to <see cref="Customer"/></returns>
     public static Customer ToCustomerEntity(this ManageCustomerDetailDto manageCustomerDto)
     {
         return new Customer
@@ -37,7 +48,11 @@ public static class ManageCustomerDetailDtoExtensions
             CompanyIdNumber = manageCustomerDto.CompanyIdNumber
         };
     }
-
+    /// <summary>
+    /// Maps properties of <see cref="ManageCustomerDetailDto"/> to <see cref="Customer"/>.
+    /// </summary>
+    /// <param name="dto">Source <see cref="ManageCustomerDetailDto"/></param>
+    /// <param name="target">Destination <see cref="Customer"/></param>
     public static void MapToEntity(this ManageCustomerDetailDto dto, Customer target)
     {
         target.Id = dto.Id;

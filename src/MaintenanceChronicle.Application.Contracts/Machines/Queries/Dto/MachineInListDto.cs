@@ -9,9 +9,16 @@ public class MachineInListDto
     public required string LocationName { get; set; }
     public required string CustomerName { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="MachineInListDto"/> entity.
+/// </summary>
 public static  class MachineInListExtension
 {
+    /// <summary>
+    /// Converts <see cref="Machine"/> to <see cref="MachineInListDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="Machine"/> to convert</param>
+    /// <returns>Converted entity to <see cref="MachineInListDto"/></returns>
     public static MachineInListDto ToMachineInListDto(this Machine entity) => new MachineInListDto
     {
         Id = entity.Id,

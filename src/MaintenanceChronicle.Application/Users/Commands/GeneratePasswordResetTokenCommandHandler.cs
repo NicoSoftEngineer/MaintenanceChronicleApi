@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
-
+/// <summary>
+/// Handler for <see cref="GeneratePasswordResetTokenCommand"/> command.
+/// </summary>
 public class GeneratePasswordResetTokenCommandHandler(UserManager<User> userManager) : IRequestHandler<GeneratePasswordResetTokenCommand, string>
 {
     public async Task<string> Handle(GeneratePasswordResetTokenCommand request, CancellationToken cancellationToken)
@@ -16,6 +18,7 @@ public class GeneratePasswordResetTokenCommandHandler(UserManager<User> userMana
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
+        // Generate password reset token for found user
         var token = await userManager.GeneratePasswordResetTokenAsync(user);
         return token;
     }

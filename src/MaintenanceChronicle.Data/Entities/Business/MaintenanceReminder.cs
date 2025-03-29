@@ -21,9 +21,12 @@ public class MaintenanceReminder : ITenant, ITrackable
     public Guid TenantId { get; set; }
     public Tenant Tenant { get; set; } = null!;
     public Instant CreatedAt { get; set; }
+    [MaxLength(StringLengthConstants.MaxIdLength)]
     public string CreatedBy { get; set; } = null!;
     public Instant ModifiedAt { get; set; }
+    [MaxLength(StringLengthConstants.MaxIdLength)]
     public string ModifiedBy { get; set; } = null!;
     public Instant? DeletedAt { get; set; }
+    [MaxLength(StringLengthConstants.MaxIdLength)]
     public string? DeletedBy { get; set; }
 }

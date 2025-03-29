@@ -6,7 +6,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Machines.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetMachinesForLocationQuery"/>.
+/// </summary>
 public class GetMachinesForLocationQueryHandler(AppDbContext dbContext) : IRequestHandler<GetMachinesForLocationQuery, List<MachineInListForLocationDto>>
 {
     public async Task<List<MachineInListForLocationDto>> Handle(GetMachinesForLocationQuery request, CancellationToken cancellationToken)

@@ -30,7 +30,6 @@
         <ProjectReference Include="..\MaintenanceChronicle.Application.Contracts\MaintenanceChronicle.Application.Contracts.csproj" />
         <ProjectReference Include="..\MaintenanceChronicle.Application\MaintenanceChronicle.Application.csproj" />
         <ProjectReference Include="..\MaintenanceChronicle.BackgroundServices\MaintenanceChronicle.BackgroundServices.csproj" />
-        <ProjectReference Include="..\MaintenanceChronicle.Configurations\MaintenanceChronicle.Configurations.csproj" />
         <ProjectReference Include="..\MaintenanceChronicle.Data\MaintenanceChronicle.Data.csproj" />
         <ProjectReference Include="..\MaintenanceChronicle.Utilities\MaintenanceChronicle.Utilities.csproj" />
     </ItemGroup>

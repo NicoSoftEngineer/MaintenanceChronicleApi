@@ -1,4 +1,5 @@
 using MaintenanceChronicle.Application.Contracts.Tenants.Commands;
+using MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto;
 using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Data.Interfaces;
 using MaintenanceChronicle.Utilities.Error;
@@ -6,22 +7,27 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Tenants.Commands;
-
-public class UpdateTenantCommandHandler(AppDbContext dbContext,IClock clock) : IRequestHandler<UpdateTenantCommand>
+/// <summary>
+/// Handler for <see cref="UpdateTenantCommand"/>
+/// </summary>
+public class UpdateTenantCommandHandler(AppDbContext dbContext,IClock clock) : IRequestHandler<UpdateTenantCommand, TenantDetailDto>
 {
-    public async Task Handle(UpdateTenantCommand request, CancellationToken cancellationToken)
+    public async Task<TenantDetailDto> Handle(UpdateTenantCommand request, CancellationToken cancellationToken)
     {
-        var tenantEntity = await dbContext.Tenants.FindAsync(request.TenantDetail.Id, cancellationToken);
+        var tenantEntity = await dbContext.Tenants.FindAsync([request.Id], cancellationToken);
         if (tenantEntity == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);
         }
 
-        //map changed properties to entity
-        tenantEntity.Name = request.TenantDetail.Name;
+        // Update the entity
+        var dto = tenantEntity.ToDto();
+        request.TenantDetail.ApplyTo(dto);
+        dto.MapToEntity(tenantEntity);
 
         tenantEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
 
         await dbContext.SaveChangesAsync(cancellationToken);
+        return dto;
     }
 }

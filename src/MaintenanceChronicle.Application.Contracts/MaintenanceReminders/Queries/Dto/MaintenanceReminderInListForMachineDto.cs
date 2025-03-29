@@ -9,8 +9,16 @@ public class MaintenanceReminderInListForMachineDto
     public required string Description { get; set; }
     public Instant Date { get; set; }
 }
+/// <summary>
+/// Extension methods for <see cref="MaintenanceReminder"/> class.
+/// </summary>
 public static class MaintenanceReminderInListForMachineDtoExtension
 {
+    /// <summary>
+    /// Convert <see cref="MaintenanceReminder"/> to <see cref="MaintenanceReminderInListForMachineDto"/>.
+    /// </summary>
+    /// <param name="mr"><see cref="MaintenanceReminder"/> entity</param>
+    /// <returns>Mapped entity to <see cref="MaintenanceReminderInListForMachineDto"/></returns>
     public static MaintenanceReminderInListForMachineDto ToListDto(this MaintenanceReminder mr) => new MaintenanceReminderInListForMachineDto
     {
         Id = mr.Id,

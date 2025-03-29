@@ -10,9 +10,16 @@ public class ManageLocationDetailDto
     public required string City { get; set; }
     public required string Country { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="ManageLocationDetailDto"/> entity.
+/// </summary>
 public static class ManageLocationDetailDtoExtension
 {
+    /// <summary>
+    /// Converts <see cref="Location"/> to <see cref="ManageLocationDetailDto"/>.
+    /// </summary>
+    /// <param name="location"><see cref="Location"/> to convert</param>
+    /// <returns>Converted entity to <see cref="ManageLocationDetailDto"/></returns>
     public static ManageLocationDetailDto ToManageDto(this Location location)
     {
         return new ManageLocationDetailDto
@@ -24,6 +31,11 @@ public static class ManageLocationDetailDtoExtension
             Country = location.Country,
         };
     }
+    /// <summary>
+    /// Maps the props of <see cref="ManageLocationDetailDto"/> to <see cref="Location"/>.
+    /// </summary>
+    /// <param name="manageLocationDetailDto">Source <see cref="ManageLocationDetailDto"/></param>
+    /// <param name="target">Destination <see cref="Location"/></param>
     public static void MapToEntity(this ManageLocationDetailDto manageLocationDetailDto, Location target)
     {
         target.Id = manageLocationDetailDto.Id;
