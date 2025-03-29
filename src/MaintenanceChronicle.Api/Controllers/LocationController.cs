@@ -145,7 +145,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     [HttpGet("/api/v1/locations/contacts")]
     public async Task<ActionResult<List<LocationContactInListDto>>> GetPossibleContactsForLocation()
     {
-        var getContactsQuery = new GetListOfEntityQuery<LocationContactInListDto>();s
+        var getContactsQuery = new GetListOfEntityQuery<LocationContactInListDto>();
         var contacts = await mediator.Send(getContactsQuery);
 
         return Ok(contacts);
