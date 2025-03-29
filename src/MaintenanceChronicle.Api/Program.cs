@@ -110,6 +110,9 @@ builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 //Adding EmailSenderBackgroundService into HostedServices
 builder.Services.AddHostedService<EmailSenderBackgroundService>();
 
+//Adding MaintenanceReminderBackgroundService into HostedServices
+builder.Services.AddHostedService<MaintenanceReminderBackgroundService>();
+
 //Registering middleware to validate if user has access to tenant
 builder.Services.AddScoped<UserTenantValidationMiddleware>();
 

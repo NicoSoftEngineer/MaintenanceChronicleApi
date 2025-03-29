@@ -7,8 +7,8 @@ namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto;
 public class EmailMessageInListDto
 {
     public Guid Id { get; set; }
-    public required string RecipientEmail { get; set; }
-    public string? RecipientName { get; set; }
+    public IDictionary<string, string?> Recipients { get; set; } = new Dictionary<string, string?>();
+
     public required string Subject { get; set; }
     public required string Body { get; set; }
     public bool Sent { get; set; }
@@ -24,8 +24,7 @@ public static class EmailMessageInListExtension
         Body = entity.Body,
         FromEmail = entity.FromEmail,
         FromName = entity.FromName,
-        RecipientEmail = entity.RecipientEmail,
-        RecipientName = entity.RecipientName,
+        Recipients = entity.Recipients,
         Sent = entity.Sent,
         Subject = entity.Subject,
     };

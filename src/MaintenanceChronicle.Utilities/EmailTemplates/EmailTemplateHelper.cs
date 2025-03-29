@@ -43,4 +43,13 @@ public class EmailTemplateHelper
 
         return template;
     }
+
+    public async Task<string> GetMaintenanceReminderEmailTemplate(string machineName, string machineSerialNumber,
+        string date, string description, string locationName, string locationAddress)
+    {
+        var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/MaintenanceReminderEmail.html");
+        template = template.Replace("[MachineName]", machineName).Replace("[MachineSerialNumber]", machineSerialNumber)
+            .Replace("[Date]", date).Replace("[Description]", description).Replace("[LocationName]", locationName).Replace("[LocationAddress]", locationAddress);
+        return template;
+    }
 }

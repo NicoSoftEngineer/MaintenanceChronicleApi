@@ -5,6 +5,7 @@ using MaintenanceChronicle.Data;
 using MaintenanceChronicle.Data.Entities.Business;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -14,9 +15,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MaintenanceChronicle.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250327114741_EmailMessageInReminderMadeNullable")]
+    partial class EmailMessageInReminderMadeNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -626,6 +629,9 @@ namespace MaintenanceChronicle.Data.Migrations
                         .HasMaxLength(2000)
                         .HasColumnType("character varying(2000)");
 
+                    b.Property<Guid?>("EmailMessageId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("MachineId")
                         .HasColumnType("uuid");
 
@@ -639,10 +645,9 @@ namespace MaintenanceChronicle.Data.Migrations
                     b.Property<Guid>("TenantId")
                         .HasColumnType("uuid");
 
-                    b.Property<bool>("WasReminderSent")
-                        .HasColumnType("boolean");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("EmailMessageId");
 
                     b.HasIndex("MachineId");
 
@@ -885,6 +890,10 @@ namespace MaintenanceChronicle.Data.Migrations
 
             modelBuilder.Entity("MaintenanceChronicle.Data.Entities.Business.MaintenanceReminder", b =>
                 {
+                    b.HasOne("MaintenanceChronicle.Data.Entities.Business.EmailMessage", "EmailMessage")
+                        .WithMany()
+                        .HasForeignKey("EmailMessageId");
+
                     b.HasOne("MaintenanceChronicle.Data.Entities.Business.Machine", "Machine")
                         .WithMany()
                         .HasForeignKey("MachineId")
@@ -896,6 +905,8 @@ namespace MaintenanceChronicle.Data.Migrations
                         .HasForeignKey("TenantId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("EmailMessage");
 
                     b.Navigation("Machine");
 

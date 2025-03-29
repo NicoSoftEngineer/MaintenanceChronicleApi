@@ -28,11 +28,10 @@ public class GeneratePasswordCreateEmailForUserCommandHandler(UserManager<User> 
 
         var newEmailMessage = new NewEmailMessageDto
         {
-            RecipientEmail = user.Email,
-            RecipientName = $"{user.FirstName} {user.LastName}",
             Subject = "Email confirmation",
             Body = body,
         };
+        newEmailMessage.Recipients.Add(user.Email!, $"{user.FirstName} {user.LastName}");
 
         return newEmailMessage;
     }
