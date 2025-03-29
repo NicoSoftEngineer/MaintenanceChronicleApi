@@ -128,6 +128,11 @@ public class MachineController(IMediator mediator) : ControllerBase
         return Ok(location);
     }
 
+    /// <summary>
+    /// Gets all the reminders for one machine
+    /// </summary>
+    /// <param name="id">Machine id</param>
+    /// <returns>List of reminders</returns>
     [HttpGet("/api/v1/machines/{id:guid}/maintenance-reminders")]
     public async Task<ActionResult<List<MaintenanceReminderInListForMachineDto>>> GetMaintenanceRemindersForMachine([FromRoute] Guid id)
     {

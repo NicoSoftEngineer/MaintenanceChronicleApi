@@ -29,7 +29,7 @@ public class GenerateMaintenanceReminderEmailCommandHandler(AppDbContext dbConte
             throw new BadRequestException(ErrorType.MachineNotFound);
         }
 
-        var date = InstantPattern.CreateWithInvariantCulture("yyyy-MM-dd").Format(request.Reminder.SendAt);
+        var date = InstantPattern.CreateWithInvariantCulture("yyyy-MM-dd").Format(request.Reminder.Date);
 
         var emailHelper = new EmailTemplateHelper();
         var body = await emailHelper.GetMaintenanceReminderEmailTemplate($"{machine.Manufacture} {machine.Model}", machine.SerialNumber, date, request.Reminder.Description, machine.Location.Name, $"{machine.Location.Street}, {machine.Location.City}, {machine.Location.Country}");

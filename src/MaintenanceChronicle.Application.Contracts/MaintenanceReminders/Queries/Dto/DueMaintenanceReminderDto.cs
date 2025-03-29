@@ -7,7 +7,7 @@ public class DueMaintenanceReminderDto()
 {
     public Guid Id { get; set; }
     public required string Description { get; set; } 
-    public Instant SendAt { get; set; }
+    public Instant Date { get; set; }
     public bool WasSent { get; set; }
     public Guid MachineId { get; set; }
 }
@@ -17,7 +17,7 @@ public static class DueMaintenanceReminderDtoExtension
     {
         Id = mr.Id,
         Description = mr.Description,
-        SendAt = mr.Date,
+        Date = mr.Date,
         MachineId = mr.MachineId,
         WasSent = mr.WasReminderSent,
     };
