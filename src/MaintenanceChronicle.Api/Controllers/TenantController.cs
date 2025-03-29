@@ -13,8 +13,6 @@ namespace MaintenanceChronicle.Api.Controllers;
 [ApiController]
 public class TenantController(IMediator mediator) : ControllerBase
 {
-    //TODO: Remove unusable endpoints
-
     /// <summary>
     /// Updates a tenant with the given information
     /// </summary>

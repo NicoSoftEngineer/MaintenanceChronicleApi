@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.JsonPatch;
 
 namespace MaintenanceChronicle.Application.Contracts.Tenants.Commands;
 
-//TODO: Implement Patch
 /// <summary>
 /// Command to update tenant details.
 /// </summary>

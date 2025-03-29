@@ -61,8 +61,7 @@ public class MaintenanceReminderBackgroundService(IServiceProvider provider) : B
             }
 
             //Wait for 1 hour before checking again
-            //TODO: Change to 1 hour after testing
-            await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken);
+            await Task.Delay(TimeSpan.FromHours(1), cancellationToken);
         }
     }
 }
