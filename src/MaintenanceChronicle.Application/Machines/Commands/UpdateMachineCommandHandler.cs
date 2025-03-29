@@ -8,19 +8,22 @@ using Microsoft.EntityFrameworkCore;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Machines.Commands;
-
+/// <summary>
+/// Handler for <see cref="UpdateMachineCommand"/>
+/// </summary>
 public class UpdateMachineCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateMachineCommand,ManageMachineDetailDto>
 {
     public async Task<ManageMachineDetailDto> Handle(UpdateMachineCommand request, CancellationToken cancellationToken)
     {
+        // Get machine from db
         var machineEntity = await dbContext.Machines.FindAsync(new object[] { request.MachineId }, cancellationToken);
         if (machineEntity is null)
         {
-            throw new BadRequestException(ErrorType.MachineNotFound);
+           throw new BadRequestException(ErrorType.MachineNotFound);
         }
-
+        // Map to dto
         var machineDetail = machineEntity.ToManageMachineDetailDto();
-
+        // Apply patch to dto
         request.Patch.ApplyTo(machineDetail);
 
         if (!(await dbContext
@@ -29,7 +32,7 @@ public class UpdateMachineCommandHandler(AppDbContext dbContext, IClock clock) :
         {
             throw new BadRequestException(ErrorType.LocationNotFound);
         }
-
+        // Map changed properties back to entity
         machineDetail.MapToEntity(machineEntity);
         machineEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
 

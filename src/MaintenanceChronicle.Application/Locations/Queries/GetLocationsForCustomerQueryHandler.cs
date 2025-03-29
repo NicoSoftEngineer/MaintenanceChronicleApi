@@ -6,7 +6,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Locations.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetLocationsForCustomerQuery"/>.
+/// </summary>
 public class GetLocationsForCustomerQueryHandler(AppDbContext dbContext) : IRequestHandler<GetLocationsForCustomerQuery,List<LocationInListDto>>
 {
     public async Task<List<LocationInListDto>> Handle(GetLocationsForCustomerQuery request,

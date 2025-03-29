@@ -6,7 +6,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Roles.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetEntityByNameQuery{RoleDetailDto}"/> to get <see cref="RoleDetailDto"/> by name.
+/// </summary>
 public class GetRoleByNameQueryHandler(AppDbContext dbContext) : IRequestHandler<GetEntityByNameQuery<RoleDetailDto>,RoleDetailDto>
 {
     public async Task<RoleDetailDto> Handle(GetEntityByNameQuery<RoleDetailDto> request, CancellationToken cancellationToken)

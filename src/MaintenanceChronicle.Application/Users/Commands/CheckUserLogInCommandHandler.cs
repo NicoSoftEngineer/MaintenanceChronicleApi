@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
-
+/// <summary>
+/// Handler for <see cref="CheckUserLogInCommand"/> command.
+/// </summary>
 public class CheckUserLogInCommandHandler(UserManager<User> userManager, SignInManager<User> signInManager) : IRequestHandler<CheckUserLogInCommand, SignInResult>
 {
     public async Task<SignInResult> Handle(CheckUserLogInCommand request, CancellationToken cancellationToken)

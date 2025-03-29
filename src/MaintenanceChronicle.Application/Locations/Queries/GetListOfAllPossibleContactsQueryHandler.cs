@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Locations.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetListOfAllPossibleContactsQuery"/>.
+/// </summary>
 public class GetListOfAllPossibleContactsQueryHandler(AppDbContext dbContext) : IRequestHandler<GetListOfEntityQuery<LocationContactInListDto>, List<LocationContactInListDto>>
 {
     public async Task<List<LocationContactInListDto>> Handle(GetListOfEntityQuery<LocationContactInListDto> request,

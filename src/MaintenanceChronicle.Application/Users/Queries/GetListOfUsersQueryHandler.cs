@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Users.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetListOfEntityQuery{TEntity}"/> to get list of users.
+/// </summary>
 public class GetListOfUsersQueryHandler(UserManager<User> userManager) : IRequestHandler<GetListOfEntityQuery<UserListDto>, List<UserListDto>>
 {
     public async Task<List<UserListDto>> Handle(GetListOfEntityQuery<UserListDto> request,

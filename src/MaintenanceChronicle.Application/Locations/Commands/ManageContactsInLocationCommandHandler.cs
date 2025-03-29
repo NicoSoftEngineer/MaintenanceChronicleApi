@@ -8,11 +8,14 @@ using Microsoft.EntityFrameworkCore;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Locations.Commands;
-
+/// <summary>
+/// Handler for <see cref="ManageContactsInLocationCommand"/>.
+/// </summary>
 public class ManageContactsInLocationCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<ManageContactsInLocationCommand>
 {
     public async Task Handle(ManageContactsInLocationCommand request, CancellationToken cancellationToken)
     {
+        // Get current location from db
         var location = await dbContext.Locations
             .Include(l => l.Contacts)
             .FirstOrDefaultAsync(l => l.Id == request.LocationId, cancellationToken);
@@ -22,6 +25,7 @@ public class ManageContactsInLocationCommandHandler(AppDbContext dbContext, IClo
         }
 
         var currentInstant = clock.GetCurrentInstant();
+        // Get all contact ids from request
         var contactIds = request.Contacts.Select(c => c.Id).ToList();
 
         foreach (var existingContacts in location.Contacts)

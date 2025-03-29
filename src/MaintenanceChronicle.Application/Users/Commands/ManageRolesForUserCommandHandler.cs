@@ -11,12 +11,16 @@ using NodaTime;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
+/// <summary>
+/// Handler for <see cref="ManageRolesForUserCommand"/>
+/// </summary>
 public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clock, UserManager<User> userManager) : IRequestHandler<ManageRolesForUserCommand>
 {
     public async Task Handle(ManageRolesForUserCommand request, CancellationToken cancellationToken)
     {
         var userRoles = request.UserRoles;
 
+        // Check if user exists
         var user = await dbContext.Users
             .Include(u => u.Roles)
             .FirstOrDefaultAsync(x => x.Id == userRoles.UserId, cancellationToken: cancellationToken);
@@ -25,13 +29,16 @@ public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clo
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
+        // Get roles from database
         var roles = await dbContext.Roles.Where(x => userRoles.RoleIds.Contains(x.Id)).ToListAsync(cancellationToken);
 
+        // Remove roles that are not in the list that the user should have
         foreach (var roleToRemove in user.Roles.Where(x => !roles.Contains(x.Role)))
         {
             roleToRemove.SetDeleteBy(request.UserId, clock.GetCurrentInstant());
         }
 
+        // Add roles that are not in the list that the user should have
         var rolesToAdd = roles.Where(x => user.Roles.All(r => r.RoleId != x.Id)).ToList();
         foreach (var roleToAdd in rolesToAdd)
         {
@@ -47,6 +54,7 @@ public class ManageRolesForUserCommandHandler(AppDbContext dbContext, IClock clo
                 await dbContext.UserRoles.AddAsync(userRole, cancellationToken);
             }
         }
+
         await dbContext.SaveChangesAsync(cancellationToken);
     }
 }

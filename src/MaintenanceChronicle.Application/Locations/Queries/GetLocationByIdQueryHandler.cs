@@ -5,12 +5,15 @@ using MaintenanceChronicle.Utilities.Error;
 using MediatR;
 
 namespace MaintenanceChronicle.Application.Locations.Queries;
+/// <summary>
+/// Handler for <see cref="GetEntityByIdQuery{TEntity}"/> to get a location by ID.
+/// </summary>
 public class GetLocationByIdQueryHandler(AppDbContext dbContext) : IRequestHandler<GetEntityByIdQuery<LocationDetailDto>, LocationDetailDto>
 {
     public async Task<LocationDetailDto> Handle(GetEntityByIdQuery<LocationDetailDto> request,
         CancellationToken cancellationToken)
     {
-        var location = await dbContext.Locations.FindAsync(request.Id, cancellationToken);
+        var location = await dbContext.Locations.FindAsync([request.Id], cancellationToken);
         if (location == null)
         {
             throw new BadRequestException(ErrorType.LocationNotFound);

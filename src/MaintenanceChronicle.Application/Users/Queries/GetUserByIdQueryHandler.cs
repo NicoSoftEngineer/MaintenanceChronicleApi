@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Users.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetEntityByIdQuery{TEntity}"/> to get user by ID.
+/// </summary>
 public class GetUserByIdQueryHandler(UserManager<User> userManager) : IRequestHandler<GetEntityByIdQuery<UserDetailDto>, UserDetailDto>
 {
     public async Task<UserDetailDto> Handle(GetEntityByIdQuery<UserDetailDto> request, CancellationToken cancellationToken)

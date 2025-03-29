@@ -6,12 +6,14 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Tenants.Commands;
-
+/// <summary>
+/// Handler for <see cref="UpdateTenantCommand"/>
+/// </summary>
 public class UpdateTenantCommandHandler(AppDbContext dbContext,IClock clock) : IRequestHandler<UpdateTenantCommand>
 {
     public async Task Handle(UpdateTenantCommand request, CancellationToken cancellationToken)
     {
-        var tenantEntity = await dbContext.Tenants.FindAsync(request.TenantDetail.Id, cancellationToken);
+        var tenantEntity = await dbContext.Tenants.FindAsync([request.TenantDetail.Id], cancellationToken);
         if (tenantEntity == null)
         {
             throw new BadRequestException(ErrorType.TenantNotFound);

@@ -8,7 +8,9 @@ using MediatR;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Machines.Commands;
-
+/// <summary>
+/// Handler for <see cref="CreateNewMachineCommand"/>
+/// </summary>
 public class CreateNewMachineCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<CreateNewMachineCommand, Guid>
 {
     public async Task<Guid> Handle(CreateNewMachineCommand request, CancellationToken cancellationToken)

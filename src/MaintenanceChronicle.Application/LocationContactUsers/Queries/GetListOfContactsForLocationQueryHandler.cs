@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.LocationContactUsers.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetListOfContactsForLocationQuery"/>
+/// </summary>
 public class GetListOfContactsForLocationQueryHandler(AppDbContext dbContext) : IRequestHandler<GetListOfContactsForLocationQuery, List<LocationContactInListDto>>
 {
     public async Task<List<LocationContactInListDto>> Handle(GetListOfContactsForLocationQuery request,

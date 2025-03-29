@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
-
+/// <summary>
+/// Handler for <see cref="GenerateEmailConfirmTokenCommand"/>
+/// </summary>
 public class GenerateEmailConfirmTokenCommandHandler(UserManager<User> userManager) : IRequestHandler<GenerateEmailConfirmTokenCommand, string>
 {
     public async Task<string> Handle(GenerateEmailConfirmTokenCommand request, CancellationToken cancellationToken)
@@ -16,6 +18,7 @@ public class GenerateEmailConfirmTokenCommandHandler(UserManager<User> userManag
             throw new BadRequestException(ErrorType.UserNotFound);
         }
 
+        // Generate token
         var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
 
         var tokenEncoded = Uri.EscapeDataString(token);

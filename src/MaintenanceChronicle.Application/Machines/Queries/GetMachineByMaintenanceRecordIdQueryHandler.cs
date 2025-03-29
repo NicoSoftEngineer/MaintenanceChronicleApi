@@ -6,7 +6,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Machines.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetMachineByMaintenanceRecordIdQuery"/>.
+/// </summary>
 public class GetMachineByMaintenanceRecordIdQueryHandler(AppDbContext dbContext) : IRequestHandler<GetMachineByMaintenanceRecordIdQuery, MachineInMaintenanceRecordDetailDto>
 {
     public async Task<MachineInMaintenanceRecordDetailDto> Handle(GetMachineByMaintenanceRecordIdQuery request,

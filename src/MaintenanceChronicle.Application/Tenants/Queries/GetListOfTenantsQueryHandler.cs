@@ -5,7 +5,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace MaintenanceChronicle.Application.Tenants.Queries;
-
+/// <summary>
+/// Handler for <see cref="GetListOfEntityQuery{TDto}"/> to get list of <see cref="TenantListDto"/>.
+/// </summary>
 public class GetListOfTenantsQueryHandler(AppDbContext dbContext) : IRequestHandler<GetListOfEntityQuery<TenantListDto>, List<TenantListDto>>
 {
     public async Task<List<TenantListDto>> Handle(GetListOfEntityQuery<TenantListDto> request,

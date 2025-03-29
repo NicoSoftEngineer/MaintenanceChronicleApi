@@ -8,21 +8,25 @@ using Microsoft.EntityFrameworkCore;
 using NodaTime;
 
 namespace MaintenanceChronicle.Application.Customers.Commands;
-
+/// <summary>
+/// Handler for <see cref="UpdateCustomerCommand"/>
+/// </summary>
 public class UpdateCustomerCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateCustomerCommand, ManageCustomerDetailDto>
 {
     public async Task<ManageCustomerDetailDto> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
     {
+        // Get customer entity from database
         var customerEntity = await dbContext.Customers.FirstOrDefaultAsync(x => x.Id == request.CustomerId, cancellationToken);
         if (customerEntity == null)
         {
             throw new BadRequestException(ErrorType.CustomerNotFound);
         }
         var patch = request.Patch;
-
+        // Map entity to Dto and apply patch
         var customerMapped = customerEntity.ToManageCustomerDetailDto();
         request.Patch.ApplyTo(customerMapped);
 
+        // Map changed props back to entity
         customerMapped.MapToEntity(customerEntity);
 
         customerEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
