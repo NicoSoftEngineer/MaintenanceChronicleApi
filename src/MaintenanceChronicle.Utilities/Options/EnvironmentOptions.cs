@@ -1,5 +1,8 @@
 namespace MaintenanceChronicle.Utilities.Options;
 
+/// <summary>
+/// Defines environment options.
+/// </summary>
 public class EnvironmentOptions
 {
     public required string FrontendHostUrl { get; set; }

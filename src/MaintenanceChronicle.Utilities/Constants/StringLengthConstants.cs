@@ -1,5 +1,8 @@
 namespace MaintenanceChronicle.Utilities.Constants;
 
+/// <summary>
+/// Constants for string lengths.
+/// </summary>
 public class StringLengthConstants
 {
     public const int MaxDescriptionLength = 2000;

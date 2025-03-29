@@ -1,5 +1,7 @@
 namespace MaintenanceChronicle.Utilities.EmailTemplates;
-
+/// <summary>
+/// Helper class to get email templates from file system and fill out the placeholders.
+/// </summary>
 public class EmailTemplateHelper
 {
     /// <summary>
@@ -43,13 +45,27 @@ public class EmailTemplateHelper
 
         return template;
     }
-
+    /// <summary>
+    /// Gets MaintenanceReminderEmailTemplate from file system, fills out machineName, machineSerialNumber, date, description, locationName, locationAddress into email
+    /// </summary>
+    /// <param name="machineName">Machine name</param>
+    /// <param name="machineSerialNumber">Machine serial number</param>
+    /// <param name="date">Date when the reminder should be performed</param>
+    /// <param name="description">Description of what should be done</param>
+    /// <param name="locationName">Location name</param>
+    /// <param name="locationAddress">Locations address</param>
+    /// <returns>Email template</returns>
     public async Task<string> GetMaintenanceReminderEmailTemplate(string machineName, string machineSerialNumber,
         string date, string description, string locationName, string locationAddress)
     {
         var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/MaintenanceReminderEmail.html");
-        template = template.Replace("[MachineName]", machineName).Replace("[MachineSerialNumber]", machineSerialNumber)
-            .Replace("[Date]", date).Replace("[Description]", description).Replace("[LocationName]", locationName).Replace("[LocationAddress]", locationAddress);
+        template = template
+            .Replace("[MachineName]", machineName)
+            .Replace("[MachineSerialNumber]", machineSerialNumber)
+            .Replace("[Date]", date)
+            .Replace("[Description]", description)
+            .Replace("[LocationName]", locationName)
+            .Replace("[LocationAddress]", locationAddress);
         return template;
     }
 }

@@ -1,5 +1,8 @@
 namespace MaintenanceChronicle.Utilities.Options;
 
+/// <summary>
+/// Defines JWT options.
+/// </summary>
 public class JwtOptions
 {
     public required string SecretKey { get; set; }

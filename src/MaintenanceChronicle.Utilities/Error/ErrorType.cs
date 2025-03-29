@@ -2,6 +2,9 @@
 namespace MaintenanceChronicle.Utilities.Error;
 
 //TODO: localize
+/// <summary>
+/// Enum for error types.
+/// </summary>
 public enum ErrorType
 {
     [ErrorMessage("Uživatel s tímto e-mailem již existuje!")]
