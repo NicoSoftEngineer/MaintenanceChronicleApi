@@ -14,7 +14,7 @@ namespace MaintenanceChronicle.Application.Users.Commands;
 /// </summary>
 public class GenerateAccessTokenFromClaimsCommandHandler(IOptions<JwtOptions> jwtOptions) : IRequestHandler<GenerateAccessTokenFromClaimsCommand, string>
 {
-    public async Task<string> Handle(GenerateAccessTokenFromClaimsCommand request, CancellationToken cancellationToken)
+    public Task<string> Handle(GenerateAccessTokenFromClaimsCommand request, CancellationToken cancellationToken)
     {
         // create key, by which to sign and verify the token
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Value.SecretKey));
@@ -31,6 +31,6 @@ public class GenerateAccessTokenFromClaimsCommandHandler(IOptions<JwtOptions> jw
             signingCredentials: creds);
 
         // builds the token from the token object, encodes it in base64 and returns it
-        return new JwtSecurityTokenHandler().WriteToken(token);
+        return Task.FromResult(new JwtSecurityTokenHandler().WriteToken(token));
     }
 }

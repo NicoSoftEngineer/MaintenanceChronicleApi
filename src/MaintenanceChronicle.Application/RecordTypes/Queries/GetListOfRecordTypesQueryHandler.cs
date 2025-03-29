@@ -9,7 +9,7 @@ namespace MaintenanceChronicle.Application.RecordTypes.Queries;
 /// </summary>
 public class GetListOfRecordTypesQueryHandler : IRequestHandler<GetListOfEntityQuery<RecordTypeDto>, List<RecordTypeDto>>
 {
-    public async Task<List<RecordTypeDto>> Handle(GetListOfEntityQuery<RecordTypeDto> request,
+    public Task<List<RecordTypeDto>> Handle(GetListOfEntityQuery<RecordTypeDto> request,
         CancellationToken cancellationToken)
     {
         var enumsList = new List<RecordTypeDto>();
@@ -21,6 +21,6 @@ public class GetListOfRecordTypesQueryHandler : IRequestHandler<GetListOfEntityQ
             enumsList.Add(@enum.ToDto());
         }
 
-        return enumsList;
+        return Task.FromResult(enumsList);
     }
 }
