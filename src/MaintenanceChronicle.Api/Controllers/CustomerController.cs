@@ -2,6 +2,7 @@ using MaintenanceChronicle.Application.Contracts.Customers.Commands;
 using MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto;
 using MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Locations.Queries;
+using MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto;
 using MaintenanceChronicle.Application.Contracts.Utils.Commands;
 using MaintenanceChronicle.Application.Contracts.Utils.Queries;
 using MaintenanceChronicle.Data.Entities.Business;
@@ -42,9 +43,9 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Updates customer with the given information
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="id">ID of customer to be updated</param>
     /// <param name="patch">Information that admin provides</param>
-    /// <returns></returns>
+    /// <returns>Updated <see cref="ManageCustomerDetailDto"/></returns>
     [HttpPatch("api/v1/customers/{id:guid}")]
     public async Task<ActionResult<ManageCustomerDetailDto>> UpdateCustomer(
         [FromRoute] Guid id,
@@ -64,9 +65,9 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Updates customer with the given information
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of <see cref="CustomerInListDto"/></returns>
     [HttpGet("api/v1/customers")]
-    public async Task<ActionResult<List<ManageCustomerDetailDto>>> GetCustomerList()
+    public async Task<ActionResult<List<CustomerInListDto>>> GetCustomerList()
     {
         var getCustomerListQuery = new GetListOfEntityQuery<CustomerInListDto>();
         var customers = await mediator.Send(getCustomerListQuery);
@@ -77,8 +78,8 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets a specific customer by id
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns>customer</returns>
+    /// <param name="id">Id of customer to get</param>
+    /// <returns>The requested <see cref="CustomerDetailDto"/>></returns>
     [HttpGet("api/v1/customers/{id:guid}")]
     public async Task<ActionResult> GetCustomer(
         [FromRoute] Guid id
@@ -93,8 +94,8 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Deletes a specific customer by id
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns>customer</returns>
+    /// <param name="id">Id of customer to delete</param>
+    /// <returns></returns>
     [HttpDelete("api/v1/customers/{id:guid}")]
     public async Task<ActionResult> DeleteCustomer(
         [FromRoute] Guid id
@@ -110,9 +111,9 @@ public class CustomerController(IMediator mediator) : ControllerBase
     /// Gets list of locations for the specified customer
     /// </summary>
     /// <param name="id">[Guid] customer id</param>
-    /// <returns>List of locations</returns>
+    /// <returns>List of <see cref="LocationInListDto"/>></returns>
     [HttpGet("api/v1/customers/{id:guid}/locations")]
-    public async Task<ActionResult> GetLocationsForCustomer([FromRoute] Guid id)
+    public async Task<ActionResult<List<LocationInListDto>>> GetLocationsForCustomer([FromRoute] Guid id)
     {
         var locationsQuery = new GetLocationsForCustomerQuery(id);
         var locations = await mediator.Send(locationsQuery);

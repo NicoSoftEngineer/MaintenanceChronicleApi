@@ -44,8 +44,8 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// Updates machine info
     /// </summary>
     /// <param name="id">Updated machine id</param>
-    /// <param name="patch">Object that says what props should be changed and how</param>
-    /// <returns>Updated MachineDetail</returns>
+    /// <param name="patch"><see cref="JsonPatchDocument{MManageMachineDetailDto}"/> With instruction on what to replace</param>
+    /// <returns>Updated <see cref="ManageMachineDetailDto"/></returns>
     [HttpPatch("/api/v1/machines/{id:guid}")]
     public async Task<ActionResult<ManageMachineDetailDto>> UpdateMachine([FromRoute] Guid id, [FromBody] JsonPatchDocument<ManageMachineDetailDto> patch)
     {
@@ -58,7 +58,7 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Soft deletes machine by specified id
     /// </summary>
-    /// <param name="id">User specified machine id</param>
+    /// <param name="id">ID of machine to delete</param>
     /// <returns></returns>
     [HttpDelete("/api/v1/machines/{id:guid}")]
     public async Task<ActionResult> DeleteMachine([FromRoute] Guid id)
@@ -72,8 +72,8 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets machine by specified id
     /// </summary>
-    /// <param name="id">Machine id specified by user</param>
-    /// <returns>Patch</returns>
+    /// <param name="id">ID of machine to query for</param>
+    /// <returns><see cref="MachineDetailDto"/></returns>
     [AllowAnonymous]
     [HttpGet("/api/v1/machines/{id:guid}")]
     public async Task<ActionResult<MachineDetailDto>> GetMachineById([FromRoute] Guid id)
@@ -87,7 +87,7 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets list of machines
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of <see cref="MachineInListDto"/></returns>
     [HttpGet("/api/v1/machines")]
     public async Task<ActionResult<List<MachineInListDto>>> GetMachineList()
     {
@@ -100,8 +100,8 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets MaintenanceRecords for the specified machine
     /// </summary>
-    /// <param name="id">Specified machine id</param>
-    /// <returns>List of MaintenanceRecords</returns>
+    /// <param name="id">ID of machine for which to get records</param>
+    /// <returns>List of <see cref="MaintenanceRecordInListForMachineDto"/></returns>
     [HttpGet("/api/v1/machines/{id:guid}/maintenance-records")]
     public async Task<ActionResult<List<MaintenanceRecordInListForMachineDto>>> GetMaintenanceRecordsForMachine(
         [FromRoute] Guid id)
@@ -116,7 +116,7 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// Gets Location for the specified machine
     /// </summary>
     /// <param name="id">Specified machine id</param>
-    /// <returns>Machines location</returns>
+    /// <returns>Machines <see cref="LocationInListDto"/></returns>
     [AllowAnonymous]
     [HttpGet("/api/v1/machines/{id:guid}/location")]
     public async Task<ActionResult<List<LocationInListDto>>> GetLocationForMachine(
@@ -132,7 +132,7 @@ public class MachineController(IMediator mediator) : ControllerBase
     /// Gets all the reminders for one machine
     /// </summary>
     /// <param name="id">Machine id</param>
-    /// <returns>List of reminders</returns>
+    /// <returns>List of <see cref="MaintenanceReminderInListForMachineDto"/></returns>
     [HttpGet("/api/v1/machines/{id:guid}/maintenance-reminders")]
     public async Task<ActionResult<List<MaintenanceReminderInListForMachineDto>>> GetMaintenanceRemindersForMachine([FromRoute] Guid id)
     {

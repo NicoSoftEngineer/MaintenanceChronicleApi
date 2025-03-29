@@ -49,7 +49,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// </summary>
     /// <param name="id"></param>
     /// <param name="patch">Information that admin provides</param>
-    /// <returns></returns>
+    /// <returns>Updated <see cref="ManageLocationDetailDto"/></returns>
     [HttpPatch("api/v1/locations/{id:guid}")]
     public async Task<ActionResult<ManageLocationDetailDto>> UpdateLocation(
         [FromRoute] Guid id,
@@ -69,7 +69,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets the list of locations
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of <see cref="LocationInListDto"/></returns>
     [HttpGet("/api/v1/locations")]
     public async Task<ActionResult<List<LocationInListDto>>> GetLocationList()
     {
@@ -83,7 +83,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// Get location by id
     /// </summary>
     /// <param name="id">Id that user provides</param>
-    /// <returns></returns>
+    /// <returns><see cref="LocationDetailDto"/></returns>
     [HttpGet("/api/v1/locations/{id:guid}")]
     public async Task<ActionResult<List<LocationDetailDto>>> GetLocation(Guid id)
     {
@@ -96,7 +96,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Delete the specified location
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="id">ID of location to delete</param>
     /// <returns></returns>
     [HttpDelete("/api/v1/locations/{id:guid}")]
     public async Task<ActionResult> DeleteLocation(Guid id)
@@ -110,8 +110,8 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Adds contact to Location
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="contactInListDto"></param>
+    /// <param name="id">Id of location to add contact to</param>
+    /// <param name="contactInListDto">Array of <see cref="LocationContactInListDto"/> containing contacts of location</param>
     /// <returns></returns>
     [HttpPost("/api/v1/locations/{id:guid}/contacts")]
     public async Task<ActionResult> ManageContactsToLocation([FromRoute] Guid id,[FromBody]LocationContactInListDto[] contactInListDto)
@@ -126,8 +126,8 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets contacts for specified location
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">ID of location to get contacts for</param>
+    /// <returns>List of <see cref="LocationContactInListDto"/></returns>
     [AllowAnonymous]
     [HttpGet("/api/v1/locations/{id:guid}/contacts")]
     public async Task<ActionResult<List<LocationContactInListDto>>> GetContactsForLocation([FromRoute] Guid id)
@@ -141,11 +141,11 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Gets possible contacts for location
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of <see cref="LocationContactInListDto"/>, that can be added as contact for location</returns>
     [HttpGet("/api/v1/locations/contacts")]
     public async Task<ActionResult<List<LocationContactInListDto>>> GetPossibleContactsForLocation()
     {
-        var getContactsQuery = new GetListOfEntityQuery<LocationContactInListDto>();
+        var getContactsQuery = new GetListOfEntityQuery<LocationContactInListDto>();s
         var contacts = await mediator.Send(getContactsQuery);
 
         return Ok(contacts);
@@ -155,7 +155,7 @@ public class LocationController(IMediator mediator) : ControllerBase
     /// Gets list of machines for the specified location
     /// </summary>
     /// <param name="id">User specified location id</param>
-    /// <returns>List of machines</returns>
+    /// <returns>List of <see cref="MachineInListDto"/></returns>
     [HttpGet("/api/v1/locations/{id:guid}/machines")]
     public async Task<ActionResult<List<MachineInListForLocationDto>>> GetMachinesForLocation([FromRoute] Guid id)
     {
@@ -165,6 +165,11 @@ public class LocationController(IMediator mediator) : ControllerBase
         return Ok(machines);
     }
 
+    /// <summary>
+    /// Gets customer for the specified location
+    /// </summary>
+    /// <param name="id">ID of location for which to get the customer</param>
+    /// <returns><see cref="CustomerDetailForLocationDto"/> from location</returns>
     [HttpGet("/api/v1/locations/{id:guid}/customer")]
     public async Task<ActionResult<CustomerDetailForLocationDto>> GetCustomerForLocation([FromRoute] Guid id)
     {

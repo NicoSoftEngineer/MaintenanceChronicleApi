@@ -39,8 +39,8 @@ public class MaintenanceReminderController(IMediator mediator) : Controller
     /// Updates a maintenance reminder
     /// </summary>
     /// <param name="id">Id of updated maintenance reminder</param>
-    /// <param name="reminderDto">Patch info of what should be updated</param>
-    /// <returns>The updated MaintenanceReminderDetailDto</returns>
+    /// <param name="reminderDto"><see cref="JsonPatchDocument{MaintenanceReminderDetailDto}"/> with instructions on what to change</param>
+    /// <returns>The updated <see cref="MaintenanceReminderDetailDto"/></returns>
     [HttpPatch("{id}")]
     public async Task<ActionResult<MaintenanceReminderDetailDto>> UpdateMaintenanceReminder([FromRoute] Guid id, [FromBody] JsonPatchDocument<MaintenanceReminderDetailDto>reminderDto)
     {

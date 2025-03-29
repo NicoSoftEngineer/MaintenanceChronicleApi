@@ -113,9 +113,6 @@ builder.Services.AddHostedService<EmailSenderBackgroundService>();
 //Adding MaintenanceReminderBackgroundService into HostedServices
 builder.Services.AddHostedService<MaintenanceReminderBackgroundService>();
 
-//Registering middleware to validate if user has access to tenant
-builder.Services.AddScoped<UserTenantValidationMiddleware>();
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -169,7 +166,6 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseMiddleware<UserTenantValidationMiddleware>();
 app.UseMiddleware<ExceptionMiddleware>();
 
 //app.UseHttpsRedirection();
