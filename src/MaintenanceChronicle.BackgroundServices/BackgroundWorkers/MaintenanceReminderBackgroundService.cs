@@ -10,11 +10,21 @@ namespace MaintenanceChronicle.BackgroundServices.BackgroundWorkers;
 
 public class MaintenanceReminderBackgroundService(IServiceProvider provider) : BackgroundService
 {
+    /// <summary>
+    /// Function definition from BackgroundService, which gets called at the start of an app
+    /// Calls private CheckReminders
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         await CheckReminders(cancellationToken);
     }
-
+    /// <summary>
+    /// Has infinite loop, gets all due reminders, generates email for each, and marks reminder as sent
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     private async Task CheckReminders(CancellationToken cancellationToken)
     {
         while (!cancellationToken.IsCancellationRequested)
