@@ -14,9 +14,17 @@ public class NewEmailMessageDto
     public string? FromEmail { get; set; }
     public string? FromName { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="NewEmailMessageDto"/> entity.
+/// </summary>
 public static class NewEmailMessageExtension
 {
+    /// <summary>
+    /// Converts <see cref="NewEmailMessageDto"/> to <see cref="EmailMessage"/>.
+    /// </summary>
+    /// <param name="dto"><see cref="NewEmailMessageDto"/>  to convert</param>
+    /// <param name="createdAt">when was the message created</param>
+    /// <returns>Converted entity to <see cref="EmailMessage"/>, with assigned CreatedAt</returns>
     public static EmailMessage ToEntity(this NewEmailMessageDto dto, Instant createdAt) => new EmailMessage
     {
         Body = dto.Body,

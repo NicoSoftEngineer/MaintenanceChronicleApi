@@ -6,5 +6,5 @@ namespace MaintenanceChronicle.Application.Contracts.EmailMessages.Commands;
 /// <summary>
 /// Sends the email, and sets the property Sent of an email message to be true
 /// </summary>
-/// <param name="MessageId"></param>
+/// <param name="MessageId">ID of message to send</param>
 public record SendEmailMessageCommand(Guid MessageId) : IRequest;

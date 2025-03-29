@@ -13,9 +13,16 @@ public class MachineInMaintenanceRecordDetailDto
     public required string Color { get; set; }
     public required string InUseSince { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="MaintenanceRecord"/> entity.
+/// </summary>
 public static class MachineInMaintenanceRecordDetailExtension
 {
+    /// <summary>
+    /// Converts <see cref="MaintenanceRecord"/> to <see cref="MachineInMaintenanceRecordDetailDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="MaintenanceRecord"/> to convert</param>
+    /// <returns>Converted entity to  <see cref="MachineInMaintenanceRecordDetailDto"/></returns>
     public static MachineInMaintenanceRecordDetailDto ToMachineDto(this MaintenanceRecord entity) =>
         new MachineInMaintenanceRecordDetailDto
         {

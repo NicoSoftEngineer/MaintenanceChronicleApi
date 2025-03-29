@@ -15,7 +15,7 @@ public class NewMaintenanceReminderDto
 public static class NewMrExtension
 {
     /// <summary>
-    /// Maps the NewMaintenanceReminderDto to MaintenanceReminder entity
+    /// Maps the  <see cref="NewMaintenanceReminderDto"/> to  <see cref="MaintenanceReminder"/> entity
     /// </summary>
     /// <param name="dto">The specified dto to be mapped</param>
     /// <returns>Mapped entity</returns>

@@ -9,4 +9,5 @@ namespace MaintenanceChronicle.Application.Contracts.Users.Commands;
 /// <param name="Email">Users email</param>
 /// <param name="PasswordToken">Token to allow user to change his password</param>
 /// <param name="ConfToken">Email confirmation email</param>
+/// <returns>New email message with Invitation and password creation email</returns>
 public record GeneratePasswordCreateEmailForUserCommand(string Email, string PasswordToken, string ConfToken) : IRequest<NewEmailMessageDto>;

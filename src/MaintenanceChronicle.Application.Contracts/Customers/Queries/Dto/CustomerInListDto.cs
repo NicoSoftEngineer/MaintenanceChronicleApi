@@ -10,9 +10,16 @@ public class CustomerInListDto
     public required string PhoneNumber { get; set; }
     public required string CompanyIdNumber { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="CustomerInListDto"/> entity.
+/// </summary>
 public static class CustomerListDtoExtensions
 {
+    /// <summary>
+    /// Converts <see cref="Customer"/> to <see cref="CustomerInListDto"/>.
+    /// </summary>
+    /// <param name="customer"><see cref="Customer"/> to convert</param>
+    /// <returns>Converted entity to <see cref="CustomerInListDto"/></returns>
     public static CustomerInListDto ToListDto(this Customer customer)
     {
         return new CustomerInListDto

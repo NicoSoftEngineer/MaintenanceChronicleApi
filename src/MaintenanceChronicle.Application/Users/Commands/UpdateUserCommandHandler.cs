@@ -9,9 +9,9 @@ using NodaTime;
 
 namespace MaintenanceChronicle.Application.Users.Commands;
 
-public class UpdateUserCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateUserCommand>
+public class UpdateUserCommandHandler(AppDbContext dbContext, IClock clock) : IRequestHandler<UpdateUserCommand, UpdateUserDetailDto>
 {
-    public async Task Handle(UpdateUserCommand request, CancellationToken cancellationToken)
+    public async Task<UpdateUserDetailDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
         var userEntity = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == request.ModifiedUserId, cancellationToken);
         if (userEntity == null)
@@ -26,5 +26,6 @@ public class UpdateUserCommandHandler(AppDbContext dbContext, IClock clock) : IR
         userEntity.SetModifyBy(request.UserId, clock.GetCurrentInstant());
 
         await dbContext.SaveChangesAsync(cancellationToken);
+        return userUpdateDto;
     }
 }

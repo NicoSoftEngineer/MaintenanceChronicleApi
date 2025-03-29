@@ -12,6 +12,7 @@ namespace MaintenanceChronicle.Api.Controllers;
 [ApiController]
 public class TenantController(IMediator mediator) : ControllerBase
 {
+    //TODO: Remove unusable endpoints
     /// <summary>
     /// Creates a tenant with the given information
     /// </summary>
@@ -19,13 +20,12 @@ public class TenantController(IMediator mediator) : ControllerBase
     /// <returns></returns>
     [HttpPost("api/v1/tenants")]
     public async Task<ActionResult<Guid>> CreateTenant(
-        [FromBody] NewTenantDto newTenantDto
     )
     {
-        var createNewTenantCommand = new CreateNewTenantCommand(newTenantDto);
-        var tenantId = await mediator.Send(createNewTenantCommand);
+        //var createNewTenantCommand = new CreateNewTenantCommand(newTenantDto);
+        //var tenantId = await mediator.Send(createNewTenantCommand);
 
-        return Ok(tenantId);
+        return Ok();
     }
 
     /// <summary>
@@ -35,11 +35,11 @@ public class TenantController(IMediator mediator) : ControllerBase
     /// <returns></returns>
     [HttpPost("api/v1/tenants/creation-info")]
     public async Task<ActionResult> AssignCreationInfoToTenant(
-        [FromBody] TenantsCreatorUserIdDto tenantsCreatorUserId
+        //[FromBody] TenantsCreatorUserIdDto tenantsCreatorUserId
     )
     {
-        var createNewTenantCommand = new AssignCreationInfoToTenantCommand(tenantsCreatorUserId);
-        await mediator.Send(createNewTenantCommand);
+        //var createNewTenantCommand = new AssignCreationInfoToTenantCommand(tenantsCreatorUserId);
+        //await mediator.Send(createNewTenantCommand);
 
         return NoContent();
     }

@@ -12,9 +12,16 @@ public class NewMaintenanceRecordDto
     public required string Date { get; set; }
     public required int RecordType { get; set; }
 }
-
+/// <summary>
+/// Extension methods for NewMaintenanceRecordDto.
+/// </summary>
 public static class NewMaintenanceRecordExtension
 {
+    /// <summary>
+    /// Converts <see cref="NewMaintenanceRecordDto"/> to <see cref="MaintenanceRecord"/>.
+    /// </summary>
+    /// <param name="dto"><see cref="NewMaintenanceRecordDto"/> to convert</param>
+    /// <returns>Mapped entity to <see cref="MaintenanceRecord"/></returns>
     public static MaintenanceRecord ToEntity(this NewMaintenanceRecordDto dto) => new MaintenanceRecord
     {
         Type = (RecordType)dto.RecordType,

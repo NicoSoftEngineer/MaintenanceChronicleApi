@@ -10,9 +10,16 @@ public class NewLocationDto
     public required string Country { get; set; }
     public Guid CustomerId { get; set; }
 }
+/// <summary>
+/// Extension methods for <see cref="NewLocationDto"/> entity.
+/// </summary>
 public static class NewLocationDtoExtension
 {
-
+    /// <summary>
+    /// Converts <see cref="NewLocationDto"/> to <see cref="Location"/>.
+    /// </summary>
+    /// <param name="newLocationDto"><see cref="NewLocationDto"/> to convert</param>
+    /// <returns>Converted entity to <see cref="Location"/></returns>
     public static Location ToEntity(this NewLocationDto newLocationDto)
     {
         return new Location

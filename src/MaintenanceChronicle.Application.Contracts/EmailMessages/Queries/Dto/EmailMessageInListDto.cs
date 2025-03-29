@@ -15,9 +15,16 @@ public class EmailMessageInListDto
     public required string FromEmail { get; set; }
     public required string FromName { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="EmailMessageInListDto"/> entity.
+/// </summary>
 public static class EmailMessageInListExtension
 {
+    /// <summary>
+    /// Converts <see cref="EmailMessage"/> to <see cref="EmailMessageInListDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="EmailMessage"/> to convert</param>
+    /// <returns>Converted entity to <see cref="EmailMessageInListDto"/></returns>
     public static EmailMessageInListDto ToListDto(this EmailMessage entity) => new EmailMessageInListDto
     {
         Id = entity.Id,

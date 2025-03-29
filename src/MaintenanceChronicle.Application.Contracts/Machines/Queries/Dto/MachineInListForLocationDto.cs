@@ -8,9 +8,16 @@ public class MachineInListForLocationDto
     public required string Model { get; set; }
     public required string SerialNumber { get; set; }
 }
-
+/// <summary>
+/// Extension methods for <see cref="Machine"/> entity.
+/// </summary>
 public static class MachineInListForLocationExtension
 {
+    /// <summary>
+    /// Converts <see cref="Machine"/> to <see cref="MachineInListForLocationDto"/>.
+    /// </summary>
+    /// <param name="entity"><see cref="Machine"/> to convert</param>
+    /// <returns>Converted entity to <see cref="MachineInListForLocationDto"/></returns>
     public static MachineInListForLocationDto ToMachineInListForLocationDto(this Machine entity) => new MachineInListForLocationDto
     {
         Id = entity.Id,
