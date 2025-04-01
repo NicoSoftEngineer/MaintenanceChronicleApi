@@ -25,6 +25,7 @@ public static class MaintenanceRecordDetailExtension
     /// <returns>Converted entity to <see cref="ManageMaintenanceRecordDetailDto"/></returns>
     public static ManageMaintenanceRecordDetailDto ToManageDto(this MaintenanceRecord entity) => new ManageMaintenanceRecordDetailDto()
     {
+        Id = entity.Id,
         MachineId = entity.MachineId,
         Description = entity.Description,
         Date = entity.Date.ToString(),

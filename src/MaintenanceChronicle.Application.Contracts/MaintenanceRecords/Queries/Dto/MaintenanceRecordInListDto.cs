@@ -32,7 +32,7 @@ public static class MaintenanceRecordInListExtension
         MachineName = entity.Machine.Model,
         MachineSerialNumber = entity.Machine.SerialNumber,
         Type = entity.Type.GetTypeName(),
-        Date = InstantPattern.CreateWithInvariantCulture("dd.MM.yyyy").Format(entity.Date),
+        Date = entity.Date.ToString(),
         Description = entity.Description,
         CustomerName = entity.Machine.Location.Customer.Name,
     };
