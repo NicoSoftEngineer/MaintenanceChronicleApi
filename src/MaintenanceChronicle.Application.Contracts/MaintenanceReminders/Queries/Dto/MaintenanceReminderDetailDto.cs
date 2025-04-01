@@ -1,5 +1,6 @@
 using MaintenanceChronicle.Data.Entities.Business;
 using NodaTime;
+using NodaTime.Text;
 
 namespace MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto;
 
@@ -7,7 +8,7 @@ public class MaintenanceReminderDetailDto
 {
     public Guid Id { get; set; }
     public string Description { get; set; } = String.Empty;
-    public Instant Date { get; set; }
+    public required string Date { get; set; }
     public Guid MachineId { get; set; }
 }
 /// <summary>
@@ -24,7 +25,7 @@ public static class MaintenanceReminderDetailDtoExtension
     {
         Id = mr.Id,
         Description = mr.Description,
-        Date = mr.Date,
+        Date = mr.Date.ToString(),
         MachineId = mr.MachineId,
     };
     /// <summary>
@@ -35,7 +36,7 @@ public static class MaintenanceReminderDetailDtoExtension
     public static void MapToEntity(this MaintenanceReminderDetailDto dto, MaintenanceReminder entity)
     {
         entity.Description = dto.Description;
-        entity.Date = dto.Date;
+        entity.Date = InstantPattern.General.Parse(dto.Date).Value;
         entity.MachineId = dto.MachineId;
     }
 }

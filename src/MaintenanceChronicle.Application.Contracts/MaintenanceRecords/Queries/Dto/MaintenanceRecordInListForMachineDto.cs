@@ -25,7 +25,7 @@ public static class MaintenanceRecordInListForMachineExtension
     {
         Id = entity.Id,
         Type = entity.Type.GetTypeName(),
-        Date = InstantPattern.CreateWithInvariantCulture("dd.MM.yyyy").Format(entity.Date),
+        Date = entity.Date.ToString(),
         Description = entity.Description,
     };
 }
