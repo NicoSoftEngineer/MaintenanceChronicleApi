@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  commentId: N:MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  id: MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  children:
+  - MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService
+  - MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  nameWithType: MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  fullName: MaintenanceChronicle.BackgroundServices.BackgroundWorkers
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.BackgroundServices
+references:
+- uid: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService
+  commentId: T:MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService
+  href: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService.html
+  name: EmailSenderBackgroundService
+  nameWithType: EmailSenderBackgroundService
+  fullName: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService
+- uid: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService
+  commentId: T:MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService
+  href: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService.html
+  name: MaintenanceReminderBackgroundService
+  nameWithType: MaintenanceReminderBackgroundService
+  fullName: MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService

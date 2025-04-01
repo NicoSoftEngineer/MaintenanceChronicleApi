@@ -1,0 +1,801 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  commentId: T:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  id: SendEmailMessageCommandHandler
+  parent: MaintenanceChronicle.Application.EmailMessages.Commands
+  children:
+  - MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions})
+  - MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: SendEmailMessageCommandHandler
+  nameWithType: SendEmailMessageCommandHandler
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: SendEmailMessageCommandHandler
+    path: ../src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.EmailMessages.Commands
+  summary: Handler for <xref href="MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: 'public class SendEmailMessageCommandHandler : IRequestHandler<SendEmailMessageCommand>'
+    content.vb: Public Class SendEmailMessageCommandHandler Implements IRequestHandler(Of SendEmailMessageCommand)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions})
+  commentId: M:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor(MaintenanceChronicle.Data.AppDbContext,Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions})
+  id: '#ctor(MaintenanceChronicle.Data.AppDbContext,Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions})'
+  parent: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: SendEmailMessageCommandHandler(AppDbContext, IOptions<SmtpOptions>)
+  nameWithType: SendEmailMessageCommandHandler.SendEmailMessageCommandHandler(AppDbContext, IOptions<SmtpOptions>)
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.SendEmailMessageCommandHandler(MaintenanceChronicle.Data.AppDbContext, Microsoft.Extensions.Options.IOptions<MaintenanceChronicle.Utilities.Options.SmtpOptions>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: .ctor
+    path: ../src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.EmailMessages.Commands
+  summary: Handler for <xref href="MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public SendEmailMessageCommandHandler(AppDbContext dbContext, IOptions<SmtpOptions> smtpOptions)
+    parameters:
+    - id: dbContext
+      type: MaintenanceChronicle.Data.AppDbContext
+    - id: smtpOptions
+      type: Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions}
+    content.vb: Public Sub New(dbContext As AppDbContext, smtpOptions As IOptions(Of SmtpOptions))
+  overload: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor*
+  nameWithType.vb: SendEmailMessageCommandHandler.New(AppDbContext, IOptions(Of SmtpOptions))
+  fullName.vb: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.New(MaintenanceChronicle.Data.AppDbContext, Microsoft.Extensions.Options.IOptions(Of MaintenanceChronicle.Utilities.Options.SmtpOptions))
+  name.vb: New(AppDbContext, IOptions(Of SmtpOptions))
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  commentId: M:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  id: Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  parent: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(SendEmailMessageCommand, CancellationToken)
+  nameWithType: SendEmailMessageCommandHandler.Handle(SendEmailMessageCommand, CancellationToken)
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Handle
+    path: ../src/MaintenanceChronicle.Application/EmailMessages/Commands/SendEmailMessageCommandHandler.cs
+    startLine: 15
+  assemblies:
+  - MaintenanceChronicle.Application
+  namespace: MaintenanceChronicle.Application.EmailMessages.Commands
+  summary: Handles a request
+  example: []
+  syntax:
+    content: public Task Handle(SendEmailMessageCommand request, CancellationToken cancellationToken)
+    parameters:
+    - id: request
+      type: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+      description: The request
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task
+      description: Response from the request
+    content.vb: Public Function Handle(request As SendEmailMessageCommand, cancellationToken As CancellationToken) As Task
+  overload: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle*
+  implements:
+  - MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+references:
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand.html
+  name: SendEmailMessageCommand
+  nameWithType: SendEmailMessageCommand
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands
+  commentId: N:MaintenanceChronicle.Application.EmailMessages.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.EmailMessages.Commands
+  nameWithType: MaintenanceChronicle.Application.EmailMessages.Commands
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.EmailMessages.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.EmailMessages.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}
+  commentId: T:MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`1
+  name: IRequestHandler<SendEmailMessageCommand>
+  nameWithType: IRequestHandler<SendEmailMessageCommand>
+  fullName: MediatR.IRequestHandler<MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand>
+  nameWithType.vb: IRequestHandler(Of SendEmailMessageCommand)
+  fullName.vb: MediatR.IRequestHandler(Of MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand)
+  name.vb: IRequestHandler(Of SendEmailMessageCommand)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`1
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+    name: SendEmailMessageCommand
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`1
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+    name: SendEmailMessageCommand
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequestHandler`1
+  commentId: T:MediatR.IRequestHandler`1
+  isExternal: true
+  name: IRequestHandler<TRequest>
+  nameWithType: IRequestHandler<TRequest>
+  fullName: MediatR.IRequestHandler<TRequest>
+  nameWithType.vb: IRequestHandler(Of TRequest)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest)
+  name.vb: IRequestHandler(Of TRequest)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`1
+    name: IRequestHandler
+    isExternal: true
+  - name: <
+  - name: TRequest
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`1
+    name: IRequestHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRequest
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.#ctor
+  href: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.html#MaintenanceChronicle_Application_EmailMessages_Commands_SendEmailMessageCommandHandler__ctor_MaintenanceChronicle_Data_AppDbContext_Microsoft_Extensions_Options_IOptions_MaintenanceChronicle_Utilities_Options_SmtpOptions__
+  name: SendEmailMessageCommandHandler
+  nameWithType: SendEmailMessageCommandHandler.SendEmailMessageCommandHandler
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.SendEmailMessageCommandHandler
+  nameWithType.vb: SendEmailMessageCommandHandler.New
+  fullName.vb: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.New
+  name.vb: New
+- uid: MaintenanceChronicle.Data.AppDbContext
+  commentId: T:MaintenanceChronicle.Data.AppDbContext
+  parent: MaintenanceChronicle.Data
+  href: MaintenanceChronicle.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: MaintenanceChronicle.Data.AppDbContext
+- uid: Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{MaintenanceChronicle.Utilities.Options.SmtpOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<SmtpOptions>
+  nameWithType: IOptions<SmtpOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<MaintenanceChronicle.Utilities.Options.SmtpOptions>
+  nameWithType.vb: IOptions(Of SmtpOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of MaintenanceChronicle.Utilities.Options.SmtpOptions)
+  name.vb: IOptions(Of SmtpOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: MaintenanceChronicle.Utilities.Options.SmtpOptions
+    name: SmtpOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Utilities.Options.SmtpOptions
+    name: SmtpOptions
+  - name: )
+- uid: MaintenanceChronicle.Data
+  commentId: N:MaintenanceChronicle.Data
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Data
+  nameWithType: MaintenanceChronicle.Data
+  fullName: MaintenanceChronicle.Data
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Data
+    name: Data
+    href: MaintenanceChronicle.Data.html
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle*
+  commentId: Overload:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle
+  href: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.html#MaintenanceChronicle_Application_EmailMessages_Commands_SendEmailMessageCommandHandler_Handle_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_SendEmailMessageCommand_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: SendEmailMessageCommandHandler.Handle
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.Handle
+- uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}
+  definition: MediatR.IRequestHandler`1.Handle(`0,System.Threading.CancellationToken)
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(SendEmailMessageCommand, CancellationToken)
+  nameWithType: IRequestHandler<SendEmailMessageCommand>.Handle(SendEmailMessageCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand>.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of SendEmailMessageCommand).Handle(SendEmailMessageCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand).Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+    name: SendEmailMessageCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler{MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand}.Handle(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand
+    name: SendEmailMessageCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: MediatR.IRequestHandler`1.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`1.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`1.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`1.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TRequest
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

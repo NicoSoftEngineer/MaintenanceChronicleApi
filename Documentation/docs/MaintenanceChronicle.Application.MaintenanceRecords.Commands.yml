@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  commentId: N:MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  id: MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  children:
+  - MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler
+  - MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler
+  - MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  nameWithType: MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  fullName: MaintenanceChronicle.Application.MaintenanceRecords.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler
+  commentId: T:MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler
+  href: MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler.html
+  name: CreateNewMaintenanceRecordCommandHandler
+  nameWithType: CreateNewMaintenanceRecordCommandHandler
+  fullName: MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler
+- uid: MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler
+  commentId: T:MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler
+  href: MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler.html
+  name: DeleteMaintenanceRecordByIdCommandHandler
+  nameWithType: DeleteMaintenanceRecordByIdCommandHandler
+  fullName: MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler
+- uid: MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler
+  commentId: T:MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler
+  href: MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler.html
+  name: UpdateMaintenanceRecordCommandHandler
+  nameWithType: UpdateMaintenanceRecordCommandHandler
+  fullName: MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler

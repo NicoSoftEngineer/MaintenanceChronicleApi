@@ -27,7 +27,7 @@ Comprehensive API and architecture documentation is available at:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/maintenanceChronicleApi.git
+git clone https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
 cd maintenanceChronicleApi
 ```
 

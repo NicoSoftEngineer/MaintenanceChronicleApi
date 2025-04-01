@@ -1,0 +1,723 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  id: NewEmailMessageDto
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+  langs:
+  - csharp
+  - vb
+  name: NewEmailMessageDto
+  nameWithType: NewEmailMessageDto
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: NewEmailMessageDto
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 7
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public class NewEmailMessageDto
+    content.vb: Public Class NewEmailMessageDto
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(NodaTime.Instant)
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+  commentId: P:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+  id: Recipients
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  langs:
+  - csharp
+  - vb
+  name: Recipients
+  nameWithType: NewEmailMessageDto.Recipients
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Recipients
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 9
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public Dictionary<string, string?> Recipients { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Property Recipients As Dictionary(Of String, String)
+  overload: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients*
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+  commentId: P:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+  id: Subject
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  langs:
+  - csharp
+  - vb
+  name: Subject
+  nameWithType: NewEmailMessageDto.Subject
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Subject
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 10
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public required string Subject { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Subject As String
+  overload: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject*
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+  commentId: P:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+  id: Body
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: NewEmailMessageDto.Body
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Body
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public required string Body { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Body As String
+  overload: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body*
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+  commentId: P:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+  id: FromEmail
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  langs:
+  - csharp
+  - vb
+  name: FromEmail
+  nameWithType: NewEmailMessageDto.FromEmail
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: FromEmail
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 12
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public string? FromEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FromEmail As String
+  overload: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail*
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName
+  commentId: P:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName
+  id: FromName
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  langs:
+  - csharp
+  - vb
+  name: FromName
+  nameWithType: NewEmailMessageDto.FromName
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: FromName
+    path: ../src/MaintenanceChronicle.Application.Contracts/EmailMessages/Commands/Dto/NewEmailMessageDto.cs
+    startLine: 13
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  syntax:
+    content: public string? FromName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FromName As String
+  overload: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName*
+references:
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  definition: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  name: ToEntity(NewEmailMessageDto, Instant)
+  nameWithType: NewEmailMessageExtension.ToEntity(NewEmailMessageDto, Instant)
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto, NodaTime.Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+    name: ToEntity
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+    name: NewEmailMessageDto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+    name: ToEntity
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+    name: NewEmailMessageDto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+  commentId: M:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+  isExternal: true
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  name: ToEntity(NewEmailMessageDto, Instant)
+  nameWithType: NewEmailMessageExtension.ToEntity(NewEmailMessageDto, Instant)
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto, NodaTime.Instant)
+  spec.csharp:
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+    name: ToEntity
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+    name: NewEmailMessageDto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+  spec.vb:
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.ToEntity(MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto,NodaTime.Instant)
+    name: ToEntity
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageExtension_ToEntity_MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_NodaTime_Instant_
+  - name: (
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+    name: NewEmailMessageDto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html
+  - name: ','
+  - name: " "
+  - uid: NodaTime.Instant
+    name: Instant
+    isExternal: true
+    href: https://github.com/jskeet/nodatime/blob/4d0e4c04dd5f09304a7e53a0675dce1597ea0143/src/NodaTime/Instant.cs
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html
+  name: NewEmailMessageExtension
+  nameWithType: NewEmailMessageExtension
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_Recipients
+  name: Recipients
+  nameWithType: NewEmailMessageDto.Recipients
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Recipients
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_Subject
+  name: Subject
+  nameWithType: NewEmailMessageDto.Subject
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Subject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_Body
+  name: Body
+  nameWithType: NewEmailMessageDto.Body
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.Body
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_FromEmail
+  name: FromEmail
+  nameWithType: NewEmailMessageDto.FromEmail
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromEmail
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html#MaintenanceChronicle_Application_Contracts_EmailMessages_Commands_Dto_NewEmailMessageDto_FromName
+  name: FromName
+  nameWithType: NewEmailMessageDto.FromName
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.FromName

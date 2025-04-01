@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.RecordTypes.Queries
+  commentId: N:MaintenanceChronicle.Application.RecordTypes.Queries
+  id: MaintenanceChronicle.Application.RecordTypes.Queries
+  children:
+  - MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.RecordTypes.Queries
+  nameWithType: MaintenanceChronicle.Application.RecordTypes.Queries
+  fullName: MaintenanceChronicle.Application.RecordTypes.Queries
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler
+  commentId: T:MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler
+  href: MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler.html
+  name: GetListOfRecordTypesQueryHandler
+  nameWithType: GetListOfRecordTypesQueryHandler
+  fullName: MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler

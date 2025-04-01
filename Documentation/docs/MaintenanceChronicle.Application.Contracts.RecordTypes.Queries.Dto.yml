@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  id: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto
+  - MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto
+  parent: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto.html
+  name: RecordTypeDto
+  nameWithType: RecordTypeDto
+  fullName: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto
+- uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension
+  href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension.html
+  name: RecordTypeExtension
+  nameWithType: RecordTypeExtension
+  fullName: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension
+- uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes
+    name: RecordTypes
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes
+    name: RecordTypes
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries
+    name: Queries
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.html

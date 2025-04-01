@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/MaintenanceChronicleApiDocumentation",
+  "source_base_path": "D:/MaintenanceChronicleApi/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,2043 +12,3340 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.AuthController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.AuthController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.AuthController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.AuthController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.CustomerController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.CustomerController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.CustomerController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.CustomerController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.LocationController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.LocationController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.LocationController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.LocationController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.MachineController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.MachineController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.MachineController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.MachineController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.TenantController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.MaintenanceRecordController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.TenantController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.MaintenanceRecordController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.UserController.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.MaintenanceReminderController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.UserController.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.MaintenanceReminderController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Controllers.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.TenantController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Controllers.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.TenantController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Utils.CurrentTenantProvider.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.UserController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Utils.CurrentTenantProvider.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.UserController.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Api.Utils.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Controllers.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Api.Utils.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Controllers.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Utils.CurrentTenantProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Utils.CurrentTenantProvider.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Utils.DatabaseMigrationExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Utils.DatabaseMigrationExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDtoExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Api.Utils.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDtoExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Api.Utils.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.NewCustomerDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.NewCustomerDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.CreateNewCustomerCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.ManageCustomerDetailDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.NewCustomerDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.NewCustomerDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.UpdateCustomerCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailForLocationDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailForLocationDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailForLocationDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerDetailForLocationDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfContactsForLocationQuery.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfContactsForLocationQuery.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerListDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.CustomerListDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.GetCustomerDetailForLocationQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ContactsInLocationDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.GetCustomerDetailForLocationQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Customers.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.CreateNewEmailMessageCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.CreateNewEmailMessageCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.SendEmailMessageCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.EmailMessageInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.EmailMessageInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.EmailMessageInListExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.EmailMessageInListExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDtoExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDtoExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.EmailMessages.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationContactInListDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationInListForContactDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationInListForContactDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationInListForContactExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.LocationInListForContactExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Locations.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfContactsForLocationQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfContactsForLocationQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfLocationsForContactUserQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.GetListOfLocationsForContactUserQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.LocationContactUsers.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.CreateNewLocationCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.ManageLocationDetailDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.NewLocationDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDtoExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDtoExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.ManageContactsInLocationCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.UpdateLocationCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationDetailDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachinesForLocationQuery.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachinesForLocationQuery.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.LocationInListExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Machines.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationForMachineQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationForMachineQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Roles.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Roles.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.GetLocationsForCustomerQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimToUserPrincipalCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Locations.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AssignCreationInfoToTenantCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.CreateNewMachineCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.CreateNewTenantCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.NewTenantDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.NewTenantDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.ManageMachineDetailExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantsCreatorUserIdDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.NewMachineDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.UserTenantClaimDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.UserTenantClaimDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.UpdateMachineCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineDetailDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInListForLocationExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInMaintenanceRecordDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInMaintenanceRecordDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInMaintenanceRecordDetailExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.MachineInMaintenanceRecordDetailExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachineByMaintenanceRecordIdQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.AddPasswordToRegisteredUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachineByMaintenanceRecordIdQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachinesForLocationQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.AddRolesToUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.GetMachinesForLocationQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Machines.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.AddPasswordToRegisteredUserDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.RegisterUserDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsPrincipalForUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordDetailExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationTokenForUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordDetailExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.RegisterNewUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListForMachineDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListForMachineDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListForMachineExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.MaintenanceRecordInListForMachineExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.GetMaintenanceRecordsByMachineIdQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.GetMaintenanceRecordsByMachineIdQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.CreateNewMaintenanceReminderCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserCommand.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.CreateNewMaintenanceReminderCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.NewMaintenanceReminderDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Users.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.NewMaintenanceReminderDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.NewMrExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.NewMrExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.GenerateMaintenanceReminderEmailCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.GenerateMaintenanceReminderEmailCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.MarkMaintenanceReminderAsSentCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.MarkMaintenanceReminderAsSentCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.UpdateMaintenanceReminderCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.UpdateMaintenanceReminderCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Contracts.Utils.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.DueMaintenanceReminderDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.DueMaintenanceReminderDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.DueMaintenanceReminderDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.DueMaintenanceReminderDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderDetailDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderDetailDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderInListForMachineDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderInListForMachineDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderInListForMachineDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.MaintenanceReminderInListForMachineDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Customers.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.GetAllDueMaintenanceRemindersQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.GetAllDueMaintenanceRemindersQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.LocationContactUsers.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.GetAllMaintenanceRemindersForMachineQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.LocationContactUsers.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.GetAllMaintenanceRemindersForMachineQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.MaintenanceReminders.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.RecordTypeExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RecordTypes.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.RefreshTokenDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.RefreshTokenDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.RefreshTokenDtoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Locations.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.RefreshTokenDtoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.GetStoredRefreshTokenQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.GetStoredRefreshTokenQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.RefreshTokens.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Roles.Dto.RoleDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Roles.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Roles.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimsListCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.AddTenantClaimsListCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDtoExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Machines.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.TenantDetailDtoExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.RequestHandlerRegistrationHelper.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.UserTenantClaimDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.RequestHandlerRegistrationHelper.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.UserTenantClaimDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Roles.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Roles.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.UpdateTenantCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.AssignCreationInfoToTenantCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.CreateNewTenantCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.TenantListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Tenants.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.RegisterUserTenantDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.RegisterUserTenantDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.UserTenantIdsDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Tenants.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.RegisterUserAndTenantCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.UserTenant.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.UserTenant.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.CheckUserLogInCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.UserTenant.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.CheckUserLogInCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.AddPasswordToRegisteredUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.CreateNewUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.AddRolesToUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.CreateNewUserDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.EmailConfirmTokenForUserDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.GenerateClaimsPrincipalForUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.LoginDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationTokenForUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.RegisterNewUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UpdateUserDetailExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserResetPasswordDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserResetPasswordDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.UserRolesDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Commands.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Commands.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateAccessTokenFromClaimsCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateAccessTokenFromClaimsCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsListForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateClaimsListForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmTokenCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmTokenCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Users.Queries.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationEmailForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Users.Queries.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GenerateEmailConfirmationEmailForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordCreateEmailForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Validators.UserTenantValidationMiddleware.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordCreateEmailForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Validators.UserTenantValidator.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordResetEmailForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Validators.UserTenantValidator.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordResetEmailForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.Validators.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordResetTokenCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.Validators.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.GeneratePasswordResetTokenCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Application.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ManageRolesForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Application.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ManageRolesForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.AppDbContext.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ResetPasswordForUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.AppDbContext.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ResetPasswordForUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Account.Role.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Account.Role.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.UpdateUserCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Account.Tenant.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Account.Tenant.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.ValidateEmailConfirmationTokenCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Account.User.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Account.User.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Account.UserRole.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.LoggedInUserInfoDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Account.UserRole.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.LoggedInUserInfoDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Account.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.LoggedInUserInfoExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Account.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.LoggedInUserInfoExtension.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Customer.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Customer.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserDetailDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Location.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Location.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.UserListDto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Business.LocationContactUser.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Business.LocationContactUser.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.Dto.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Machine.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.GetCurrentUserInfoQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Business.Machine.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.GetCurrentUserInfoQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Entities.Business.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserQuery.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Entities.Business.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.GetTenantIdFromUserQuery.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Interfaces.ITenant.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Interfaces.ITenant.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Users.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Interfaces.ITrackable.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Interfaces.ITrackable.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Commands.DeleteEntityByIdCommand-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Interfaces.TrackableExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Interfaces.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Interfaces.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByIdQuery-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedITrackableToEntities.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetEntityByNameQuery-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedLocationContactUser.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedLocationContactUser.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.GetListOfEntityQuery-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.AddedTenantAndPutTenantIdToEntities.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Contracts.Utils.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.CustomerAdded.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.CustomerAdded.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.CreateNewCustomerCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.Init.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.Init.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.DeleteCustomerCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.LocationEntityAdded.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.LocationEntityAdded.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.UpdateCustomerCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.MachineAdded.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.MachineAdded.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.RolesAdded.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.RolesAdded.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetCustomerByIdQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.Migrations.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetCustomerDetailForLocationQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.Migrations.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetCustomerDetailForLocationQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Data.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Data.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.GetListOfCustomersQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Customers.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Constants.RoleTypes.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Constants.RoleTypes.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Constants.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Constants.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Enum.EnumExtensions.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Enum.EnumExtensions.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Enum.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Queries.GetListOfEmailMessagesQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Enum.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Queries.GetListOfEmailMessagesQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.BadRequestException.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.BadRequestException.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.EmailMessages.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfContactsForLocationQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.ErrorType.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfLocationsForContactUserQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.ErrorType.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.GetListOfLocationsForContactUserQueryHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.ExceptionMiddleware.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.ExceptionMiddleware.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.LocationContactUsers.Queries.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.InternalServerException.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.InternalServerException.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.CreateNewLocationCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Error.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Error.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.DeleteLocationCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.ManageContactsInLocationCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.UpdateLocationCommandHandler.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Helpers.NormalizeStringExtension.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Commands.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MaintenanceChronicle.Utilities.Helpers.yml",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetListOfAllPossibleContactsQueryHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MaintenanceChronicle.Utilities.Helpers.html"
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetListOfAllPossibleContactsQueryHandler.html"
         }
       },
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetListOfLocationsQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationForMachineQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationForMachineQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.GetLocationsForCustomerQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Locations.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.CreateNewMachineCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.DeleteMachineCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.UpdateMachineCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetListOfMachinesQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachineByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachineByMaintenanceRecordIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachineByMaintenanceRecordIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.GetMachinesForLocationQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Machines.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.CreateNewMaintenanceRecordCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.DeleteMaintenanceRecordByIdCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetListOfMaintenanceRecordsQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetListOfMaintenanceRecordsQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetMaintenanceRecordByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetMaintenanceRecordByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetMaintenanceRecordsByMachineIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.GetMaintenanceRecordsByMachineIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceRecords.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.CreateNewMaintenanceReminderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.CreateNewMaintenanceReminderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.GenerateMaintenanceReminderEmailCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.GenerateMaintenanceReminderEmailCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.MarkMaintenanceReminderAsSentCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.MarkMaintenanceReminderAsSentCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.UpdateMaintenanceReminderCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.UpdateMaintenanceReminderCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.GetAllDueMaintenanceRemindersQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.GetAllDueMaintenanceRemindersQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.GetAllMaintenanceRemindersForMachineQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.GetAllMaintenanceRemindersForMachineQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.MaintenanceReminders.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RecordTypes.Queries.GetListOfRecordTypesQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RecordTypes.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RecordTypes.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Queries.GetStoredRefreshTokenQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Queries.GetStoredRefreshTokenQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RefreshTokens.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.RequestHandlerRegistrationHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.RequestHandlerRegistrationHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.GetListOfRolesQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.GetListOfRolesQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.GetRoleByNameQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Roles.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.AddTenantClaimToUserPrincipalCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.UpdateTenantCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.GetListOfTenantsQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.GetTenantByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Tenants.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.UserTenant.Commands.RegisterUserAndTenantCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.UserTenant.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.UserTenant.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.CheckUserLogInCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.CheckUserLogInCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.CreateNewUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateAccessTokenFromClaimsCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateAccessTokenFromClaimsCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateClaimsListForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateClaimsListForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmTokenCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmTokenCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationEmailForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GenerateEmailConfirmationEmailForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordCreateEmailForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordCreateEmailForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordResetEmailForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordResetEmailForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordResetTokenCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.GeneratePasswordResetTokenCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ManageRolesForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ManageRolesForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ResetPasswordForUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ResetPasswordForUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.UpdateUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.ValidateEmailConfirmationTokenCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetCurrentUserInfoQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetCurrentUserInfoQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetListOfUsersQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetTenantIdFromUserCommandHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.GetUserByIdQueryHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Users.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Validators.UserTenantValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Validators.UserTenantValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.Validators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Application.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.EmailSenderBackgroundService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.MaintenanceReminderBackgroundService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.BackgroundServices.BackgroundWorkers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.AppDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.AppDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.RefreshToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.RefreshToken.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.Role.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.Role.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.Tenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.Tenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.UserRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.UserRole.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Customer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.EmailMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.EmailMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Location.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.LocationContactUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.LocationContactUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Machine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.Machine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.MaintenanceRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.MaintenanceRecord.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.MaintenanceReminder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.MaintenanceReminder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.RecordType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.RecordType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Entities.Business.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Interfaces.ITenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Interfaces.ITenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Interfaces.ITrackable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Interfaces.ITrackable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Interfaces.TrackableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Interfaces.TrackableExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.AddedSendAtPropToEmailMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.AddedSendAtPropToEmailMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.ChangedEmailMessageInReminderToIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.ChangedEmailMessageInReminderToIndicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.ChangedEmailMessageToHaveMultipleRecipients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.ChangedEmailMessageToHaveMultipleRecipients.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.EmailMessageAddedToReminderInsteadOfIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.EmailMessageAddedToReminderInsteadOfIndicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.EmailMessageInReminderMadeNullable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.EmailMessageInReminderMadeNullable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.Init.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.Init.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.MaintenanceRemindersAdded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.MaintenanceRemindersAdded.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.MaxStringLengthDefined.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.MaxStringLengthDefined.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.RefreshTokensAdded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.RefreshTokensAdded.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.RemovedEmailFromReminderAndAddedIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.RemovedEmailFromReminderAndAddedIndicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Constants.MaintenanceChronicleClaimTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Constants.RoleTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Constants.RoleTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Constants.StringLengthConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Constants.StringLengthConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Constants.TokenConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Constants.TokenConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.EmailTemplates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.EmailTemplates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Enum.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Enum.EnumExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Enum.MaintenanceRecordTypeEnumNameAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Enum.MaintenanceRecordTypeEnumNameAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.BadRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.BadRequestException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.ErrorMessageAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.ErrorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.ErrorType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.ExceptionMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.ExceptionMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.InternalServerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.InternalServerException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.UnauthorizedRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.UnauthorizedRequestException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Error.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.ICurrentTenantProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.IdentityCookieExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.StringExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.StringExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Helpers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Options.EnvironmentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Options.EnvironmentOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Options.JwtOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Options.JwtOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Options.SmtpOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Options.SmtpOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/MaintenanceChronicle.Utilities.Options.yml",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html"
-        },
-        ".json": {
-          "relative_path": "api/toc.json"
+          "relative_path": "docs/MaintenanceChronicle.Utilities.Options.html"
         }
       },
       "version": ""

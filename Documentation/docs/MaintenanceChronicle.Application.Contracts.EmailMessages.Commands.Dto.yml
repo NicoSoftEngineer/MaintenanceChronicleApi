@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  id: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  - MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto.html
+  name: NewEmailMessageDto
+  nameWithType: NewEmailMessageDto
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageDto
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+  parent: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension.html
+  name: NewEmailMessageExtension
+  nameWithType: NewEmailMessageExtension
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.NewEmailMessageExtension
+- uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages
+    name: EmailMessages
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.EmailMessages.Commands.Dto.html
