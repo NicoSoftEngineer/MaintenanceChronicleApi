@@ -41,7 +41,7 @@ Here is a sample structure:
   "ConnectionStrings": {
     "DbConnection": "your_postgresql_connection_string"
   },
-  //Your info about the UI
+  /*Your info about the UI*/
   "EnvironmentOptions": {
     "FrontendHostUrl": "http://localhost:4200",
     "FrontendConfirmUrl": "/auth/email-confirm/[Email]/[ConfToken]",
@@ -52,7 +52,7 @@ Here is a sample structure:
   },
   "SmtpOptions": {
     "Host": "your_smtp_host",
-    "Port": your_smtp_port,
+    "Port": "your_smtp_port",
     "Username": "your_smtp_username",
     "Password": "your_smtp_password"
   },
