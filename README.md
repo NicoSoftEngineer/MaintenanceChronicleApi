@@ -41,13 +41,12 @@ Here is a sample structure:
   "ConnectionStrings": {
     "DbConnection": "your_postgresql_connection_string"
   },
-  /*Your info about the UI*/
   "EnvironmentOptions": {
-    "FrontendHostUrl": "http://localhost:4200",
+    "FrontendHostUrl": "url_of_ui",
     "FrontendConfirmUrl": "/auth/email-confirm/[Email]/[ConfToken]",
     "FrontendPasswordResetUrl": "/auth/password-reset/[Email]/[PasswordToken]",
-    "FrontendPasswordCreateUrl": "/auth/create-password/[Email]/[ConfToken]/[PasswordToken]",
-    "SenderEmail": "info@mach.com",
+    "FrontendPasswordCre_ateUrl": "/auth/create-password/[Email]/[ConfToken]/[PasswordToken]",
+    "SenderEmail": "your_email",
     "SenderName": "Maintenance Chronicle"
   },
   "SmtpOptions": {
