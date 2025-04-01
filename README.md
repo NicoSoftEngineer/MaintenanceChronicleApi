@@ -14,6 +14,14 @@
 
 ---
 
+## 📚 Documentation
+
+Comprehensive API and architecture documentation is available at:
+
+🔗 [https://nicosoftengineer.github.io/MaintenanceChronicleApi/index.html](https://nicosoftengineer.github.io/MaintenanceChronicleApi/index.html)
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
