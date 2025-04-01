@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.RefreshTokens.Commands
+  commentId: N:MaintenanceChronicle.Application.RefreshTokens.Commands
+  id: MaintenanceChronicle.Application.RefreshTokens.Commands
+  children:
+  - MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler
+  - MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.RefreshTokens.Commands
+  nameWithType: MaintenanceChronicle.Application.RefreshTokens.Commands
+  fullName: MaintenanceChronicle.Application.RefreshTokens.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler
+  commentId: T:MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler
+  href: MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler.html
+  name: GenerateRefreshTokenForUserCommandHandler
+  nameWithType: GenerateRefreshTokenForUserCommandHandler
+  fullName: MaintenanceChronicle.Application.RefreshTokens.Commands.GenerateRefreshTokenForUserCommandHandler
+- uid: MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler
+  commentId: T:MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler
+  href: MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler.html
+  name: RevokeRefreshTokenCommandHandler
+  nameWithType: RevokeRefreshTokenCommandHandler
+  fullName: MaintenanceChronicle.Application.RefreshTokens.Commands.RevokeRefreshTokenCommandHandler

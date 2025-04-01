@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>This is the HOMEPAGE. | MaintenanceChronicleApiDocumantation </title>
+      <title>&#128736;️ MaintenanceChronicleApi | MaintenanceChronicleApiDocumantation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="This is the HOMEPAGE. | MaintenanceChronicleApiDocumantation ">
+      <meta name="title" content="&#128736;️ MaintenanceChronicleApi | MaintenanceChronicleApiDocumantation ">
       
       
       <link rel="icon" href="favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/NicoSoftEngineer/MaintenanceChronicleApi/blob/dev/Documentation/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -71,17 +71,101 @@
         </div>
 
         <article data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="-maintenancechronicleapi">🛠️ MaintenanceChronicleApi</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p><strong>MaintenanceChronicleApi</strong> is a backend REST API built with <strong>ASP.NET Core</strong> using a <strong>CQS (Command Query Separation)</strong> architecture and backed by a <strong>PostgreSQL</strong> database. It is designed to handle tasks and workflows associated with maintenance tracking and management.</p>
+<hr>
+<h2 id="-tech-stack">📦 Tech Stack</h2>
+<ul>
+<li><strong>ASP.NET Core Web API</strong></li>
+<li><strong>PostgreSQL</strong></li>
+<li><strong>CQS Architecture</strong></li>
+<li><strong>JWT Authentication</strong></li>
+<li><strong>SMTP Integration (for email workflows)</strong></li>
+</ul>
+<hr>
+<h2 id="-getting-started">🚀 Getting Started</h2>
+<h3 id="1-clone-the-repository">1. Clone the Repository</h3>
+<pre><code class="lang-bash">git clone https://github.com/your-username/maintenanceChronicleApi.git
+cd maintenanceChronicleApi
+</code></pre>
+<h3 id="2-configure-appsettingsjson">2. Configure <code>appsettings.json</code></h3>
+<p>Before running the project, ensure you fill in the necessary fields in the <code>appsettings.json</code> configuration file.</p>
+<p>Here is a sample structure:</p>
+<pre><code class="lang-json">{
+  &quot;Logging&quot;: {
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Information&quot;,
+      &quot;Microsoft.AspNetCore&quot;: &quot;Warning&quot;
+    }
+  },
+  &quot;AllowedHosts&quot;: &quot;*&quot;,
+  &quot;ConnectionStrings&quot;: {
+    &quot;DbConnection&quot;: &quot;your_postgresql_connection_string&quot;
+  },
+  &quot;EnvironmentOptions&quot;: {
+    &quot;FrontendHostUrl&quot;: &quot;url_of_ui&quot;,
+    &quot;FrontendConfirmUrl&quot;: &quot;/auth/email-confirm/[Email]/[ConfToken]&quot;,
+    &quot;FrontendPasswordResetUrl&quot;: &quot;/auth/password-reset/[Email]/[PasswordToken]&quot;,
+    &quot;FrontendPasswordCre_ateUrl&quot;: &quot;/auth/create-password/[Email]/[ConfToken]/[PasswordToken]&quot;,
+    &quot;SenderEmail&quot;: &quot;your_email&quot;,
+    &quot;SenderName&quot;: &quot;Maintenance Chronicle&quot;
+  },
+  &quot;SmtpOptions&quot;: {
+    &quot;Host&quot;: &quot;your_smtp_host&quot;,
+    &quot;Port&quot;: &quot;your_smtp_port&quot;,
+    &quot;Username&quot;: &quot;your_smtp_username&quot;,
+    &quot;Password&quot;: &quot;your_smtp_password&quot;
+  },
+  &quot;JwtOptions&quot;: {
+    &quot;SecretKey&quot;: &quot;your_very_long_secret_key&quot;,
+    &quot;Issuer&quot;: &quot;url_of_app&quot;,
+    &quot;Audience&quot;: &quot;url_of_ui&quot;,
+    &quot;AccessTokenExpirationInMinutes&quot;: 30,
+    &quot;RefreshTokenExpirationInDays&quot;: 14
+  }
+}
+</code></pre>
+<blockquote>
+<p>⚠️ Replace all placeholder values with your own credentials.</p>
+</blockquote>
+<hr>
+<h2 id="-database-setup">🗃️ Database Setup</h2>
+<p>Ensure you have a running PostgreSQL instance. Update the <code>DbConnection</code> string in <code>appsettings.json</code> accordingly.</p>
+<p>Run the migrations to create the database schema:</p>
+<pre><code class="lang-bash">dotnet ef database update
+</code></pre>
+<hr>
+<h2 id="-running-the-project">🏃‍♂️ Running the Project</h2>
+<p>Use the .NET CLI to run the API locally:</p>
+<pre><code class="lang-bash">dotnet run
+</code></pre>
+<p>The API will start on the default port (usually <code>https://localhost:5209</code>).</p>
+<hr>
+<h2 id="-architectural-overview">🧱 Architectural Overview</h2>
+<p>This project follows the <strong>CQS (Command Query Separation)</strong> pattern:</p>
+<ul>
+<li><strong>Commands</strong>: Used for write operations (e.g., create/update/delete).</li>
+<li><strong>Queries</strong>: Used for read operations (e.g., fetch by ID, list).</li>
+</ul>
+<p>This separation promotes cleaner logic, better testability, and a more maintainable codebase.</p>
+<hr>
+<h2 id="-email-functionality">✉️ Email Functionality</h2>
+<p>The API includes SMTP integration for:</p>
+<ul>
+<li>Email confirmation</li>
+<li>Password reset</li>
+<li>Password creation</li>
+</ul>
+<p>Configure the <code>SmtpOptions</code> and <code>EnvironmentOptions</code> in <code>appsettings.json</code> to match your email provider and frontend URLs.</p>
+<hr>
+<h2 id="-authentication">🔐 Authentication</h2>
+<p>Authentication is handled via <strong>JWT (JSON Web Tokens)</strong>. Ensure the <code>JwtOptions.SecretKey</code> is secure and sufficiently long.</p>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/NicoSoftEngineer/MaintenanceChronicleApi/blob/dev/Documentation/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

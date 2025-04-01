@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.EmailTemplates
+  commentId: N:MaintenanceChronicle.Utilities.EmailTemplates
+  id: MaintenanceChronicle.Utilities.EmailTemplates
+  children:
+  - MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Utilities.EmailTemplates
+  nameWithType: MaintenanceChronicle.Utilities.EmailTemplates
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Utilities
+references:
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  commentId: T:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  href: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html
+  name: EmailTemplateHelper
+  nameWithType: EmailTemplateHelper
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper

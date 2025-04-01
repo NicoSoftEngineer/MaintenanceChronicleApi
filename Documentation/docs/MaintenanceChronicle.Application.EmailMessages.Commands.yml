@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands
+  commentId: N:MaintenanceChronicle.Application.EmailMessages.Commands
+  id: MaintenanceChronicle.Application.EmailMessages.Commands
+  children:
+  - MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler
+  - MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.EmailMessages.Commands
+  nameWithType: MaintenanceChronicle.Application.EmailMessages.Commands
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application
+references:
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler
+  commentId: T:MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler
+  href: MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler.html
+  name: CreateNewEmailMessageCommandHandler
+  nameWithType: CreateNewEmailMessageCommandHandler
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.CreateNewEmailMessageCommandHandler
+- uid: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  commentId: T:MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler
+  href: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler.html
+  name: SendEmailMessageCommandHandler
+  nameWithType: SendEmailMessageCommandHandler
+  fullName: MaintenanceChronicle.Application.EmailMessages.Commands.SendEmailMessageCommandHandler

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  id: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  children:
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  name: ManageMaintenanceRecordDetailDto
+  nameWithType: ManageMaintenanceRecordDetailDto
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension.html
+  name: MaintenanceRecordDetailExtension
+  nameWithType: MaintenanceRecordDetailExtension
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.MaintenanceRecordDetailExtension
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto
+  commentId: T:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto.html
+  name: NewMaintenanceRecordDto
+  nameWithType: NewMaintenanceRecordDto
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordDto
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension
+  commentId: T:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension.html
+  name: NewMaintenanceRecordExtension
+  nameWithType: NewMaintenanceRecordExtension
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.NewMaintenanceRecordExtension
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  commentId: N:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  nameWithType: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords
+    name: MaintenanceRecords
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords
+    name: MaintenanceRecords
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto
+    name: Dto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.html

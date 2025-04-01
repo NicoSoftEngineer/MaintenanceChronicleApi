@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  commentId: T:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  id: EmailTemplateHelper
+  parent: MaintenanceChronicle.Utilities.EmailTemplates
+  children:
+  - MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate(System.String,System.String)
+  - MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(System.String,System.String,System.String,System.String,System.String,System.String)
+  - MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate(System.String,System.String)
+  - MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: EmailTemplateHelper
+  nameWithType: EmailTemplateHelper
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: EmailTemplateHelper
+    path: ../src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+    startLine: 4
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.EmailTemplates
+  summary: Helper class to get email templates from file system and fill out the placeholders.
+  example: []
+  syntax:
+    content: public class EmailTemplateHelper
+    content.vb: Public Class EmailTemplateHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate(System.String,System.String)
+  commentId: M:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate(System.String,System.String)
+  id: GetEmailConfirmationTemplate(System.String,System.String)
+  parent: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetEmailConfirmationTemplate(string, string)
+  nameWithType: EmailTemplateHelper.GetEmailConfirmationTemplate(string, string)
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: GetEmailConfirmationTemplate
+    path: ../src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+    startLine: 12
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.EmailTemplates
+  summary: Gets email confirm template from file system, and assign userName and confirmationLink
+  example: []
+  syntax:
+    content: public Task<string> GetEmailConfirmationTemplate(string userName, string confirmationLink)
+    parameters:
+    - id: userName
+      type: System.String
+      description: User name
+    - id: confirmationLink
+      type: System.String
+      description: Email confirmation link for user
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Email template
+    content.vb: Public Function GetEmailConfirmationTemplate(userName As String, confirmationLink As String) As Task(Of String)
+  overload: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate*
+  nameWithType.vb: EmailTemplateHelper.GetEmailConfirmationTemplate(String, String)
+  fullName.vb: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate(String, String)
+  name.vb: GetEmailConfirmationTemplate(String, String)
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate(System.String,System.String)
+  commentId: M:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate(System.String,System.String)
+  id: GetPasswordResetEmailTemplate(System.String,System.String)
+  parent: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetPasswordResetEmailTemplate(string, string)
+  nameWithType: EmailTemplateHelper.GetPasswordResetEmailTemplate(string, string)
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: GetPasswordResetEmailTemplate
+    path: ../src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+    startLine: 26
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.EmailTemplates
+  summary: Gets password reset template from file system, and assign userName and passwordResetLink
+  example: []
+  syntax:
+    content: public Task<string> GetPasswordResetEmailTemplate(string userName, string passwordResetLink)
+    parameters:
+    - id: userName
+      type: System.String
+      description: User name
+    - id: passwordResetLink
+      type: System.String
+      description: Password reset link for user
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Email template
+    content.vb: Public Function GetPasswordResetEmailTemplate(userName As String, passwordResetLink As String) As Task(Of String)
+  overload: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate*
+  nameWithType.vb: EmailTemplateHelper.GetPasswordResetEmailTemplate(String, String)
+  fullName.vb: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate(String, String)
+  name.vb: GetPasswordResetEmailTemplate(String, String)
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate(System.String,System.String)
+  commentId: M:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate(System.String,System.String)
+  id: GetUserInvitationEmailTemplate(System.String,System.String)
+  parent: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetUserInvitationEmailTemplate(string, string)
+  nameWithType: EmailTemplateHelper.GetUserInvitationEmailTemplate(string, string)
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: GetUserInvitationEmailTemplate
+    path: ../src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+    startLine: 40
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.EmailTemplates
+  summary: Gets UserInvitationEmailTemplate from file system, fills out userName and link into email
+  example: []
+  syntax:
+    content: public Task<string> GetUserInvitationEmailTemplate(string userName, string link)
+    parameters:
+    - id: userName
+      type: System.String
+      description: User name
+    - id: link
+      type: System.String
+      description: Create password and confirm email link
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Email template
+    content.vb: Public Function GetUserInvitationEmailTemplate(userName As String, link As String) As Task(Of String)
+  overload: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate*
+  nameWithType.vb: EmailTemplateHelper.GetUserInvitationEmailTemplate(String, String)
+  fullName.vb: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate(String, String)
+  name.vb: GetUserInvitationEmailTemplate(String, String)
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(System.String,System.String,System.String,System.String,System.String,System.String)
+  id: GetMaintenanceReminderEmailTemplate(System.String,System.String,System.String,System.String,System.String,System.String)
+  parent: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetMaintenanceReminderEmailTemplate(string, string, string, string, string, string)
+  nameWithType: EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(string, string, string, string, string, string)
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(string, string, string, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: GetMaintenanceReminderEmailTemplate
+    path: ../src/MaintenanceChronicle.Utilities/EmailTemplates/EmailTemplateHelper.cs
+    startLine: 57
+  assemblies:
+  - MaintenanceChronicle.Utilities
+  namespace: MaintenanceChronicle.Utilities.EmailTemplates
+  summary: Gets MaintenanceReminderEmailTemplate from file system, fills out machineName, machineSerialNumber, date, description, locationName, locationAddress into email
+  example: []
+  syntax:
+    content: public Task<string> GetMaintenanceReminderEmailTemplate(string machineName, string machineSerialNumber, string date, string description, string locationName, string locationAddress)
+    parameters:
+    - id: machineName
+      type: System.String
+      description: Machine name
+    - id: machineSerialNumber
+      type: System.String
+      description: Machine serial number
+    - id: date
+      type: System.String
+      description: Date when the reminder should be performed
+    - id: description
+      type: System.String
+      description: Description of what should be done
+    - id: locationName
+      type: System.String
+      description: Location name
+    - id: locationAddress
+      type: System.String
+      description: Locations address
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Email template
+    content.vb: Public Function GetMaintenanceReminderEmailTemplate(machineName As String, machineSerialNumber As String, [date] As String, description As String, locationName As String, locationAddress As String) As Task(Of String)
+  overload: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate*
+  nameWithType.vb: EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(String, String, String, String, String, String)
+  fullName.vb: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate(String, String, String, String, String, String)
+  name.vb: GetMaintenanceReminderEmailTemplate(String, String, String, String, String, String)
+references:
+- uid: MaintenanceChronicle.Utilities.EmailTemplates
+  commentId: N:MaintenanceChronicle.Utilities.EmailTemplates
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Utilities.EmailTemplates
+  nameWithType: MaintenanceChronicle.Utilities.EmailTemplates
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.EmailTemplates
+    name: EmailTemplates
+    href: MaintenanceChronicle.Utilities.EmailTemplates.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities
+    name: Utilities
+    href: MaintenanceChronicle.Utilities.html
+  - name: .
+  - uid: MaintenanceChronicle.Utilities.EmailTemplates
+    name: EmailTemplates
+    href: MaintenanceChronicle.Utilities.EmailTemplates.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate*
+  commentId: Overload:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate
+  href: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html#MaintenanceChronicle_Utilities_EmailTemplates_EmailTemplateHelper_GetEmailConfirmationTemplate_System_String_System_String_
+  name: GetEmailConfirmationTemplate
+  nameWithType: EmailTemplateHelper.GetEmailConfirmationTemplate
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetEmailConfirmationTemplate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate*
+  commentId: Overload:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate
+  href: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html#MaintenanceChronicle_Utilities_EmailTemplates_EmailTemplateHelper_GetPasswordResetEmailTemplate_System_String_System_String_
+  name: GetPasswordResetEmailTemplate
+  nameWithType: EmailTemplateHelper.GetPasswordResetEmailTemplate
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetPasswordResetEmailTemplate
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate*
+  commentId: Overload:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate
+  href: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html#MaintenanceChronicle_Utilities_EmailTemplates_EmailTemplateHelper_GetUserInvitationEmailTemplate_System_String_System_String_
+  name: GetUserInvitationEmailTemplate
+  nameWithType: EmailTemplateHelper.GetUserInvitationEmailTemplate
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetUserInvitationEmailTemplate
+- uid: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate*
+  commentId: Overload:MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate
+  href: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.html#MaintenanceChronicle_Utilities_EmailTemplates_EmailTemplateHelper_GetMaintenanceReminderEmailTemplate_System_String_System_String_System_String_System_String_System_String_System_String_
+  name: GetMaintenanceReminderEmailTemplate
+  nameWithType: EmailTemplateHelper.GetMaintenanceReminderEmailTemplate
+  fullName: MaintenanceChronicle.Utilities.EmailTemplates.EmailTemplateHelper.GetMaintenanceReminderEmailTemplate

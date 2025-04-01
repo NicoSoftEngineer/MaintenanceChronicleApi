@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  id: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand
+  - MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand
+  langs:
+  - csharp
+  - vb
+  name: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  type: Namespace
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+references:
+- uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand
+  parent: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  href: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand.html
+  name: GenerateRefreshTokenForUserCommand
+  nameWithType: GenerateRefreshTokenForUserCommand
+  fullName: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.GenerateRefreshTokenForUserCommand
+- uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand
+  parent: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  href: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand.html
+  name: RevokeRefreshTokenCommand
+  nameWithType: RevokeRefreshTokenCommand
+  fullName: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.RevokeRefreshTokenCommand
+- uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RefreshTokens
+    name: RefreshTokens
+    href: MaintenanceChronicle.Application.Contracts.RefreshTokens.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RefreshTokens
+    name: RefreshTokens
+    href: MaintenanceChronicle.Application.Contracts.RefreshTokens.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.RefreshTokens.Commands.html

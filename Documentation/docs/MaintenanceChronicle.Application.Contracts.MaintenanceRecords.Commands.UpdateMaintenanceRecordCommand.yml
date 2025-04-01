@@ -1,0 +1,747 @@
+### YamlMime:ManagedReference
+items:
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  commentId: T:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  id: UpdateMaintenanceRecordCommand
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  children:
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto},System.Guid,System.String)
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+  - MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
+  langs:
+  - csharp
+  - vb
+  name: UpdateMaintenanceRecordCommand
+  nameWithType: UpdateMaintenanceRecordCommand
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  type: Class
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: UpdateMaintenanceRecordCommand
+    path: ../src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  summary: Command to update maintenance record.
+  example: []
+  syntax:
+    content: 'public record UpdateMaintenanceRecordCommand : IRequest<ManageMaintenanceRecordDetailDto>, IBaseRequest, IEquatable<UpdateMaintenanceRecordCommand>'
+    content.vb: Public Class UpdateMaintenanceRecordCommand Implements IRequest(Of ManageMaintenanceRecordDetailDto), IBaseRequest, IEquatable(Of UpdateMaintenanceRecordCommand)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequest{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+  - MediatR.IBaseRequest
+  - System.IEquatable{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto},System.Guid,System.String)
+  commentId: M:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto},System.Guid,System.String)
+  id: '#ctor(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto},System.Guid,System.String)'
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  langs:
+  - csharp
+  - vb
+  name: UpdateMaintenanceRecordCommand(JsonPatchDocument<ManageMaintenanceRecordDetailDto>, Guid, string)
+  nameWithType: UpdateMaintenanceRecordCommand.UpdateMaintenanceRecordCommand(JsonPatchDocument<ManageMaintenanceRecordDetailDto>, Guid, string)
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UpdateMaintenanceRecordCommand(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument<MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto>, System.Guid, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: .ctor
+    path: ../src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  summary: Command to update maintenance record.
+  example: []
+  syntax:
+    content: public UpdateMaintenanceRecordCommand(JsonPatchDocument<ManageMaintenanceRecordDetailDto> Patch, Guid Id, string UserId)
+    parameters:
+    - id: Patch
+      type: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+      description: <xref href="Microsoft.AspNetCore.JsonPatch.JsonPatchDocument" data-throw-if-not-resolved="false"></xref> with instructions on what to replace
+    - id: Id
+      type: System.Guid
+      description: ID of record which should get updated
+    - id: UserId
+      type: System.String
+      description: ID of user who requested the update
+    content.vb: Public Sub New(Patch As JsonPatchDocument(Of ManageMaintenanceRecordDetailDto), Id As Guid, UserId As String)
+  overload: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor*
+  nameWithType.vb: UpdateMaintenanceRecordCommand.New(JsonPatchDocument(Of ManageMaintenanceRecordDetailDto), Guid, String)
+  fullName.vb: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.New(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument(Of MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto), System.Guid, String)
+  name.vb: New(JsonPatchDocument(Of ManageMaintenanceRecordDetailDto), Guid, String)
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+  commentId: P:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+  id: Patch
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  langs:
+  - csharp
+  - vb
+  name: Patch
+  nameWithType: UpdateMaintenanceRecordCommand.Patch
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Patch
+    path: ../src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  summary: <xref href="Microsoft.AspNetCore.JsonPatch.JsonPatchDocument" data-throw-if-not-resolved="false"></xref> with instructions on what to replace
+  example: []
+  syntax:
+    content: public JsonPatchDocument<ManageMaintenanceRecordDetailDto> Patch { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+    content.vb: Public Property Patch As JsonPatchDocument(Of ManageMaintenanceRecordDetailDto)
+  overload: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch*
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+  commentId: P:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+  id: Id
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UpdateMaintenanceRecordCommand.Id
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: Id
+    path: ../src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  summary: ID of record which should get updated
+  example: []
+  syntax:
+    content: public Guid Id { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id*
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
+  commentId: P:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
+  id: UserId
+  parent: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: UpdateMaintenanceRecordCommand.UserId
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
+  type: Property
+  source:
+    remote:
+      path: src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+      branch: dev
+      repo: https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+    id: UserId
+    path: ../src/MaintenanceChronicle.Application.Contracts/MaintenanceRecords/Commands/UpdateMaintenanceRecordCommand.cs
+    startLine: 11
+  assemblies:
+  - MaintenanceChronicle.Application.Contracts
+  namespace: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  summary: ID of user who requested the update
+  example: []
+  syntax:
+    content: public string UserId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserId As String
+  overload: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId*
+references:
+- uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument
+  commentId: T:Microsoft.AspNetCore.JsonPatch.JsonPatchDocument
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument
+  name: JsonPatchDocument
+  nameWithType: JsonPatchDocument
+  fullName: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  commentId: N:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  href: MaintenanceChronicle.html
+  name: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  nameWithType: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+  spec.csharp:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords
+    name: MaintenanceRecords
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.html
+  spec.vb:
+  - uid: MaintenanceChronicle
+    name: MaintenanceChronicle
+    href: MaintenanceChronicle.html
+  - name: .
+  - uid: MaintenanceChronicle.Application
+    name: Application
+    href: MaintenanceChronicle.Application.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts
+    name: Contracts
+    href: MaintenanceChronicle.Application.Contracts.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords
+    name: MaintenanceRecords
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.html
+  - name: .
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands
+    name: Commands
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.IRequest{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+  commentId: T:MediatR.IRequest{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+  parent: MediatR
+  definition: MediatR.IRequest`1
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  name: IRequest<ManageMaintenanceRecordDetailDto>
+  nameWithType: IRequest<ManageMaintenanceRecordDetailDto>
+  fullName: MediatR.IRequest<MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto>
+  nameWithType.vb: IRequest(Of ManageMaintenanceRecordDetailDto)
+  fullName.vb: MediatR.IRequest(Of MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto)
+  name.vb: IRequest(Of ManageMaintenanceRecordDetailDto)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+    name: ManageMaintenanceRecordDetailDto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+    name: ManageMaintenanceRecordDetailDto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  - name: )
+- uid: MediatR.IBaseRequest
+  commentId: T:MediatR.IBaseRequest
+  parent: MediatR
+  isExternal: true
+  name: IBaseRequest
+  nameWithType: IBaseRequest
+  fullName: MediatR.IBaseRequest
+- uid: System.IEquatable{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand}
+  commentId: T:System.IEquatable{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<UpdateMaintenanceRecordCommand>
+  nameWithType: IEquatable<UpdateMaintenanceRecordCommand>
+  fullName: System.IEquatable<MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand>
+  nameWithType.vb: IEquatable(Of UpdateMaintenanceRecordCommand)
+  fullName.vb: System.IEquatable(Of MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand)
+  name.vb: IEquatable(Of UpdateMaintenanceRecordCommand)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+    name: UpdateMaintenanceRecordCommand
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand
+    name: UpdateMaintenanceRecordCommand
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.IRequest`1
+  commentId: T:MediatR.IRequest`1
+  isExternal: true
+  name: IRequest<TResponse>
+  nameWithType: IRequest<TResponse>
+  fullName: MediatR.IRequest<TResponse>
+  nameWithType.vb: IRequest(Of TResponse)
+  fullName.vb: MediatR.IRequest(Of TResponse)
+  name.vb: IRequest(Of TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.IRequest`1
+    name: IRequest
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.#ctor
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html#MaintenanceChronicle_Application_Contracts_MaintenanceRecords_Commands_UpdateMaintenanceRecordCommand__ctor_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument_MaintenanceChronicle_Application_Contracts_MaintenanceRecords_Commands_Dto_ManageMaintenanceRecordDetailDto__System_Guid_System_String_
+  name: UpdateMaintenanceRecordCommand
+  nameWithType: UpdateMaintenanceRecordCommand.UpdateMaintenanceRecordCommand
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UpdateMaintenanceRecordCommand
+  nameWithType.vb: UpdateMaintenanceRecordCommand.New
+  fullName.vb: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+  commentId: T:Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto}
+  parent: Microsoft.AspNetCore.JsonPatch
+  definition: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  name: JsonPatchDocument<ManageMaintenanceRecordDetailDto>
+  nameWithType: JsonPatchDocument<ManageMaintenanceRecordDetailDto>
+  fullName: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument<MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto>
+  nameWithType.vb: JsonPatchDocument(Of ManageMaintenanceRecordDetailDto)
+  fullName.vb: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument(Of MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto)
+  name.vb: JsonPatchDocument(Of ManageMaintenanceRecordDetailDto)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+    name: JsonPatchDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  - name: <
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+    name: ManageMaintenanceRecordDetailDto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+    name: JsonPatchDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto
+    name: ManageMaintenanceRecordDetailDto
+    href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.Dto.ManageMaintenanceRecordDetailDto.html
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+  commentId: T:Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  name: JsonPatchDocument<TModel>
+  nameWithType: JsonPatchDocument<TModel>
+  fullName: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument<TModel>
+  nameWithType.vb: JsonPatchDocument(Of TModel)
+  fullName.vb: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument(Of TModel)
+  name.vb: JsonPatchDocument(Of TModel)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+    name: JsonPatchDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  - name: <
+  - name: TModel
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1
+    name: JsonPatchDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TModel
+  - name: )
+- uid: Microsoft.AspNetCore.JsonPatch
+  commentId: N:Microsoft.AspNetCore.JsonPatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.JsonPatch
+  nameWithType: Microsoft.AspNetCore.JsonPatch
+  fullName: Microsoft.AspNetCore.JsonPatch
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.JsonPatch
+    name: JsonPatch
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.JsonPatch
+    name: JsonPatch
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html#MaintenanceChronicle_Application_Contracts_MaintenanceRecords_Commands_UpdateMaintenanceRecordCommand_Patch
+  name: Patch
+  nameWithType: UpdateMaintenanceRecordCommand.Patch
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Patch
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html#MaintenanceChronicle_Application_Contracts_MaintenanceRecords_Commands_UpdateMaintenanceRecordCommand_Id
+  name: Id
+  nameWithType: UpdateMaintenanceRecordCommand.Id
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.Id
+- uid: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId*
+  commentId: Overload:MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
+  href: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.html#MaintenanceChronicle_Application_Contracts_MaintenanceRecords_Commands_UpdateMaintenanceRecordCommand_UserId
+  name: UserId
+  nameWithType: UpdateMaintenanceRecordCommand.UserId
+  fullName: MaintenanceChronicle.Application.Contracts.MaintenanceRecords.Commands.UpdateMaintenanceRecordCommand.UserId
