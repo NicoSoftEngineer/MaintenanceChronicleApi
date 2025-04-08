@@ -17,7 +17,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        IMAGE_NAME=machapi
+        IMAGE_NAME=ghcr.io/nicosoftengineer/machapi:latest
         docker build -t $IMAGE_NAME .
         docker push $IMAGE_NAME
 
@@ -29,7 +29,7 @@ jobs:
         key: ${{ secrets.REMOTE_SSH_KEY }}
         script: |
           echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ secrets.GHCR_USER }} --password-stdin
-          docker pull machapi
+          docker pull ghcr.io/nicosoftengineer/machapi:latest
           docker stop machapi || true
           docker rm machapi || true
           docker run -d --name machapi -p 80:80 machapi
