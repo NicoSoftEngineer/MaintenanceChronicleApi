@@ -24,6 +24,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.WebHost.ConfigureKestrel(serverOptions => {
 //    serverOptions.ListenAnyIP(7290); // Change the port number here
 //});
+builder.WebHost.UseUrls("http://*:80");
 
 // Add services to the container.
 //These services are needed fot the ICurrentTenantProvider
@@ -169,8 +170,15 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.Use(async (context, next) =>
+{
+    Console.WriteLine($"🔥 Incoming Request: {context.Request.Method} {context.Request.Path}");
+    await next();
+});
 app.UseMiddleware<ExceptionMiddleware>();
+
+
+
 
 //app.UseHttpsRedirection();
 

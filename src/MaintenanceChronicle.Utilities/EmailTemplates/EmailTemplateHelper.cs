@@ -12,7 +12,30 @@ public class EmailTemplateHelper
     /// <returns>Email template</returns>
     public async Task<string> GetEmailConfirmationTemplate(string userName, string confirmationLink)
     {
-        var template = await File.ReadAllTextAsync("../MaintenanceChronicle.Utilities/EmailTemplates/EmailConfirmation.html");
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Console.WriteLine("Current Directory: " + currentDirectory);
+
+        string[] files = Directory.GetFiles(currentDirectory);
+        string[] directories = Directory.GetDirectories(currentDirectory);
+
+        foreach (string file in files)
+        {
+            Console.WriteLine(file);
+        }
+
+        Console.WriteLine("---------------------------------------------------------------------------");
+        foreach (string dir in directories)
+        {
+            string[] filess = Directory.GetFiles(dir);
+            Console.WriteLine(dir);
+            foreach (string file in filess)
+            {
+                Console.WriteLine(file);
+            }
+        }
+        Console.WriteLine("---------------------------------------------------------------------------");
+
+        var template = await File.ReadAllTextAsync("./EmailTemplates/EmailConfirmation.html");
         template = template.Replace("[UserName]", userName).Replace("[ConfirmationLink]", confirmationLink);
 
         return template;
