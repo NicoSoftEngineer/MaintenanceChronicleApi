@@ -29,7 +29,7 @@ jobs:
         key: ${{ secrets.REMOTE_SSH_KEY }}
         script: |
           echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ secrets.GHCR_USER }} --password-stdin
-          docker pull ghcr.io/nicosoftengineer/machapi:latest
+          docker pull ghcr.io/nicosoftengineer/machapi
           docker stop machapi || true
           docker rm machapi || true
           docker run -d --name machapi -p 80:80 machapi
