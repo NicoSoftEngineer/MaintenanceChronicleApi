@@ -32,4 +32,4 @@ jobs:
           docker pull ghcr.io/nicosoftengineer/machapi
           docker stop machapi || true
           docker rm machapi || true
-          docker run -d --name machapi -p 80:80 machapi
+          docker run -d --name ghcr.io/nicosoftengineer/machapi:latest -p 80:80 machapi
