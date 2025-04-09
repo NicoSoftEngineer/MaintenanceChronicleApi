@@ -12,6 +12,29 @@ public class EmailTemplateHelper
     /// <returns>Email template</returns>
     public async Task<string> GetEmailConfirmationTemplate(string userName, string confirmationLink)
     {
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Console.WriteLine("Current Directory: " + currentDirectory);
+
+        string[] files = Directory.GetFiles(currentDirectory);
+        string[] directories = Directory.GetDirectories(currentDirectory);
+
+        foreach (string file in files)
+        {
+            Console.WriteLine(file);
+        }
+
+        Console.WriteLine("---------------------------------------------------------------------------");
+        foreach (string dir in directories)
+        {
+            string[] filess = Directory.GetFiles(dir);
+            Console.WriteLine(dir);
+            foreach (string file in filess)
+            {
+                Console.WriteLine(file);
+            }
+        }
+        Console.WriteLine("---------------------------------------------------------------------------");
+
         var template = await File.ReadAllTextAsync("./EmailTemplates/EmailConfirmation.html");
         template = template.Replace("[UserName]", userName).Replace("[ConfirmationLink]", confirmationLink);
 
@@ -26,6 +49,29 @@ public class EmailTemplateHelper
     /// <returns>Email template</returns>
     public async Task<string> GetPasswordResetEmailTemplate(string userName, string passwordResetLink)
     {
+
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Console.WriteLine("Current Directory: " + currentDirectory);
+
+        string[] files = Directory.GetFiles(currentDirectory);
+        string[] directories = Directory.GetDirectories(currentDirectory);
+
+        foreach (string file in files)
+        {
+            Console.WriteLine(file);
+        }
+
+        Console.WriteLine("---------------------------------------------------------------------------");
+        foreach (string dir in directories)
+        {
+            string[] filess = Directory.GetFiles(dir);
+            Console.WriteLine(dir);
+            foreach (string file in filess)
+            {
+                Console.WriteLine(file);
+            }
+        }
+        Console.WriteLine("---------------------------------------------------------------------------");
         var template = await File.ReadAllTextAsync("./EmailTemplates/PasswordReset.html");
         template = template.Replace("[UserName]", userName).Replace("[ResetLink]", passwordResetLink);
 
@@ -40,6 +86,29 @@ public class EmailTemplateHelper
     /// <returns>Email template</returns>
     public async Task<string> GetUserInvitationEmailTemplate(string userName, string link)
     {
+
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Console.WriteLine("Current Directory: " + currentDirectory);
+
+        string[] files = Directory.GetFiles(currentDirectory);
+        string[] directories = Directory.GetDirectories(currentDirectory);
+
+        foreach (string file in files)
+        {
+            Console.WriteLine(file);
+        }
+
+        Console.WriteLine("---------------------------------------------------------------------------");
+        foreach (string dir in directories)
+        {
+            string[] filess = Directory.GetFiles(dir);
+            Console.WriteLine(dir);
+            foreach (string file in filess)
+            {
+                Console.WriteLine(file);
+            }
+        }
+        Console.WriteLine("---------------------------------------------------------------------------");
         var template = await File.ReadAllTextAsync("./EmailTemplates/UserInvitationEmail.html");
         template = template.Replace("[UserName]", userName).Replace("[Link]", link);
 
@@ -58,6 +127,28 @@ public class EmailTemplateHelper
     public async Task<string> GetMaintenanceReminderEmailTemplate(string machineName, string machineSerialNumber,
         string date, string description, string locationName, string locationAddress)
     {
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Console.WriteLine("Current Directory: " + currentDirectory);
+
+        string[] files = Directory.GetFiles(currentDirectory);
+        string[] directories = Directory.GetDirectories(currentDirectory);
+
+        foreach (string file in files)
+        {
+            Console.WriteLine(file);
+        }
+
+        Console.WriteLine("---------------------------------------------------------------------------");
+        foreach (string dir in directories)
+        {
+            string[] filess = Directory.GetFiles(dir);
+            Console.WriteLine(dir);
+            foreach (string file in filess)
+            {
+                Console.WriteLine(file);
+            }
+        }
+        Console.WriteLine("---------------------------------------------------------------------------");
         var template = await File.ReadAllTextAsync("./EmailTemplates/MaintenanceReminderEmail.html");
         template = template
             .Replace("[MachineName]", machineName)
