@@ -45,6 +45,7 @@ public class SendEmailMessageCommandHandler(AppDbContext dbContext, IOptions<Smt
 
         // Send the email
         using var smtp = new MailKit.Net.Smtp.SmtpClient();
+        smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
         await smtp.ConnectAsync(smtpOptions.Value.Host, smtpOptions.Value.Port, cancellationToken: cancellationToken);
         await smtp.AuthenticateAsync(smtpOptions.Value.Username, smtpOptions.Value.Password, cancellationToken);
         await smtp.SendAsync((MimeMessage)mail, cancellationToken);
