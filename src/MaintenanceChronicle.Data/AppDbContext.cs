@@ -25,6 +25,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentTenant
     {
         base.OnModelCreating(modelBuilder);
 
+        //Global filters
         modelBuilder.Entity<User>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<UserRole>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.TenantId == currentTenantProvider.TenantId) && b.DeletedAt == null);
         modelBuilder.Entity<Tenant>().HasQueryFilter(b => (currentTenantProvider.TenantId == Guid.Empty || b.Id == currentTenantProvider.TenantId) && b.DeletedAt == null);

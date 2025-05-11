@@ -22,6 +22,7 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
         }
         catch (BadRequestException ex)
         {
+            logger.LogError(ex, ex.Message);
             var errorResponse = new
             {
                 Errors = new Dictionary<string, string[]>
@@ -35,6 +36,7 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
         }
         catch (UnauthorizedRequestException ex)
         {
+            logger.LogError(ex, ex.Message);
             var errorResponse = new { Message = ex.ErrorType.GetErrorMessage() };
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
             context.Response.ContentType = "application/json";
@@ -42,6 +44,7 @@ public class ExceptionMiddleware(ILogger<ExceptionMiddleware> logger, RequestDel
         }
         catch (InternalServerException ex)
         {
+            logger.LogError(ex, ex.Message);
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             await context.Response.WriteAsJsonAsync(new
             {
