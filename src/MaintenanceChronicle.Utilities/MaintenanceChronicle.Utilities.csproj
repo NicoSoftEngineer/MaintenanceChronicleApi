@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MaintenanceChronicle.Infrastructure\MaintenanceChronicle.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="EmailTemplates\EmailConfirmation.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
