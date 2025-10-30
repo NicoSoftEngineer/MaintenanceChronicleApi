@@ -12,6 +12,7 @@ using MaintenanceChronicle.Application.Validators;
 using MaintenanceChronicle.BackgroundServices.BackgroundWorkers;
 using MaintenanceChronicle.Data.Entities.Account;
 using MaintenanceChronicle.Data.Entities.Business;
+using MaintenanceChronicle.Infrastructure;
 using MaintenanceChronicle.Utilities.Error;
 using MaintenanceChronicle.Utilities.Helpers;
 using Microsoft.OpenApi.Models;
@@ -29,133 +30,10 @@ if (!builder.Environment.IsDevelopment())
     builder.WebHost.UseUrls("http://*:80");
 }
 
-// Add services to the container.
-//These services are needed fot the ICurrentTenantProvider
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddDataProtection();
-
-//Method for global filter into db
-builder.Services.AddScoped<ICurrentTenantProvider, CurrentTenantProvider>();
-
-//DbContext
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection"), optionsBuilder =>
-    {
-        optionsBuilder.UseNodaTime();
-        optionsBuilder.MapEnum<RecordType>("recordType");
-    });
-});
-
-//Use PATCH endpoints
-builder.Services.AddControllers()
-    .AddNewtonsoftJson();
-
-//Identity
-builder.Services.AddIdentity<User, Role>(options =>
-    {
-        options.User.RequireUniqueEmail = true;
-        options.SignIn.RequireConfirmedAccount = true;
-        options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
-    })
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddSignInManager()
-    .AddDefaultTokenProviders();
-
-builder.Services.Configure<IdentityOptions>(options =>
-{
-    options.Password.RequireDigit = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequiredLength = 6;
-    options.Password.RequiredUniqueChars = 1;
-});
-
-//Configure JwtOptions
-builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
-
-//Configure authentication using JwtTokens
-var jwtSettings = builder.Configuration.GetRequiredSection(nameof(JwtOptions)).Get<JwtOptions>();
-if (jwtSettings == null)
-{
-    throw new InternalServerException("Jwt settings was not found");
-}
-
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
-            ValidIssuer = jwtSettings.Issuer,
-            ValidAudience = jwtSettings.Audience
-        };
-    });
-
-//MediatR
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(typeof(RequestHandlerRegistrationHelper).Assembly);
-});
-
-//Smtp Options
-builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("SmtpOptions"));
-
-//Environment options
-builder.Services.Configure<EnvironmentOptions>(builder.Configuration.GetSection("EnvironmentOptions"));
-
-//Clock
-builder.Services.AddSingleton<IClock>(SystemClock.Instance);
-
-//Adding EmailSenderBackgroundService into HostedServices
-builder.Services.AddHostedService<EmailSenderBackgroundService>();
-
-//Adding MaintenanceReminderBackgroundService into HostedServices
-builder.Services.AddHostedService<MaintenanceReminderBackgroundService>();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "MaintenanceChronicleApi", Version = "v1" });
-    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    options.IncludeXmlComments(xmlPath);
-
-    // Configure JWT Authentication in Swagger
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        Type = SecuritySchemeType.Http,
-        Scheme = "bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "Enter your JWT token without the 'Bearer' prefix.\n\nExample: abc123xyz"
-    });
-
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-    });
-});
+builder.Services.InstallServices(
+    builder.Configuration,
+    Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!
+);
 
 var app = builder.Build();
 

@@ -20,10 +20,10 @@ COPY ["src/MaintenanceChronicle.Application/MaintenanceChronicle.Application.csp
 COPY ["src/MaintenanceChronicle.BackgroundServices/MaintenanceChronicle.BackgroundServices.csproj", "MaintenanceChronicle.BackgroundServices/"]
 RUN dotnet restore "./MaintenanceChronicle.Api/MaintenanceChronicle.Api.csproj"
 COPY ./src ./
-COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/EmailConfirmation.html ./
-COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/PasswordReset.html ./
-COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/UserInvitationEmail.html ./
-COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/MaintenanceReminderEmail.html ./
+COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/EmailConfirmation.html ./MaintenanceChronicle.Utilities/EmailTemplates/
+COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/PasswordReset.html ./MaintenanceChronicle.Utilities/EmailTemplates/
+COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/UserInvitationEmail.html ./MaintenanceChronicle.Utilities/EmailTemplates/
+COPY ./src/MaintenanceChronicle.Utilities/EmailTemplates/MaintenanceReminderEmail.html ./MaintenanceChronicle.Utilities/EmailTemplates/
 WORKDIR "/src/MaintenanceChronicle.Api"
 RUN dotnet build "./MaintenanceChronicle.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
