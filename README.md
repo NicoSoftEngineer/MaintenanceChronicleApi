@@ -1,6 +1,6 @@
 # 🛠️ MaintenanceChronicleApi
 
-**MaintenanceChronicleApi** is a backend REST API built with **ASP.NET Core** using a **CQS (Command Query Separation)** architecture and backed by a **PostgreSQL** database. It is designed to handle tasks and workflows associated with maintenance tracking and management.
+**MaintenanceChronicleApi** is a backend REST API built with **ASP.NET Core** using Clean architecture with **CQS (Command Query Separation)** pattern and backed by a **PostgreSQL** database. It is designed to handle tasks and workflows associated with maintenance tracking and management.
 
 ---
 
@@ -8,7 +8,7 @@
 
 - **ASP.NET Core Web API**
 - **PostgreSQL**
-- **CQS Architecture**
+- **Clean architecture with CQS pattern**
 - **JWT Authentication**
 - **SMTP Integration (for email workflows)**
 
@@ -27,7 +27,7 @@ Comprehensive API and architecture documentation is available at:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/NicoSoftEngineer/MaintenanceChronicleApi.git
+git clone https://github.com/NicoSoftwareEngineer/MaintenanceChronicleApi.git
 cd maintenanceChronicleApi
 ```
 
