@@ -29,7 +29,6 @@ public static class ServiceInstallerExtensions
         var installers = assemblies
             .SelectMany(a => a.DefinedTypes)
             .Where(IsAssignableToType<IServiceInstaller>)
-            .Where(t => !t.IsInterface && !t.IsAbstract)
             .Select(Activator.CreateInstance)
             .Cast<IServiceInstaller>()
             .ToArray();
