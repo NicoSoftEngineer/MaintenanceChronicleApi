@@ -1,10 +1,10 @@
-# 🛠️ MaintenanceChronicleApi
+#  MaintenanceChronicleApi
 
 **MaintenanceChronicleApi** is a backend REST API built with **ASP.NET Core** using Clean architecture with **CQS (Command Query Separation)** pattern and backed by a **PostgreSQL** database. It is designed to handle tasks and workflows associated with maintenance tracking and management.
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 - **ASP.NET Core Web API**
 - **PostgreSQL**
@@ -14,15 +14,15 @@
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 Comprehensive API and architecture documentation is available at:
 
-🔗 [https://nicosoftwareengineer.github.io/MaintenanceChronicleApi/index.html](https://nicosoftwareengineer.github.io/MaintenanceChronicleApi/index.html)
+ [https://nicosoftwareengineer.github.io/MaintenanceChronicleApi/index.html](https://nicosoftwareengineer.github.io/MaintenanceChronicleApi/index.html)
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
@@ -73,11 +73,11 @@ Here is a sample structure:
 }
 ```
 
-> ⚠️ Replace all placeholder values with your own credentials.
+>  Replace all placeholder values with your own credentials.
 
 ---
 
-## 🗃️ Database Setup
+##  Database Setup
 
 Ensure you have a running PostgreSQL instance. Update the `DbConnection` string in `appsettings.json` accordingly.
 
@@ -89,7 +89,7 @@ dotnet ef database update
 
 ---
 
-## 🏃‍♂️ Running the Project
+##  Running the Project
 
 Use the .NET CLI to run the API locally:
 
@@ -101,7 +101,7 @@ The API will start on the default port (usually `https://localhost:5209`).
 
 ---
 
-## 🧱 Architectural Overview
+##  Architectural Overview
 
 This project follows the **CQS (Command Query Separation)** pattern:
 
@@ -112,7 +112,7 @@ This separation promotes cleaner logic, better testability, and a more maintaina
 
 ---
 
-## ✉️ Email Functionality
+##  Email Functionality
 
 The API includes SMTP integration for:
 
@@ -124,7 +124,7 @@ Configure the `SmtpOptions` and `EnvironmentOptions` in `appsettings.json` to ma
 
 ---
 
-## 🔐 Authentication
+##  Authentication
 
 Authentication is handled via **JWT (JSON Web Tokens)**. Ensure the `JwtOptions.SecretKey` is secure and sufficiently long.
 
